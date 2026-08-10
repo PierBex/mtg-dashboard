@@ -434,11 +434,11 @@ body { font-size:15px; line-height:1.45; }
   function showDashboard(){
     login.style.display='none';
     app.classList.add('is-visible');
-    document.getElementById('userName').textContent = (window.AUTH && AUTH.getUsername()) || 'User';
+    document.getElementById('userName').textContent = (window.AUTH && window.AUTH.getUsername()) || 'User';
     initDashboard();
   }
 
-  if (window.AUTH && AUTH.isLoggedIn()) showDashboard();
+  if (window.AUTH && window.AUTH.isLoggedIn()) showDashboard();
 
   form.addEventListener('submit', async (e)=>{
     e.preventDefault();
@@ -446,14 +446,14 @@ body { font-size:15px; line-height:1.45; }
     const btn = form.querySelector('button');
     const original = btn.textContent;
     btn.textContent='Verifying...'; btn.disabled=true;
-    const res = await AUTH.authenticate(form.username.value, form.password.value);
+    const res = await window.AUTH.authenticate(form.username.value, form.password.value);
     btn.textContent=original; btn.disabled=false;
     if (res.success) showDashboard();
     else error.textContent=res.error;
   });
 
   logoutBtn.addEventListener('click', ()=>{
-    AUTH.logout();
+    window.AUTH.logout();
     location.reload();
   });
 })();
@@ -570,7 +570,8 @@ function renderOverview(){
     const matchesSearch = !overviewSearch || (set.name || '').toLowerCase().includes(overviewSearch);
     let matchesType = true;
     if (overviewFilterType !== 'all') {
-      matchesType = (set.products || []).some(p => (p.product_type || '').toLowerCase() === overviewFilterType.toLowerCase());
+      const filt = overviewFilterType.toLowerCase();
+      matchesType = (set.products || []).some(p => (p.product_type || '').toLowerCase().includes(filt));
     }
     return matchesSearch && matchesType;
   });
@@ -583,7 +584,9 @@ function renderOverview(){
   sets.sort((a,b)=> ((b.year||0)-(a.year||0)) || (a.name||'').localeCompare(b.name||''));
 
   content.innerHTML = sets.map(set => {
-    const products = (set.products || []).slice().sort((a,b)=> (PRODUCT_TYPE_ORDER[a.product_type]||9) - (PRODUCT_TYPE_ORDER[b.product_type]||9));
+    const products = (set.products || []).slice().sort((a,b)=>
+      (PRODUCT_TYPE_ORDER[a.product_type] || 99) - (PRODUCT_TYPE_ORDER[b.product_type] || 99)
+    );
     const code = escapeHtml(set.code || '??').toUpperCase();
     return `
     <article class="set-card" data-id="${escapeHtml(set.id)}">

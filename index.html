@@ -1,0 +1,963 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0d0b1a">
+    <title>MTG Price Tracker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: #0d0b1a;
+            --bg-card: #1a1530;
+            --bg-card-hover: #221b3d;
+            --accent: #b388ff;
+            --accent-gold: #ffc857;
+            --text: #e8e6f3;
+            --text-muted: #8b87a8;
+            --border: #2d2745;
+            --green: #4caf50;
+            --red: #ef5350;
+            --blue: #42a5f5;
+            --orange: #ffa726;
+            --play: #42a5f5;
+            --set: #66bb6a;
+            --draft: #ffa726;
+            --collector: #b388ff;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* === LOGIN === */
+        #login-screen {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0d0b1a 0%, #1a1530 50%, #0d0b1a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        #login-screen::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: url('assets/mtg-bg.png') center/cover;
+            opacity: 0.15;
+            z-index: 0;
+        }
+
+        .login-card {
+            background: rgba(26, 21, 48, 0.95);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px 32px;
+            max-width: 380px;
+            width: 90%;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+
+        .login-card h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--accent-gold);
+            margin-bottom: 4px;
+        }
+
+        .login-card .subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+            margin-bottom: 32px;
+        }
+
+        .login-card input {
+            width: 100%;
+            padding: 14px 16px;
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 16px;
+            font-family: 'Inter', sans-serif;
+            margin-bottom: 12px;
+            transition: border-color 0.2s;
+        }
+
+        .login-card input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        .login-card input::placeholder { color: var(--text-muted); }
+
+        .login-card button {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, var(--accent) 0%, #7c4dff 100%);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-size: 16px;
+            font-weight: 600;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: transform 0.1s, opacity 0.2s;
+        }
+
+        .login-card button:active { transform: scale(0.98); }
+        .login-card button:disabled { opacity: 0.5; }
+
+        .login-error {
+            color: var(--red);
+            font-size: 13px;
+            text-align: center;
+            margin-top: 12px;
+            min-height: 18px;
+        }
+
+        /* === MAIN APP === */
+        #app { display: none; }
+        #app.active { display: block; }
+
+        .header {
+            background: linear-gradient(135deg, #1a1530 0%, #0d0b1a 100%);
+            border-bottom: 1px solid var(--border);
+            padding: 16px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--accent-gold);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .header h1 .icon { font-size: 22px; }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .header-actions button {
+            background: none;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .header-actions button:hover {
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
+        /* Tabs */
+        .tabs {
+            display: flex;
+            gap: 0;
+            background: var(--bg);
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .tab {
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            border-bottom: 2px solid transparent;
+            transition: all 0.2s;
+            background: none;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .tab.active {
+            color: var(--accent-gold);
+            border-bottom-color: var(--accent-gold);
+        }
+
+        .tab:hover:not(.active) {
+            color: var(--text);
+        }
+
+        /* Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+
+        /* Stats bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            text-align: center;
+        }
+
+        .stat-card .value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--accent-gold);
+            font-family: 'Cinzel', serif;
+        }
+
+        .stat-card .label {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Search */
+        .search-bar {
+            margin-bottom: 16px;
+        }
+
+        .search-bar input {
+            width: 100%;
+            padding: 12px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-size: 15px;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .search-bar input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+
+        /* Set cards */
+        .set-list { display: flex; flex-direction: column; gap: 12px; }
+
+        .set-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s;
+        }
+
+        .set-card:hover { border-color: var(--accent); }
+
+        .set-header {
+            padding: 14px 16px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .set-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .set-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: linear-gradient(135deg, var(--accent) 0%, #7c4dff 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+            flex-shrink: 0;
+            font-family: 'Cinzel', serif;
+        }
+
+        .set-name {
+            font-size: 15px;
+            font-weight: 600;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .set-meta {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .set-chevron {
+            color: var(--text-muted);
+            font-size: 18px;
+            transition: transform 0.2s;
+            flex-shrink: 0;
+            margin-left: 8px;
+        }
+
+        .set-card.expanded .set-chevron { transform: rotate(90deg); }
+
+        .set-products {
+            display: none;
+            border-top: 1px solid var(--border);
+        }
+
+        .set-card.expanded .set-products { display: block; }
+
+        /* Product row */
+        .product-row {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(45, 39, 69, 0.5);
+        }
+
+        .product-row:last-child { border-bottom: none; }
+
+        .product-type-badge {
+            font-size: 11px;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+        }
+
+        .badge-play { background: rgba(66, 165, 245, 0.15); color: var(--play); }
+        .badge-set { background: rgba(102, 187, 106, 0.15); color: var(--set); }
+        .badge-draft { background: rgba(255, 167, 38, 0.15); color: var(--draft); }
+        .badge-collector { background: rgba(179, 136, 255, 0.15); color: var(--collector); }
+
+        .product-prices {
+            text-align: right;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .product-from {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--accent-gold);
+        }
+
+        .product-avg25 {
+            font-size: 12px;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+
+        .product-stock {
+            font-size: 11px;
+            color: var(--text-muted);
+            margin-top: 1px;
+        }
+
+        .product-cm-link {
+            margin-left: 12px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .product-cm-link:hover { color: var(--accent-gold); }
+
+        .product-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .no-data {
+            color: var(--text-muted);
+            font-size: 13px;
+            font-style: italic;
+        }
+
+        .out-of-stock {
+            color: var(--red);
+            font-size: 13px;
+        }
+
+        /* Loading */
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+        }
+
+        .spinner {
+            width: 32px;
+            height: 32px;
+            border: 3px solid var(--border);
+            border-top-color: var(--accent);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+            margin: 0 auto 12px;
+        }
+
+        @keyframes spin { to { transform: rotate(360deg); } }
+
+        /* History view */
+        .history-chart {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 16px;
+            margin-bottom: 12px;
+        }
+
+        .history-chart h3 {
+            font-size: 14px;
+            margin-bottom: 12px;
+            color: var(--text);
+        }
+
+        .chart-container {
+            position: relative;
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        .chart-svg {
+            display: block;
+        }
+
+        /* Filter chips */
+        .filter-chips {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .chip {
+            padding: 6px 14px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .chip.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        .chip:hover:not(.active) {
+            border-color: var(--accent);
+            color: var(--text);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 24px 16px;
+            color: var(--text-muted);
+            font-size: 12px;
+        }
+
+        .footer a { color: var(--accent); text-decoration: none; }
+
+        /* Mobile optimizations */
+        @media (max-width: 640px) {
+            .container { padding: 12px; }
+            .stat-card { padding: 12px; }
+            .stat-card .value { font-size: 22px; }
+            .header h1 { font-size: 15px; }
+            .product-row { padding: 10px 12px; }
+            .set-header { padding: 12px; }
+            .tabs { padding: 0; }
+            .tab { padding: 10px 14px; font-size: 13px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- LOGIN SCREEN -->
+<div id="login-screen">
+    <div class="login-card">
+        <h1>⚔️ MTG Price Tracker</h1>
+        <p class="subtitle">Booster Box Price Database</p>
+        <input type="text" id="login-username" placeholder="Username" autocomplete="username">
+        <input type="password" id="login-password" placeholder="Password" autocomplete="current-password">
+        <button id="login-btn" onclick="handleLogin()">Enter Dashboard</button>
+        <div class="login-error" id="login-error"></div>
+    </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="app">
+    <div class="header">
+        <div class="header-content">
+            <h1><span class="icon">⚔️</span> MTG Price Tracker</h1>
+            <div class="header-actions">
+                <button onclick="logout()">Logout</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <button class="tab active" onclick="switchTab('overview', this)">📊 Overview</button>
+        <button class="tab" onclick="switchTab('history', this)">📈 Price History</button>
+        <button class="tab" onclick="switchTab('stats', this)">📋 Stats</button>
+    </div>
+
+    <div class="container">
+        <!-- Overview Tab -->
+        <div id="tab-overview" class="tab-content">
+            <div class="search-bar">
+                <input type="text" id="search-input" placeholder="Search sets..." oninput="filterSets()">
+            </div>
+            <div class="filter-chips" id="type-filters">
+                <div class="chip active" onclick="toggleFilter('all', this)">All Types</div>
+                <div class="chip" onclick="toggleFilter('Play Booster Box', this)">Play</div>
+                <div class="chip" onclick="toggleFilter('Set Booster Box', this)">Set</div>
+                <div class="chip" onclick="toggleFilter('Draft Booster Box', this)">Draft</div>
+                <div class="chip" onclick="toggleFilter('Collector Booster Box', this)">Collector</div>
+            </div>
+            <div id="overview-content"></div>
+        </div>
+
+        <!-- History Tab -->
+        <div id="tab-history" class="tab-content" style="display:none">
+            <div class="search-bar">
+                <input type="text" id="history-search" placeholder="Search sets for price history..." oninput="filterHistory()">
+            </div>
+            <div id="history-content"></div>
+        </div>
+
+        <!-- Stats Tab -->
+        <div id="tab-stats" class="tab-content" style="display:none">
+            <div id="stats-content"></div>
+        </div>
+    </div>
+
+    <div class="footer">
+        MTG Price Tracker · Data from <a href="https://www.cardmarket.com/en/Magic" target="_blank">CardMarket</a> · Sets from <a href="https://scryfall.com" target="_blank">Scryfall</a>
+    </div>
+</div>
+
+<script src="auth.js"></script>
+<script>
+let overviewData = [];
+let historyData = [];
+let statsData = {};
+let activeFilter = 'all';
+let searchTerm = '';
+
+// === INIT ===
+async function init() {
+    if (isLoggedIn()) {
+        showApp();
+        await loadData();
+    } else {
+        document.getElementById('login-screen').style.display = 'flex';
+    }
+
+    // Enter key login
+    document.getElementById('login-password').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') handleLogin();
+    });
+    document.getElementById('login-username').addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') document.getElementById('login-password').focus();
+    });
+}
+
+async function handleLogin() {
+    const username = document.getElementById('login-username').value.trim();
+    const password = document.getElementById('login-password').value;
+    const errorEl = document.getElementById('login-error');
+    const btn = document.getElementById('login-btn');
+
+    if (!username || !password) {
+        errorEl.textContent = 'Enter username and password';
+        return;
+    }
+
+    btn.disabled = true;
+    btn.textContent = 'Checking...';
+    errorEl.textContent = '';
+
+    try {
+        const ok = await authenticate(username, password);
+        if (ok) {
+            setSession();
+            showApp();
+            await loadData();
+        } else {
+            errorEl.textContent = 'Invalid credentials';
+            btn.disabled = false;
+            btn.textContent = 'Enter Dashboard';
+        }
+    } catch (e) {
+        errorEl.textContent = 'Error: ' + e.message;
+        btn.disabled = false;
+        btn.textContent = 'Enter Dashboard';
+    }
+}
+
+function showApp() {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('app').classList.add('active');
+}
+
+// === DATA LOADING ===
+async function loadData() {
+    try {
+        const [ovRes, histRes, statsRes] = await Promise.all([
+            fetch('data/overview.json'),
+            fetch('data/history.json'),
+            fetch('data/stats.json')
+        ]);
+        overviewData = await ovRes.json();
+        historyData = await histRes.json();
+        statsData = await statsRes.json();
+        renderOverview();
+        renderStats();
+    } catch (e) {
+        document.getElementById('overview-content').innerHTML = '<div class="loading">Failed to load data. Please refresh.</div>';
+    }
+}
+
+// === OVERVIEW ===
+function renderOverview() {
+    const container = document.getElementById('overview-content');
+    let filtered = overviewData;
+
+    // Search filter
+    if (searchTerm) {
+        const term = searchTerm.toLowerCase();
+        filtered = filtered.filter(s =>
+            s.name.toLowerCase().includes(term) ||
+            s.code.toLowerCase().includes(term) ||
+            (s.short_info || '').toLowerCase().includes(term)
+        );
+    }
+
+    // Type filter
+    if (activeFilter !== 'all') {
+        filtered = filtered.filter(s =>
+            s.products.some(p => p.product_type === activeFilter)
+        );
+    }
+
+    if (filtered.length === 0) {
+        container.innerHTML = '<div class="loading">No sets found matching your search.</div>';
+        return;
+    }
+
+    let html = '<div class="set-list">';
+    for (const set of filtered) {
+        const products = activeFilter !== 'all'
+            ? set.products.filter(p => p.product_type === activeFilter)
+            : set.products;
+
+        if (products.length === 0) continue;
+
+        const iconText = (set.code || set.name || '?').substring(0, 2).toUpperCase();
+        const year = set.year || '?';
+        const typeText = set.set_type || '';
+
+        html += `<div class="set-card" onclick="toggleSet(this)">
+            <div class="set-header">
+                <div class="set-info">
+                    <div class="set-icon">${iconText}</div>
+                    <div style="min-width:0;flex:1">
+                        <div class="set-name">${set.name}</div>
+                        <div class="set-meta">${year} · ${typeText} · ${products.length} product${products.length > 1 ? 's' : ''}</div>
+                    </div>
+                </div>
+                <div class="set-chevron">▶</div>
+            </div>
+            <div class="set-products">`;
+
+        for (const p of products) {
+            const typeClass = p.product_type.split(' ')[0].toLowerCase();
+            const fromPrice = p.from_price != null ? `€${p.from_price.toFixed(2)}` : '<span class="out-of-stock">Out of stock</span>';
+            const avg25 = p.avg_25_lowest != null ? `Avg25: €${p.avg_25_lowest.toFixed(2)}` : '';
+            const stock = p.available_items != null ? `${p.available_items} EN listings` : '';
+            const cmLink = p.cardmarket_url ? `<a href="${p.cardmarket_url}" target="_blank" class="product-cm-link" onclick="event.stopPropagation()" title="View on CardMarket">↗</a>` : '';
+
+            html += `<div class="product-row">
+                <div style="display:flex;align-items:center;gap:10px;min-width:0;flex:1">
+                    <span class="product-type-badge badge-${typeClass}">${p.product_type.replace(' Booster Box','')}</span>
+                    <div class="product-prices">
+                        <span class="product-from">${fromPrice}</span>
+                        <span class="product-avg25">${avg25}</span>
+                        <span class="product-stock">${stock}</span>
+                    </div>
+                </div>
+                <div class="product-actions">${cmLink}</div>
+            </div>`;
+        }
+
+        html += `</div></div>`;
+    }
+    html += '</div>';
+    container.innerHTML = html;
+}
+
+function toggleSet(el) {
+    el.classList.toggle('expanded');
+}
+
+function filterSets() {
+    searchTerm = document.getElementById('search-input').value;
+    renderOverview();
+}
+
+function toggleFilter(type, el) {
+    activeFilter = type;
+    document.querySelectorAll('#type-filters .chip').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    renderOverview();
+}
+
+// === HISTORY ===
+let historySearchTerm = '';
+
+function filterHistory() {
+    historySearchTerm = document.getElementById('history-search').value;
+    renderHistory();
+}
+
+function renderHistory() {
+    const container = document.getElementById('history-content');
+    let filtered = historyData;
+
+    if (historySearchTerm) {
+        const term = historySearchTerm.toLowerCase();
+        filtered = filtered.filter(h =>
+            (h.set_name || '').toLowerCase().includes(term) ||
+            (h.set_code || '').toLowerCase().includes(term) ||
+            (h.product_name || '').toLowerCase().includes(term)
+        );
+    }
+
+    // Only show products with more than 1 snapshot (actual history)
+    filtered = filtered.filter(h => h.snapshots.length > 0);
+
+    if (filtered.length === 0) {
+        container.innerHTML = '<div class="loading">No products found. Price history will appear after multiple crawls.</div>';
+        return;
+    }
+
+    let html = '';
+    for (const h of filtered.slice(0, 50)) { // Limit to 50 for performance
+        if (h.snapshots.length === 0) continue;
+
+        const typeClass = (h.product_type || '').split(' ')[0].toLowerCase();
+        const setName = h.set_name || 'Unknown';
+
+        html += `<div class="history-chart">
+            <h3>${setName} (${h.set_code || '?'}) — <span class="product-type-badge badge-${typeClass}">${h.product_type || ''}</span></h3>`;
+
+        if (h.snapshots.length === 1) {
+            const s = h.snapshots[0];
+            html += `<div class="set-meta">First scan: ${s.scan_date} · From: ${s.from_price ? '€'+s.from_price.toFixed(2) : 'N/A'} · Avg25: ${s.avg_25_lowest ? '€'+s.avg_25_lowest.toFixed(2) : 'N/A'}</div>`;
+        } else {
+            // Draw simple SVG line chart
+            html += drawChart(h.snapshots);
+        }
+
+        html += `</div>`;
+    }
+
+    if (filtered.length > 50) {
+        html += `<div class="loading">Showing 50 of ${filtered.length} products. Refine your search to see more.</div>`;
+    }
+
+    container.innerHTML = html;
+}
+
+function drawChart(snapshots) {
+    const width = Math.min(window.innerWidth - 64, 600);
+    const height = 160;
+    const padding = { top: 10, right: 10, bottom: 25, left: 50 };
+    const chartW = width - padding.left - padding.right;
+    const chartH = height - padding.top - padding.bottom;
+
+    const prices = snapshots.map(s => s.avg_25_lowest || s.from_price || 0).filter(p => p > 0);
+    if (prices.length < 2) return '<div class="set-meta">Not enough data points for a chart.</div>';
+
+    const minP = Math.min(...prices) * 0.95;
+    const maxP = Math.max(...prices) * 1.05;
+    const range = maxP - minP || 1;
+
+    const xStep = chartW / (snapshots.length - 1 || 1);
+
+    let points = [];
+    let validSnapshots = [];
+    for (let i = 0; i < snapshots.length; i++) {
+        const p = snapshots[i].avg_25_lowest || snapshots[i].from_price;
+        if (p && p > 0) {
+            const x = padding.left + (validSnapshots.length * (chartW / Math.max(prices.length - 1, 1)));
+            const y = padding.top + chartH - ((p - minP) / range) * chartH;
+            points.push(`${x},${y}`);
+            validSnapshots.push({ x, y, date: snapshots[i].scan_date, price: p });
+        }
+    }
+
+    if (points.length < 2) return '<div class="set-meta">Not enough valid data points.</div>';
+
+    const linePath = 'M ' + points.join(' L ');
+    const areaPath = linePath + ` L ${points[points.length-1].split(',')[0]},${padding.top + chartH} L ${points[0].split(',')[0]},${padding.top + chartH} Z`;
+
+    let html = `<div class="chart-container"><svg class="chart-svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
+        <defs>
+            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#b388ff" stop-opacity="0.3"/>
+                <stop offset="100%" stop-color="#b388ff" stop-opacity="0"/>
+            </linearGradient>
+        </defs>
+        <path d="${areaPath}" fill="url(#areaGrad)" />
+        <path d="${linePath}" fill="none" stroke="#b388ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />`;
+
+    // Dots and labels
+    for (const pt of validSnapshots) {
+        html += `<circle cx="${pt.x}" cy="${pt.y}" r="3" fill="#ffc857" />`;
+    }
+
+    // Y-axis labels
+    html += `<text x="${padding.left - 8}" y="${padding.top + 8}" text-anchor="end" fill="#8b87a8" font-size="10" font-family="Inter">€${maxP.toFixed(0)}</text>`;
+    html += `<text x="${padding.left - 8}" y="${padding.top + chartH}" text-anchor="end" fill="#8b87a8" font-size="10" font-family="Inter">€${minP.toFixed(0)}</text>`;
+
+    // X-axis labels (first and last date)
+    if (validSnapshots.length > 0) {
+        const first = validSnapshots[0];
+        const last = validSnapshots[validSnapshots.length - 1];
+        html += `<text x="${first.x}" y="${height - 5}" text-anchor="start" fill="#8b87a8" font-size="9" font-family="Inter">${first.date}</text>`;
+        html += `<text x="${last.x}" y="${height - 5}" text-anchor="end" fill="#8b87a8" font-size="9" font-family="Inter">${last.date}</text>`;
+    }
+
+    html += `</svg></div>`;
+
+    return html;
+}
+
+// === STATS ===
+function renderStats() {
+    const container = document.getElementById('stats-content');
+    const s = statsData;
+
+    let html = `<div class="stats-bar">
+        <div class="stat-card"><div class="value">${s.total_sets || 0}</div><div class="label">Sets Tracked</div></div>
+        <div class="stat-card"><div class="value">${s.total_products || 0}</div><div class="label">Products</div></div>
+        <div class="stat-card"><div class="value">${s.products_with_prices || 0}</div><div class="label">With EN Prices</div></div>
+        <div class="stat-card"><div class="value">${s.products_out_of_stock || 0}</div><div class="label">Out of Stock</div></div>
+    </div>`;
+
+    if (s.type_breakdown) {
+        html += '<div class="stats-bar">';
+        for (const [type, count] of Object.entries(s.type_breakdown)) {
+            const typeClass = type.split(' ')[0].toLowerCase();
+            html += `<div class="stat-card"><div class="value" style="color:var(--${typeClass})">${count}</div><div class="label">${type.replace(' Booster Box','')}</div></div>`;
+        }
+        html += '</div>';
+    }
+
+    if (s.last_crawl) {
+        html += `<div class="history-chart">
+            <h3>Last Crawl</h3>
+            <div class="set-meta">
+                Job: ${s.last_crawl.job_name || 'N/A'}<br>
+                Status: ${s.last_crawl.status || 'N/A'}<br>
+                Products scanned: ${s.last_crawl.products_scanned || 0}<br>
+                Finished: ${s.last_crawl.finished_at || 'N/A'}<br>
+                Data exported: ${s.exported_at || 'N/A'}
+            </div>
+        </div>`;
+    }
+
+    html += `<div class="history-chart">
+        <h3>About</h3>
+        <div class="set-meta">
+            Tracks booster box prices from CardMarket for all MTG sets with English-language listings.<br><br>
+            <b>Price calculation:</b> Average of the 25 cheapest English listings per product.<br><br>
+            <b>Product types:</b> Play, Set, Draft, and Collector Booster Boxes.<br><br>
+            <b>Data source:</b> CardMarket (English listings only) · Sets from Scryfall API.<br><br>
+            <b>Update frequency:</b> Twice weekly (Monday + Thursday at 05:00 EEST).<br><br>
+            <b>Sets tracked:</b> ${s.total_sets || 0} — from Alpha (1993) to the latest releases.
+        </div>
+    </div>`;
+
+    container.innerHTML = html;
+}
+
+// === TABS ===
+function switchTab(tabName, el) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
+    document.getElementById('tab-' + tabName).style.display = 'block';
+
+    if (tabName === 'history') renderHistory();
+    if (tabName === 'stats') renderStats();
+}
+
+// === START ===
+init();
+</script>
+</body>
+</html>

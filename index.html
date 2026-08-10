@@ -1,963 +1,783 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <meta name="theme-color" content="#0d0b1a">
-    <title>MTG Price Tracker</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-
-        :root {
-            --bg: #0d0b1a;
-            --bg-card: #1a1530;
-            --bg-card-hover: #221b3d;
-            --accent: #b388ff;
-            --accent-gold: #ffc857;
-            --text: #e8e6f3;
-            --text-muted: #8b87a8;
-            --border: #2d2745;
-            --green: #4caf50;
-            --red: #ef5350;
-            --blue: #42a5f5;
-            --orange: #ffa726;
-            --play: #42a5f5;
-            --set: #66bb6a;
-            --draft: #ffa726;
-            --collector: #b388ff;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        /* === LOGIN === */
-        #login-screen {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0d0b1a 0%, #1a1530 50%, #0d0b1a 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        #login-screen::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; right: 0; bottom: 0;
-            background: url('assets/mtg-bg.png') center/cover;
-            opacity: 0.15;
-            z-index: 0;
-        }
-
-        .login-card {
-            background: rgba(26, 21, 48, 0.95);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 40px 32px;
-            max-width: 380px;
-            width: 90%;
-            position: relative;
-            z-index: 1;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
-        }
-
-        .login-card h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 24px;
-            font-weight: 700;
-            text-align: center;
-            color: var(--accent-gold);
-            margin-bottom: 4px;
-        }
-
-        .login-card .subtitle {
-            text-align: center;
-            color: var(--text-muted);
-            font-size: 13px;
-            margin-bottom: 32px;
-        }
-
-        .login-card input {
-            width: 100%;
-            padding: 14px 16px;
-            background: var(--bg);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text);
-            font-size: 16px;
-            font-family: 'Inter', sans-serif;
-            margin-bottom: 12px;
-            transition: border-color 0.2s;
-        }
-
-        .login-card input:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        .login-card input::placeholder { color: var(--text-muted); }
-
-        .login-card button {
-            width: 100%;
-            padding: 14px;
-            background: linear-gradient(135deg, var(--accent) 0%, #7c4dff 100%);
-            border: none;
-            border-radius: 8px;
-            color: white;
-            font-size: 16px;
-            font-weight: 600;
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            transition: transform 0.1s, opacity 0.2s;
-        }
-
-        .login-card button:active { transform: scale(0.98); }
-        .login-card button:disabled { opacity: 0.5; }
-
-        .login-error {
-            color: var(--red);
-            font-size: 13px;
-            text-align: center;
-            margin-top: 12px;
-            min-height: 18px;
-        }
-
-        /* === MAIN APP === */
-        #app { display: none; }
-        #app.active { display: block; }
-
-        .header {
-            background: linear-gradient(135deg, #1a1530 0%, #0d0b1a 100%);
-            border-bottom: 1px solid var(--border);
-            padding: 16px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-        }
-
-        .header-content {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .header h1 {
-            font-family: 'Cinzel', serif;
-            font-size: 18px;
-            font-weight: 600;
-            color: var(--accent-gold);
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .header h1 .icon { font-size: 22px; }
-
-        .header-actions {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .header-actions button {
-            background: none;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 13px;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .header-actions button:hover {
-            border-color: var(--accent);
-            color: var(--text);
-        }
-
-        /* Tabs */
-        .tabs {
-            display: flex;
-            gap: 0;
-            background: var(--bg);
-            border-bottom: 1px solid var(--border);
-            overflow-x: auto;
-            -webkit-overflow-scrolling: touch;
-        }
-
-        .tab {
-            padding: 12px 20px;
-            font-size: 14px;
-            font-weight: 500;
-            color: var(--text-muted);
-            cursor: pointer;
-            white-space: nowrap;
-            border-bottom: 2px solid transparent;
-            transition: all 0.2s;
-            background: none;
-            border-top: none;
-            border-left: none;
-            border-right: none;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .tab.active {
-            color: var(--accent-gold);
-            border-bottom-color: var(--accent-gold);
-        }
-
-        .tab:hover:not(.active) {
-            color: var(--text);
-        }
-
-        /* Content */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-
-        /* Stats bar */
-        .stats-bar {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-            gap: 12px;
-            margin-bottom: 20px;
-        }
-
-        .stat-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px;
-            text-align: center;
-        }
-
-        .stat-card .value {
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--accent-gold);
-            font-family: 'Cinzel', serif;
-        }
-
-        .stat-card .label {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 4px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        /* Search */
-        .search-bar {
-            margin-bottom: 16px;
-        }
-
-        .search-bar input {
-            width: 100%;
-            padding: 12px 16px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text);
-            font-size: 15px;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .search-bar input:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        /* Set cards */
-        .set-list { display: flex; flex-direction: column; gap: 12px; }
-
-        .set-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: border-color 0.2s;
-        }
-
-        .set-card:hover { border-color: var(--accent); }
-
-        .set-header {
-            padding: 14px 16px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .set-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            flex: 1;
-            min-width: 0;
-        }
-
-        .set-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 8px;
-            background: linear-gradient(135deg, var(--accent) 0%, #7c4dff 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 14px;
-            font-weight: 700;
-            color: white;
-            flex-shrink: 0;
-            font-family: 'Cinzel', serif;
-        }
-
-        .set-name {
-            font-size: 15px;
-            font-weight: 600;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-
-        .set-meta {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        .set-chevron {
-            color: var(--text-muted);
-            font-size: 18px;
-            transition: transform 0.2s;
-            flex-shrink: 0;
-            margin-left: 8px;
-        }
-
-        .set-card.expanded .set-chevron { transform: rotate(90deg); }
-
-        .set-products {
-            display: none;
-            border-top: 1px solid var(--border);
-        }
-
-        .set-card.expanded .set-products { display: block; }
-
-        /* Product row */
-        .product-row {
-            padding: 12px 16px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid rgba(45, 39, 69, 0.5);
-        }
-
-        .product-row:last-child { border-bottom: none; }
-
-        .product-type-badge {
-            font-size: 11px;
-            font-weight: 600;
-            padding: 3px 8px;
-            border-radius: 6px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            flex-shrink: 0;
-        }
-
-        .badge-play { background: rgba(66, 165, 245, 0.15); color: var(--play); }
-        .badge-set { background: rgba(102, 187, 106, 0.15); color: var(--set); }
-        .badge-draft { background: rgba(255, 167, 38, 0.15); color: var(--draft); }
-        .badge-collector { background: rgba(179, 136, 255, 0.15); color: var(--collector); }
-
-        .product-prices {
-            text-align: right;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-        }
-
-        .product-from {
-            font-size: 16px;
-            font-weight: 700;
-            color: var(--accent-gold);
-        }
-
-        .product-avg25 {
-            font-size: 12px;
-            color: var(--text-muted);
-            margin-top: 1px;
-        }
-
-        .product-stock {
-            font-size: 11px;
-            color: var(--text-muted);
-            margin-top: 1px;
-        }
-
-        .product-cm-link {
-            margin-left: 12px;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 18px;
-            flex-shrink: 0;
-        }
-
-        .product-cm-link:hover { color: var(--accent-gold); }
-
-        .product-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        .no-data {
-            color: var(--text-muted);
-            font-size: 13px;
-            font-style: italic;
-        }
-
-        .out-of-stock {
-            color: var(--red);
-            font-size: 13px;
-        }
-
-        /* Loading */
-        .loading {
-            text-align: center;
-            padding: 40px;
-            color: var(--text-muted);
-        }
-
-        .spinner {
-            width: 32px;
-            height: 32px;
-            border: 3px solid var(--border);
-            border-top-color: var(--accent);
-            border-radius: 50%;
-            animation: spin 0.8s linear infinite;
-            margin: 0 auto 12px;
-        }
-
-        @keyframes spin { to { transform: rotate(360deg); } }
-
-        /* History view */
-        .history-chart {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 16px;
-            margin-bottom: 12px;
-        }
-
-        .history-chart h3 {
-            font-size: 14px;
-            margin-bottom: 12px;
-            color: var(--text);
-        }
-
-        .chart-container {
-            position: relative;
-            width: 100%;
-            overflow-x: auto;
-        }
-
-        .chart-svg {
-            display: block;
-        }
-
-        /* Filter chips */
-        .filter-chips {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-        }
-
-        .chip {
-            padding: 6px 14px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            font-size: 13px;
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: 'Inter', sans-serif;
-        }
-
-        .chip.active {
-            background: var(--accent);
-            border-color: var(--accent);
-            color: white;
-        }
-
-        .chip:hover:not(.active) {
-            border-color: var(--accent);
-            color: var(--text);
-        }
-
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 24px 16px;
-            color: var(--text-muted);
-            font-size: 12px;
-        }
-
-        .footer a { color: var(--accent); text-decoration: none; }
-
-        /* Mobile optimizations */
-        @media (max-width: 640px) {
-            .container { padding: 12px; }
-            .stat-card { padding: 12px; }
-            .stat-card .value { font-size: 22px; }
-            .header h1 { font-size: 15px; }
-            .product-row { padding: 10px 12px; }
-            .set-header { padding: 12px; }
-            .tabs { padding: 0; }
-            .tab { padding: 10px 14px; font-size: 13px; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#121214">
+<title>MTG Booster Box Tracker</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<script src="auth.js"></script>
+<style>
+:root{
+  --bg:#121214;
+  --bg-elev:#18181B;
+  --bg-card:rgba(30,30,35,0.72);
+  --bg-glass:rgba(255,255,255,0.04);
+  --border:rgba(255,255,255,0.08);
+  --border-hover:rgba(255,255,255,0.16);
+  --text:#F8E6C1;
+  --text-sec:#A09B8C;
+  --text-muted:#6D6859;
+  --gold:#FFC857;
+  --gold-dim:#B8860B;
+  --mana-w:#F8E6C1;
+  --mana-u:#0E68AB;
+  --mana-b:#1B1B1B;
+  --mana-r:#D3202A;
+  --mana-g:#00733E;
+  --play:#0E68AB;
+  --set:#00733E;
+  --draft:#F59E0B;
+  --collector:#8B5CF6;
+  --radius:14px;
+  --radius-sm:10px;
+  --shadow:0 18px 60px rgba(0,0,0,0.45);
+  --max:980px;
+  --header-h:64px;
+}
+* { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
+html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family:'Inter',sans-serif; min-height:100dvh; }
+body { font-size:15px; line-height:1.45; }
+
+/* Animated subtle mana-gradient background */
+.bg-mana{
+  position:fixed; inset:0; z-index:-2; pointer-events:none;
+  background:
+    radial-gradient(circle at 12% 18%, rgba(14,104,171,0.18) 0%, transparent 32%),
+    radial-gradient(circle at 88% 14%, rgba(211,32,42,0.14) 0%, transparent 30%),
+    radial-gradient(circle at 55% 85%, rgba(0,115,62,0.14) 0%, transparent 35%),
+    radial-gradient(circle at 22% 75%, rgba(248,230,193,0.08) 0%, transparent 28%),
+    var(--bg);
+}
+.bg-noise{
+  position:fixed; inset:0; z-index:-1; pointer-events:none; opacity:0.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.7' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* LOGIN */
+.login-wrap{
+  display:flex; align-items:center; justify-content:center; min-height:100dvh;
+  padding:24px;
+}
+.login-card{
+  width:100%; max-width:360px;
+  background:linear-gradient(160deg, rgba(30,30,35,0.96), rgba(24,24,27,0.98));
+  border:1px solid var(--border);
+  border-radius:calc(var(--radius) + 4px);
+  padding:32px 26px 34px;
+  box-shadow:var(--shadow);
+  position:relative; overflow:hidden;
+}
+.login-card::before{
+  content:""; position:absolute; inset:0; border-radius:inherit; padding:1px;
+  background:linear-gradient(135deg, rgba(255,200,87,0.22), rgba(14,104,171,0.22), rgba(0,115,62,0.12));
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  pointer-events:none;
+}
+.login-crest{
+  width:76px; height:76px; margin:0 auto 18px; border-radius:50%;
+  background:linear-gradient(145deg, rgba(255,200,87,0.18), rgba(14,104,171,0.18));
+  border:1px solid rgba(255,200,87,0.25);
+  display:grid; place-items:center; font-family:'Cinzel',serif; font-size:32px; color:var(--gold); font-weight:700;
+  box-shadow:0 0 38px rgba(255,200,87,0.16), inset 0 0 22px rgba(14,104,171,0.14);
+}
+.login-title{ font-family:'Cinzel',serif; font-size:22px; font-weight:600; text-align:center; margin-bottom:4px; }
+.login-sub{ color:var(--text-sec); text-align:center; font-size:13px; margin-bottom:26px; }
+.login-card form{ display:flex; flex-direction:column; gap:14px; }
+.field{ display:flex; flex-direction:column; gap:5px; }
+.field label{ font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:var(--text-sec); font-weight:600; }
+.field input{
+  width:100%; padding:13px 14px; border-radius:var(--radius-sm);
+  background:rgba(0,0,0,0.22); border:1px solid var(--border); color:var(--text);
+  font-size:15px; outline:none; transition:border .2s, box-shadow .2s;
+}
+.field input:focus{ border-color:rgba(255,200,87,0.45); box-shadow:0 0 0 3px rgba(255,200,87,0.08); }
+.btn{
+  width:100%; padding:14px; border-radius:var(--radius-sm); border:none; cursor:pointer;
+  font-weight:700; font-size:15px; letter-spacing:0.02em; font-family:'Inter',sans-serif;
+  transition:transform .12s, box-shadow .2s, background .2s; position:relative; overflow:hidden;
+}
+.btn-primary{
+  background:linear-gradient(135deg, #B8860B, #D4AF37 60%, #B8860B);
+  color:#1A1200; box-shadow:0 8px 24px rgba(184,134,11,0.28);
+}
+.btn-primary:hover{ transform:translateY(-1px); box-shadow:0 10px 30px rgba(184,134,11,0.36); }
+.btn-primary:active{ transform:translateY(0); }
+.login-error{ color:#FF7A7A; font-size:13px; text-align:center; min-height:18px; margin-top:2px; }
+
+/* APP */
+.app{ display:none; min-height:100dvh; }
+.app.is-visible{ display:block; animation:fadeIn .35s ease; }
+@keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
+
+.header{
+  position:sticky; top:0; z-index:50; height:var(--header-h); padding:0 14px;
+  background:rgba(18,18,20,0.82); backdrop-filter:blur(18px); -webkit-backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--border); display:flex; align-items:center; justify-content:space-between;
+}
+.brand{ display:flex; align-items:center; gap:12px; }
+.brand-crest{
+  width:38px; height:38px; border-radius:50%; flex-shrink:0; display:grid; place-items:center;
+  background:linear-gradient(135deg, rgba(255,200,87,0.18), rgba(14,104,171,0.18));
+  border:1px solid rgba(255,200,87,0.22); font-family:'Cinzel',serif; font-size:18px; color:var(--gold); font-weight:700;
+}
+.brand-title{ font-family:'Cinzel',serif; font-size:17px; font-weight:600; line-height:1.2; }
+.brand-title span{ display:block; font-family:'Inter',sans-serif; font-size:10px; font-weight:500; letter-spacing:0.12em; text-transform:uppercase; color:var(--gold-dim); }
+.user-pill{
+  display:flex; align-items:center; gap:8px; padding:6px 12px; border-radius:30px;
+  background:var(--bg-glass); border:1px solid var(--border); font-size:12px; color:var(--text-sec); cursor:pointer;
+  transition:border .2s, background .2s;
+}
+.user-pill:hover{ border-color:rgba(255,200,87,0.35); background:rgba(255,200,87,0.05); }
+.user-pill svg{ width:14px; height:14px; stroke:var(--gold); }
+
+.container{ max-width:var(--max); margin:0 auto; padding:18px 14px 36px; }
+
+/* Tabs */
+.tabs{ position:sticky; top:var(--header-h); z-index:40; padding:12px 0 0; margin:-18px -14px 20px; }
+.tabs-inner{
+  display:flex; gap:8px; padding:6px; border-radius:30px; border:1px solid var(--border);
+  background:var(--bg-glass); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  max-width:var(--max); margin:0 auto;
+}
+.tab{
+  flex:1; padding:9px 8px; border-radius:24px; border:none; background:transparent; color:var(--text-sec);
+  font-size:13px; font-weight:600; cursor:pointer; transition:all .2s; white-space:nowrap;
+}
+.tab.is-active{ background:rgba(255,200,87,0.12); color:var(--gold); box-shadow:0 4px 14px rgba(0,0,0,0.22); }
+.tab:not(.is-active):hover{ color:var(--text); background:rgba(255,255,255,0.04); }
+
+/* Panel */
+.panel{ display:none; animation:fadeIn .28s ease; }
+.panel.is-active{ display:block; }
+
+/* Search + filters */
+.search-row{ margin-bottom:16px; }
+.search-box{
+  display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:var(--radius-sm);
+  background:var(--bg-glass); border:1px solid var(--border); transition:border .2s;
+}
+.search-box:focus-within{ border-color:rgba(255,200,87,0.35); }
+.search-box svg{ width:18px; height:18px; stroke:var(--text-muted); flex-shrink:0; }
+.search-box input{
+  flex:1; background:transparent; border:none; outline:none; color:var(--text); font-size:15px;
+}
+.search-box input::placeholder{ color:var(--text-muted); }
+.chips{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.chip{
+  padding:7px 14px; border-radius:20px; border:1px solid var(--border); background:var(--bg-glass);
+  color:var(--text-sec); font-size:12px; font-weight:600; cursor:pointer; transition:all .2s;
+}
+.chip.is-active{ border-color:rgba(255,200,87,0.35); background:rgba(255,200,87,0.10); color:var(--gold); }
+.chip:not(.is-active):hover{ border-color:var(--border-hover); background:rgba(255,255,255,0.05); color:var(--text); }
+
+/* Loading */
+.loading{
+  display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:220px; gap:16px; color:var(--text-sec);
+}
+.spinner{
+  width:42px; height:42px; border-radius:50%;
+  border:3px solid rgba(255,255,255,0.06);
+  border-top-color:var(--gold);
+  animation:spin 0.9s linear infinite;
+}
+@keyframes spin{ to{ transform:rotate(360deg);} }
+
+/* Section titles */
+.section-title{ font-family:'Cinzel',serif; font-size:18px; font-weight:600; margin-bottom:12px; display:flex; align-items:center; gap:10px; }
+.section-title .dot{ width:7px; height:7px; border-radius:50%; background:var(--gold); box-shadow:0 0 10px var(--gold); }
+.subtitle{ color:var(--text-sec); font-size:13px; margin-bottom:16px; }
+
+/* Cards */
+.set-card{
+  border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--bg-card); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.28); overflow:hidden; margin-bottom:16px;
+  transition:border .2s, transform .2s, box-shadow .2s;
+}
+.set-card:hover{ border-color:var(--border-hover); transform:translateY(-1px); box-shadow:0 16px 48px rgba(0,0,0,0.34); }
+.set-header{
+  display:flex; align-items:center; gap:12px; padding:14px 14px 14px 16px; cursor:pointer;
+  background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
+}
+.set-icon{
+  width:42px; height:42px; border-radius:50%; flex-shrink:0; display:grid; place-items:center;
+  font-family:'Cinzel',serif; font-weight:700; font-size:12px; letter-spacing:0.04em; color:#fff;
+  background:var(--mana-u); border:2px solid rgba(255,255,255,0.12);
+  text-shadow:0 1px 2px rgba(0,0,0,0.45);
+}
+.set-icon[data-type="core"]{ background:linear-gradient(145deg, var(--mana-w), #DCC698); color:#3A2F18; }
+.set-icon[data-type="expansion"]{ background:linear-gradient(145deg, var(--mana-u), #084A7C); }
+.set-icon[data-type="draft_innovation"]{ background:linear-gradient(145deg, var(--mana-g), #00592C); }
+.set-icon[data-type="commander"]{ background:linear-gradient(145deg, var(--mana-b), #333333); border-color:rgba(255,255,255,0.14); }
+.set-icon[data-type="masters"]{ background:linear-gradient(145deg, var(--mana-r), #9E151E); }
+.set-icon[data-type="spellbook"]{ background:linear-gradient(145deg, #8B5CF6, #6D28D9); }
+.set-icon[data-type="premium"]{ background:linear-gradient(145deg, #F59E0B, #B45309); }
+.set-info{ flex:1; min-width:0; }
+.set-name{ font-family:'Cinzel',serif; font-size:16px; font-weight:600; margin-bottom:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.set-meta{ display:flex; gap:8px; align-items:center; color:var(--text-sec); font-size:12px; flex-wrap:wrap; }
+.set-meta span{ display:inline-flex; align-items:center; gap:4px; }
+.set-chevron{
+  width:24px; height:24px; flex-shrink:0; stroke:var(--text-sec); transition:transform .25s;
+}
+.set-card.is-open .set-chevron{ transform:rotate(180deg); }
+.set-body{
+  max-height:0; overflow:hidden; transition:max-height .35s ease, padding .25s ease;
+  border-top:1px solid transparent;
+}
+.set-card.is-open .set-body{
+  max-height:2000px; border-top-color:var(--border); padding:8px 0 6px;
+}
+.set-desc{ padding:2px 16px 10px; font-size:13px; color:var(--text-sec); line-height:1.5; }
+
+/* Product rows */
+.product-list{ padding:0 8px; }
+.product-row{
+  display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center;
+  padding:12px 10px; margin:0 2px 8px; border-radius:var(--radius-sm);
+  background:var(--bg-glass); border:1px solid rgba(255,255,255,0.03);
+  transition:background .2s, border .2s;
+}
+.product-row:hover{ background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.07); }
+.badge{
+  min-width:58px; text-align:center; padding:5px 8px; border-radius:6px; font-size:10px; font-weight:800;
+  text-transform:uppercase; letter-spacing:0.04em; color:#fff; background:var(--text-muted);
+}
+.badge-play{ background:var(--play); }
+.badge-set{ background:var(--set); }
+.badge-draft{ background:var(--draft); color:#2A1500; }
+.badge-collector{ background:var(--collector); }
+.product-name{ font-weight:500; font-size:14px; color:var(--text); }
+.product-sub{ font-size:11px; color:var(--text-muted); margin-top:2px; }
+.price-col{ text-align:right; }
+.price-main{ font-size:19px; font-weight:700; color:var(--gold); letter-spacing:-0.02em; }
+.price-sub{ font-size:11px; color:var(--text-sec); }
+.price-missing{ color:var(--text-muted); font-size:13px; }
+.stock-tag{ display:inline-flex; align-items:center; gap:4px; font-size:11px; color:var(--text-sec); margin-top:3px; }
+.stock-tag.out{ color:#FF7A7A; }
+.cm-link{
+  display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%;
+  background:var(--bg-elev); border:1px solid var(--border); color:var(--text-sec); margin-left:4px;
+  transition:all .2s; flex-shrink:0;
+}
+.cm-link:hover{ border-color:rgba(255,200,87,0.4); color:var(--gold); background:rgba(255,200,87,0.07); }
+.cm-link svg{ width:16px; height:16px; }
+
+/* Stats */
+.stats-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:12px; margin-bottom:20px; }
+.stat-card{
+  padding:18px 16px; border-radius:var(--radius); border:1px solid var(--border);
+  background:var(--bg-card); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.20); transition:transform .2s, border .2s;
+}
+.stat-card:hover{ transform:translateY(-2px); border-color:var(--border-hover); }
+.stat-card.wide{ grid-column:span 2; }
+.stat-label{ font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:0.09em; color:var(--text-sec); margin-bottom:8px; }
+.stat-value{ font-size:28px; font-weight:700; color:var(--gold); letter-spacing:-0.02em; }
+.stat-card.wide .stat-value{ font-size:22px; }
+.stat-sub{ font-size:12px; color:var(--text-sec); margin-top:4px; }
+.type-breakdown{ display:flex; flex-direction:column; gap:8px; }
+.type-row{ display:flex; align-items:center; gap:10px; font-size:13px; }
+.type-dot{ width:9px; height:9px; border-radius:50%; }
+.type-name{ flex:1; color:var(--text); }
+.type-count{ font-weight:700; }
+
+/* History */
+.history-grid{ display:grid; gap:16px; }
+.history-card{
+  border:1px solid var(--border); border-radius:var(--radius);
+  background:var(--bg-card); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+  box-shadow:0 10px 30px rgba(0,0,0,0.20); padding:14px 14px 16px;
+}
+.history-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:10px; }
+.history-title{ font-weight:600; font-size:14px; }
+.history-sub{ font-size:12px; color:var(--text-sec); }
+.chart-wrap{ width:100%; height:160px; position:relative; }
+.chart-wrap svg{ width:100%; height:100%; display:block; }
+.chart-labels{ display:flex; justify-content:space-between; font-size:10px; color:var(--text-muted); margin-top:6px; }
+.chart-legend{ display:flex; gap:14px; justify-content:center; margin-top:8px; font-size:11px; }
+.legend-item{ display:flex; align-items:center; gap:5px; color:var(--text-sec); }
+.legend-line{ width:16px; height:2px; border-radius:2px; }
+
+/* Empty / error */
+.empty{ text-align:center; color:var(--text-sec); padding:46px 12px; }
+.empty-icon{ font-size:34px; margin-bottom:10px; opacity:.7; }
+.empty h3{ font-size:16px; margin-bottom:6px; color:var(--text); }
+.empty p{ font-size:13px; margin:0; }
+.error-msg{ color:#FF7A7A; font-size:13px; text-align:center; padding:20px 0; }
+
+/* Footer */
+.footer{ text-align:center; font-size:11px; color:var(--text-muted); padding:20px 0 34px; }
+.footer a{ color:var(--gold-dim); text-decoration:none; }
+
+/* Desktop tweaks */
+@media(min-width:640px){
+  :root{ --header-h:68px; }
+  .brand-title{ font-size:20px; }
+  .container{ padding:22px 22px 42px; }
+  .tabs{ margin:-22px -22px 22px; }
+  .stats-grid{ grid-template-columns:repeat(4,1fr); }
+  .stat-card.wide{ grid-column:span 1; }
+  .history-grid{ grid-template-columns:repeat(2,1fr); }
+}
+@media(min-width:900px){
+  .history-grid{ grid-template-columns:repeat(3,1fr); }
+}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+</style>
 </head>
 <body>
+<div class="bg-mana"></div>
+<div class="bg-noise"></div>
 
-<!-- LOGIN SCREEN -->
-<div id="login-screen">
-    <div class="login-card">
-        <h1>⚔️ MTG Price Tracker</h1>
-        <p class="subtitle">Booster Box Price Database</p>
-        <input type="text" id="login-username" placeholder="Username" autocomplete="username">
-        <input type="password" id="login-password" placeholder="Password" autocomplete="current-password">
-        <button id="login-btn" onclick="handleLogin()">Enter Dashboard</button>
-        <div class="login-error" id="login-error"></div>
-    </div>
+<!-- Login -->
+<div id="login" class="login-wrap">
+  <div class="login-card">
+    <div class="login-crest">M</div>
+    <h1 class="login-title">MTG Booster Box Tracker</h1>
+    <p class="login-sub">CardMarket English listings · Updated twice weekly</p>
+    <form id="loginForm" autocomplete="off">
+      <div class="field">
+        <label for="username">Username</label>
+        <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter username" required>
+      </div>
+      <div class="field">
+        <label for="password">Password</label>
+        <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required>
+      </div>
+      <button type="submit" class="btn btn-primary">Enter Dashboard</button>
+      <div id="loginError" class="login-error"></div>
+    </form>
+  </div>
 </div>
 
-<!-- MAIN APP -->
-<div id="app">
-    <div class="header">
-        <div class="header-content">
-            <h1><span class="icon">⚔️</span> MTG Price Tracker</h1>
-            <div class="header-actions">
-                <button onclick="logout()">Logout</button>
-            </div>
-        </div>
+<!-- App -->
+<div id="app" class="app">
+  <header class="header">
+    <div class="brand">
+      <div class="brand-crest">M</div>
+      <div class="brand-title">MTG Tracker <span>Booster Box Prices</span></div>
     </div>
+    <button id="logoutBtn" class="user-pill" title="Log out">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+      <span id="userName">aquarius</span>
+    </button>
+  </header>
 
+  <div class="container">
     <div class="tabs">
-        <button class="tab active" onclick="switchTab('overview', this)">📊 Overview</button>
-        <button class="tab" onclick="switchTab('history', this)">📈 Price History</button>
-        <button class="tab" onclick="switchTab('stats', this)">📋 Stats</button>
+      <div class="tabs-inner">
+        <button class="tab is-active" data-tab="overview">Overview</button>
+        <button class="tab" data-tab="history">Price History</button>
+        <button class="tab" data-tab="stats">Stats</button>
+      </div>
     </div>
 
-    <div class="container">
-        <!-- Overview Tab -->
-        <div id="tab-overview" class="tab-content">
-            <div class="search-bar">
-                <input type="text" id="search-input" placeholder="Search sets..." oninput="filterSets()">
-            </div>
-            <div class="filter-chips" id="type-filters">
-                <div class="chip active" onclick="toggleFilter('all', this)">All Types</div>
-                <div class="chip" onclick="toggleFilter('Play Booster Box', this)">Play</div>
-                <div class="chip" onclick="toggleFilter('Set Booster Box', this)">Set</div>
-                <div class="chip" onclick="toggleFilter('Draft Booster Box', this)">Draft</div>
-                <div class="chip" onclick="toggleFilter('Collector Booster Box', this)">Collector</div>
-            </div>
-            <div id="overview-content"></div>
+    <!-- Overview panel -->
+    <div id="overviewPanel" class="panel is-active">
+      <div class="search-row">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="setSearch" type="search" placeholder="Search sets by name..." autocomplete="off">
         </div>
+      </div>
+      <div class="chips" id="typeChips">
+        <button class="chip is-active" data-filter="all">All Types</button>
+        <button class="chip" data-filter="Play">Play</button>
+        <button class="chip" data-filter="Set">Set</button>
+        <button class="chip" data-filter="Draft">Draft</button>
+        <button class="chip" data-filter="Collector">Collector</button>
+      </div>
+      <div id="overviewLoading" class="loading"><div class="spinner"></div>Loading sets...</div>
+      <div id="overviewContent"></div>
+    </div>
 
-        <!-- History Tab -->
-        <div id="tab-history" class="tab-content" style="display:none">
-            <div class="search-bar">
-                <input type="text" id="history-search" placeholder="Search sets for price history..." oninput="filterHistory()">
-            </div>
-            <div id="history-content"></div>
-        </div>
+    <!-- History panel -->
+    <div id="historyPanel" class="panel">
+      <h2 class="section-title"><span class="dot"></span>Price History</h2>
+      <p class="subtitle">Historical "from" price and avg-25 lowest for tracked products.</p>
+      <div id="historyLoading" class="loading"><div class="spinner"></div>Loading history...</div>
+      <div id="historyContent" class="history-grid"></div>
+    </div>
 
-        <!-- Stats Tab -->
-        <div id="tab-stats" class="tab-content" style="display:none">
-            <div id="stats-content"></div>
-        </div>
+    <!-- Stats panel -->
+    <div id="statsPanel" class="panel">
+      <h2 class="section-title"><span class="dot"></span>Dashboard Stats</h2>
+      <p class="subtitle">At-a-glance summary of your tracked CardMarket data.</p>
+      <div id="statsLoading" class="loading"><div class="spinner"></div>Loading stats...</div>
+      <div id="statsContent"></div>
     </div>
 
     <div class="footer">
-        MTG Price Tracker · Data from <a href="https://www.cardmarket.com/en/Magic" target="_blank">CardMarket</a> · Sets from <a href="https://scryfall.com" target="_blank">Scryfall</a>
+      Data from CardMarket (English) · <a href="https://pierbex.github.io/mtg-dashboard/" target="_blank" rel="noopener">pierbex.github.io/mtg-dashboard</a>
     </div>
+  </div>
 </div>
 
-<script src="auth.js"></script>
 <script>
+/* ---- Auth ---- */
+(function initAuth(){
+  const login = document.getElementById('login');
+  const app = document.getElementById('app');
+  const form = document.getElementById('loginForm');
+  const error = document.getElementById('loginError');
+  const logoutBtn = document.getElementById('logoutBtn');
+
+  function showDashboard(){
+    login.style.display='none';
+    app.classList.add('is-visible');
+    document.getElementById('userName').textContent = (window.AUTH && AUTH.getUsername()) || 'User';
+    initDashboard();
+  }
+
+  if (window.AUTH && AUTH.isLoggedIn()) showDashboard();
+
+  form.addEventListener('submit', async (e)=>{
+    e.preventDefault();
+    error.textContent='';
+    const btn = form.querySelector('button');
+    const original = btn.textContent;
+    btn.textContent='Verifying...'; btn.disabled=true;
+    const res = await AUTH.authenticate(form.username.value, form.password.value);
+    btn.textContent=original; btn.disabled=false;
+    if (res.success) showDashboard();
+    else error.textContent=res.error;
+  });
+
+  logoutBtn.addEventListener('click', ()=>{
+    AUTH.logout();
+    location.reload();
+  });
+})();
+
+/* ---- Dashboard ---- */
+let dashboardInitialized = false;
 let overviewData = [];
 let historyData = [];
-let statsData = {};
-let activeFilter = 'all';
-let searchTerm = '';
+let statsData = null;
 
-// === INIT ===
-async function init() {
-    if (isLoggedIn()) {
-        showApp();
-        await loadData();
-    } else {
-        document.getElementById('login-screen').style.display = 'flex';
-    }
+const PRODUCT_TYPE_ORDER = {
+  'Play Booster Box':1,
+  'Set Booster Box':2,
+  'Draft Booster Box':3,
+  'Collector Booster Box':4,
+  'Jumpstart Booster Box':5,
+  'Theme Booster Box':6
+};
 
-    // Enter key login
-    document.getElementById('login-password').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') handleLogin();
+function fmtPrice(n){
+  if (n === null || n === undefined || n === '') return null;
+  const val = parseFloat(n);
+  if (isNaN(val)) return null;
+  return val.toLocaleString('en-IE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+}
+function fmtDate(str){
+  if (!str) return '';
+  try { return new Date(str).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); }
+  catch(e){ return str; }
+}
+function typeClass(type){
+  if (!type) return 'badge-play';
+  const t = String(type).toLowerCase();
+  if (t.includes('play')) return 'badge-play';
+  if (t.includes('draft')) return 'badge-draft';
+  if (t.includes('collector')) return 'badge-collector';
+  if (t.includes('set')) return 'badge-set';
+  return 'badge-play';
+}
+function setTypeKey(set_type){
+  const s = String(set_type || '').toLowerCase();
+  if (s.includes('core')) return 'core';
+  if (s.includes('expansion')) return 'expansion';
+  if (s.includes('draft')) return 'draft_innovation';
+  if (s.includes('commander')) return 'commander';
+  if (s.includes('masters')) return 'masters';
+  if (s.includes('spellbook')) return 'spellbook';
+  if (s.includes('premium')) return 'premium';
+  return 'expansion';
+}
+function escapeHtml(str){ return String(str).replace(/[&<>"']/g, m=>({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m])); }
+
+async function initDashboard(){
+  if (dashboardInitialized) return;
+  dashboardInitialized = true;
+
+  setupTabs();
+  setupOverviewFilters();
+
+  await Promise.all([
+    fetchJSON('data/overview.json').then(d => { overviewData = d || []; renderOverview(); }).catch(e => showError('overviewContent','overviewLoading', e)),
+    fetchJSON('data/history.json').then(d => { historyData = d || []; renderHistory(); }).catch(e => showError('historyContent','historyLoading', e)),
+    fetchJSON('data/stats.json').then(d => { statsData = d; renderStats(); }).catch(e => showError('statsContent','statsLoading', e))
+  ]);
+}
+
+async function fetchJSON(path){
+  const res = await fetch(path + '?' + Date.now(), { cache:'no-store' });
+  if (!res.ok) throw new Error('Failed to load ' + path + ' (' + res.status + ')');
+  return res.json();
+}
+
+function showError(containerId, loadingId, err){
+  const el = document.getElementById(containerId);
+  document.getElementById(loadingId).style.display='none';
+  el.innerHTML = '<div class="error-msg">Could not load data.<br>' + escapeHtml(err.message) + '</div>';
+}
+
+function setupTabs(){
+  document.querySelectorAll('.tab').forEach(btn=>{
+    btn.addEventListener('click', ()=>{
+      document.querySelectorAll('.tab').forEach(t=>t.classList.remove('is-active'));
+      document.querySelectorAll('.panel').forEach(p=>p.classList.remove('is-active'));
+      btn.classList.add('is-active');
+      document.getElementById(btn.dataset.tab + 'Panel').classList.add('is-active');
+      window.scrollTo({ top:0, behavior:'smooth' });
     });
-    document.getElementById('login-username').addEventListener('keypress', (e) => {
-        if (e.key === 'Enter') document.getElementById('login-password').focus();
-    });
+  });
 }
 
-async function handleLogin() {
-    const username = document.getElementById('login-username').value.trim();
-    const password = document.getElementById('login-password').value;
-    const errorEl = document.getElementById('login-error');
-    const btn = document.getElementById('login-btn');
+/* ---- Overview ---- */
+let overviewFilterType = 'all';
+let overviewSearch = '';
 
-    if (!username || !password) {
-        errorEl.textContent = 'Enter username and password';
-        return;
-    }
+function setupOverviewFilters(){
+  const search = document.getElementById('setSearch');
+  search.addEventListener('input', (e)=>{ overviewSearch = e.target.value.toLowerCase(); renderOverview(); });
 
-    btn.disabled = true;
-    btn.textContent = 'Checking...';
-    errorEl.textContent = '';
-
-    try {
-        const ok = await authenticate(username, password);
-        if (ok) {
-            setSession();
-            showApp();
-            await loadData();
-        } else {
-            errorEl.textContent = 'Invalid credentials';
-            btn.disabled = false;
-            btn.textContent = 'Enter Dashboard';
-        }
-    } catch (e) {
-        errorEl.textContent = 'Error: ' + e.message;
-        btn.disabled = false;
-        btn.textContent = 'Enter Dashboard';
-    }
-}
-
-function showApp() {
-    document.getElementById('login-screen').style.display = 'none';
-    document.getElementById('app').classList.add('active');
-}
-
-// === DATA LOADING ===
-async function loadData() {
-    try {
-        const [ovRes, histRes, statsRes] = await Promise.all([
-            fetch('data/overview.json'),
-            fetch('data/history.json'),
-            fetch('data/stats.json')
-        ]);
-        overviewData = await ovRes.json();
-        historyData = await histRes.json();
-        statsData = await statsRes.json();
-        renderOverview();
-        renderStats();
-    } catch (e) {
-        document.getElementById('overview-content').innerHTML = '<div class="loading">Failed to load data. Please refresh.</div>';
-    }
-}
-
-// === OVERVIEW ===
-function renderOverview() {
-    const container = document.getElementById('overview-content');
-    let filtered = overviewData;
-
-    // Search filter
-    if (searchTerm) {
-        const term = searchTerm.toLowerCase();
-        filtered = filtered.filter(s =>
-            s.name.toLowerCase().includes(term) ||
-            s.code.toLowerCase().includes(term) ||
-            (s.short_info || '').toLowerCase().includes(term)
-        );
-    }
-
-    // Type filter
-    if (activeFilter !== 'all') {
-        filtered = filtered.filter(s =>
-            s.products.some(p => p.product_type === activeFilter)
-        );
-    }
-
-    if (filtered.length === 0) {
-        container.innerHTML = '<div class="loading">No sets found matching your search.</div>';
-        return;
-    }
-
-    let html = '<div class="set-list">';
-    for (const set of filtered) {
-        const products = activeFilter !== 'all'
-            ? set.products.filter(p => p.product_type === activeFilter)
-            : set.products;
-
-        if (products.length === 0) continue;
-
-        const iconText = (set.code || set.name || '?').substring(0, 2).toUpperCase();
-        const year = set.year || '?';
-        const typeText = set.set_type || '';
-
-        html += `<div class="set-card" onclick="toggleSet(this)">
-            <div class="set-header">
-                <div class="set-info">
-                    <div class="set-icon">${iconText}</div>
-                    <div style="min-width:0;flex:1">
-                        <div class="set-name">${set.name}</div>
-                        <div class="set-meta">${year} · ${typeText} · ${products.length} product${products.length > 1 ? 's' : ''}</div>
-                    </div>
-                </div>
-                <div class="set-chevron">▶</div>
-            </div>
-            <div class="set-products">`;
-
-        for (const p of products) {
-            const typeClass = p.product_type.split(' ')[0].toLowerCase();
-            const fromPrice = p.from_price != null ? `€${p.from_price.toFixed(2)}` : '<span class="out-of-stock">Out of stock</span>';
-            const avg25 = p.avg_25_lowest != null ? `Avg25: €${p.avg_25_lowest.toFixed(2)}` : '';
-            const stock = p.available_items != null ? `${p.available_items} EN listings` : '';
-            const cmLink = p.cardmarket_url ? `<a href="${p.cardmarket_url}" target="_blank" class="product-cm-link" onclick="event.stopPropagation()" title="View on CardMarket">↗</a>` : '';
-
-            html += `<div class="product-row">
-                <div style="display:flex;align-items:center;gap:10px;min-width:0;flex:1">
-                    <span class="product-type-badge badge-${typeClass}">${p.product_type.replace(' Booster Box','')}</span>
-                    <div class="product-prices">
-                        <span class="product-from">${fromPrice}</span>
-                        <span class="product-avg25">${avg25}</span>
-                        <span class="product-stock">${stock}</span>
-                    </div>
-                </div>
-                <div class="product-actions">${cmLink}</div>
-            </div>`;
-        }
-
-        html += `</div></div>`;
-    }
-    html += '</div>';
-    container.innerHTML = html;
-}
-
-function toggleSet(el) {
-    el.classList.toggle('expanded');
-}
-
-function filterSets() {
-    searchTerm = document.getElementById('search-input').value;
+  document.getElementById('typeChips').addEventListener('click', (e)=>{
+    if (!e.target.classList.contains('chip')) return;
+    document.querySelectorAll('#typeChips .chip').forEach(c=>c.classList.remove('is-active'));
+    e.target.classList.add('is-active');
+    overviewFilterType = e.target.dataset.filter;
     renderOverview();
+  });
 }
 
-function toggleFilter(type, el) {
-    activeFilter = type;
-    document.querySelectorAll('#type-filters .chip').forEach(c => c.classList.remove('active'));
-    el.classList.add('active');
-    renderOverview();
-}
+function renderOverview(){
+  const loading = document.getElementById('overviewLoading');
+  const content = document.getElementById('overviewContent');
+  loading.style.display = 'none';
 
-// === HISTORY ===
-let historySearchTerm = '';
-
-function filterHistory() {
-    historySearchTerm = document.getElementById('history-search').value;
-    renderHistory();
-}
-
-function renderHistory() {
-    const container = document.getElementById('history-content');
-    let filtered = historyData;
-
-    if (historySearchTerm) {
-        const term = historySearchTerm.toLowerCase();
-        filtered = filtered.filter(h =>
-            (h.set_name || '').toLowerCase().includes(term) ||
-            (h.set_code || '').toLowerCase().includes(term) ||
-            (h.product_name || '').toLowerCase().includes(term)
-        );
+  let sets = overviewData.filter(set => {
+    const matchesSearch = !overviewSearch || (set.name || '').toLowerCase().includes(overviewSearch);
+    let matchesType = true;
+    if (overviewFilterType !== 'all') {
+      matchesType = (set.products || []).some(p => (p.product_type || '').toLowerCase() === overviewFilterType.toLowerCase());
     }
+    return matchesSearch && matchesType;
+  });
 
-    // Only show products with more than 1 snapshot (actual history)
-    filtered = filtered.filter(h => h.snapshots.length > 0);
+  if (!sets.length){
+    content.innerHTML = '<div class="empty"><div class="empty-icon">🔮</div><h3>No sets found</h3><p>Try a different search or filter.</p></div>';
+    return;
+  }
 
-    if (filtered.length === 0) {
-        container.innerHTML = '<div class="loading">No products found. Price history will appear after multiple crawls.</div>';
-        return;
-    }
+  sets.sort((a,b)=> ((b.year||0)-(a.year||0)) || (a.name||'').localeCompare(b.name||''));
 
-    let html = '';
-    for (const h of filtered.slice(0, 50)) { // Limit to 50 for performance
-        if (h.snapshots.length === 0) continue;
-
-        const typeClass = (h.product_type || '').split(' ')[0].toLowerCase();
-        const setName = h.set_name || 'Unknown';
-
-        html += `<div class="history-chart">
-            <h3>${setName} (${h.set_code || '?'}) — <span class="product-type-badge badge-${typeClass}">${h.product_type || ''}</span></h3>`;
-
-        if (h.snapshots.length === 1) {
-            const s = h.snapshots[0];
-            html += `<div class="set-meta">First scan: ${s.scan_date} · From: ${s.from_price ? '€'+s.from_price.toFixed(2) : 'N/A'} · Avg25: ${s.avg_25_lowest ? '€'+s.avg_25_lowest.toFixed(2) : 'N/A'}</div>`;
-        } else {
-            // Draw simple SVG line chart
-            html += drawChart(h.snapshots);
-        }
-
-        html += `</div>`;
-    }
-
-    if (filtered.length > 50) {
-        html += `<div class="loading">Showing 50 of ${filtered.length} products. Refine your search to see more.</div>`;
-    }
-
-    container.innerHTML = html;
-}
-
-function drawChart(snapshots) {
-    const width = Math.min(window.innerWidth - 64, 600);
-    const height = 160;
-    const padding = { top: 10, right: 10, bottom: 25, left: 50 };
-    const chartW = width - padding.left - padding.right;
-    const chartH = height - padding.top - padding.bottom;
-
-    const prices = snapshots.map(s => s.avg_25_lowest || s.from_price || 0).filter(p => p > 0);
-    if (prices.length < 2) return '<div class="set-meta">Not enough data points for a chart.</div>';
-
-    const minP = Math.min(...prices) * 0.95;
-    const maxP = Math.max(...prices) * 1.05;
-    const range = maxP - minP || 1;
-
-    const xStep = chartW / (snapshots.length - 1 || 1);
-
-    let points = [];
-    let validSnapshots = [];
-    for (let i = 0; i < snapshots.length; i++) {
-        const p = snapshots[i].avg_25_lowest || snapshots[i].from_price;
-        if (p && p > 0) {
-            const x = padding.left + (validSnapshots.length * (chartW / Math.max(prices.length - 1, 1)));
-            const y = padding.top + chartH - ((p - minP) / range) * chartH;
-            points.push(`${x},${y}`);
-            validSnapshots.push({ x, y, date: snapshots[i].scan_date, price: p });
-        }
-    }
-
-    if (points.length < 2) return '<div class="set-meta">Not enough valid data points.</div>';
-
-    const linePath = 'M ' + points.join(' L ');
-    const areaPath = linePath + ` L ${points[points.length-1].split(',')[0]},${padding.top + chartH} L ${points[0].split(',')[0]},${padding.top + chartH} Z`;
-
-    let html = `<div class="chart-container"><svg class="chart-svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}">
-        <defs>
-            <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0%" stop-color="#b388ff" stop-opacity="0.3"/>
-                <stop offset="100%" stop-color="#b388ff" stop-opacity="0"/>
-            </linearGradient>
-        </defs>
-        <path d="${areaPath}" fill="url(#areaGrad)" />
-        <path d="${linePath}" fill="none" stroke="#b388ff" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" />`;
-
-    // Dots and labels
-    for (const pt of validSnapshots) {
-        html += `<circle cx="${pt.x}" cy="${pt.y}" r="3" fill="#ffc857" />`;
-    }
-
-    // Y-axis labels
-    html += `<text x="${padding.left - 8}" y="${padding.top + 8}" text-anchor="end" fill="#8b87a8" font-size="10" font-family="Inter">€${maxP.toFixed(0)}</text>`;
-    html += `<text x="${padding.left - 8}" y="${padding.top + chartH}" text-anchor="end" fill="#8b87a8" font-size="10" font-family="Inter">€${minP.toFixed(0)}</text>`;
-
-    // X-axis labels (first and last date)
-    if (validSnapshots.length > 0) {
-        const first = validSnapshots[0];
-        const last = validSnapshots[validSnapshots.length - 1];
-        html += `<text x="${first.x}" y="${height - 5}" text-anchor="start" fill="#8b87a8" font-size="9" font-family="Inter">${first.date}</text>`;
-        html += `<text x="${last.x}" y="${height - 5}" text-anchor="end" fill="#8b87a8" font-size="9" font-family="Inter">${last.date}</text>`;
-    }
-
-    html += `</svg></div>`;
-
-    return html;
-}
-
-// === STATS ===
-function renderStats() {
-    const container = document.getElementById('stats-content');
-    const s = statsData;
-
-    let html = `<div class="stats-bar">
-        <div class="stat-card"><div class="value">${s.total_sets || 0}</div><div class="label">Sets Tracked</div></div>
-        <div class="stat-card"><div class="value">${s.total_products || 0}</div><div class="label">Products</div></div>
-        <div class="stat-card"><div class="value">${s.products_with_prices || 0}</div><div class="label">With EN Prices</div></div>
-        <div class="stat-card"><div class="value">${s.products_out_of_stock || 0}</div><div class="label">Out of Stock</div></div>
-    </div>`;
-
-    if (s.type_breakdown) {
-        html += '<div class="stats-bar">';
-        for (const [type, count] of Object.entries(s.type_breakdown)) {
-            const typeClass = type.split(' ')[0].toLowerCase();
-            html += `<div class="stat-card"><div class="value" style="color:var(--${typeClass})">${count}</div><div class="label">${type.replace(' Booster Box','')}</div></div>`;
-        }
-        html += '</div>';
-    }
-
-    if (s.last_crawl) {
-        html += `<div class="history-chart">
-            <h3>Last Crawl</h3>
-            <div class="set-meta">
-                Job: ${s.last_crawl.job_name || 'N/A'}<br>
-                Status: ${s.last_crawl.status || 'N/A'}<br>
-                Products scanned: ${s.last_crawl.products_scanned || 0}<br>
-                Finished: ${s.last_crawl.finished_at || 'N/A'}<br>
-                Data exported: ${s.exported_at || 'N/A'}
-            </div>
-        </div>`;
-    }
-
-    html += `<div class="history-chart">
-        <h3>About</h3>
-        <div class="set-meta">
-            Tracks booster box prices from CardMarket for all MTG sets with English-language listings.<br><br>
-            <b>Price calculation:</b> Average of the 25 cheapest English listings per product.<br><br>
-            <b>Product types:</b> Play, Set, Draft, and Collector Booster Boxes.<br><br>
-            <b>Data source:</b> CardMarket (English listings only) · Sets from Scryfall API.<br><br>
-            <b>Update frequency:</b> Twice weekly (Monday + Thursday at 05:00 EEST).<br><br>
-            <b>Sets tracked:</b> ${s.total_sets || 0} — from Alpha (1993) to the latest releases.
+  content.innerHTML = sets.map(set => {
+    const products = (set.products || []).slice().sort((a,b)=> (PRODUCT_TYPE_ORDER[a.product_type]||9) - (PRODUCT_TYPE_ORDER[b.product_type]||9));
+    const code = escapeHtml(set.code || '??').toUpperCase();
+    return `
+    <article class="set-card" data-id="${escapeHtml(set.id)}">
+      <div class="set-header" onclick="toggleSet(this)">
+        <div class="set-icon" data-type="${setTypeKey(set.set_type)}" title="${escapeHtml(set.set_type || '')}">${code}</div>
+        <div class="set-info">
+          <div class="set-name">${escapeHtml(set.name || '')}</div>
+          <div class="set-meta">
+            <span>${escapeHtml(String(set.year || ''))}</span>
+            <span>•</span>
+            <span>${escapeHtml(set.set_type || '')}</span>
+            <span>•</span>
+            <span>${set.card_count || '?'} cards</span>
+            <span>•</span>
+            <span>${products.length} products</span>
+          </div>
         </div>
-    </div>`;
-
-    container.innerHTML = html;
+        <svg class="set-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </div>
+      <div class="set-body">
+        ${set.short_info ? `<div class="set-desc">${escapeHtml(set.short_info)}</div>` : ''}
+        <div class="product-list">
+          ${products.map(p => renderProductRow(p)).join('')}
+        </div>
+      </div>
+    </article>`;
+  }).join('');
 }
 
-// === TABS ===
-function switchTab(tabName, el) {
-    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
-    el.classList.add('active');
-    document.querySelectorAll('.tab-content').forEach(c => c.style.display = 'none');
-    document.getElementById('tab-' + tabName).style.display = 'block';
-
-    if (tabName === 'history') renderHistory();
-    if (tabName === 'stats') renderStats();
+function renderProductRow(p){
+  const from = fmtPrice(p.from_price);
+  const avg = fmtPrice(p.avg_25_lowest);
+  const badgeClass = typeClass(p.product_type);
+  const name = escapeHtml(p.product_name || '');
+  const type = escapeHtml(p.product_type || '');
+  const out = !p.available_items || Number(p.available_items) === 0;
+  return `
+  <div class="product-row">
+    <div class="badge ${badgeClass}">${type}</div>
+    <div>
+      <div class="product-name">${name}</div>
+      <div class="product-sub">Updated ${fmtDate(p.scan_date)}</div>
+    </div>
+    <div class="price-col">
+      ${from !== null ? `<div class="price-main">€${from}</div>` : `<div class="price-missing">No price</div>`}
+      ${avg !== null ? `<div class="price-sub">avg25 €${avg}</div>` : ''}
+      <div class="stock-tag ${out ? 'out' : ''}">${out ? '● Out of stock' : '● ' + (Number(p.available_items)||0).toLocaleString() + ' listed'}</div>
+    </div>
+    ${p.cardmarket_url ? `<a class="cm-link" href="${escapeHtml(p.cardmarket_url)}" target="_blank" rel="noopener" title="Open on CardMarket">↗</a>` : ''}
+  </div>`;
 }
 
-// === START ===
-init();
+function toggleSet(header){
+  const card = header.closest('.set-card');
+  const body = card.querySelector('.set-body');
+  const wasOpen = card.classList.contains('is-open');
+  document.querySelectorAll('.set-card.is-open').forEach(c=>{
+    if (c !== card){ c.classList.remove('is-open'); c.querySelector('.set-body').style.maxHeight=null; }
+  });
+  if (!wasOpen){
+    card.classList.add('is-open');
+    body.style.maxHeight = body.scrollHeight + 'px';
+    setTimeout(()=>{ if (card.classList.contains('is-open')) body.style.maxHeight='2000px'; }, 350);
+  } else {
+    card.classList.remove('is-open');
+    body.style.maxHeight = null;
+  }
+}
+
+/* ---- History ---- */
+function renderHistory(){
+  const loading = document.getElementById('historyLoading');
+  const content = document.getElementById('historyContent');
+  loading.style.display='none';
+
+  let items = (historyData || []).filter(h => (h.snapshots || []).length >= 2).slice().sort((a,b)=> b.snapshots.length - a.snapshots.length);
+  if (!items.length){
+    content.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">📉</div><h3>No history yet</h3><p>History charts will appear once multiple price snapshots are available.</p></div>';
+    return;
+  }
+
+  items = items.slice(0, 60); // show most-sampled products, mobile first
+  content.innerHTML = items.map(h => renderHistoryCard(h)).join('');
+}
+
+function renderHistoryCard(h){
+  const snaps = h.snapshots || [];
+  const fromSeries = snaps.map(s => parseFloat(s.from_price)).filter(v=>!isNaN(v));
+  const avgSeries = snaps.map(s => parseFloat(s.avg_25_lowest)).filter(v=>!isNaN(v));
+  if (!fromSeries.length) fromSeries.push(0);
+  if (!avgSeries.length) avgSeries.push(0);
+  const all = [...fromSeries, ...avgSeries];
+  const min = Math.min(...all), max = Math.max(...all);
+  const pad = (max - min) * 0.1 || 1;
+  const yMin = Math.max(0, min - pad), yMax = max + pad;
+  const w = 300, height = 150, padX=28, padY=20;
+  const chartW = w - padX*2, chartH = height - padY*2;
+
+  function svgPath(series, color){
+    if (!series.length) return '';
+    const points = series.map((v,i)=>{
+      const x = padX + (series.length > 1 ? (i / (series.length - 1)) * chartW : chartW/2);
+      const y = padY + chartH - ((v - yMin) / (yMax - yMin || 1)) * chartH;
+      return `${x.toFixed(1)},${y.toFixed(1)}`;
+    });
+    const area = `M ${padX},${padY+chartH} L ${points.join(' L ')} L ${padX+chartW},${padY+chartH} Z`;
+    const line = `M ${points.join(' L ')}`;
+    const dots = points.map((pt,i)=> `<circle cx="${pt.split(',')[0]}" cy="${pt.split(',')[1]}" r="2.4" fill="${color}" stroke="none" />`).join('');
+    return `<path d="${area}" fill="${color}" opacity="0.10" stroke="none" />
+            <path d="${line}" fill="none" stroke="${color}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+            ${dots}`;
+  }
+
+  const fromSvg = svgPath(fromSeries, 'var(--gold)');
+  const avgSvg = svgPath(avgSeries, 'var(--mana-u)');
+  const firstDate = fmtDate(snaps[0].scan_date);
+  const lastDate = fmtDate(snaps[snaps.length - 1].scan_date);
+  const currentFrom = fmtPrice(snaps[snaps.length-1].from_price);
+  const currentAvg = fmtPrice(snaps[snaps.length-1].avg_25_lowest);
+
+  return `
+  <div class="history-card">
+    <div class="history-head">
+      <div>
+        <div class="history-title">${escapeHtml(h.product_name || '')}</div>
+        <div class="history-sub">${escapeHtml(h.set_name || '')} · ${escapeHtml(h.product_type || '')}</div>
+      </div>
+      <div class="badge ${typeClass(h.product_type)}">${escapeHtml(h.product_type || '')}</div>
+    </div>
+    <div class="chart-wrap">
+      <svg viewBox="0 0 ${w} ${height}" preserveAspectRatio="none">
+        ${gridLines(w, height, padX, padY, chartW, chartH, yMin, yMax)}
+        ${avgSvg}
+        ${fromSvg}
+      </svg>
+    </div>
+    <div class="chart-legend">
+      <span class="legend-item"><span class="legend-line" style="background:var(--gold)"></span> from ${currentFrom !== null ? '€'+currentFrom : '—'}</span>
+      <span class="legend-item"><span class="legend-line" style="background:var(--mana-u)"></span> avg25 ${currentAvg !== null ? '€'+currentAvg : '—'}</span>
+    </div>
+    <div class="chart-labels"><span>${firstDate}</span><span>${lastDate}</span></div>
+  </div>`;
+}
+
+function gridLines(w, h, padX, padY, cw, ch, yMin, yMax){
+  const range = yMax - yMin || 1;
+  let lines = '';
+  for (let i=0; i<=4; i++){
+    const y = padY + (i/4)*ch;
+    const val = (yMax - (i/4)*range).toFixed(0);
+    lines += `<line x1="${padX}" y1="${y.toFixed(1)}" x2="${w-padX}" y2="${y.toFixed(1)}" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />`;
+    lines += `<text x="4" y="${(y+3).toFixed(1)}" fill="var(--text-muted)" font-size="8" font-family="Inter,sans-serif">€${val}</text>`;
+  }
+  return lines;
+}
+
+/* ---- Stats ---- */
+function renderStats(){
+  const loading = document.getElementById('statsLoading');
+  const content = document.getElementById('statsContent');
+  loading.style.display='none';
+  if (!statsData){
+    content.innerHTML = '<div class="empty"><div class="empty-icon">📊</div><h3>No stats available</h3></div>';
+    return;
+  }
+  const s = statsData;
+  const typeBreakdown = s.type_breakdown || {};
+  const last = s.last_crawl || {};
+  const exported = fmtDate(s.exported_at);
+
+  content.innerHTML = `
+    <div class="stats-grid">
+      <div class="stat-card"><div class="stat-label">Total Sets</div><div class="stat-value">${(s.total_sets||0).toLocaleString()}</div><div class="stat-sub">tracked sets</div></div>
+      <div class="stat-card"><div class="stat-label">Total Products</div><div class="stat-value">${(s.total_products||0).toLocaleString()}</div><div class="stat-sub">all booster boxes</div></div>
+      <div class="stat-card"><div class="stat-label">With Prices</div><div class="stat-value">${(s.products_with_prices||0).toLocaleString()}</div><div class="stat-sub">priced listings</div></div>
+      <div class="stat-card"><div class="stat-label">Out of Stock</div><div class="stat-value">${(s.products_out_of_stock||0).toLocaleString()}</div><div class="stat-sub">unavailable</div></div>
+      <div class="stat-card wide"><div class="stat-label">Total Snapshots</div><div class="stat-value" style="font-size:22px">${(s.total_snapshots||0).toLocaleString()}</div><div class="stat-sub">price observations in history</div></div>
+      <div class="stat-card wide"><div class="stat-label">Last Crawl</div><div class="stat-value" style="font-size:18px">${escapeHtml(last.status || '—')} · ${fmtDate(last.finished_at)}</div><div class="stat-sub">${(last.products_scanned||0).toLocaleString()} products scanned · ${(last.items_scraped||0).toLocaleString()} items scraped</div></div>
+      <div class="stat-card wide"><div class="stat-label">Exported</div><div class="stat-value" style="font-size:22px">${exported || '—'}</div><div class="stat-sub">JSON bundle generation date</div></div>
+    </div>
+    <div class="set-card" style="padding:18px 18px 22px;">
+      <h3 class="section-title" style="font-size:16px; margin-bottom:14px"><span class="dot"></span>Product Type Breakdown</h3>
+      <div class="type-breakdown">
+        ${Object.entries(typeBreakdown).sort((a,b)=>b[1]-a[1]).map(([type,count])=>`
+          <div class="type-row">
+            <span class="type-dot" style="background:var(--${typeClass(type).replace('badge-','')})"></span>
+            <span class="type-name">${escapeHtml(type)}</span>
+            <span class="type-count">${count.toLocaleString()}</span>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
 </script>
 </body>
 </html>

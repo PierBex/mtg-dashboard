@@ -1,8 +1,6 @@
 // Auth configuration for MTG Dashboard
-// Password is hashed with SHA-256 — the plain text password is shared privately with Pier
 const AUTH_CONFIG = {
     username: "aquarius",
-    // SHA-256 hash of the password
     password_hash: "57016ab31516ab194980337d54cf8e97959f30d827aa0f574f535b84eae37cf4",
     session_key: "mtg_dashboard_auth",
     session_duration_hours: 24,

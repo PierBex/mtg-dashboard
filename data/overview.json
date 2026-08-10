@@ -1,0 +1,4947 @@
+[
+  {
+    "id": 1,
+    "name": "Star Trek",
+    "code": "trk",
+    "released_at": "2026-11-13",
+    "year": "2026",
+    "set_type": "expansion",
+    "short_info": "Star Trek (2026) \u00b7 expansion \u00b7 129 cards",
+    "card_count": 129,
+    "products": [
+      {
+        "product_id": 48,
+        "product_type": "Play Booster Box",
+        "product_name": "Star Trek Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Star-Trek-Play-Booster-Box?language=1",
+        "from_price": 141.5,
+        "avg_25_lowest": 158.27,
+        "available_items": 15,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 24,
+        "product_type": "Collector Booster Box",
+        "product_name": "Star Trek Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Star-Trek-Collector-Booster-Box?language=1",
+        "from_price": 467.1,
+        "avg_25_lowest": 506.81,
+        "available_items": 17,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Mystery Booster Commander Edition",
+    "code": "mbc",
+    "released_at": "2026-11-09",
+    "year": "2026",
+    "set_type": "draft_innovation",
+    "short_info": "Mystery Booster Commander Edition (2026) \u00b7 draft_innovation \u00b7 80 cards",
+    "card_count": 80,
+    "products": [
+      {
+        "product_id": 149,
+        "product_type": "Draft Booster Box",
+        "product_name": "Mystery Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Mystery-Booster-Box?language=1",
+        "from_price": 185.99,
+        "avg_25_lowest": 307.38,
+        "available_items": 40,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 162,
+        "product_type": "Draft Booster Box",
+        "product_name": "Mystery Booster: Convention Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Mystery-Booster-Convention-Edition-Booster-Box?language=1",
+        "from_price": 219.0,
+        "avg_25_lowest": 349.5,
+        "available_items": 27,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Reality Fracture",
+    "code": "fra",
+    "released_at": "2026-10-02",
+    "year": "2026",
+    "set_type": "expansion",
+    "short_info": "Reality Fracture (2026) \u00b7 expansion \u00b7 43 cards",
+    "card_count": 43,
+    "products": [
+      {
+        "product_id": 13,
+        "product_type": "Play Booster Box",
+        "product_name": "Reality Fracture Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Reality-Fracture-Play-Booster-Box?language=1",
+        "from_price": 127.89,
+        "avg_25_lowest": 137.33,
+        "available_items": 25,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 14,
+        "product_type": "Collector Booster Box",
+        "product_name": "Reality Fracture Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Reality-Fracture-Collector-Booster-Box?language=1",
+        "from_price": 302.09,
+        "avg_25_lowest": 317.33,
+        "available_items": 21,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "The Hobbit",
+    "code": "hob",
+    "released_at": "2026-08-14",
+    "year": "2026",
+    "set_type": "expansion",
+    "short_info": "The Hobbit (2026) \u00b7 expansion \u00b7 321 cards",
+    "card_count": 321,
+    "products": [
+      {
+        "product_id": 1,
+        "product_type": "Play Booster Box",
+        "product_name": "The Hobbit Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Hobbit-Play-Booster-Box?language=1",
+        "from_price": 165.0,
+        "avg_25_lowest": 170.91,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 4,
+        "product_type": "Collector Booster Box",
+        "product_name": "The Hobbit Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Hobbit-Collector-Booster-Box?language=1",
+        "from_price": 699.69,
+        "avg_25_lowest": 718.09,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Marvel Super Heroes",
+    "code": "msh",
+    "released_at": "2026-06-26",
+    "year": "2026",
+    "set_type": "expansion",
+    "short_info": "Marvel Super Heroes (2026) \u00b7 expansion \u00b7 453 cards",
+    "card_count": 453,
+    "products": [
+      {
+        "product_id": 2,
+        "product_type": "Play Booster Box",
+        "product_name": "Magic: The Gathering | Marvel Super Heroes Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Marvel-Super-Heroes-Play-Booster-Box?language=1",
+        "from_price": 95.28,
+        "avg_25_lowest": 106.91,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 7,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic: The Gathering | Marvel Super Heroes Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Marvel-Super-Heroes-Jumpstart-Booster-Box?language=1",
+        "from_price": 104.95,
+        "avg_25_lowest": 115.0,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 3,
+        "product_type": "Collector Booster Box",
+        "product_name": "Magic: The Gathering | Marvel Super Heroes Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Marvel-Super-Heroes-Collector-Booster-Box?language=1",
+        "from_price": 315.0,
+        "avg_25_lowest": 332.79,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Secrets of Strixhaven",
+    "code": "sos",
+    "released_at": "2026-04-24",
+    "year": "2026",
+    "set_type": "expansion",
+    "short_info": "Secrets of Strixhaven (2026) \u00b7 expansion \u00b7 368 cards",
+    "card_count": 368,
+    "products": [
+      {
+        "product_id": 6,
+        "product_type": "Play Booster Box",
+        "product_name": "Secrets of Strixhaven Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Secrets-of-Strixhaven-Play-Booster-Box?language=1",
+        "from_price": 98.95,
+        "avg_25_lowest": 103.91,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 8,
+        "product_type": "Collector Booster Box",
+        "product_name": "Secrets of Strixhaven Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Secrets-of-Strixhaven-Collector-Booster-Box?language=1",
+        "from_price": 340.0,
+        "avg_25_lowest": 370.9,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Teenage Mutant Ninja Turtles",
+    "code": "tmt",
+    "released_at": "2026-03-06",
+    "year": "2026",
+    "set_type": "expansion",
+    "short_info": "Teenage Mutant Ninja Turtles (2026) \u00b7 expansion \u00b7 320 cards",
+    "card_count": 320,
+    "products": [
+      {
+        "product_id": 9,
+        "product_type": "Play Booster Box",
+        "product_name": "Magic: The Gathering | Teenage Mutant Ninja Turtles Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Teenage-Mutant-Ninja-Turtles-Play-Booster-Box?language=1",
+        "from_price": 68.0,
+        "avg_25_lowest": 75.04,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 21,
+        "product_type": "Collector Booster Box",
+        "product_name": "Magic: The Gathering | Teenage Mutant Ninja Turtles Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Teenage-Mutant-Ninja-Turtles-Collector-Booster-Box?language=1",
+        "from_price": 259.0,
+        "avg_25_lowest": 296.06,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Lorwyn Eclipsed",
+    "code": "ecl",
+    "released_at": "2026-01-23",
+    "year": "2026",
+    "set_type": "expansion",
+    "short_info": "Lorwyn Eclipsed (2026) \u00b7 expansion \u00b7 408 cards",
+    "card_count": 408,
+    "products": [
+      {
+        "product_id": 15,
+        "product_type": "Play Booster Box",
+        "product_name": "Lorwyn Eclipsed Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Lorwyn-Eclipsed-Play-Booster-Box?language=1",
+        "from_price": 104.99,
+        "avg_25_lowest": 123.19,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 242,
+        "product_type": "Draft Booster Box",
+        "product_name": "Lorwyn Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Lorwyn-Booster-Box?language=1",
+        "from_price": 1200.0,
+        "avg_25_lowest": 2152.14,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 23,
+        "product_type": "Collector Booster Box",
+        "product_name": "Lorwyn Eclipsed Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Lorwyn-Eclipsed-Collector-Booster-Box?language=1",
+        "from_price": 315.0,
+        "avg_25_lowest": 342.58,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Avatar: The Last Airbender",
+    "code": "tla",
+    "released_at": "2025-11-21",
+    "year": "2025",
+    "set_type": "expansion",
+    "short_info": "Avatar: The Last Airbender (2025) \u00b7 expansion \u00b7 394 cards",
+    "card_count": 394,
+    "products": [
+      {
+        "product_id": 10,
+        "product_type": "Play Booster Box",
+        "product_name": "Magic: The Gathering | Avatar: The Last Airbender Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Avatar-The-Last-Airbender-Play-Booster-Box?language=1",
+        "from_price": 109.9,
+        "avg_25_lowest": 120.04,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 61,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic: The Gathering | Avatar: The Last Airbender Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Avatar-The-Last-Airbender-Jumpstart-Booster-Box?language=1",
+        "from_price": 109.9,
+        "avg_25_lowest": 119.57,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 12,
+        "product_type": "Collector Booster Box",
+        "product_name": "Magic: The Gathering | Avatar: The Last Airbender Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Avatar-The-Last-Airbender-Collector-Booster-Box?language=1",
+        "from_price": 340.0,
+        "avg_25_lowest": 370.85,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Marvel's Spider-Man",
+    "code": "spm",
+    "released_at": "2025-09-26",
+    "year": "2025",
+    "set_type": "expansion",
+    "short_info": "Marvel's Spider-Man (2025) \u00b7 expansion \u00b7 286 cards",
+    "card_count": 286,
+    "products": []
+  },
+  {
+    "id": 11,
+    "name": "Edge of Eternities",
+    "code": "eoe",
+    "released_at": "2025-08-01",
+    "year": "2025",
+    "set_type": "expansion",
+    "short_info": "Edge of Eternities (2025) \u00b7 expansion \u00b7 400 cards",
+    "card_count": 400,
+    "products": [
+      {
+        "product_id": 20,
+        "product_type": "Play Booster Box",
+        "product_name": "Edge of Eternities Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Edge-of-Eternities-Play-Booster-Box?language=1",
+        "from_price": 174.0,
+        "avg_25_lowest": 190.85,
+        "available_items": 44,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 46,
+        "product_type": "Collector Booster Box",
+        "product_name": "Edge of Eternities Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Edge-of-Eternities-Collector-Booster-Box?language=1",
+        "from_price": 599.0,
+        "avg_25_lowest": 1033.58,
+        "available_items": 26,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Final Fantasy",
+    "code": "fin",
+    "released_at": "2025-06-13",
+    "year": "2025",
+    "set_type": "expansion",
+    "short_info": "Final Fantasy (2025) \u00b7 expansion \u00b7 599 cards",
+    "card_count": 599,
+    "products": [
+      {
+        "product_id": 5,
+        "product_type": "Play Booster Box",
+        "product_name": "Magic: The Gathering - FINAL FANTASY Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-FINAL-FANTASY-Play-Booster-Box?language=1",
+        "from_price": 154.0,
+        "avg_25_lowest": 161.42,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 270,
+        "product_type": "Draft Booster Box",
+        "product_name": "FINAL FANTASY Basic",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/FINAL-FANTASY-Basic-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 18,
+        "product_type": "Collector Booster Box",
+        "product_name": "Magic: The Gathering - FINAL FANTASY Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-FINAL-FANTASY-Collector-Booster-Box?language=1",
+        "from_price": 1300.0,
+        "avg_25_lowest": 1418.98,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Tarkir: Dragonstorm",
+    "code": "tdm",
+    "released_at": "2025-04-11",
+    "year": "2025",
+    "set_type": "expansion",
+    "short_info": "Tarkir: Dragonstorm (2025) \u00b7 expansion \u00b7 427 cards",
+    "card_count": 427,
+    "products": [
+      {
+        "product_id": 29,
+        "product_type": "Play Booster Box",
+        "product_name": "Tarkir: Dragonstorm Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Tarkir-Dragonstorm-Play-Booster-Box?language=1",
+        "from_price": 112.0,
+        "avg_25_lowest": 133.76,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 45,
+        "product_type": "Collector Booster Box",
+        "product_name": "Tarkir: Dragonstorm Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Tarkir-Dragonstorm-Collector-Booster-Box?language=1",
+        "from_price": 430.0,
+        "avg_25_lowest": 486.71,
+        "available_items": 35,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Aetherdrift",
+    "code": "dft",
+    "released_at": "2025-02-14",
+    "year": "2025",
+    "set_type": "expansion",
+    "short_info": "Aetherdrift (2025) \u00b7 expansion \u00b7 553 cards",
+    "card_count": 553,
+    "products": [
+      {
+        "product_id": 34,
+        "product_type": "Play Booster Box",
+        "product_name": "Aetherdrift Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Aetherdrift-Play-Booster-Box?language=1",
+        "from_price": 78.0,
+        "avg_25_lowest": 92.25,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 28,
+        "product_type": "Collector Booster Box",
+        "product_name": "Aetherdrift Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Aetherdrift-Collector-Booster-Box?language=1",
+        "from_price": 229.95,
+        "avg_25_lowest": 247.06,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Innistrad Remastered",
+    "code": "inr",
+    "released_at": "2025-01-24",
+    "year": "2025",
+    "set_type": "masters",
+    "short_info": "Innistrad Remastered (2025) \u00b7 masters \u00b7 495 cards",
+    "card_count": 495,
+    "products": [
+      {
+        "product_id": 44,
+        "product_type": "Play Booster Box",
+        "product_name": "Innistrad Remastered Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Remastered-Play-Booster-Box?language=1",
+        "from_price": 164.9,
+        "avg_25_lowest": 200.36,
+        "available_items": 30,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 195,
+        "product_type": "Draft Booster Box",
+        "product_name": "Innistrad Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Booster-Box?language=1",
+        "from_price": 529.0,
+        "avg_25_lowest": 935.3,
+        "available_items": 19,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 37,
+        "product_type": "Collector Booster Box",
+        "product_name": "Innistrad Remastered Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Remastered-Collector-Booster-Box?language=1",
+        "from_price": 359.2,
+        "avg_25_lowest": 412.06,
+        "available_items": 43,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Foundations",
+    "code": "fdn",
+    "released_at": "2024-11-15",
+    "year": "2024",
+    "set_type": "core",
+    "short_info": "Foundations (2024) \u00b7 Core Set \u00b7 core \u00b7 771 cards",
+    "card_count": 771,
+    "products": [
+      {
+        "product_id": 19,
+        "product_type": "Play Booster Box",
+        "product_name": "Magic: The Gathering Foundations Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Foundations-Play-Booster-Box?language=1",
+        "from_price": 105.0,
+        "avg_25_lowest": 121.34,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 31,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic: The Gathering Foundations Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Foundations-Jumpstart-Booster-Box?language=1",
+        "from_price": 85.0,
+        "avg_25_lowest": 93.93,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 113,
+        "product_type": "Collector Booster Box",
+        "product_name": "Magic: The Gathering Foundations Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-The-Gathering-Foundations-Collector-Booster-Box?language=1",
+        "from_price": 690.0,
+        "avg_25_lowest": 4229.45,
+        "available_items": 25,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Foundations Jumpstart",
+    "code": "j25",
+    "released_at": "2024-11-15",
+    "year": "2024",
+    "set_type": "draft_innovation",
+    "short_info": "Foundations Jumpstart (2024) \u00b7 draft_innovation \u00b7 779 cards",
+    "card_count": 779,
+    "products": [
+      {
+        "product_id": 32,
+        "product_type": "Draft Booster Box",
+        "product_name": "Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Jumpstart-Booster-Box?language=1",
+        "from_price": 95.0,
+        "avg_25_lowest": 105.51,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Duskmourn: House of Horror",
+    "code": "dsk",
+    "released_at": "2024-09-27",
+    "year": "2024",
+    "set_type": "expansion",
+    "short_info": "Duskmourn: House of Horror (2024) \u00b7 expansion \u00b7 419 cards",
+    "card_count": 419,
+    "products": [
+      {
+        "product_id": 30,
+        "product_type": "Play Booster Box",
+        "product_name": "Duskmourn: House of Horror Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Duskmourn-House-of-Horror-Play-Booster-Box?language=1",
+        "from_price": 119.85,
+        "avg_25_lowest": 142.38,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 90,
+        "product_type": "Collector Booster Box",
+        "product_name": "Duskmourn: House of Horror Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Duskmourn-House-of-Horror-Collector-Booster-Box?language=1",
+        "from_price": 619.0,
+        "avg_25_lowest": 3722.5,
+        "available_items": 17,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Bloomburrow",
+    "code": "blb",
+    "released_at": "2024-08-02",
+    "year": "2024",
+    "set_type": "expansion",
+    "short_info": "Bloomburrow (2024) \u00b7 expansion \u00b7 398 cards",
+    "card_count": 398,
+    "products": [
+      {
+        "product_id": 16,
+        "product_type": "Play Booster Box",
+        "product_name": "Bloomburrow Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Bloomburrow-Play-Booster-Box?language=1",
+        "from_price": 145.0,
+        "avg_25_lowest": 159.0,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 69,
+        "product_type": "Collector Booster Box",
+        "product_name": "Bloomburrow Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Bloomburrow-Collector-Booster-Box?language=1",
+        "from_price": 800.0,
+        "avg_25_lowest": 4906.15,
+        "available_items": 18,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Mystery Booster 2",
+    "code": "mb2",
+    "released_at": "2024-08-02",
+    "year": "2024",
+    "set_type": "masters",
+    "short_info": "Mystery Booster 2 (2024) \u00b7 masters \u00b7 385 cards",
+    "card_count": 385,
+    "products": [
+      {
+        "product_id": 11,
+        "product_type": "Draft Booster Box",
+        "product_name": "Mystery Booster 2 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Mystery-Booster-2-Booster-Box?language=1",
+        "from_price": 250.0,
+        "avg_25_lowest": 270.63,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Assassin's Creed",
+    "code": "acr",
+    "released_at": "2024-07-05",
+    "year": "2024",
+    "set_type": "draft_innovation",
+    "short_info": "Assassin's Creed (2024) \u00b7 draft_innovation \u00b7 309 cards",
+    "card_count": 309,
+    "products": []
+  },
+  {
+    "id": 23,
+    "name": "Modern Horizons 3",
+    "code": "mh3",
+    "released_at": "2024-06-14",
+    "year": "2024",
+    "set_type": "draft_innovation",
+    "short_info": "Modern Horizons 3 (2024) \u00b7 Modern Horizons Block \u00b7 draft_innovation \u00b7 528 cards",
+    "card_count": 528,
+    "products": [
+      {
+        "product_id": 26,
+        "product_type": "Play Booster Box",
+        "product_name": "Modern Horizons 3 Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Horizons-3-Play-Booster-Box?language=1",
+        "from_price": 250.0,
+        "avg_25_lowest": 285.8,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 142,
+        "product_type": "Collector Booster Box",
+        "product_name": "Modern Horizons 3 Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Horizons-3-Collector-Booster-Box?language=1",
+        "from_price": 729.0,
+        "avg_25_lowest": 3172.75,
+        "available_items": 24,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Modern Horizons 2 Timeshifts",
+    "code": "h2r",
+    "released_at": "2024-06-14",
+    "year": "2024",
+    "set_type": "draft_innovation",
+    "short_info": "Modern Horizons 2 Timeshifts (2024) \u00b7 draft_innovation \u00b7 16 cards",
+    "card_count": 16,
+    "products": [
+      {
+        "product_id": 100,
+        "product_type": "Set Booster Box",
+        "product_name": "Modern Horizons 2 Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Horizons-2-Set-Booster-Box?language=1",
+        "from_price": 289.02,
+        "avg_25_lowest": 325.82,
+        "available_items": 42,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 92,
+        "product_type": "Draft Booster Box",
+        "product_name": "Modern Horizons Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Horizons-Booster-Box?language=1",
+        "from_price": 210.0,
+        "avg_25_lowest": 237.84,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 75,
+        "product_type": "Collector Booster Box",
+        "product_name": "Modern Horizons 2 Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Horizons-2-Collector-Booster-Box?language=1",
+        "from_price": 398.56,
+        "avg_25_lowest": 499.56,
+        "available_items": 35,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Outlaws of Thunder Junction",
+    "code": "otj",
+    "released_at": "2024-04-19",
+    "year": "2024",
+    "set_type": "expansion",
+    "short_info": "Outlaws of Thunder Junction (2024) \u00b7 Outlaws of Thunder Junction \u00b7 expansion \u00b7 374 cards",
+    "card_count": 374,
+    "products": [
+      {
+        "product_id": 39,
+        "product_type": "Play Booster Box",
+        "product_name": "Outlaws of Thunder Junction Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Outlaws-of-Thunder-Junction-Play-Booster-Box?language=1",
+        "from_price": 120.0,
+        "avg_25_lowest": 135.06,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 68,
+        "product_type": "Collector Booster Box",
+        "product_name": "Outlaws of Thunder Junction Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Outlaws-of-Thunder-Junction-Collector-Booster-Box?language=1",
+        "from_price": 399.0,
+        "avg_25_lowest": 3561.53,
+        "available_items": 20,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "The Big Score",
+    "code": "big",
+    "released_at": "2024-04-19",
+    "year": "2024",
+    "set_type": "expansion",
+    "short_info": "The Big Score (2024) \u00b7 Outlaws of Thunder Junction \u00b7 expansion \u00b7 95 cards",
+    "card_count": 95,
+    "products": []
+  },
+  {
+    "id": 26,
+    "name": "Ravnica: Clue Edition",
+    "code": "clu",
+    "released_at": "2024-02-23",
+    "year": "2024",
+    "set_type": "draft_innovation",
+    "short_info": "Ravnica: Clue Edition (2024) \u00b7 draft_innovation \u00b7 284 cards",
+    "card_count": 284,
+    "products": []
+  },
+  {
+    "id": 27,
+    "name": "Murders at Karlov Manor",
+    "code": "mkm",
+    "released_at": "2024-02-09",
+    "year": "2024",
+    "set_type": "expansion",
+    "short_info": "Murders at Karlov Manor (2024) \u00b7 expansion \u00b7 451 cards",
+    "card_count": 451,
+    "products": [
+      {
+        "product_id": 95,
+        "product_type": "Play Booster Box",
+        "product_name": "Murders at Karlov Manor Play Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Murders-at-Karlov-Manor-Play-Booster-Box?language=1",
+        "from_price": 124.9,
+        "avg_25_lowest": 142.46,
+        "available_items": 43,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 33,
+        "product_type": "Collector Booster Box",
+        "product_name": "Murders at Karlov Manor Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Murders-at-Karlov-Manor-Collector-Booster-Box?language=1",
+        "from_price": 286.12,
+        "avg_25_lowest": 2747.89,
+        "available_items": 21,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Ravnica Remastered",
+    "code": "rvr",
+    "released_at": "2024-01-12",
+    "year": "2024",
+    "set_type": "masters",
+    "short_info": "Ravnica Remastered (2024) \u00b7 masters \u00b7 531 cards",
+    "card_count": 531,
+    "products": [
+      {
+        "product_id": 153,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ravnica Remastered Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ravnica-Remastered-Draft-Booster-Box?language=1",
+        "from_price": 204.42,
+        "avg_25_lowest": 721.73,
+        "available_items": 21,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 141,
+        "product_type": "Collector Booster Box",
+        "product_name": "Ravnica Remastered Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ravnica-Remastered-Collector-Booster-Box?language=1",
+        "from_price": 1475.0,
+        "avg_25_lowest": 5433.08,
+        "available_items": 15,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "The Lost Caverns of Ixalan",
+    "code": "lci",
+    "released_at": "2023-11-17",
+    "year": "2023",
+    "set_type": "expansion",
+    "short_info": "The Lost Caverns of Ixalan (2023) \u00b7 expansion \u00b7 416 cards",
+    "card_count": 416,
+    "products": [
+      {
+        "product_id": 27,
+        "product_type": "Set Booster Box",
+        "product_name": "The Lost Caverns of Ixalan Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lost-Caverns-of-Ixalan-Set-Booster-Box?language=1",
+        "from_price": 235.0,
+        "avg_25_lowest": 344.35,
+        "available_items": 20,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 67,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Lost Caverns of Ixalan Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lost-Caverns-of-Ixalan-Draft-Booster-Box?language=1",
+        "from_price": 214.98,
+        "avg_25_lowest": 263.59,
+        "available_items": 24,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 122,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ixalan Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ixalan-Booster-Box?language=1",
+        "from_price": 125.0,
+        "avg_25_lowest": 141.11,
+        "available_items": 46,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 140,
+        "product_type": "Collector Booster Box",
+        "product_name": "The Lost Caverns of Ixalan Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lost-Caverns-of-Ixalan-Collector-Booster-Box?language=1",
+        "from_price": 870.0,
+        "avg_25_lowest": 4652.03,
+        "available_items": 15,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Wilds of Eldraine",
+    "code": "woe",
+    "released_at": "2023-09-08",
+    "year": "2023",
+    "set_type": "expansion",
+    "short_info": "Wilds of Eldraine (2023) \u00b7 expansion \u00b7 381 cards",
+    "card_count": 381,
+    "products": [
+      {
+        "product_id": 133,
+        "product_type": "Set Booster Box",
+        "product_name": "Wilds of Eldraine Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Wilds-of-Eldraine-Set-Booster-Box?language=1",
+        "from_price": 269.99,
+        "avg_25_lowest": 382.33,
+        "available_items": 20,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 119,
+        "product_type": "Draft Booster Box",
+        "product_name": "Wilds of Eldraine Draft",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Wilds-of-Eldraine-Draft-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 127,
+        "product_type": "Collector Booster Box",
+        "product_name": "Wilds of Eldraine Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Wilds-of-Eldraine-Collector-Booster-Box?language=1",
+        "from_price": 795.0,
+        "avg_25_lowest": 3623.07,
+        "available_items": 20,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Commander Masters",
+    "code": "cmm",
+    "released_at": "2023-08-04",
+    "year": "2023",
+    "set_type": "masters",
+    "short_info": "Commander Masters (2023) \u00b7 Commander \u00b7 masters \u00b7 1067 cards",
+    "card_count": 1067,
+    "products": [
+      {
+        "product_id": 63,
+        "product_type": "Set Booster Box",
+        "product_name": "Commander Masters Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Masters-Set-Booster-Box?language=1",
+        "from_price": 449.99,
+        "avg_25_lowest": 547.3,
+        "available_items": 21,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 101,
+        "product_type": "Draft Booster Box",
+        "product_name": "Commander Masters Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Masters-Draft-Booster-Box?language=1",
+        "from_price": 399.9,
+        "avg_25_lowest": 482.33,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 118,
+        "product_type": "Collector Booster Box",
+        "product_name": "Commander Masters Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Masters-Collector-Booster-Box?language=1",
+        "from_price": 499.0,
+        "avg_25_lowest": 3242.85,
+        "available_items": 19,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "The Lord of the Rings: Tales of Middle-earth",
+    "code": "ltr",
+    "released_at": "2023-06-23",
+    "year": "2023",
+    "set_type": "draft_innovation",
+    "short_info": "The Lord of the Rings: Tales of Middle-earth (2023) \u00b7 draft_innovation \u00b7 856 cards",
+    "card_count": 856,
+    "products": [
+      {
+        "product_id": 25,
+        "product_type": "Set Booster Box",
+        "product_name": "The Lord of the Rings: Tales of Middle-earth Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lord-of-the-Rings-Tales-of-Middle-earth-Set-Booster-Box?language=1",
+        "from_price": 290.0,
+        "avg_25_lowest": 312.53,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 58,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Lord of the Rings: Tales of Middle-earth Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lord-of-the-Rings-Tales-of-Middle-earth-Draft-Booster-Box?language=1",
+        "from_price": 250.0,
+        "avg_25_lowest": 289.95,
+        "available_items": 46,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 35,
+        "product_type": "Collector Booster Box",
+        "product_name": "The Lord of the Rings: Tales of Middle-earth Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lord-of-the-Rings-Tales-of-Middle-earth-Collector-Booster-Box?language=1",
+        "from_price": 1500.0,
+        "avg_25_lowest": 1815.43,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 128,
+        "product_type": "Collector Booster Box",
+        "product_name": "The Lord of the Rings: Tales of Middle-earth Special Edition Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lord-of-the-Rings-Tales-of-Middle-earth-Special-Edition-Collector-Booster-Box?language=1",
+        "from_price": 6500.0,
+        "avg_25_lowest": 8832.75,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "March of the Machine: The Aftermath",
+    "code": "mat",
+    "released_at": "2023-05-12",
+    "year": "2023",
+    "set_type": "expansion",
+    "short_info": "March of the Machine: The Aftermath (2023) \u00b7 expansion \u00b7 230 cards",
+    "card_count": 230,
+    "products": [
+      {
+        "product_id": 36,
+        "product_type": "Set Booster Box",
+        "product_name": "March of the Machine Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/March-of-the-Machine-Set-Booster-Box?language=1",
+        "from_price": 129.99,
+        "avg_25_lowest": 192.54,
+        "available_items": 20,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 88,
+        "product_type": "Draft Booster Box",
+        "product_name": "March of the Machine: The Aftermath Epilogue Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/March-of-the-Machine-The-Aftermath-Epilogue-Booster-Box?language=1",
+        "from_price": 64.9,
+        "avg_25_lowest": 80.69,
+        "available_items": 30,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 80,
+        "product_type": "Collector Booster Box",
+        "product_name": "March of the Machine Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/March-of-the-Machine-Collector-Booster-Box?language=1",
+        "from_price": 764.0,
+        "avg_25_lowest": 3854.76,
+        "available_items": 17,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 152,
+        "product_type": "Collector Booster Box",
+        "product_name": "March of the Machine: The Aftermath Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/March-of-the-Machine-The-Aftermath-Collector-Booster-Box?language=1",
+        "from_price": 154.9,
+        "avg_25_lowest": 198.99,
+        "available_items": 35,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "March of the Machine",
+    "code": "mom",
+    "released_at": "2023-04-21",
+    "year": "2023",
+    "set_type": "expansion",
+    "short_info": "March of the Machine (2023) \u00b7 expansion \u00b7 387 cards",
+    "card_count": 387,
+    "products": [
+      {
+        "product_id": 79,
+        "product_type": "Draft Booster Box",
+        "product_name": "March of the Machine Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/March-of-the-Machine-Draft-Booster-Box?language=1",
+        "from_price": 119.0,
+        "avg_25_lowest": 175.61,
+        "available_items": 15,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 159,
+        "product_type": "Draft Booster Box",
+        "product_name": "March of the Machine Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/March-of-the-Machine-Jumpstart-Booster-Box?language=1",
+        "from_price": 64.9,
+        "avg_25_lowest": 83.73,
+        "available_items": 12,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Phyrexia: All Will Be One",
+    "code": "one",
+    "released_at": "2023-02-10",
+    "year": "2023",
+    "set_type": "expansion",
+    "short_info": "Phyrexia: All Will Be One (2023) \u00b7 expansion \u00b7 479 cards",
+    "card_count": 479,
+    "products": [
+      {
+        "product_id": 94,
+        "product_type": "Set Booster Box",
+        "product_name": "Phyrexia: All Will Be One Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Phyrexia-All-Will-Be-One-Set-Booster-Box?language=1",
+        "from_price": 250.0,
+        "avg_25_lowest": 282.09,
+        "available_items": 31,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 112,
+        "product_type": "Draft Booster Box",
+        "product_name": "Phyrexia: All Will Be One Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Phyrexia-All-Will-Be-One-Draft-Booster-Box?language=1",
+        "from_price": 176.99,
+        "avg_25_lowest": 214.36,
+        "available_items": 27,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 126,
+        "product_type": "Draft Booster Box",
+        "product_name": "Phyrexia: All Will Be One Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Phyrexia-All-Will-Be-One-Jumpstart-Booster-Box?language=1",
+        "from_price": 70.0,
+        "avg_25_lowest": 93.64,
+        "available_items": 13,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 132,
+        "product_type": "Collector Booster Box",
+        "product_name": "Phyrexia: All Will Be One Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Phyrexia-All-Will-Be-One-Collector-Booster-Box?language=1",
+        "from_price": 749.0,
+        "avg_25_lowest": 1001.58,
+        "available_items": 28,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Dominaria Remastered",
+    "code": "dmr",
+    "released_at": "2023-01-13",
+    "year": "2023",
+    "set_type": "masters",
+    "short_info": "Dominaria Remastered (2023) \u00b7 masters \u00b7 457 cards",
+    "card_count": 457,
+    "products": [
+      {
+        "product_id": 57,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dominaria Remastered Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dominaria-Remastered-Draft-Booster-Box?language=1",
+        "from_price": 220.0,
+        "avg_25_lowest": 244.79,
+        "available_items": 41,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 70,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dominaria Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dominaria-Booster-Box?language=1",
+        "from_price": 120.0,
+        "avg_25_lowest": 132.73,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 117,
+        "product_type": "Collector Booster Box",
+        "product_name": "Dominaria Remastered Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dominaria-Remastered-Collector-Booster-Box?language=1",
+        "from_price": 499.0,
+        "avg_25_lowest": 836.12,
+        "available_items": 26,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Jumpstart 2022",
+    "code": "j22",
+    "released_at": "2022-12-02",
+    "year": "2022",
+    "set_type": "draft_innovation",
+    "short_info": "Jumpstart 2022 (2022) \u00b7 draft_innovation \u00b7 835 cards",
+    "card_count": 835,
+    "products": [
+      {
+        "product_id": 78,
+        "product_type": "Draft Booster Box",
+        "product_name": "Jumpstart 2022 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Jumpstart-2022-Booster-Box?language=1",
+        "from_price": 171.0,
+        "avg_25_lowest": 231.62,
+        "available_items": 24,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "The Brothers' War",
+    "code": "bro",
+    "released_at": "2022-11-18",
+    "year": "2022",
+    "set_type": "expansion",
+    "short_info": "The Brothers' War (2022) \u00b7 expansion \u00b7 399 cards",
+    "card_count": 399,
+    "products": [
+      {
+        "product_id": 62,
+        "product_type": "Set Booster Box",
+        "product_name": "The Brothers' War Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Brothers-War-Set-Booster-Box?language=1",
+        "from_price": 200.0,
+        "avg_25_lowest": 260.58,
+        "available_items": 13,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 83,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Brothers' War Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Brothers-War-Draft-Booster-Box?language=1",
+        "from_price": 115.0,
+        "avg_25_lowest": 150.87,
+        "available_items": 34,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 116,
+        "product_type": "Collector Booster Box",
+        "product_name": "The Brothers' War Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Brothers-War-Collector-Booster-Box?language=1",
+        "from_price": 668.99,
+        "avg_25_lowest": 795.19,
+        "available_items": 33,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Dominaria United",
+    "code": "dmu",
+    "released_at": "2022-09-09",
+    "year": "2022",
+    "set_type": "expansion",
+    "short_info": "Dominaria United (2022) \u00b7 expansion \u00b7 453 cards",
+    "card_count": 453,
+    "products": [
+      {
+        "product_id": 77,
+        "product_type": "Set Booster Box",
+        "product_name": "Dominaria United Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dominaria-United-Set-Booster-Box?language=1",
+        "from_price": 159.95,
+        "avg_25_lowest": 191.06,
+        "available_items": 17,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 109,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dominaria United Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dominaria-United-Draft-Booster-Box?language=1",
+        "from_price": 124.9,
+        "avg_25_lowest": 182.43,
+        "available_items": 26,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 158,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dominaria United Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dominaria-United-Jumpstart-Booster-Box?language=1",
+        "from_price": 64.99,
+        "avg_25_lowest": 92.53,
+        "available_items": 23,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 60,
+        "product_type": "Collector Booster Box",
+        "product_name": "Dominaria United Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dominaria-United-Collector-Booster-Box?language=1",
+        "from_price": 266.99,
+        "avg_25_lowest": 284.76,
+        "available_items": 41,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Double Masters 2022",
+    "code": "2x2",
+    "released_at": "2022-07-08",
+    "year": "2022",
+    "set_type": "masters",
+    "short_info": "Double Masters 2022 (2022) \u00b7 masters \u00b7 579 cards",
+    "card_count": 579,
+    "products": [
+      {
+        "product_id": 41,
+        "product_type": "Draft Booster Box",
+        "product_name": "Double Masters 2022 Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Double-Masters-2022-Draft-Booster-Box?language=1",
+        "from_price": 299.0,
+        "avg_25_lowest": 332.11,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 169,
+        "product_type": "Draft Booster Box",
+        "product_name": "Double Masters Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Double-Masters-Booster-Box?language=1",
+        "from_price": 599.99,
+        "avg_25_lowest": 800.32,
+        "available_items": 21,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 66,
+        "product_type": "Collector Booster Box",
+        "product_name": "Double Masters 2022 Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Double-Masters-2022-Collector-Booster-Box?language=1",
+        "from_price": 390.0,
+        "avg_25_lowest": 438.05,
+        "available_items": 39,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Commander Legends: Battle for Baldur's Gate",
+    "code": "clb",
+    "released_at": "2022-06-10",
+    "year": "2022",
+    "set_type": "draft_innovation",
+    "short_info": "Commander Legends: Battle for Baldur's Gate (2022) \u00b7 Commander \u00b7 draft_innovation \u00b7 936 cards",
+    "card_count": 936,
+    "products": [
+      {
+        "product_id": 275,
+        "product_type": "Draft Booster Box",
+        "product_name": "Legends Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Legends-Booster-Box?language=1",
+        "from_price": 31757.06,
+        "avg_25_lowest": 31757.06,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 170,
+        "product_type": "Collector Booster Box",
+        "product_name": "Commander Legends Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Legends-Collector-Booster-Box?language=1",
+        "from_price": 600.0,
+        "avg_25_lowest": 2869.63,
+        "available_items": 24,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Streets of New Capenna",
+    "code": "snc",
+    "released_at": "2022-04-29",
+    "year": "2022",
+    "set_type": "expansion",
+    "short_info": "Streets of New Capenna (2022) \u00b7 expansion \u00b7 513 cards",
+    "card_count": 513,
+    "products": [
+      {
+        "product_id": 40,
+        "product_type": "Set Booster Box",
+        "product_name": "Streets of New Capenna Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Streets-of-New-Capenna-Set-Booster-Box?language=1",
+        "from_price": 115.0,
+        "avg_25_lowest": 151.74,
+        "available_items": 27,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 93,
+        "product_type": "Draft Booster Box",
+        "product_name": "Streets of New Capenna Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Streets-of-New-Capenna-Draft-Booster-Box?language=1",
+        "from_price": 100.99,
+        "avg_25_lowest": 119.24,
+        "available_items": 41,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 201,
+        "product_type": "Draft Booster Box",
+        "product_name": "Streets of New Capenna Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Streets-of-New-Capenna-Theme-Booster-Box?language=1",
+        "from_price": 59.0,
+        "avg_25_lowest": 64.98,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 59,
+        "product_type": "Collector Booster Box",
+        "product_name": "Streets of New Capenna Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Streets-of-New-Capenna-Collector-Booster-Box?language=1",
+        "from_price": 185.0,
+        "avg_25_lowest": 210.0,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Universes Within",
+    "code": "slx",
+    "released_at": "2022-03-03",
+    "year": "2022",
+    "set_type": "masters",
+    "short_info": "Universes Within (2022) \u00b7 masters \u00b7 30 cards",
+    "card_count": 30,
+    "products": []
+  },
+  {
+    "id": 44,
+    "name": "Kamigawa: Neon Dynasty",
+    "code": "neo",
+    "released_at": "2022-02-18",
+    "year": "2022",
+    "set_type": "expansion",
+    "short_info": "Kamigawa: Neon Dynasty (2022) \u00b7 expansion \u00b7 531 cards",
+    "card_count": 531,
+    "products": [
+      {
+        "product_id": 53,
+        "product_type": "Set Booster Box",
+        "product_name": "Kamigawa: Neon Dynasty Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kamigawa-Neon-Dynasty-Set-Booster-Box?language=1",
+        "from_price": 195.0,
+        "avg_25_lowest": 220.45,
+        "available_items": 42,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 54,
+        "product_type": "Draft Booster Box",
+        "product_name": "Kamigawa: Neon Dynasty Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kamigawa-Neon-Dynasty-Draft-Booster-Box?language=1",
+        "from_price": 150.0,
+        "avg_25_lowest": 188.26,
+        "available_items": 33,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 267,
+        "product_type": "Draft Booster Box",
+        "product_name": "Kamigawa: Neon Dynasty Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kamigawa-Neon-Dynasty-Theme-Booster-Box?language=1",
+        "from_price": 79.99,
+        "avg_25_lowest": 79.99,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 50,
+        "product_type": "Collector Booster Box",
+        "product_name": "Kamigawa: Neon Dynasty Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kamigawa-Neon-Dynasty-Collector-Booster-Box?language=1",
+        "from_price": 439.9,
+        "avg_25_lowest": 518.58,
+        "available_items": 34,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Innistrad: Double Feature",
+    "code": "dbl",
+    "released_at": "2022-01-28",
+    "year": "2022",
+    "set_type": "draft_innovation",
+    "short_info": "Innistrad: Double Feature (2022) \u00b7 draft_innovation \u00b7 535 cards",
+    "card_count": 535,
+    "products": [
+      {
+        "product_id": 125,
+        "product_type": "Draft Booster Box",
+        "product_name": "Innistrad: Double Feature Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Double-Feature-Booster-Box?language=1",
+        "from_price": 139.0,
+        "avg_25_lowest": 151.76,
+        "available_items": 47,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Innistrad: Crimson Vow",
+    "code": "vow",
+    "released_at": "2021-11-19",
+    "year": "2021",
+    "set_type": "expansion",
+    "short_info": "Innistrad: Crimson Vow (2021) \u00b7 Innistrad: Double Feature \u00b7 expansion \u00b7 423 cards",
+    "card_count": 423,
+    "products": [
+      {
+        "product_id": 144,
+        "product_type": "Set Booster Box",
+        "product_name": "Innistrad: Crimson Vow Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Crimson-Vow-Set-Booster-Box?language=1",
+        "from_price": 125.0,
+        "avg_25_lowest": 154.61,
+        "available_items": 24,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 97,
+        "product_type": "Draft Booster Box",
+        "product_name": "Innistrad: Crimson Vow Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Crimson-Vow-Draft-Booster-Box?language=1",
+        "from_price": 99.5,
+        "avg_25_lowest": 113.55,
+        "available_items": 40,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 268,
+        "product_type": "Draft Booster Box",
+        "product_name": "Innistrad: Crimson Vow Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Crimson-Vow-Theme-Booster-Box?language=1",
+        "from_price": 96.2,
+        "avg_25_lowest": 96.2,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 73,
+        "product_type": "Collector Booster Box",
+        "product_name": "Innistrad: Crimson Vow Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Crimson-Vow-Collector-Booster-Box?language=1",
+        "from_price": 192.39,
+        "avg_25_lowest": 224.76,
+        "available_items": 43,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Innistrad: Midnight Hunt",
+    "code": "mid",
+    "released_at": "2021-09-24",
+    "year": "2021",
+    "set_type": "expansion",
+    "short_info": "Innistrad: Midnight Hunt (2021) \u00b7 Innistrad: Double Feature \u00b7 expansion \u00b7 399 cards",
+    "card_count": 399,
+    "products": [
+      {
+        "product_id": 138,
+        "product_type": "Set Booster Box",
+        "product_name": "Innistrad: Midnight Hunt Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Midnight-Hunt-Set-Booster-Box?language=1",
+        "from_price": 105.95,
+        "avg_25_lowest": 137.38,
+        "available_items": 33,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 96,
+        "product_type": "Draft Booster Box",
+        "product_name": "Innistrad: Midnight Hunt Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Midnight-Hunt-Draft-Booster-Box?language=1",
+        "from_price": 95.0,
+        "avg_25_lowest": 105.27,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 180,
+        "product_type": "Draft Booster Box",
+        "product_name": "Innistrad: Midnight Hunt Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Midnight-Hunt-Theme-Booster-Box?language=1",
+        "from_price": 99.9,
+        "avg_25_lowest": 99.9,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 72,
+        "product_type": "Collector Booster Box",
+        "product_name": "Innistrad: Midnight Hunt Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Innistrad-Midnight-Hunt-Collector-Booster-Box?language=1",
+        "from_price": 189.9,
+        "avg_25_lowest": 214.68,
+        "available_items": 45,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Adventures in the Forgotten Realms",
+    "code": "afr",
+    "released_at": "2021-07-23",
+    "year": "2021",
+    "set_type": "expansion",
+    "short_info": "Adventures in the Forgotten Realms (2021) \u00b7 expansion \u00b7 424 cards",
+    "card_count": 424,
+    "products": [
+      {
+        "product_id": 124,
+        "product_type": "Set Booster Box",
+        "product_name": "Adventures in the Forgotten Realms Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Adventures-in-the-Forgotten-Realms-Set-Booster-Box?language=1",
+        "from_price": 195.0,
+        "avg_25_lowest": 268.28,
+        "available_items": 21,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 137,
+        "product_type": "Draft Booster Box",
+        "product_name": "Adventures in the Forgotten Realms Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Adventures-in-the-Forgotten-Realms-Draft-Booster-Box?language=1",
+        "from_price": 172.9,
+        "avg_25_lowest": 189.25,
+        "available_items": 38,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 266,
+        "product_type": "Draft Booster Box",
+        "product_name": "Adventures in the Forgotten Realms Theme",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Adventures-in-the-Forgotten-Realms-Theme-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 38,
+        "product_type": "Collector Booster Box",
+        "product_name": "Adventures in the Forgotten Realms Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Adventures-in-the-Forgotten-Realms-Collector-Booster-Box?language=1",
+        "from_price": 300.0,
+        "avg_25_lowest": 423.44,
+        "available_items": 28,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Modern Horizons 2",
+    "code": "mh2",
+    "released_at": "2021-06-18",
+    "year": "2021",
+    "set_type": "draft_innovation",
+    "short_info": "Modern Horizons 2 (2021) \u00b7 Modern Horizons Block \u00b7 draft_innovation \u00b7 493 cards",
+    "card_count": 493,
+    "products": [
+      {
+        "product_id": 56,
+        "product_type": "Draft Booster Box",
+        "product_name": "Modern Horizons 2 Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Horizons-2-Draft-Booster-Box?language=1",
+        "from_price": 230.0,
+        "avg_25_lowest": 282.46,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Modern Horizons 1 Timeshifts",
+    "code": "h1r",
+    "released_at": "2021-06-18",
+    "year": "2021",
+    "set_type": "draft_innovation",
+    "short_info": "Modern Horizons 1 Timeshifts (2021) \u00b7 draft_innovation \u00b7 40 cards",
+    "card_count": 40,
+    "products": []
+  },
+  {
+    "id": 51,
+    "name": "Strixhaven: School of Mages",
+    "code": "stx",
+    "released_at": "2021-04-23",
+    "year": "2021",
+    "set_type": "expansion",
+    "short_info": "Strixhaven: School of Mages (2021) \u00b7 expansion \u00b7 393 cards",
+    "card_count": 393,
+    "products": [
+      {
+        "product_id": 200,
+        "product_type": "Set Booster Box",
+        "product_name": "Strixhaven: School of Mages Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Strixhaven-School-of-Mages-Set-Booster-Box?language=1",
+        "from_price": 159.9,
+        "avg_25_lowest": 179.63,
+        "available_items": 28,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 171,
+        "product_type": "Draft Booster Box",
+        "product_name": "Strixhaven: School of Mages Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Strixhaven-School-of-Mages-Draft-Booster-Box?language=1",
+        "from_price": 145.0,
+        "avg_25_lowest": 160.11,
+        "available_items": 38,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 179,
+        "product_type": "Draft Booster Box",
+        "product_name": "Strixhaven: School of Mages Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Strixhaven-School-of-Mages-Theme-Booster-Box?language=1",
+        "from_price": 85.0,
+        "avg_25_lowest": 85.0,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 107,
+        "product_type": "Collector Booster Box",
+        "product_name": "Strixhaven: School of Mages Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Strixhaven-School-of-Mages-Collector-Booster-Box?language=1",
+        "from_price": 420.0,
+        "avg_25_lowest": 500.28,
+        "available_items": 31,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Time Spiral Remastered",
+    "code": "tsr",
+    "released_at": "2021-03-19",
+    "year": "2021",
+    "set_type": "masters",
+    "short_info": "Time Spiral Remastered (2021) \u00b7 masters \u00b7 411 cards",
+    "card_count": 411,
+    "products": [
+      {
+        "product_id": 65,
+        "product_type": "Draft Booster Box",
+        "product_name": "Time Spiral Remastered Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Time-Spiral-Remastered-Draft-Booster-Box?language=1",
+        "from_price": 200.0,
+        "avg_25_lowest": 233.01,
+        "available_items": 48,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 164,
+        "product_type": "Draft Booster Box",
+        "product_name": "Time Spiral Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Time-Spiral-Booster-Box?language=1",
+        "from_price": 600.0,
+        "avg_25_lowest": 698.66,
+        "available_items": 7,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Kaldheim",
+    "code": "khm",
+    "released_at": "2021-02-05",
+    "year": "2021",
+    "set_type": "expansion",
+    "short_info": "Kaldheim (2021) \u00b7 expansion \u00b7 425 cards",
+    "card_count": 425,
+    "products": [
+      {
+        "product_id": 82,
+        "product_type": "Set Booster Box",
+        "product_name": "Kaldheim Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kaldheim-Set-Booster-Box?language=1",
+        "from_price": 175.0,
+        "avg_25_lowest": 253.58,
+        "available_items": 22,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 151,
+        "product_type": "Draft Booster Box",
+        "product_name": "Kaldheim Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kaldheim-Draft-Booster-Box?language=1",
+        "from_price": 149.0,
+        "avg_25_lowest": 182.95,
+        "available_items": 34,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 265,
+        "product_type": "Draft Booster Box",
+        "product_name": "Kaldheim Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kaldheim-Theme-Booster-Box?language=1",
+        "from_price": 70.0,
+        "avg_25_lowest": 72.5,
+        "available_items": 2,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 106,
+        "product_type": "Collector Booster Box",
+        "product_name": "Kaldheim Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kaldheim-Collector-Booster-Box?language=1",
+        "from_price": 295.0,
+        "avg_25_lowest": 2652.6,
+        "available_items": 22,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Commander Legends",
+    "code": "cmr",
+    "released_at": "2020-11-20",
+    "year": "2020",
+    "set_type": "draft_innovation",
+    "short_info": "Commander Legends (2020) \u00b7 Commander \u00b7 draft_innovation \u00b7 718 cards",
+    "card_count": 718,
+    "products": [
+      {
+        "product_id": 76,
+        "product_type": "Set Booster Box",
+        "product_name": "Commander Legends: Battle for Baldur's Gate Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Legends-Battle-for-Baldurs-Gate-Set-Booster-Box?language=1",
+        "from_price": 260.0,
+        "avg_25_lowest": 316.98,
+        "available_items": 18,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 52,
+        "product_type": "Draft Booster Box",
+        "product_name": "Commander Legends Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Legends-Draft-Booster-Box?language=1",
+        "from_price": 214.99,
+        "avg_25_lowest": 233.49,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 87,
+        "product_type": "Draft Booster Box",
+        "product_name": "Commander Legends: Battle for Baldur's Gate Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Legends-Battle-for-Baldurs-Gate-Draft-Booster-Box?language=1",
+        "from_price": 260.0,
+        "avg_25_lowest": 298.62,
+        "available_items": 28,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 74,
+        "product_type": "Collector Booster Box",
+        "product_name": "Commander Legends: Battle for Baldur's Gate Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Commander-Legends-Battle-for-Baldurs-Gate-Collector-Booster-Box?language=1",
+        "from_price": 569.9,
+        "avg_25_lowest": 3272.0,
+        "available_items": 23,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "The List",
+    "code": "plst",
+    "released_at": "2020-09-26",
+    "year": "2020",
+    "set_type": "masters",
+    "short_info": "The List (2020) \u00b7 masters \u00b7 5120 cards",
+    "card_count": 5120,
+    "products": []
+  },
+  {
+    "id": 56,
+    "name": "Zendikar Rising",
+    "code": "znr",
+    "released_at": "2020-09-25",
+    "year": "2020",
+    "set_type": "expansion",
+    "short_info": "Zendikar Rising (2020) \u00b7 expansion \u00b7 407 cards",
+    "card_count": 407,
+    "products": [
+      {
+        "product_id": 150,
+        "product_type": "Set Booster Box",
+        "product_name": "Zendikar Rising Set Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Zendikar-Rising-Set-Booster-Box?language=1",
+        "from_price": 125.0,
+        "avg_25_lowest": 152.53,
+        "available_items": 39,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 123,
+        "product_type": "Draft Booster Box",
+        "product_name": "Zendikar Rising Draft Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Zendikar-Rising-Draft-Booster-Box?language=1",
+        "from_price": 115.0,
+        "avg_25_lowest": 128.83,
+        "available_items": 43,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 173,
+        "product_type": "Draft Booster Box",
+        "product_name": "Zendikar Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Zendikar-Booster-Box?language=1",
+        "from_price": 825.0,
+        "avg_25_lowest": 1725.75,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 264,
+        "product_type": "Draft Booster Box",
+        "product_name": "Zendikar Rising Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Zendikar-Rising-Theme-Booster-Box?language=1",
+        "from_price": 50.0,
+        "avg_25_lowest": 54.66,
+        "available_items": 6,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 49,
+        "product_type": "Collector Booster Box",
+        "product_name": "Zendikar Rising Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Zendikar-Rising-Collector-Booster-Box?language=1",
+        "from_price": 369.9,
+        "avg_25_lowest": 451.83,
+        "available_items": 27,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Double Masters",
+    "code": "2xm",
+    "released_at": "2020-08-07",
+    "year": "2020",
+    "set_type": "masters",
+    "short_info": "Double Masters (2020) \u00b7 masters \u00b7 384 cards",
+    "card_count": 384,
+    "products": []
+  },
+  {
+    "id": 58,
+    "name": "Jumpstart",
+    "code": "jmp",
+    "released_at": "2020-07-17",
+    "year": "2020",
+    "set_type": "draft_innovation",
+    "short_info": "Jumpstart (2020) \u00b7 draft_innovation \u00b7 497 cards",
+    "card_count": 497,
+    "products": [
+      {
+        "product_id": 139,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Brothers' War Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Brothers-War-Jumpstart-Booster-Box?language=1",
+        "from_price": 49.99,
+        "avg_25_lowest": 72.77,
+        "available_items": 28,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 181,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Lord of the Rings: Tales of Middle-earth Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lord-of-the-Rings-Tales-of-Middle-earth-Jumpstart-Booster-Box?language=1",
+        "from_price": 172.0,
+        "avg_25_lowest": 216.17,
+        "available_items": 13,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 203,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Lord of the Rings: Tales of Middle-earth Jumpstart Vol. 2 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Lord-of-the-Rings-Tales-of-Middle-earth-Jumpstart-Vol-2-Booster-Box?language=1",
+        "from_price": 240.0,
+        "avg_25_lowest": 414.08,
+        "available_items": 11,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Core Set 2021",
+    "code": "m21",
+    "released_at": "2020-07-03",
+    "year": "2020",
+    "set_type": "core",
+    "short_info": "Core Set 2021 (2020) \u00b7 Core Set \u00b7 core \u00b7 397 cards",
+    "card_count": 397,
+    "products": [
+      {
+        "product_id": 115,
+        "product_type": "Draft Booster Box",
+        "product_name": "Core 2021 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Core-2021-Booster-Box?language=1",
+        "from_price": 110.0,
+        "avg_25_lowest": 130.97,
+        "available_items": 37,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 51,
+        "product_type": "Collector Booster Box",
+        "product_name": "Core 2021 Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Core-2021-Collector-Booster-Box?language=1",
+        "from_price": 399.99,
+        "avg_25_lowest": 3247.0,
+        "available_items": 22,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Ikoria: Lair of Behemoths",
+    "code": "iko",
+    "released_at": "2020-04-24",
+    "year": "2020",
+    "set_type": "expansion",
+    "short_info": "Ikoria: Lair of Behemoths (2020) \u00b7 expansion \u00b7 390 cards",
+    "card_count": 390,
+    "products": [
+      {
+        "product_id": 43,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ikoria: Lair of Behemoths Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ikoria-Lair-of-Behemoths-Booster-Box?language=1",
+        "from_price": 150.0,
+        "avg_25_lowest": 172.78,
+        "available_items": 32,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 263,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ikoria: Lair of Behemoths Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ikoria-Lair-of-Behemoths-Theme-Booster-Box?language=1",
+        "from_price": 49.99,
+        "avg_25_lowest": 60.69,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 99,
+        "product_type": "Collector Booster Box",
+        "product_name": "Ikoria: Lair of Behemoths Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ikoria-Lair-of-Behemoths-Collector-Booster-Box?language=1",
+        "from_price": 350.0,
+        "avg_25_lowest": 3166.78,
+        "available_items": 19,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Theros Beyond Death",
+    "code": "thb",
+    "released_at": "2020-01-24",
+    "year": "2020",
+    "set_type": "expansion",
+    "short_info": "Theros Beyond Death (2020) \u00b7 expansion \u00b7 358 cards",
+    "card_count": 358,
+    "products": [
+      {
+        "product_id": 86,
+        "product_type": "Draft Booster Box",
+        "product_name": "Theros Beyond Death Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Theros-Beyond-Death-Booster-Box?language=1",
+        "from_price": 115.0,
+        "avg_25_lowest": 145.79,
+        "available_items": 42,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 196,
+        "product_type": "Draft Booster Box",
+        "product_name": "Theros Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Theros-Booster-Box?language=1",
+        "from_price": 204.99,
+        "avg_25_lowest": 328.05,
+        "available_items": 19,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 262,
+        "product_type": "Draft Booster Box",
+        "product_name": "Theros Beyond Death Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Theros-Beyond-Death-Theme-Booster-Box?language=1",
+        "from_price": 49.95,
+        "avg_25_lowest": 54.48,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 47,
+        "product_type": "Collector Booster Box",
+        "product_name": "Theros Beyond Death Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Theros-Beyond-Death-Collector-Booster-Box?language=1",
+        "from_price": 209.99,
+        "avg_25_lowest": 283.74,
+        "available_items": 33,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "Throne of Eldraine",
+    "code": "eld",
+    "released_at": "2019-10-04",
+    "year": "2019",
+    "set_type": "expansion",
+    "short_info": "Throne of Eldraine (2019) \u00b7 expansion \u00b7 398 cards",
+    "card_count": 398,
+    "products": [
+      {
+        "product_id": 71,
+        "product_type": "Draft Booster Box",
+        "product_name": "Throne of Eldraine Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Throne-of-Eldraine-Booster-Box?language=1",
+        "from_price": 124.0,
+        "avg_25_lowest": 144.32,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 105,
+        "product_type": "Collector Booster Box",
+        "product_name": "Throne of Eldraine Collector Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Throne-of-Eldraine-Collector-Booster-Box?language=1",
+        "from_price": 280.0,
+        "avg_25_lowest": 328.67,
+        "available_items": 39,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Core Set 2020",
+    "code": "m20",
+    "released_at": "2019-07-12",
+    "year": "2019",
+    "set_type": "core",
+    "short_info": "Core Set 2020 (2019) \u00b7 Core Set \u00b7 core \u00b7 346 cards",
+    "card_count": 346,
+    "products": [
+      {
+        "product_id": 104,
+        "product_type": "Draft Booster Box",
+        "product_name": "Core 2020 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Core-2020-Booster-Box?language=1",
+        "from_price": 99.99,
+        "avg_25_lowest": 122.66,
+        "available_items": 44,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Modern Horizons",
+    "code": "mh1",
+    "released_at": "2019-06-14",
+    "year": "2019",
+    "set_type": "draft_innovation",
+    "short_info": "Modern Horizons (2019) \u00b7 Modern Horizons Block \u00b7 draft_innovation \u00b7 255 cards",
+    "card_count": 255,
+    "products": []
+  },
+  {
+    "id": 65,
+    "name": "War of the Spark",
+    "code": "war",
+    "released_at": "2019-05-03",
+    "year": "2019",
+    "set_type": "expansion",
+    "short_info": "War of the Spark (2019) \u00b7 Guilds of Ravnica \u00b7 expansion \u00b7 312 cards",
+    "card_count": 312,
+    "products": [
+      {
+        "product_id": 55,
+        "product_type": "Draft Booster Box",
+        "product_name": "War of the Spark Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/War-of-the-Spark-Booster-Box?language=1",
+        "from_price": 109.7,
+        "avg_25_lowest": 122.82,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 285,
+        "product_type": "Draft Booster Box",
+        "product_name": "War of the Spark Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/War-of-the-Spark-Theme-Booster-Box?language=1",
+        "from_price": 68.73,
+        "avg_25_lowest": 79.24,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Ravnica Allegiance",
+    "code": "rna",
+    "released_at": "2019-01-25",
+    "year": "2019",
+    "set_type": "expansion",
+    "short_info": "Ravnica Allegiance (2019) \u00b7 Guilds of Ravnica \u00b7 expansion \u00b7 273 cards",
+    "card_count": 273,
+    "products": [
+      {
+        "product_id": 81,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ravnica Allegiance Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ravnica-Allegiance-Booster-Box?language=1",
+        "from_price": 98.0,
+        "avg_25_lowest": 115.0,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 199,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ravnica Allegiance Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ravnica-Allegiance-Theme-Booster-Box?language=1",
+        "from_price": 44.99,
+        "avg_25_lowest": 57.49,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 198,
+        "product_type": "Collector Booster Box",
+        "product_name": "Ravnica Allegiance",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ravnica-Allegiance-Collector-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Ultimate Masters",
+    "code": "uma",
+    "released_at": "2018-12-07",
+    "year": "2018",
+    "set_type": "masters",
+    "short_info": "Ultimate Masters (2018) \u00b7 masters \u00b7 254 cards",
+    "card_count": 254,
+    "products": [
+      {
+        "product_id": 85,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ultimate Masters Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ultimate-Masters-Booster-Box?language=1",
+        "from_price": 300.0,
+        "avg_25_lowest": 346.42,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Guilds of Ravnica",
+    "code": "grn",
+    "released_at": "2018-10-05",
+    "year": "2018",
+    "set_type": "expansion",
+    "short_info": "Guilds of Ravnica (2018) \u00b7 Guilds of Ravnica \u00b7 expansion \u00b7 273 cards",
+    "card_count": 273,
+    "products": [
+      {
+        "product_id": 84,
+        "product_type": "Draft Booster Box",
+        "product_name": "Guilds of Ravnica Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Guilds-of-Ravnica-Booster-Box?language=1",
+        "from_price": 96.0,
+        "avg_25_lowest": 108.7,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 260,
+        "product_type": "Draft Booster Box",
+        "product_name": "Guilds of Ravnica Theme Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Guilds-of-Ravnica-Theme-Booster-Box?language=1",
+        "from_price": 54.5,
+        "avg_25_lowest": 59.74,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Core Set 2019",
+    "code": "m19",
+    "released_at": "2018-07-13",
+    "year": "2018",
+    "set_type": "core",
+    "short_info": "Core Set 2019 (2018) \u00b7 Core Set \u00b7 core \u00b7 314 cards",
+    "card_count": 314,
+    "products": [
+      {
+        "product_id": 131,
+        "product_type": "Draft Booster Box",
+        "product_name": "Core 2019 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Core-2019-Booster-Box?language=1",
+        "from_price": 107.9,
+        "avg_25_lowest": 151.83,
+        "available_items": 29,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Battlebond",
+    "code": "bbd",
+    "released_at": "2018-06-08",
+    "year": "2018",
+    "set_type": "draft_innovation",
+    "short_info": "Battlebond (2018) \u00b7 draft_innovation \u00b7 256 cards",
+    "card_count": 256,
+    "products": [
+      {
+        "product_id": 157,
+        "product_type": "Draft Booster Box",
+        "product_name": "Battlebond Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Battlebond-Booster-Box?language=1",
+        "from_price": 199.99,
+        "avg_25_lowest": 261.77,
+        "available_items": 34,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Dominaria",
+    "code": "dom",
+    "released_at": "2018-04-27",
+    "year": "2018",
+    "set_type": "expansion",
+    "short_info": "Dominaria (2018) \u00b7 expansion \u00b7 280 cards",
+    "card_count": 280,
+    "products": []
+  },
+  {
+    "id": 72,
+    "name": "Masters 25",
+    "code": "a25",
+    "released_at": "2018-03-16",
+    "year": "2018",
+    "set_type": "masters",
+    "short_info": "Masters 25 (2018) \u00b7 masters \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 168,
+        "product_type": "Draft Booster Box",
+        "product_name": "Masters 25 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Masters-25-Booster-Box?language=1",
+        "from_price": 190.0,
+        "avg_25_lowest": 221.1,
+        "available_items": 41,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Rivals of Ixalan",
+    "code": "rix",
+    "released_at": "2018-01-19",
+    "year": "2018",
+    "set_type": "expansion",
+    "short_info": "Rivals of Ixalan (2018) \u00b7 Ixalan \u00b7 expansion \u00b7 205 cards",
+    "card_count": 205,
+    "products": [
+      {
+        "product_id": 111,
+        "product_type": "Draft Booster Box",
+        "product_name": "Rivals of Ixalan Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Rivals-of-Ixalan-Booster-Box?language=1",
+        "from_price": 110.0,
+        "avg_25_lowest": 139.55,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Iconic Masters",
+    "code": "ima",
+    "released_at": "2017-11-17",
+    "year": "2017",
+    "set_type": "masters",
+    "short_info": "Iconic Masters (2017) \u00b7 masters \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 114,
+        "product_type": "Draft Booster Box",
+        "product_name": "Iconic Masters Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Iconic-Masters-Booster-Box?language=1",
+        "from_price": 215.0,
+        "avg_25_lowest": 277.01,
+        "available_items": 28,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Ixalan",
+    "code": "xln",
+    "released_at": "2017-09-29",
+    "year": "2017",
+    "set_type": "expansion",
+    "short_info": "Ixalan (2017) \u00b7 Ixalan \u00b7 expansion \u00b7 289 cards",
+    "card_count": 289,
+    "products": []
+  },
+  {
+    "id": 76,
+    "name": "Hour of Devastation",
+    "code": "hou",
+    "released_at": "2017-07-14",
+    "year": "2017",
+    "set_type": "expansion",
+    "short_info": "Hour of Devastation (2017) \u00b7 Amonkhet \u00b7 expansion \u00b7 209 cards",
+    "card_count": 209,
+    "products": [
+      {
+        "product_id": 136,
+        "product_type": "Draft Booster Box",
+        "product_name": "Hour of Devastation Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Hour-of-Devastation-Booster-Box?language=1",
+        "from_price": 145.0,
+        "avg_25_lowest": 163.9,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Amonkhet",
+    "code": "akh",
+    "released_at": "2017-04-28",
+    "year": "2017",
+    "set_type": "expansion",
+    "short_info": "Amonkhet (2017) \u00b7 Amonkhet \u00b7 expansion \u00b7 287 cards",
+    "card_count": 287,
+    "products": [
+      {
+        "product_id": 91,
+        "product_type": "Draft Booster Box",
+        "product_name": "Amonkhet Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Amonkhet-Booster-Box?language=1",
+        "from_price": 175.0,
+        "avg_25_lowest": 193.47,
+        "available_items": 45,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "Welcome Deck 2017",
+    "code": "w17",
+    "released_at": "2017-04-15",
+    "year": "2017",
+    "set_type": "starter",
+    "short_info": "Welcome Deck 2017 (2017) \u00b7 starter \u00b7 30 cards",
+    "card_count": 30,
+    "products": []
+  },
+  {
+    "id": 79,
+    "name": "Modern Masters 2017",
+    "code": "mm3",
+    "released_at": "2017-03-17",
+    "year": "2017",
+    "set_type": "masters",
+    "short_info": "Modern Masters 2017 (2017) \u00b7 masters \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 177,
+        "product_type": "Draft Booster Box",
+        "product_name": "Modern Masters Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Masters-Booster-Box?language=1",
+        "from_price": 323.0,
+        "avg_25_lowest": 365.5,
+        "available_items": 40,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 252,
+        "product_type": "Draft Booster Box",
+        "product_name": "Modern Masters 2017 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Masters-2017-Booster-Box?language=1",
+        "from_price": 200.0,
+        "avg_25_lowest": 238.18,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Aether Revolt",
+    "code": "aer",
+    "released_at": "2017-01-20",
+    "year": "2017",
+    "set_type": "expansion",
+    "short_info": "Aether Revolt (2017) \u00b7 Kaladesh \u00b7 expansion \u00b7 197 cards",
+    "card_count": 197,
+    "products": [
+      {
+        "product_id": 102,
+        "product_type": "Draft Booster Box",
+        "product_name": "Aether Revolt Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Aether-Revolt-Booster-Box?language=1",
+        "from_price": 130.0,
+        "avg_25_lowest": 154.45,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Kaladesh",
+    "code": "kld",
+    "released_at": "2016-09-30",
+    "year": "2016",
+    "set_type": "expansion",
+    "short_info": "Kaladesh (2016) \u00b7 Kaladesh \u00b7 expansion \u00b7 278 cards",
+    "card_count": 278,
+    "products": [
+      {
+        "product_id": 108,
+        "product_type": "Draft Booster Box",
+        "product_name": "Kaladesh Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Kaladesh-Booster-Box?language=1",
+        "from_price": 290.0,
+        "avg_25_lowest": 338.33,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "Conspiracy: Take the Crown",
+    "code": "cn2",
+    "released_at": "2016-08-26",
+    "year": "2016",
+    "set_type": "draft_innovation",
+    "short_info": "Conspiracy: Take the Crown (2016) \u00b7 Conspiracy \u00b7 draft_innovation \u00b7 222 cards",
+    "card_count": 222,
+    "products": [
+      {
+        "product_id": 134,
+        "product_type": "Draft Booster Box",
+        "product_name": "Conspiracy Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Conspiracy-Booster-Box?language=1",
+        "from_price": 140.0,
+        "avg_25_lowest": 437.38,
+        "available_items": 24,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 143,
+        "product_type": "Draft Booster Box",
+        "product_name": "Conspiracy: Take the Crown Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Conspiracy-Take-the-Crown-Booster-Box?language=1",
+        "from_price": 157.9,
+        "avg_25_lowest": 174.2,
+        "available_items": 41,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Eldritch Moon",
+    "code": "emn",
+    "released_at": "2016-07-22",
+    "year": "2016",
+    "set_type": "expansion",
+    "short_info": "Eldritch Moon (2016) \u00b7 Shadows over Innistrad \u00b7 expansion \u00b7 208 cards",
+    "card_count": 208,
+    "products": [
+      {
+        "product_id": 167,
+        "product_type": "Draft Booster Box",
+        "product_name": "Eldritch Moon Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Eldritch-Moon-Booster-Box?language=1",
+        "from_price": 187.9,
+        "avg_25_lowest": 198.79,
+        "available_items": 42,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Eternal Masters",
+    "code": "ema",
+    "released_at": "2016-06-10",
+    "year": "2016",
+    "set_type": "masters",
+    "short_info": "Eternal Masters (2016) \u00b7 masters \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 121,
+        "product_type": "Draft Booster Box",
+        "product_name": "Eternal Masters Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Eternal-Masters-Booster-Box?language=1",
+        "from_price": 280.0,
+        "avg_25_lowest": 331.39,
+        "available_items": 49,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Shadows over Innistrad",
+    "code": "soi",
+    "released_at": "2016-04-08",
+    "year": "2016",
+    "set_type": "expansion",
+    "short_info": "Shadows over Innistrad (2016) \u00b7 Shadows over Innistrad \u00b7 expansion \u00b7 302 cards",
+    "card_count": 302,
+    "products": [
+      {
+        "product_id": 120,
+        "product_type": "Draft Booster Box",
+        "product_name": "Shadows over Innistrad Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Shadows-over-Innistrad-Booster-Box?language=1",
+        "from_price": 120.0,
+        "avg_25_lowest": 158.63,
+        "available_items": 30,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Welcome Deck 2016",
+    "code": "w16",
+    "released_at": "2016-04-08",
+    "year": "2016",
+    "set_type": "starter",
+    "short_info": "Welcome Deck 2016 (2016) \u00b7 starter \u00b7 16 cards",
+    "card_count": 16,
+    "products": []
+  },
+  {
+    "id": 87,
+    "name": "Oath of the Gatewatch",
+    "code": "ogw",
+    "released_at": "2016-01-22",
+    "year": "2016",
+    "set_type": "expansion",
+    "short_info": "Oath of the Gatewatch (2016) \u00b7 Battle for Zendikar \u00b7 expansion \u00b7 187 cards",
+    "card_count": 187,
+    "products": [
+      {
+        "product_id": 110,
+        "product_type": "Draft Booster Box",
+        "product_name": "Oath of the Gatewatch Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Oath-of-the-Gatewatch-Booster-Box?language=1",
+        "from_price": 108.99,
+        "avg_25_lowest": 124.74,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Battle for Zendikar",
+    "code": "bfz",
+    "released_at": "2015-10-02",
+    "year": "2015",
+    "set_type": "expansion",
+    "short_info": "Battle for Zendikar (2015) \u00b7 Battle for Zendikar \u00b7 expansion \u00b7 299 cards",
+    "card_count": 299,
+    "products": [
+      {
+        "product_id": 130,
+        "product_type": "Draft Booster Box",
+        "product_name": "Battle for Zendikar Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Battle-for-Zendikar-Booster-Box?language=1",
+        "from_price": 120.0,
+        "avg_25_lowest": 139.87,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Magic Origins Clash Pack",
+    "code": "cp3",
+    "released_at": "2015-07-17",
+    "year": "2015",
+    "set_type": "starter",
+    "short_info": "Magic Origins Clash Pack (2015) \u00b7 starter \u00b7 6 cards",
+    "card_count": 6,
+    "products": [
+      {
+        "product_id": 148,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic Origins Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-Origins-Booster-Box?language=1",
+        "from_price": 112.5,
+        "avg_25_lowest": 137.34,
+        "available_items": 30,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Magic Origins",
+    "code": "ori",
+    "released_at": "2015-07-17",
+    "year": "2015",
+    "set_type": "core",
+    "short_info": "Magic Origins (2015) \u00b7 Core Set \u00b7 core \u00b7 288 cards",
+    "card_count": 288,
+    "products": []
+  },
+  {
+    "id": 91,
+    "name": "Modern Masters 2015",
+    "code": "mm2",
+    "released_at": "2015-05-22",
+    "year": "2015",
+    "set_type": "masters",
+    "short_info": "Modern Masters 2015 (2015) \u00b7 masters \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 166,
+        "product_type": "Draft Booster Box",
+        "product_name": "Modern Masters 2015 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Modern-Masters-2015-Booster-Box?language=1",
+        "from_price": 239.0,
+        "avg_25_lowest": 258.29,
+        "available_items": 40,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Dragons of Tarkir",
+    "code": "dtk",
+    "released_at": "2015-03-27",
+    "year": "2015",
+    "set_type": "expansion",
+    "short_info": "Dragons of Tarkir (2015) \u00b7 Khans of Tarkir \u00b7 expansion \u00b7 264 cards",
+    "card_count": 264,
+    "products": [
+      {
+        "product_id": 165,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dragons of Tarkir Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dragons-of-Tarkir-Booster-Box?language=1",
+        "from_price": 179.0,
+        "avg_25_lowest": 202.99,
+        "available_items": 28,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Fate Reforged Clash Pack",
+    "code": "cp2",
+    "released_at": "2015-01-23",
+    "year": "2015",
+    "set_type": "starter",
+    "short_info": "Fate Reforged Clash Pack (2015) \u00b7 Khans of Tarkir \u00b7 starter \u00b7 6 cards",
+    "card_count": 6,
+    "products": [
+      {
+        "product_id": 135,
+        "product_type": "Draft Booster Box",
+        "product_name": "Fate Reforged Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Fate-Reforged-Booster-Box?language=1",
+        "from_price": 139.99,
+        "avg_25_lowest": 212.36,
+        "available_items": 24,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Fate Reforged",
+    "code": "frf",
+    "released_at": "2015-01-23",
+    "year": "2015",
+    "set_type": "expansion",
+    "short_info": "Fate Reforged (2015) \u00b7 Khans of Tarkir \u00b7 expansion \u00b7 191 cards",
+    "card_count": 191,
+    "products": []
+  },
+  {
+    "id": 95,
+    "name": "Khans of Tarkir",
+    "code": "ktk",
+    "released_at": "2014-09-26",
+    "year": "2014",
+    "set_type": "expansion",
+    "short_info": "Khans of Tarkir (2014) \u00b7 Khans of Tarkir \u00b7 expansion \u00b7 293 cards",
+    "card_count": 293,
+    "products": [
+      {
+        "product_id": 89,
+        "product_type": "Draft Booster Box",
+        "product_name": "Khans of Tarkir Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Khans-of-Tarkir-Booster-Box?language=1",
+        "from_price": 90.0,
+        "avg_25_lowest": 140.47,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Magic 2015 Clash Pack",
+    "code": "cp1",
+    "released_at": "2014-07-18",
+    "year": "2014",
+    "set_type": "starter",
+    "short_info": "Magic 2015 Clash Pack (2014) \u00b7 starter \u00b7 6 cards",
+    "card_count": 6,
+    "products": [
+      {
+        "product_id": 147,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic 2015 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-2015-Booster-Box?language=1",
+        "from_price": 185.0,
+        "avg_25_lowest": 239.04,
+        "available_items": 16,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Magic 2015",
+    "code": "m15",
+    "released_at": "2014-07-18",
+    "year": "2014",
+    "set_type": "core",
+    "short_info": "Magic 2015 (2014) \u00b7 Core Set \u00b7 core \u00b7 284 cards",
+    "card_count": 284,
+    "products": []
+  },
+  {
+    "id": 98,
+    "name": "Conspiracy",
+    "code": "cns",
+    "released_at": "2014-06-06",
+    "year": "2014",
+    "set_type": "draft_innovation",
+    "short_info": "Conspiracy (2014) \u00b7 Conspiracy \u00b7 draft_innovation \u00b7 210 cards",
+    "card_count": 210,
+    "products": []
+  },
+  {
+    "id": 99,
+    "name": "Journey into Nyx",
+    "code": "jou",
+    "released_at": "2014-05-02",
+    "year": "2014",
+    "set_type": "expansion",
+    "short_info": "Journey into Nyx (2014) \u00b7 Theros \u00b7 expansion \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 129,
+        "product_type": "Draft Booster Box",
+        "product_name": "Journey into Nyx Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Journey-into-Nyx-Booster-Box?language=1",
+        "from_price": 148.0,
+        "avg_25_lowest": 173.39,
+        "available_items": 30,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Born of the Gods",
+    "code": "bng",
+    "released_at": "2014-02-07",
+    "year": "2014",
+    "set_type": "expansion",
+    "short_info": "Born of the Gods (2014) \u00b7 Theros \u00b7 expansion \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 156,
+        "product_type": "Draft Booster Box",
+        "product_name": "Born of the Gods Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Born-of-the-Gods-Booster-Box?language=1",
+        "from_price": 129.95,
+        "avg_25_lowest": 176.02,
+        "available_items": 17,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Theros",
+    "code": "ths",
+    "released_at": "2013-09-27",
+    "year": "2013",
+    "set_type": "expansion",
+    "short_info": "Theros (2013) \u00b7 Theros \u00b7 expansion \u00b7 249 cards",
+    "card_count": 249,
+    "products": []
+  },
+  {
+    "id": 102,
+    "name": "Magic 2014",
+    "code": "m14",
+    "released_at": "2013-07-19",
+    "year": "2013",
+    "set_type": "core",
+    "short_info": "Magic 2014 (2013) \u00b7 Core Set \u00b7 core \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 178,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic 2014 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-2014-Booster-Box?language=1",
+        "from_price": 185.0,
+        "avg_25_lowest": 223.8,
+        "available_items": 20,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Modern Masters",
+    "code": "mma",
+    "released_at": "2013-06-07",
+    "year": "2013",
+    "set_type": "masters",
+    "short_info": "Modern Masters (2013) \u00b7 masters \u00b7 229 cards",
+    "card_count": 229,
+    "products": []
+  },
+  {
+    "id": 104,
+    "name": "Dragon's Maze",
+    "code": "dgm",
+    "released_at": "2013-05-03",
+    "year": "2013",
+    "set_type": "expansion",
+    "short_info": "Dragon's Maze (2013) \u00b7 Return to Ravnica \u00b7 expansion \u00b7 156 cards",
+    "card_count": 156,
+    "products": [
+      {
+        "product_id": 146,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dragon's Maze Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dragon-s-Maze-Booster-Box?language=1",
+        "from_price": 124.89,
+        "avg_25_lowest": 175.46,
+        "available_items": 19,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Gatecrash",
+    "code": "gtc",
+    "released_at": "2013-02-01",
+    "year": "2013",
+    "set_type": "expansion",
+    "short_info": "Gatecrash (2013) \u00b7 Return to Ravnica \u00b7 expansion \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 161,
+        "product_type": "Draft Booster Box",
+        "product_name": "Gatecrash Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Gatecrash-Booster-Box?language=1",
+        "from_price": 138.0,
+        "avg_25_lowest": 180.54,
+        "available_items": 11,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Return to Ravnica",
+    "code": "rtr",
+    "released_at": "2012-10-05",
+    "year": "2012",
+    "set_type": "expansion",
+    "short_info": "Return to Ravnica (2012) \u00b7 Return to Ravnica \u00b7 expansion \u00b7 274 cards",
+    "card_count": 274,
+    "products": [
+      {
+        "product_id": 155,
+        "product_type": "Draft Booster Box",
+        "product_name": "Return to Ravnica Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Return-to-Ravnica-Booster-Box?language=1",
+        "from_price": 150.0,
+        "avg_25_lowest": 187.89,
+        "available_items": 26,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Magic 2013",
+    "code": "m13",
+    "released_at": "2012-07-13",
+    "year": "2012",
+    "set_type": "core",
+    "short_info": "Magic 2013 (2012) \u00b7 Core Set \u00b7 core \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 251,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic 2013 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-2013-Booster-Box?language=1",
+        "from_price": 205.0,
+        "avg_25_lowest": 252.48,
+        "available_items": 14,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Avacyn Restored",
+    "code": "avr",
+    "released_at": "2012-05-04",
+    "year": "2012",
+    "set_type": "expansion",
+    "short_info": "Avacyn Restored (2012) \u00b7 Innistrad \u00b7 expansion \u00b7 244 cards",
+    "card_count": 244,
+    "products": [
+      {
+        "product_id": 160,
+        "product_type": "Draft Booster Box",
+        "product_name": "Avacyn Restored Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Avacyn-Restored-Booster-Box?language=1",
+        "from_price": 440.0,
+        "avg_25_lowest": 531.49,
+        "available_items": 22,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Dark Ascension",
+    "code": "dka",
+    "released_at": "2012-02-03",
+    "year": "2012",
+    "set_type": "expansion",
+    "short_info": "Dark Ascension (2012) \u00b7 Innistrad \u00b7 expansion \u00b7 158 cards",
+    "card_count": 158,
+    "products": [
+      {
+        "product_id": 176,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dark Ascension Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dark-Ascension-Booster-Box?language=1",
+        "from_price": 265.0,
+        "avg_25_lowest": 327.06,
+        "available_items": 22,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Innistrad",
+    "code": "isd",
+    "released_at": "2011-09-30",
+    "year": "2011",
+    "set_type": "expansion",
+    "short_info": "Innistrad (2011) \u00b7 Innistrad \u00b7 expansion \u00b7 264 cards",
+    "card_count": 264,
+    "products": []
+  },
+  {
+    "id": 111,
+    "name": "Magic 2012",
+    "code": "m12",
+    "released_at": "2011-07-15",
+    "year": "2011",
+    "set_type": "core",
+    "short_info": "Magic 2012 (2011) \u00b7 Core Set \u00b7 core \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 250,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic 2012 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-2012-Booster-Box?language=1",
+        "from_price": 249.99,
+        "avg_25_lowest": 286.11,
+        "available_items": 8,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "New Phyrexia",
+    "code": "nph",
+    "released_at": "2011-05-13",
+    "year": "2011",
+    "set_type": "expansion",
+    "short_info": "New Phyrexia (2011) \u00b7 Scars of Mirrodin \u00b7 expansion \u00b7 175 cards",
+    "card_count": 175,
+    "products": [
+      {
+        "product_id": 175,
+        "product_type": "Draft Booster Box",
+        "product_name": "New Phyrexia",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/New-Phyrexia-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": null,
+        "scan_date": null
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Mirrodin Besieged",
+    "code": "mbs",
+    "released_at": "2011-02-04",
+    "year": "2011",
+    "set_type": "expansion",
+    "short_info": "Mirrodin Besieged (2011) \u00b7 Scars of Mirrodin \u00b7 expansion \u00b7 155 cards",
+    "card_count": 155,
+    "products": [
+      {
+        "product_id": 194,
+        "product_type": "Draft Booster Box",
+        "product_name": "Mirrodin Besieged Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Mirrodin-Besieged-Booster-Box?language=1",
+        "from_price": 549.99,
+        "avg_25_lowest": 844.52,
+        "available_items": 7,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 228,
+        "product_type": "Draft Booster Box",
+        "product_name": "Mirrodin Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Mirrodin-Booster-Box?language=1",
+        "from_price": 950.0,
+        "avg_25_lowest": 1471.81,
+        "available_items": 10,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Scars of Mirrodin",
+    "code": "som",
+    "released_at": "2010-10-01",
+    "year": "2010",
+    "set_type": "expansion",
+    "short_info": "Scars of Mirrodin (2010) \u00b7 Scars of Mirrodin \u00b7 expansion \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 174,
+        "product_type": "Draft Booster Box",
+        "product_name": "Scars of Mirrodin Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Scars-of-Mirrodin-Booster-Box?language=1",
+        "from_price": 601.21,
+        "avg_25_lowest": 900.76,
+        "available_items": 11,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Magic 2011",
+    "code": "m11",
+    "released_at": "2010-07-16",
+    "year": "2010",
+    "set_type": "core",
+    "short_info": "Magic 2011 (2010) \u00b7 Core Set \u00b7 core \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 249,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic 2011 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-2011-Booster-Box?language=1",
+        "from_price": 350.0,
+        "avg_25_lowest": 428.15,
+        "available_items": 6,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Rise of the Eldrazi",
+    "code": "roe",
+    "released_at": "2010-04-23",
+    "year": "2010",
+    "set_type": "expansion",
+    "short_info": "Rise of the Eldrazi (2010) \u00b7 Zendikar \u00b7 expansion \u00b7 248 cards",
+    "card_count": 248,
+    "products": [
+      {
+        "product_id": 248,
+        "product_type": "Draft Booster Box",
+        "product_name": "Rise of the Eldrazi Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Rise-of-the-Eldrazi-Booster-Box?language=1",
+        "from_price": 2400.0,
+        "avg_25_lowest": 3198.35,
+        "available_items": 2,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Worldwake",
+    "code": "wwk",
+    "released_at": "2010-02-05",
+    "year": "2010",
+    "set_type": "expansion",
+    "short_info": "Worldwake (2010) \u00b7 Zendikar \u00b7 expansion \u00b7 145 cards",
+    "card_count": 145,
+    "products": [
+      {
+        "product_id": 247,
+        "product_type": "Draft Booster Box",
+        "product_name": "Worldwake Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Worldwake-Booster-Box?language=1",
+        "from_price": 799.99,
+        "avg_25_lowest": 2106.46,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "Zendikar",
+    "code": "zen",
+    "released_at": "2009-10-02",
+    "year": "2009",
+    "set_type": "expansion",
+    "short_info": "Zendikar (2009) \u00b7 Zendikar \u00b7 expansion \u00b7 269 cards",
+    "card_count": 269,
+    "products": []
+  },
+  {
+    "id": 119,
+    "name": "Magic 2010",
+    "code": "m10",
+    "released_at": "2009-07-17",
+    "year": "2009",
+    "set_type": "core",
+    "short_info": "Magic 2010 (2009) \u00b7 Core Set \u00b7 core \u00b7 249 cards",
+    "card_count": 249,
+    "products": [
+      {
+        "product_id": 193,
+        "product_type": "Draft Booster Box",
+        "product_name": "Magic 2010 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Magic-2010-Booster-Box?language=1",
+        "from_price": 390.0,
+        "avg_25_lowest": 504.88,
+        "available_items": 10,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Alara Reborn",
+    "code": "arb",
+    "released_at": "2009-04-30",
+    "year": "2009",
+    "set_type": "expansion",
+    "short_info": "Alara Reborn (2009) \u00b7 Alara \u00b7 expansion \u00b7 145 cards",
+    "card_count": 145,
+    "products": [
+      {
+        "product_id": 246,
+        "product_type": "Draft Booster Box",
+        "product_name": "Alara Reborn Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Alara-Reborn-Booster-Box?language=1",
+        "from_price": 375.0,
+        "avg_25_lowest": 612.28,
+        "available_items": 7,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Conflux",
+    "code": "con",
+    "released_at": "2009-02-06",
+    "year": "2009",
+    "set_type": "expansion",
+    "short_info": "Conflux (2009) \u00b7 Alara \u00b7 expansion \u00b7 145 cards",
+    "card_count": 145,
+    "products": [
+      {
+        "product_id": 245,
+        "product_type": "Draft Booster Box",
+        "product_name": "Conflux Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Conflux-Booster-Box?language=1",
+        "from_price": 585.0,
+        "avg_25_lowest": 675.0,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "Shards of Alara",
+    "code": "ala",
+    "released_at": "2008-10-03",
+    "year": "2008",
+    "set_type": "expansion",
+    "short_info": "Shards of Alara (2008) \u00b7 Alara \u00b7 expansion \u00b7 250 cards",
+    "card_count": 250,
+    "products": [
+      {
+        "product_id": 244,
+        "product_type": "Draft Booster Box",
+        "product_name": "Shards of Alara Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Shards-of-Alara-Booster-Box?language=1",
+        "from_price": 600.0,
+        "avg_25_lowest": 705.83,
+        "available_items": 8,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Eventide",
+    "code": "eve",
+    "released_at": "2008-07-25",
+    "year": "2008",
+    "set_type": "expansion",
+    "short_info": "Eventide (2008) \u00b7 Shadowmoor \u00b7 expansion \u00b7 180 cards",
+    "card_count": 180,
+    "products": [
+      {
+        "product_id": 192,
+        "product_type": "Draft Booster Box",
+        "product_name": "Eventide Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Eventide-Booster-Box?language=1",
+        "from_price": 640.0,
+        "avg_25_lowest": 761.75,
+        "available_items": 14,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Shadowmoor",
+    "code": "shm",
+    "released_at": "2008-05-02",
+    "year": "2008",
+    "set_type": "expansion",
+    "short_info": "Shadowmoor (2008) \u00b7 Shadowmoor \u00b7 expansion \u00b7 302 cards",
+    "card_count": 302,
+    "products": [
+      {
+        "product_id": 191,
+        "product_type": "Draft Booster Box",
+        "product_name": "Shadowmoor Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Shadowmoor-Booster-Box?language=1",
+        "from_price": 949.9,
+        "avg_25_lowest": 1056.66,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Morningtide",
+    "code": "mor",
+    "released_at": "2008-02-01",
+    "year": "2008",
+    "set_type": "expansion",
+    "short_info": "Morningtide (2008) \u00b7 Lorwyn \u00b7 expansion \u00b7 150 cards",
+    "card_count": 150,
+    "products": [
+      {
+        "product_id": 243,
+        "product_type": "Draft Booster Box",
+        "product_name": "Morningtide Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Morningtide-Booster-Box?language=1",
+        "from_price": 590.0,
+        "avg_25_lowest": 740.91,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Lorwyn",
+    "code": "lrw",
+    "released_at": "2007-10-12",
+    "year": "2007",
+    "set_type": "expansion",
+    "short_info": "Lorwyn (2007) \u00b7 Lorwyn \u00b7 expansion \u00b7 301 cards",
+    "card_count": 301,
+    "products": []
+  },
+  {
+    "id": 127,
+    "name": "Tenth Edition",
+    "code": "10e",
+    "released_at": "2007-07-13",
+    "year": "2007",
+    "set_type": "core",
+    "short_info": "Tenth Edition (2007) \u00b7 Core Set \u00b7 core \u00b7 510 cards",
+    "card_count": 510,
+    "products": [
+      {
+        "product_id": 241,
+        "product_type": "Draft Booster Box",
+        "product_name": "Tenth Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Tenth-Edition-Booster-Box?language=1",
+        "from_price": 649.95,
+        "avg_25_lowest": 749.06,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Future Sight",
+    "code": "fut",
+    "released_at": "2007-05-04",
+    "year": "2007",
+    "set_type": "expansion",
+    "short_info": "Future Sight (2007) \u00b7 Time Spiral \u00b7 expansion \u00b7 180 cards",
+    "card_count": 180,
+    "products": [
+      {
+        "product_id": 239,
+        "product_type": "Draft Booster Box",
+        "product_name": "Future Sight Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Future-Sight-Booster-Box?language=1",
+        "from_price": 850.0,
+        "avg_25_lowest": 1629.4,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Planar Chaos",
+    "code": "plc",
+    "released_at": "2007-02-02",
+    "year": "2007",
+    "set_type": "expansion",
+    "short_info": "Planar Chaos (2007) \u00b7 Time Spiral \u00b7 expansion \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 189,
+        "product_type": "Draft Booster Box",
+        "product_name": "Planar Chaos Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Planar-Chaos-Booster-Box?language=1",
+        "from_price": 720.0,
+        "avg_25_lowest": 1522.72,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Time Spiral",
+    "code": "tsp",
+    "released_at": "2006-10-06",
+    "year": "2006",
+    "set_type": "expansion",
+    "short_info": "Time Spiral (2006) \u00b7 Time Spiral \u00b7 expansion \u00b7 301 cards",
+    "card_count": 301,
+    "products": []
+  },
+  {
+    "id": 130,
+    "name": "Time Spiral Timeshifted",
+    "code": "tsb",
+    "released_at": "2006-10-06",
+    "year": "2006",
+    "set_type": "expansion",
+    "short_info": "Time Spiral Timeshifted (2006) \u00b7 Time Spiral \u00b7 expansion \u00b7 121 cards",
+    "card_count": 121,
+    "products": []
+  },
+  {
+    "id": 132,
+    "name": "Coldsnap",
+    "code": "csp",
+    "released_at": "2006-07-21",
+    "year": "2006",
+    "set_type": "expansion",
+    "short_info": "Coldsnap (2006) \u00b7 Ice Age \u00b7 expansion \u00b7 155 cards",
+    "card_count": 155,
+    "products": [
+      {
+        "product_id": 188,
+        "product_type": "Draft Booster Box",
+        "product_name": "Coldsnap Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Coldsnap-Booster-Box?language=1",
+        "from_price": 551.92,
+        "avg_25_lowest": 1098.02,
+        "available_items": 8,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Dissension",
+    "code": "dis",
+    "released_at": "2006-05-05",
+    "year": "2006",
+    "set_type": "expansion",
+    "short_info": "Dissension (2006) \u00b7 Ravnica \u00b7 expansion \u00b7 180 cards",
+    "card_count": 180,
+    "products": [
+      {
+        "product_id": 234,
+        "product_type": "Draft Booster Box",
+        "product_name": "Dissension Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Dissension-Booster-Box?language=1",
+        "from_price": 614.95,
+        "avg_25_lowest": 1076.37,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Guildpact",
+    "code": "gpt",
+    "released_at": "2006-02-03",
+    "year": "2006",
+    "set_type": "expansion",
+    "short_info": "Guildpact (2006) \u00b7 Ravnica \u00b7 expansion \u00b7 167 cards",
+    "card_count": 167,
+    "products": [
+      {
+        "product_id": 235,
+        "product_type": "Draft Booster Box",
+        "product_name": "Guildpact Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Guildpact-Booster-Box?language=1",
+        "from_price": 475.0,
+        "avg_25_lowest": 849.25,
+        "available_items": 8,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Ravnica: City of Guilds",
+    "code": "rav",
+    "released_at": "2005-10-07",
+    "year": "2005",
+    "set_type": "expansion",
+    "short_info": "Ravnica: City of Guilds (2005) \u00b7 Ravnica \u00b7 expansion \u00b7 306 cards",
+    "card_count": 306,
+    "products": [
+      {
+        "product_id": 236,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ravnica: City of Guilds Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ravnica-City-of-Guilds-Booster-Box?language=1",
+        "from_price": 1090.0,
+        "avg_25_lowest": 2936.63,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Ninth Edition",
+    "code": "9ed",
+    "released_at": "2005-07-29",
+    "year": "2005",
+    "set_type": "core",
+    "short_info": "Ninth Edition (2005) \u00b7 Core Set \u00b7 core \u00b7 710 cards",
+    "card_count": 710,
+    "products": [
+      {
+        "product_id": 231,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ninth Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ninth-Edition-Booster-Box?language=1",
+        "from_price": 599.0,
+        "avg_25_lowest": 697.6,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Saviors of Kamigawa",
+    "code": "sok",
+    "released_at": "2005-06-03",
+    "year": "2005",
+    "set_type": "expansion",
+    "short_info": "Saviors of Kamigawa (2005) \u00b7 Kamigawa \u00b7 expansion \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 232,
+        "product_type": "Draft Booster Box",
+        "product_name": "Saviors of Kamigawa Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Saviors-of-Kamigawa-Booster-Box?language=1",
+        "from_price": 445.0,
+        "avg_25_lowest": 599.22,
+        "available_items": 13,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "Betrayers of Kamigawa",
+    "code": "bok",
+    "released_at": "2005-02-04",
+    "year": "2005",
+    "set_type": "expansion",
+    "short_info": "Betrayers of Kamigawa (2005) \u00b7 Kamigawa \u00b7 expansion \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 233,
+        "product_type": "Draft Booster Box",
+        "product_name": "Betrayers of Kamigawa Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Betrayers-of-Kamigawa-Booster-Box?language=1",
+        "from_price": 399.99,
+        "avg_25_lowest": 657.44,
+        "available_items": 12,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Champions of Kamigawa",
+    "code": "chk",
+    "released_at": "2004-10-01",
+    "year": "2004",
+    "set_type": "expansion",
+    "short_info": "Champions of Kamigawa (2004) \u00b7 Kamigawa \u00b7 expansion \u00b7 307 cards",
+    "card_count": 307,
+    "products": [
+      {
+        "product_id": 187,
+        "product_type": "Draft Booster Box",
+        "product_name": "Champions of Kamigawa Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Champions-of-Kamigawa-Booster-Box?language=1",
+        "from_price": 850.0,
+        "avg_25_lowest": 1419.06,
+        "available_items": 11,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Fifth Dawn",
+    "code": "5dn",
+    "released_at": "2004-06-04",
+    "year": "2004",
+    "set_type": "expansion",
+    "short_info": "Fifth Dawn (2004) \u00b7 Mirrodin \u00b7 expansion \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 230,
+        "product_type": "Draft Booster Box",
+        "product_name": "Fifth Dawn Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Fifth-Dawn-Booster-Box?language=1",
+        "from_price": 685.39,
+        "avg_25_lowest": 983.04,
+        "available_items": 10,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Darksteel",
+    "code": "dst",
+    "released_at": "2004-02-06",
+    "year": "2004",
+    "set_type": "expansion",
+    "short_info": "Darksteel (2004) \u00b7 Mirrodin \u00b7 expansion \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 229,
+        "product_type": "Draft Booster Box",
+        "product_name": "Darksteel Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Darksteel-Booster-Box?language=1",
+        "from_price": 949.99,
+        "avg_25_lowest": 1698.52,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "Mirrodin",
+    "code": "mrd",
+    "released_at": "2003-10-02",
+    "year": "2003",
+    "set_type": "expansion",
+    "short_info": "Mirrodin (2003) \u00b7 Mirrodin \u00b7 expansion \u00b7 306 cards",
+    "card_count": 306,
+    "products": []
+  },
+  {
+    "id": 143,
+    "name": "Eighth Edition",
+    "code": "8ed",
+    "released_at": "2003-07-28",
+    "year": "2003",
+    "set_type": "core",
+    "short_info": "Eighth Edition (2003) \u00b7 Core Set \u00b7 core \u00b7 711 cards",
+    "card_count": 711,
+    "products": [
+      {
+        "product_id": 281,
+        "product_type": "Draft Booster Box",
+        "product_name": "Eighth Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Eighth-Edition-Booster-Box?language=1",
+        "from_price": 750.0,
+        "avg_25_lowest": 932.21,
+        "available_items": 11,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Scourge",
+    "code": "scg",
+    "released_at": "2003-05-26",
+    "year": "2003",
+    "set_type": "expansion",
+    "short_info": "Scourge (2003) \u00b7 Onslaught \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 227,
+        "product_type": "Draft Booster Box",
+        "product_name": "Scourge Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Scourge-Booster-Box?language=1",
+        "from_price": 900.0,
+        "avg_25_lowest": 1072.19,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Legions",
+    "code": "lgn",
+    "released_at": "2003-02-03",
+    "year": "2003",
+    "set_type": "expansion",
+    "short_info": "Legions (2003) \u00b7 Onslaught \u00b7 expansion \u00b7 145 cards",
+    "card_count": 145,
+    "products": [
+      {
+        "product_id": 226,
+        "product_type": "Draft Booster Box",
+        "product_name": "Legions Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Legions-Booster-Box?language=1",
+        "from_price": 850.0,
+        "avg_25_lowest": 1208.37,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Onslaught",
+    "code": "ons",
+    "released_at": "2002-10-07",
+    "year": "2002",
+    "set_type": "expansion",
+    "short_info": "Onslaught (2002) \u00b7 Onslaught \u00b7 expansion \u00b7 351 cards",
+    "card_count": 351,
+    "products": [
+      {
+        "product_id": 225,
+        "product_type": "Draft Booster Box",
+        "product_name": "Onslaught Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Onslaught-Booster-Box?language=1",
+        "from_price": 2164.38,
+        "avg_25_lowest": 2854.57,
+        "available_items": 11,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Judgment",
+    "code": "jud",
+    "released_at": "2002-05-27",
+    "year": "2002",
+    "set_type": "expansion",
+    "short_info": "Judgment (2002) \u00b7 Odyssey \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 186,
+        "product_type": "Draft Booster Box",
+        "product_name": "Judgment Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Judgment-Booster-Box?language=1",
+        "from_price": 841.71,
+        "avg_25_lowest": 1014.07,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Torment",
+    "code": "tor",
+    "released_at": "2002-02-04",
+    "year": "2002",
+    "set_type": "expansion",
+    "short_info": "Torment (2002) \u00b7 Odyssey \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 172,
+        "product_type": "Draft Booster Box",
+        "product_name": "Torment Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Torment-Booster-Box?language=1",
+        "from_price": 1052.13,
+        "avg_25_lowest": 1475.57,
+        "available_items": 2,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Odyssey",
+    "code": "ody",
+    "released_at": "2001-10-01",
+    "year": "2001",
+    "set_type": "expansion",
+    "short_info": "Odyssey (2001) \u00b7 Odyssey \u00b7 expansion \u00b7 353 cards",
+    "card_count": 353,
+    "products": [
+      {
+        "product_id": 224,
+        "product_type": "Draft Booster Box",
+        "product_name": "Odyssey Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Odyssey-Booster-Box?language=1",
+        "from_price": 1900.0,
+        "avg_25_lowest": 2750.0,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Apocalypse",
+    "code": "apc",
+    "released_at": "2001-06-04",
+    "year": "2001",
+    "set_type": "expansion",
+    "short_info": "Apocalypse (2001) \u00b7 Invasion \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 222,
+        "product_type": "Draft Booster Box",
+        "product_name": "Apocalypse Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Apocalypse-Booster-Box?language=1",
+        "from_price": 1549.98,
+        "avg_25_lowest": 1666.66,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Seventh Edition",
+    "code": "7ed",
+    "released_at": "2001-04-11",
+    "year": "2001",
+    "set_type": "core",
+    "short_info": "Seventh Edition (2001) \u00b7 Core Set \u00b7 core \u00b7 708 cards",
+    "card_count": 708,
+    "products": [
+      {
+        "product_id": 223,
+        "product_type": "Draft Booster Box",
+        "product_name": "Seventh Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Seventh-Edition-Booster-Box?language=1",
+        "from_price": 3699.95,
+        "avg_25_lowest": 4116.65,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Planeshift",
+    "code": "pls",
+    "released_at": "2001-02-05",
+    "year": "2001",
+    "set_type": "expansion",
+    "short_info": "Planeshift (2001) \u00b7 Invasion \u00b7 expansion \u00b7 146 cards",
+    "card_count": 146,
+    "products": [
+      {
+        "product_id": 280,
+        "product_type": "Draft Booster Box",
+        "product_name": "Planeshift Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Planeshift-Booster-Box?language=1",
+        "from_price": 901.83,
+        "avg_25_lowest": 1050.91,
+        "available_items": 2,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "name": "Invasion",
+    "code": "inv",
+    "released_at": "2000-10-02",
+    "year": "2000",
+    "set_type": "expansion",
+    "short_info": "Invasion (2000) \u00b7 Invasion \u00b7 expansion \u00b7 354 cards",
+    "card_count": 354,
+    "products": [
+      {
+        "product_id": 185,
+        "product_type": "Draft Booster Box",
+        "product_name": "Invasion Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Invasion-Booster-Box?language=1",
+        "from_price": 1249.99,
+        "avg_25_lowest": 1302.99,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "name": "Prophecy",
+    "code": "pcy",
+    "released_at": "2000-06-05",
+    "year": "2000",
+    "set_type": "expansion",
+    "short_info": "Prophecy (2000) \u00b7 Masques \u00b7 expansion \u00b7 144 cards",
+    "card_count": 144,
+    "products": [
+      {
+        "product_id": 184,
+        "product_type": "Draft Booster Box",
+        "product_name": "Prophecy Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Prophecy-Booster-Box?language=1",
+        "from_price": 1349.99,
+        "avg_25_lowest": 1598.89,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "name": "Starter 2000",
+    "code": "s00",
+    "released_at": "2000-04-01",
+    "year": "2000",
+    "set_type": "starter",
+    "short_info": "Starter 2000 (2000) \u00b7 starter \u00b7 20 cards",
+    "card_count": 20,
+    "products": []
+  },
+  {
+    "id": 156,
+    "name": "Nemesis",
+    "code": "nem",
+    "released_at": "2000-02-14",
+    "year": "2000",
+    "set_type": "expansion",
+    "short_info": "Nemesis (2000) \u00b7 Masques \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 279,
+        "product_type": "Draft Booster Box",
+        "product_name": "Nemesis Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Nemesis-Booster-Box?language=1",
+        "from_price": 1190.0,
+        "avg_25_lowest": 1670.47,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "name": "Mercadian Masques",
+    "code": "mmq",
+    "released_at": "1999-10-04",
+    "year": "1999",
+    "set_type": "expansion",
+    "short_info": "Mercadian Masques (1999) \u00b7 Masques \u00b7 expansion \u00b7 350 cards",
+    "card_count": 350,
+    "products": [
+      {
+        "product_id": 221,
+        "product_type": "Draft Booster Box",
+        "product_name": "Mercadian Masques Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Mercadian-Masques-Booster-Box?language=1",
+        "from_price": 2399.99,
+        "avg_25_lowest": 2572.49,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "Starter 1999",
+    "code": "s99",
+    "released_at": "1999-07-01",
+    "year": "1999",
+    "set_type": "starter",
+    "short_info": "Starter 1999 (1999) \u00b7 starter \u00b7 173 cards",
+    "card_count": 173,
+    "products": [
+      {
+        "product_id": 283,
+        "product_type": "Draft Booster Box",
+        "product_name": "Starter 1999 Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Starter-1999-Booster-Box?language=1",
+        "from_price": 6500.0,
+        "avg_25_lowest": 6500.0,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Urza's Destiny",
+    "code": "uds",
+    "released_at": "1999-06-07",
+    "year": "1999",
+    "set_type": "expansion",
+    "short_info": "Urza's Destiny (1999) \u00b7 Urza \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": []
+  },
+  {
+    "id": 160,
+    "name": "Portal Three Kingdoms",
+    "code": "ptk",
+    "released_at": "1999-05-01",
+    "year": "1999",
+    "set_type": "starter",
+    "short_info": "Portal Three Kingdoms (1999) \u00b7 Portal \u00b7 starter \u00b7 180 cards",
+    "card_count": 180,
+    "products": [
+      {
+        "product_id": 218,
+        "product_type": "Draft Booster Box",
+        "product_name": "Portal Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Portal-Booster-Box?language=1",
+        "from_price": 1495.0,
+        "avg_25_lowest": 1815.6,
+        "available_items": 6,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 278,
+        "product_type": "Draft Booster Box",
+        "product_name": "Portal Three Kingdoms Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Portal-Three-Kingdoms-Booster-Box?language=1",
+        "from_price": 27715.25,
+        "avg_25_lowest": 27715.25,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Classic Sixth Edition",
+    "code": "6ed",
+    "released_at": "1999-04-21",
+    "year": "1999",
+    "set_type": "core",
+    "short_info": "Classic Sixth Edition (1999) \u00b7 Core Set \u00b7 core \u00b7 351 cards",
+    "card_count": 351,
+    "products": [
+      {
+        "product_id": 277,
+        "product_type": "Draft Booster Box",
+        "product_name": "Sixth Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Sixth-Edition-Booster-Box?language=1",
+        "from_price": 1202.44,
+        "avg_25_lowest": 1237.14,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "name": "Urza's Legacy",
+    "code": "ulg",
+    "released_at": "1999-02-15",
+    "year": "1999",
+    "set_type": "expansion",
+    "short_info": "Urza's Legacy (1999) \u00b7 Urza \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 220,
+        "product_type": "Draft Booster Box",
+        "product_name": "Urza's Legacy Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Urza-s-Legacy-Booster-Box?language=1",
+        "from_price": 4400.0,
+        "avg_25_lowest": 5019.82,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "name": "Urza's Saga",
+    "code": "usg",
+    "released_at": "1998-10-12",
+    "year": "1998",
+    "set_type": "expansion",
+    "short_info": "Urza's Saga (1998) \u00b7 Urza \u00b7 expansion \u00b7 357 cards",
+    "card_count": 357,
+    "products": [
+      {
+        "product_id": 219,
+        "product_type": "Draft Booster Box",
+        "product_name": "Urza's Saga Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Urza-s-Saga-Booster-Box?language=1",
+        "from_price": 7900.0,
+        "avg_25_lowest": 10642.13,
+        "available_items": 7,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Portal Second Age",
+    "code": "p02",
+    "released_at": "1998-06-24",
+    "year": "1998",
+    "set_type": "starter",
+    "short_info": "Portal Second Age (1998) \u00b7 Portal \u00b7 starter \u00b7 165 cards",
+    "card_count": 165,
+    "products": [
+      {
+        "product_id": 217,
+        "product_type": "Draft Booster Box",
+        "product_name": "Portal Second Age Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Portal-Second-Age-Booster-Box?language=1",
+        "from_price": 3990.0,
+        "avg_25_lowest": 3990.0,
+        "available_items": 1,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "name": "Exodus",
+    "code": "exo",
+    "released_at": "1998-06-15",
+    "year": "1998",
+    "set_type": "expansion",
+    "short_info": "Exodus (1998) \u00b7 Tempest \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 183,
+        "product_type": "Draft Booster Box",
+        "product_name": "Exodus Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Exodus-Booster-Box?language=1",
+        "from_price": 2950.0,
+        "avg_25_lowest": 3215.36,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Stronghold",
+    "code": "sth",
+    "released_at": "1998-03-02",
+    "year": "1998",
+    "set_type": "expansion",
+    "short_info": "Stronghold (1998) \u00b7 Tempest \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 214,
+        "product_type": "Draft Booster Box",
+        "product_name": "Stronghold Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Stronghold-Booster-Box?language=1",
+        "from_price": 3500.0,
+        "avg_25_lowest": 14505.88,
+        "available_items": 8,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "name": "Tempest",
+    "code": "tmp",
+    "released_at": "1997-10-14",
+    "year": "1997",
+    "set_type": "expansion",
+    "short_info": "Tempest (1997) \u00b7 Tempest \u00b7 expansion \u00b7 350 cards",
+    "card_count": 350,
+    "products": [
+      {
+        "product_id": 213,
+        "product_type": "Draft Booster Box",
+        "product_name": "Tempest Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Tempest-Booster-Box?language=1",
+        "from_price": 3907.91,
+        "avg_25_lowest": 6714.97,
+        "available_items": 7,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Weatherlight",
+    "code": "wth",
+    "released_at": "1997-06-09",
+    "year": "1997",
+    "set_type": "expansion",
+    "short_info": "Weatherlight (1997) \u00b7 Mirage \u00b7 expansion \u00b7 167 cards",
+    "card_count": 167,
+    "products": [
+      {
+        "product_id": 212,
+        "product_type": "Draft Booster Box",
+        "product_name": "Weatherlight Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Weatherlight-Booster-Box?language=1",
+        "from_price": 1399.0,
+        "avg_25_lowest": 2629.26,
+        "available_items": 14,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Portal",
+    "code": "por",
+    "released_at": "1997-05-01",
+    "year": "1997",
+    "set_type": "starter",
+    "short_info": "Portal (1997) \u00b7 Portal \u00b7 starter \u00b7 257 cards",
+    "card_count": 257,
+    "products": []
+  },
+  {
+    "id": 170,
+    "name": "Fifth Edition",
+    "code": "5ed",
+    "released_at": "1997-03-24",
+    "year": "1997",
+    "set_type": "core",
+    "short_info": "Fifth Edition (1997) \u00b7 Core Set \u00b7 core \u00b7 460 cards",
+    "card_count": 460,
+    "products": [
+      {
+        "product_id": 216,
+        "product_type": "Draft Booster Box",
+        "product_name": "Fifth Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Fifth-Edition-Booster-Box?language=1",
+        "from_price": 1499.99,
+        "avg_25_lowest": 1610.0,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Visions",
+    "code": "vis",
+    "released_at": "1997-02-03",
+    "year": "1997",
+    "set_type": "expansion",
+    "short_info": "Visions (1997) \u00b7 Mirage \u00b7 expansion \u00b7 167 cards",
+    "card_count": 167,
+    "products": [
+      {
+        "product_id": 211,
+        "product_type": "Draft Booster Box",
+        "product_name": "Visions Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Visions-Booster-Box?language=1",
+        "from_price": 1499.0,
+        "avg_25_lowest": 2255.97,
+        "available_items": 12,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Introductory Two-Player Set",
+    "code": "itp",
+    "released_at": "1996-12-31",
+    "year": "1996",
+    "set_type": "starter",
+    "short_info": "Introductory Two-Player Set (1996) \u00b7 starter \u00b7 67 cards",
+    "card_count": 67,
+    "products": []
+  },
+  {
+    "id": 173,
+    "name": "Mirage",
+    "code": "mir",
+    "released_at": "1996-10-08",
+    "year": "1996",
+    "set_type": "expansion",
+    "short_info": "Mirage (1996) \u00b7 Mirage \u00b7 expansion \u00b7 353 cards",
+    "card_count": 353,
+    "products": [
+      {
+        "product_id": 210,
+        "product_type": "Draft Booster Box",
+        "product_name": "Mirage Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Mirage-Booster-Box?language=1",
+        "from_price": 3399.0,
+        "avg_25_lowest": 4750.65,
+        "available_items": 7,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "name": "Alliances",
+    "code": "all",
+    "released_at": "1996-06-10",
+    "year": "1996",
+    "set_type": "expansion",
+    "short_info": "Alliances (1996) \u00b7 Ice Age \u00b7 expansion \u00b7 199 cards",
+    "card_count": 199,
+    "products": [
+      {
+        "product_id": 209,
+        "product_type": "Draft Booster Box",
+        "product_name": "Alliances Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Alliances-Booster-Box?language=1",
+        "from_price": 1900.0,
+        "avg_25_lowest": 3317.8,
+        "available_items": 5,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "name": "Homelands",
+    "code": "hml",
+    "released_at": "1995-10-01",
+    "year": "1995",
+    "set_type": "expansion",
+    "short_info": "Homelands (1995) \u00b7 expansion \u00b7 140 cards",
+    "card_count": 140,
+    "products": [
+      {
+        "product_id": 208,
+        "product_type": "Draft Booster Box",
+        "product_name": "Homelands Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Homelands-Booster-Box?language=1",
+        "from_price": 659.9,
+        "avg_25_lowest": 2275.11,
+        "available_items": 15,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "name": "Rinascimento",
+    "code": "rin",
+    "released_at": "1995-08-01",
+    "year": "1995",
+    "set_type": "masters",
+    "short_info": "Rinascimento (1995) \u00b7 masters \u00b7 69 cards",
+    "card_count": 69,
+    "products": [
+      {
+        "product_id": 256,
+        "product_type": "Draft Booster Box",
+        "product_name": "Rinascimento",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Rinascimento-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "name": "Renaissance",
+    "code": "ren",
+    "released_at": "1995-08-01",
+    "year": "1995",
+    "set_type": "masters",
+    "short_info": "Renaissance (1995) \u00b7 masters \u00b7 122 cards",
+    "card_count": 122,
+    "products": [
+      {
+        "product_id": 190,
+        "product_type": "Draft Booster Box",
+        "product_name": "Renaissance",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Renaissance-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "name": "Chronicles",
+    "code": "chr",
+    "released_at": "1995-07-01",
+    "year": "1995",
+    "set_type": "masters",
+    "short_info": "Chronicles (1995) \u00b7 masters \u00b7 125 cards",
+    "card_count": 125,
+    "products": [
+      {
+        "product_id": 207,
+        "product_type": "Draft Booster Box",
+        "product_name": "Chronicles Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Chronicles-Booster-Box?language=1",
+        "from_price": 1199.48,
+        "avg_25_lowest": 1223.61,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 257,
+        "product_type": "Draft Booster Box",
+        "product_name": "Chronicles Japanese",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Chronicles-Japanese-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "name": "Chronicles Foreign Black Border",
+    "code": "bchr",
+    "released_at": "1995-07-01",
+    "year": "1995",
+    "set_type": "masters",
+    "short_info": "Chronicles Foreign Black Border (1995) \u00b7 masters \u00b7 125 cards",
+    "card_count": 125,
+    "products": []
+  },
+  {
+    "id": 180,
+    "name": "Ice Age",
+    "code": "ice",
+    "released_at": "1995-06-03",
+    "year": "1995",
+    "set_type": "expansion",
+    "short_info": "Ice Age (1995) \u00b7 Ice Age \u00b7 expansion \u00b7 383 cards",
+    "card_count": 383,
+    "products": [
+      {
+        "product_id": 206,
+        "product_type": "Draft Booster Box",
+        "product_name": "Ice Age Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Ice-Age-Booster-Box?language=1",
+        "from_price": 1299.9,
+        "avg_25_lowest": 2444.5,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "name": "Fourth Edition",
+    "code": "4ed",
+    "released_at": "1995-04-01",
+    "year": "1995",
+    "set_type": "core",
+    "short_info": "Fourth Edition (1995) \u00b7 Core Set \u00b7 core \u00b7 380 cards",
+    "card_count": 380,
+    "products": [
+      {
+        "product_id": 253,
+        "product_type": "Draft Booster Box",
+        "product_name": "Fourth Edition Black Bordered",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Fourth-Edition-Black-Bordered-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "name": "Fourth Edition Foreign Black Border",
+    "code": "4bb",
+    "released_at": "1995-04-01",
+    "year": "1995",
+    "set_type": "core",
+    "short_info": "Fourth Edition Foreign Black Border (1995) \u00b7 core \u00b7 378 cards",
+    "card_count": 378,
+    "products": [
+      {
+        "product_id": 182,
+        "product_type": "Draft Booster Box",
+        "product_name": "Fourth Edition Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Fourth-Edition-Booster-Box?language=1",
+        "from_price": 1495.0,
+        "avg_25_lowest": 1563.65,
+        "available_items": 3,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "name": "Fallen Empires",
+    "code": "fem",
+    "released_at": "1994-11-01",
+    "year": "1994",
+    "set_type": "expansion",
+    "short_info": "Fallen Empires (1994) \u00b7 expansion \u00b7 187 cards",
+    "card_count": 187,
+    "products": [
+      {
+        "product_id": 163,
+        "product_type": "Draft Booster Box",
+        "product_name": "Fallen Empires Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Fallen-Empires-Booster-Box?language=1",
+        "from_price": 500.0,
+        "avg_25_lowest": 805.97,
+        "available_items": 20,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "name": "The Dark",
+    "code": "drk",
+    "released_at": "1994-08-01",
+    "year": "1994",
+    "set_type": "expansion",
+    "short_info": "The Dark (1994) \u00b7 expansion \u00b7 122 cards",
+    "card_count": 122,
+    "products": [
+      {
+        "product_id": 254,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Dark Italian",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Dark-Italian-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      },
+      {
+        "product_id": 276,
+        "product_type": "Draft Booster Box",
+        "product_name": "The Dark Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Dark-Booster-Box?language=1",
+        "from_price": 5090.0,
+        "avg_25_lowest": 7384.5,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "name": "Summer Magic / Edgar",
+    "code": "sum",
+    "released_at": "1994-06-21",
+    "year": "1994",
+    "set_type": "core",
+    "short_info": "Summer Magic / Edgar (1994) \u00b7 Core Set \u00b7 core \u00b7 306 cards",
+    "card_count": 306,
+    "products": [
+      {
+        "product_id": 282,
+        "product_type": "Draft Booster Box",
+        "product_name": "Summer Magic",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Summer-Magic-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "name": "Legends",
+    "code": "leg",
+    "released_at": "1994-06-01",
+    "year": "1994",
+    "set_type": "expansion",
+    "short_info": "Legends (1994) \u00b7 expansion \u00b7 310 cards",
+    "card_count": 310,
+    "products": [
+      {
+        "product_id": 255,
+        "product_type": "Draft Booster Box",
+        "product_name": "Legends Italian",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Legends-Italian-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "name": "Revised Edition",
+    "code": "3ed",
+    "released_at": "1994-04-11",
+    "year": "1994",
+    "set_type": "core",
+    "short_info": "Revised Edition (1994) \u00b7 Core Set \u00b7 core \u00b7 306 cards",
+    "card_count": 306,
+    "products": [
+      {
+        "product_id": 205,
+        "product_type": "Draft Booster Box",
+        "product_name": "Revised Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Revised-Booster-Box?language=1",
+        "from_price": 7749.0,
+        "avg_25_lowest": 13333.21,
+        "available_items": 9,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "name": "Foreign Black Border",
+    "code": "fbb",
+    "released_at": "1994-04-11",
+    "year": "1994",
+    "set_type": "core",
+    "short_info": "Foreign Black Border (1994) \u00b7 Core Set \u00b7 core \u00b7 307 cards",
+    "card_count": 307,
+    "products": []
+  },
+  {
+    "id": 189,
+    "name": "Antiquities",
+    "code": "atq",
+    "released_at": "1994-03-04",
+    "year": "1994",
+    "set_type": "expansion",
+    "short_info": "Antiquities (1994) \u00b7 expansion \u00b7 102 cards",
+    "card_count": 102,
+    "products": [
+      {
+        "product_id": 204,
+        "product_type": "Draft Booster Box",
+        "product_name": "Antiquities Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Antiquities-Booster-Box?language=1",
+        "from_price": 39900.0,
+        "avg_25_lowest": 45260.49,
+        "available_items": 4,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "name": "Arabian Nights",
+    "code": "arn",
+    "released_at": "1993-12-17",
+    "year": "1993",
+    "set_type": "expansion",
+    "short_info": "Arabian Nights (1993) \u00b7 expansion \u00b7 92 cards",
+    "card_count": 92,
+    "products": [
+      {
+        "product_id": 274,
+        "product_type": "Draft Booster Box",
+        "product_name": "Arabian Nights",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Arabian-Nights-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "name": "Unlimited Edition",
+    "code": "2ed",
+    "released_at": "1993-12-01",
+    "year": "1993",
+    "set_type": "core",
+    "short_info": "Unlimited Edition (1993) \u00b7 Core Set \u00b7 core \u00b7 302 cards",
+    "card_count": 302,
+    "products": [
+      {
+        "product_id": 273,
+        "product_type": "Draft Booster Box",
+        "product_name": "Unlimited",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Unlimited-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "name": "Limited Edition Beta",
+    "code": "leb",
+    "released_at": "1993-10-04",
+    "year": "1993",
+    "set_type": "core",
+    "short_info": "Limited Edition Beta (1993) \u00b7 Core Set \u00b7 core \u00b7 302 cards",
+    "card_count": 302,
+    "products": [
+      {
+        "product_id": 272,
+        "product_type": "Draft Booster Box",
+        "product_name": "Beta",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Beta-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "name": "Limited Edition Alpha",
+    "code": "lea",
+    "released_at": "1993-08-05",
+    "year": "1993",
+    "set_type": "core",
+    "short_info": "Limited Edition Alpha (1993) \u00b7 Core Set \u00b7 core \u00b7 295 cards",
+    "card_count": 295,
+    "products": [
+      {
+        "product_id": 271,
+        "product_type": "Draft Booster Box",
+        "product_name": "Alpha",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Alpha-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0,
+        "scan_date": "2026-08-10"
+      }
+    ]
+  }
+]

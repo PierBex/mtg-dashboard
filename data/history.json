@@ -1,0 +1,4262 @@
+[
+  {
+    "product_id": 22,
+    "product_type": "Collector Booster Box",
+    "product_name": "Magic: The Gathering | Marvel's Spider-Man Collector Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 325.0,
+        "avg_25_lowest": 342.22,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 42,
+    "product_type": "Collector Booster Box",
+    "product_name": "Universes Beyond: Assassin's Creed Collector Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 439.95,
+        "avg_25_lowest": 530.03,
+        "available_items": 34
+      }
+    ]
+  },
+  {
+    "product_id": 64,
+    "product_type": "Collector Booster Box",
+    "product_name": "Universes Beyond: Doctor Who Collector Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 520.0,
+        "avg_25_lowest": 3039.88,
+        "available_items": 25
+      }
+    ]
+  },
+  {
+    "product_id": 145,
+    "product_type": "Collector Booster Box",
+    "product_name": "Unfinity Collector Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 211.88,
+        "avg_25_lowest": 332.47,
+        "available_items": 33
+      }
+    ]
+  },
+  {
+    "product_id": 154,
+    "product_type": "Collector Booster Box",
+    "product_name": "Universes Beyond: Fallout Collector Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1450.0,
+        "avg_25_lowest": 2427.88,
+        "available_items": 29
+      }
+    ]
+  },
+  {
+    "product_id": 98,
+    "product_type": "Draft Booster Box",
+    "product_name": "Unfinity Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 101.88,
+        "avg_25_lowest": 158.15,
+        "available_items": 35
+      }
+    ]
+  },
+  {
+    "product_id": 103,
+    "product_type": "Draft Booster Box",
+    "product_name": "Unstable Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 109.8,
+        "avg_25_lowest": 123.08,
+        "available_items": 48
+      }
+    ]
+  },
+  {
+    "product_id": 197,
+    "product_type": "Draft Booster Box",
+    "product_name": "Relic Tokens: Lineage Collection Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 49.98,
+        "avg_25_lowest": 79.57,
+        "available_items": 12
+      }
+    ]
+  },
+  {
+    "product_id": 202,
+    "product_type": "Draft Booster Box",
+    "product_name": "30th Anniversary Edition Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1100.0,
+        "avg_25_lowest": 1376.87,
+        "available_items": 37
+      }
+    ]
+  },
+  {
+    "product_id": 215,
+    "product_type": "Draft Booster Box",
+    "product_name": "Unglued Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1299.9,
+        "avg_25_lowest": 3532.98,
+        "available_items": 6
+      }
+    ]
+  },
+  {
+    "product_id": 237,
+    "product_type": "Draft Booster Box",
+    "product_name": "Foreign Limited",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 238,
+    "product_type": "Draft Booster Box",
+    "product_name": "Unhinged Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 549.0,
+        "avg_25_lowest": 872.31,
+        "available_items": 10
+      }
+    ]
+  },
+  {
+    "product_id": 240,
+    "product_type": "Draft Booster Box",
+    "product_name": "European Unlimited",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 258,
+    "product_type": "Draft Booster Box",
+    "product_name": "Relic Tokens: Eternal Collection Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 64.9,
+        "avg_25_lowest": 81.95,
+        "available_items": 2
+      }
+    ]
+  },
+  {
+    "product_id": 259,
+    "product_type": "Draft Booster Box",
+    "product_name": "Creature Forge: Overwhelming Swarm Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 114.99,
+        "avg_25_lowest": 114.99,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 261,
+    "product_type": "Draft Booster Box",
+    "product_name": "Relic Tokens: Legendary Collection Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 54.88,
+        "avg_25_lowest": 91.24,
+        "available_items": 11
+      }
+    ]
+  },
+  {
+    "product_id": 269,
+    "product_type": "Draft Booster Box",
+    "product_name": "Relic Tokens: Relentless Collection Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 99.95,
+        "avg_25_lowest": 99.97,
+        "available_items": 2
+      }
+    ]
+  },
+  {
+    "product_id": 284,
+    "product_type": "Draft Booster Box",
+    "product_name": "Alara Block All-Foil Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 385.0,
+        "avg_25_lowest": 436.66,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 17,
+    "product_type": "Play Booster Box",
+    "product_name": "Magic: The Gathering | Marvel's Spider-Man Play Booster Box",
+    "set_name": null,
+    "set_code": null,
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 78.6,
+        "avg_25_lowest": 84.08,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 38,
+    "product_type": "Collector Booster Box",
+    "product_name": "Adventures in the Forgotten Realms Collector Booster Box",
+    "set_name": "Adventures in the Forgotten Realms",
+    "set_code": "afr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 300.0,
+        "avg_25_lowest": 423.44,
+        "available_items": 28
+      }
+    ]
+  },
+  {
+    "product_id": 137,
+    "product_type": "Draft Booster Box",
+    "product_name": "Adventures in the Forgotten Realms Draft Booster Box",
+    "set_name": "Adventures in the Forgotten Realms",
+    "set_code": "afr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 172.9,
+        "avg_25_lowest": 189.25,
+        "available_items": 38
+      }
+    ]
+  },
+  {
+    "product_id": 266,
+    "product_type": "Draft Booster Box",
+    "product_name": "Adventures in the Forgotten Realms Theme",
+    "set_name": "Adventures in the Forgotten Realms",
+    "set_code": "afr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 124,
+    "product_type": "Set Booster Box",
+    "product_name": "Adventures in the Forgotten Realms Set Booster Box",
+    "set_name": "Adventures in the Forgotten Realms",
+    "set_code": "afr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 195.0,
+        "avg_25_lowest": 268.28,
+        "available_items": 21
+      }
+    ]
+  },
+  {
+    "product_id": 102,
+    "product_type": "Draft Booster Box",
+    "product_name": "Aether Revolt Booster Box",
+    "set_name": "Aether Revolt",
+    "set_code": "aer",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 130.0,
+        "avg_25_lowest": 154.45,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 28,
+    "product_type": "Collector Booster Box",
+    "product_name": "Aetherdrift Collector Booster Box",
+    "set_name": "Aetherdrift",
+    "set_code": "dft",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 229.95,
+        "avg_25_lowest": 247.06,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 34,
+    "product_type": "Play Booster Box",
+    "product_name": "Aetherdrift Play Booster Box",
+    "set_name": "Aetherdrift",
+    "set_code": "dft",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 78.0,
+        "avg_25_lowest": 92.25,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 246,
+    "product_type": "Draft Booster Box",
+    "product_name": "Alara Reborn Booster Box",
+    "set_name": "Alara Reborn",
+    "set_code": "arb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 375.0,
+        "avg_25_lowest": 612.28,
+        "available_items": 7
+      }
+    ]
+  },
+  {
+    "product_id": 209,
+    "product_type": "Draft Booster Box",
+    "product_name": "Alliances Booster Box",
+    "set_name": "Alliances",
+    "set_code": "all",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1900.0,
+        "avg_25_lowest": 3317.8,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 91,
+    "product_type": "Draft Booster Box",
+    "product_name": "Amonkhet Booster Box",
+    "set_name": "Amonkhet",
+    "set_code": "akh",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 175.0,
+        "avg_25_lowest": 193.47,
+        "available_items": 45
+      }
+    ]
+  },
+  {
+    "product_id": 204,
+    "product_type": "Draft Booster Box",
+    "product_name": "Antiquities Booster Box",
+    "set_name": "Antiquities",
+    "set_code": "atq",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 39900.0,
+        "avg_25_lowest": 45260.49,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 222,
+    "product_type": "Draft Booster Box",
+    "product_name": "Apocalypse Booster Box",
+    "set_name": "Apocalypse",
+    "set_code": "apc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1549.98,
+        "avg_25_lowest": 1666.66,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 274,
+    "product_type": "Draft Booster Box",
+    "product_name": "Arabian Nights",
+    "set_name": "Arabian Nights",
+    "set_code": "arn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 160,
+    "product_type": "Draft Booster Box",
+    "product_name": "Avacyn Restored Booster Box",
+    "set_name": "Avacyn Restored",
+    "set_code": "avr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 440.0,
+        "avg_25_lowest": 531.49,
+        "available_items": 22
+      }
+    ]
+  },
+  {
+    "product_id": 12,
+    "product_type": "Collector Booster Box",
+    "product_name": "Magic: The Gathering | Avatar: The Last Airbender Collector Booster Box",
+    "set_name": "Avatar: The Last Airbender",
+    "set_code": "tla",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 340.0,
+        "avg_25_lowest": 370.85,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 61,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic: The Gathering | Avatar: The Last Airbender Jumpstart Booster Box",
+    "set_name": "Avatar: The Last Airbender",
+    "set_code": "tla",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 109.9,
+        "avg_25_lowest": 119.57,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 10,
+    "product_type": "Play Booster Box",
+    "product_name": "Magic: The Gathering | Avatar: The Last Airbender Play Booster Box",
+    "set_name": "Avatar: The Last Airbender",
+    "set_code": "tla",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 109.9,
+        "avg_25_lowest": 120.04,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 130,
+    "product_type": "Draft Booster Box",
+    "product_name": "Battle for Zendikar Booster Box",
+    "set_name": "Battle for Zendikar",
+    "set_code": "bfz",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 120.0,
+        "avg_25_lowest": 139.87,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 157,
+    "product_type": "Draft Booster Box",
+    "product_name": "Battlebond Booster Box",
+    "set_name": "Battlebond",
+    "set_code": "bbd",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 199.99,
+        "avg_25_lowest": 261.77,
+        "available_items": 34
+      }
+    ]
+  },
+  {
+    "product_id": 233,
+    "product_type": "Draft Booster Box",
+    "product_name": "Betrayers of Kamigawa Booster Box",
+    "set_name": "Betrayers of Kamigawa",
+    "set_code": "bok",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 399.99,
+        "avg_25_lowest": 657.44,
+        "available_items": 12
+      }
+    ]
+  },
+  {
+    "product_id": 69,
+    "product_type": "Collector Booster Box",
+    "product_name": "Bloomburrow Collector Booster Box",
+    "set_name": "Bloomburrow",
+    "set_code": "blb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 800.0,
+        "avg_25_lowest": 4906.15,
+        "available_items": 18
+      }
+    ]
+  },
+  {
+    "product_id": 16,
+    "product_type": "Play Booster Box",
+    "product_name": "Bloomburrow Play Booster Box",
+    "set_name": "Bloomburrow",
+    "set_code": "blb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 145.0,
+        "avg_25_lowest": 159.0,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 156,
+    "product_type": "Draft Booster Box",
+    "product_name": "Born of the Gods Booster Box",
+    "set_name": "Born of the Gods",
+    "set_code": "bng",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 129.95,
+        "avg_25_lowest": 176.02,
+        "available_items": 17
+      }
+    ]
+  },
+  {
+    "product_id": 187,
+    "product_type": "Draft Booster Box",
+    "product_name": "Champions of Kamigawa Booster Box",
+    "set_name": "Champions of Kamigawa",
+    "set_code": "chk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 850.0,
+        "avg_25_lowest": 1419.06,
+        "available_items": 11
+      }
+    ]
+  },
+  {
+    "product_id": 207,
+    "product_type": "Draft Booster Box",
+    "product_name": "Chronicles Booster Box",
+    "set_name": "Chronicles",
+    "set_code": "chr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1199.48,
+        "avg_25_lowest": 1223.61,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 257,
+    "product_type": "Draft Booster Box",
+    "product_name": "Chronicles Japanese",
+    "set_name": "Chronicles",
+    "set_code": "chr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 277,
+    "product_type": "Draft Booster Box",
+    "product_name": "Sixth Edition Booster Box",
+    "set_name": "Classic Sixth Edition",
+    "set_code": "6ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1202.44,
+        "avg_25_lowest": 1237.14,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 188,
+    "product_type": "Draft Booster Box",
+    "product_name": "Coldsnap Booster Box",
+    "set_name": "Coldsnap",
+    "set_code": "csp",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 551.92,
+        "avg_25_lowest": 1098.02,
+        "available_items": 8
+      }
+    ]
+  },
+  {
+    "product_id": 74,
+    "product_type": "Collector Booster Box",
+    "product_name": "Commander Legends: Battle for Baldur's Gate Collector Booster Box",
+    "set_name": "Commander Legends",
+    "set_code": "cmr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 569.9,
+        "avg_25_lowest": 3272.0,
+        "available_items": 23
+      }
+    ]
+  },
+  {
+    "product_id": 52,
+    "product_type": "Draft Booster Box",
+    "product_name": "Commander Legends Draft Booster Box",
+    "set_name": "Commander Legends",
+    "set_code": "cmr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 214.99,
+        "avg_25_lowest": 233.49,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 87,
+    "product_type": "Draft Booster Box",
+    "product_name": "Commander Legends: Battle for Baldur's Gate Draft Booster Box",
+    "set_name": "Commander Legends",
+    "set_code": "cmr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 260.0,
+        "avg_25_lowest": 298.62,
+        "available_items": 28
+      }
+    ]
+  },
+  {
+    "product_id": 76,
+    "product_type": "Set Booster Box",
+    "product_name": "Commander Legends: Battle for Baldur's Gate Set Booster Box",
+    "set_name": "Commander Legends",
+    "set_code": "cmr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 260.0,
+        "avg_25_lowest": 316.98,
+        "available_items": 18
+      }
+    ]
+  },
+  {
+    "product_id": 170,
+    "product_type": "Collector Booster Box",
+    "product_name": "Commander Legends Collector Booster Box",
+    "set_name": "Commander Legends: Battle for Baldur's Gate",
+    "set_code": "clb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 600.0,
+        "avg_25_lowest": 2869.63,
+        "available_items": 24
+      }
+    ]
+  },
+  {
+    "product_id": 275,
+    "product_type": "Draft Booster Box",
+    "product_name": "Legends Booster Box",
+    "set_name": "Commander Legends: Battle for Baldur's Gate",
+    "set_code": "clb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 31757.06,
+        "avg_25_lowest": 31757.06,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 118,
+    "product_type": "Collector Booster Box",
+    "product_name": "Commander Masters Collector Booster Box",
+    "set_name": "Commander Masters",
+    "set_code": "cmm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 499.0,
+        "avg_25_lowest": 3242.85,
+        "available_items": 19
+      }
+    ]
+  },
+  {
+    "product_id": 101,
+    "product_type": "Draft Booster Box",
+    "product_name": "Commander Masters Draft Booster Box",
+    "set_name": "Commander Masters",
+    "set_code": "cmm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 399.9,
+        "avg_25_lowest": 482.33,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 63,
+    "product_type": "Set Booster Box",
+    "product_name": "Commander Masters Set Booster Box",
+    "set_name": "Commander Masters",
+    "set_code": "cmm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 449.99,
+        "avg_25_lowest": 547.3,
+        "available_items": 21
+      }
+    ]
+  },
+  {
+    "product_id": 245,
+    "product_type": "Draft Booster Box",
+    "product_name": "Conflux Booster Box",
+    "set_name": "Conflux",
+    "set_code": "con",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 585.0,
+        "avg_25_lowest": 675.0,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 134,
+    "product_type": "Draft Booster Box",
+    "product_name": "Conspiracy Booster Box",
+    "set_name": "Conspiracy: Take the Crown",
+    "set_code": "cn2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 140.0,
+        "avg_25_lowest": 437.38,
+        "available_items": 24
+      }
+    ]
+  },
+  {
+    "product_id": 143,
+    "product_type": "Draft Booster Box",
+    "product_name": "Conspiracy: Take the Crown Booster Box",
+    "set_name": "Conspiracy: Take the Crown",
+    "set_code": "cn2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 157.9,
+        "avg_25_lowest": 174.2,
+        "available_items": 41
+      }
+    ]
+  },
+  {
+    "product_id": 131,
+    "product_type": "Draft Booster Box",
+    "product_name": "Core 2019 Booster Box",
+    "set_name": "Core Set 2019",
+    "set_code": "m19",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 107.9,
+        "avg_25_lowest": 151.83,
+        "available_items": 29
+      }
+    ]
+  },
+  {
+    "product_id": 104,
+    "product_type": "Draft Booster Box",
+    "product_name": "Core 2020 Booster Box",
+    "set_name": "Core Set 2020",
+    "set_code": "m20",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 99.99,
+        "avg_25_lowest": 122.66,
+        "available_items": 44
+      }
+    ]
+  },
+  {
+    "product_id": 51,
+    "product_type": "Collector Booster Box",
+    "product_name": "Core 2021 Collector Booster Box",
+    "set_name": "Core Set 2021",
+    "set_code": "m21",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 399.99,
+        "avg_25_lowest": 3247.0,
+        "available_items": 22
+      }
+    ]
+  },
+  {
+    "product_id": 115,
+    "product_type": "Draft Booster Box",
+    "product_name": "Core 2021 Booster Box",
+    "set_name": "Core Set 2021",
+    "set_code": "m21",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 110.0,
+        "avg_25_lowest": 130.97,
+        "available_items": 37
+      }
+    ]
+  },
+  {
+    "product_id": 176,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dark Ascension Booster Box",
+    "set_name": "Dark Ascension",
+    "set_code": "dka",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 265.0,
+        "avg_25_lowest": 327.06,
+        "available_items": 22
+      }
+    ]
+  },
+  {
+    "product_id": 229,
+    "product_type": "Draft Booster Box",
+    "product_name": "Darksteel Booster Box",
+    "set_name": "Darksteel",
+    "set_code": "dst",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 949.99,
+        "avg_25_lowest": 1698.52,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 234,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dissension Booster Box",
+    "set_name": "Dissension",
+    "set_code": "dis",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 614.95,
+        "avg_25_lowest": 1076.37,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 117,
+    "product_type": "Collector Booster Box",
+    "product_name": "Dominaria Remastered Collector Booster Box",
+    "set_name": "Dominaria Remastered",
+    "set_code": "dmr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 499.0,
+        "avg_25_lowest": 836.12,
+        "available_items": 26
+      }
+    ]
+  },
+  {
+    "product_id": 57,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dominaria Remastered Draft Booster Box",
+    "set_name": "Dominaria Remastered",
+    "set_code": "dmr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 220.0,
+        "avg_25_lowest": 244.79,
+        "available_items": 41
+      }
+    ]
+  },
+  {
+    "product_id": 70,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dominaria Booster Box",
+    "set_name": "Dominaria Remastered",
+    "set_code": "dmr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 120.0,
+        "avg_25_lowest": 132.73,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 60,
+    "product_type": "Collector Booster Box",
+    "product_name": "Dominaria United Collector Booster Box",
+    "set_name": "Dominaria United",
+    "set_code": "dmu",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 266.99,
+        "avg_25_lowest": 284.76,
+        "available_items": 41
+      }
+    ]
+  },
+  {
+    "product_id": 109,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dominaria United Draft Booster Box",
+    "set_name": "Dominaria United",
+    "set_code": "dmu",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 124.9,
+        "avg_25_lowest": 182.43,
+        "available_items": 26
+      }
+    ]
+  },
+  {
+    "product_id": 158,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dominaria United Jumpstart Booster Box",
+    "set_name": "Dominaria United",
+    "set_code": "dmu",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 64.99,
+        "avg_25_lowest": 92.53,
+        "available_items": 23
+      }
+    ]
+  },
+  {
+    "product_id": 77,
+    "product_type": "Set Booster Box",
+    "product_name": "Dominaria United Set Booster Box",
+    "set_name": "Dominaria United",
+    "set_code": "dmu",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 159.95,
+        "avg_25_lowest": 191.06,
+        "available_items": 17
+      }
+    ]
+  },
+  {
+    "product_id": 66,
+    "product_type": "Collector Booster Box",
+    "product_name": "Double Masters 2022 Collector Booster Box",
+    "set_name": "Double Masters 2022",
+    "set_code": "2x2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 390.0,
+        "avg_25_lowest": 438.05,
+        "available_items": 39
+      }
+    ]
+  },
+  {
+    "product_id": 41,
+    "product_type": "Draft Booster Box",
+    "product_name": "Double Masters 2022 Draft Booster Box",
+    "set_name": "Double Masters 2022",
+    "set_code": "2x2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 299.0,
+        "avg_25_lowest": 332.11,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 169,
+    "product_type": "Draft Booster Box",
+    "product_name": "Double Masters Booster Box",
+    "set_name": "Double Masters 2022",
+    "set_code": "2x2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 599.99,
+        "avg_25_lowest": 800.32,
+        "available_items": 21
+      }
+    ]
+  },
+  {
+    "product_id": 146,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dragon's Maze Booster Box",
+    "set_name": "Dragon's Maze",
+    "set_code": "dgm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 124.89,
+        "avg_25_lowest": 175.46,
+        "available_items": 19
+      }
+    ]
+  },
+  {
+    "product_id": 165,
+    "product_type": "Draft Booster Box",
+    "product_name": "Dragons of Tarkir Booster Box",
+    "set_name": "Dragons of Tarkir",
+    "set_code": "dtk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 179.0,
+        "avg_25_lowest": 202.99,
+        "available_items": 28
+      }
+    ]
+  },
+  {
+    "product_id": 90,
+    "product_type": "Collector Booster Box",
+    "product_name": "Duskmourn: House of Horror Collector Booster Box",
+    "set_name": "Duskmourn: House of Horror",
+    "set_code": "dsk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 619.0,
+        "avg_25_lowest": 3722.5,
+        "available_items": 17
+      }
+    ]
+  },
+  {
+    "product_id": 30,
+    "product_type": "Play Booster Box",
+    "product_name": "Duskmourn: House of Horror Play Booster Box",
+    "set_name": "Duskmourn: House of Horror",
+    "set_code": "dsk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 119.85,
+        "avg_25_lowest": 142.38,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 46,
+    "product_type": "Collector Booster Box",
+    "product_name": "Edge of Eternities Collector Booster Box",
+    "set_name": "Edge of Eternities",
+    "set_code": "eoe",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 599.0,
+        "avg_25_lowest": 1033.58,
+        "available_items": 26
+      }
+    ]
+  },
+  {
+    "product_id": 20,
+    "product_type": "Play Booster Box",
+    "product_name": "Edge of Eternities Play Booster Box",
+    "set_name": "Edge of Eternities",
+    "set_code": "eoe",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 174.0,
+        "avg_25_lowest": 190.85,
+        "available_items": 44
+      }
+    ]
+  },
+  {
+    "product_id": 281,
+    "product_type": "Draft Booster Box",
+    "product_name": "Eighth Edition Booster Box",
+    "set_name": "Eighth Edition",
+    "set_code": "8ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 750.0,
+        "avg_25_lowest": 932.21,
+        "available_items": 11
+      }
+    ]
+  },
+  {
+    "product_id": 167,
+    "product_type": "Draft Booster Box",
+    "product_name": "Eldritch Moon Booster Box",
+    "set_name": "Eldritch Moon",
+    "set_code": "emn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 187.9,
+        "avg_25_lowest": 198.79,
+        "available_items": 42
+      }
+    ]
+  },
+  {
+    "product_id": 121,
+    "product_type": "Draft Booster Box",
+    "product_name": "Eternal Masters Booster Box",
+    "set_name": "Eternal Masters",
+    "set_code": "ema",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 280.0,
+        "avg_25_lowest": 331.39,
+        "available_items": 49
+      }
+    ]
+  },
+  {
+    "product_id": 192,
+    "product_type": "Draft Booster Box",
+    "product_name": "Eventide Booster Box",
+    "set_name": "Eventide",
+    "set_code": "eve",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 640.0,
+        "avg_25_lowest": 761.75,
+        "available_items": 14
+      }
+    ]
+  },
+  {
+    "product_id": 183,
+    "product_type": "Draft Booster Box",
+    "product_name": "Exodus Booster Box",
+    "set_name": "Exodus",
+    "set_code": "exo",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 2950.0,
+        "avg_25_lowest": 3215.36,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 163,
+    "product_type": "Draft Booster Box",
+    "product_name": "Fallen Empires Booster Box",
+    "set_name": "Fallen Empires",
+    "set_code": "fem",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 500.0,
+        "avg_25_lowest": 805.97,
+        "available_items": 20
+      }
+    ]
+  },
+  {
+    "product_id": 135,
+    "product_type": "Draft Booster Box",
+    "product_name": "Fate Reforged Booster Box",
+    "set_name": "Fate Reforged Clash Pack",
+    "set_code": "cp2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 139.99,
+        "avg_25_lowest": 212.36,
+        "available_items": 24
+      }
+    ]
+  },
+  {
+    "product_id": 230,
+    "product_type": "Draft Booster Box",
+    "product_name": "Fifth Dawn Booster Box",
+    "set_name": "Fifth Dawn",
+    "set_code": "5dn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 685.39,
+        "avg_25_lowest": 983.04,
+        "available_items": 10
+      }
+    ]
+  },
+  {
+    "product_id": 216,
+    "product_type": "Draft Booster Box",
+    "product_name": "Fifth Edition Booster Box",
+    "set_name": "Fifth Edition",
+    "set_code": "5ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1499.99,
+        "avg_25_lowest": 1610.0,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 18,
+    "product_type": "Collector Booster Box",
+    "product_name": "Magic: The Gathering - FINAL FANTASY Collector Booster Box",
+    "set_name": "Final Fantasy",
+    "set_code": "fin",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1300.0,
+        "avg_25_lowest": 1418.98,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 270,
+    "product_type": "Draft Booster Box",
+    "product_name": "FINAL FANTASY Basic",
+    "set_name": "Final Fantasy",
+    "set_code": "fin",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 5,
+    "product_type": "Play Booster Box",
+    "product_name": "Magic: The Gathering - FINAL FANTASY Play Booster Box",
+    "set_name": "Final Fantasy",
+    "set_code": "fin",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 154.0,
+        "avg_25_lowest": 161.42,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 113,
+    "product_type": "Collector Booster Box",
+    "product_name": "Magic: The Gathering Foundations Collector Booster Box",
+    "set_name": "Foundations",
+    "set_code": "fdn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 690.0,
+        "avg_25_lowest": 4229.45,
+        "available_items": 25
+      }
+    ]
+  },
+  {
+    "product_id": 31,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic: The Gathering Foundations Jumpstart Booster Box",
+    "set_name": "Foundations",
+    "set_code": "fdn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 85.0,
+        "avg_25_lowest": 93.93,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 19,
+    "product_type": "Play Booster Box",
+    "product_name": "Magic: The Gathering Foundations Play Booster Box",
+    "set_name": "Foundations",
+    "set_code": "fdn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 105.0,
+        "avg_25_lowest": 121.34,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 32,
+    "product_type": "Draft Booster Box",
+    "product_name": "Jumpstart Booster Box",
+    "set_name": "Foundations Jumpstart",
+    "set_code": "j25",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 95.0,
+        "avg_25_lowest": 105.51,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 253,
+    "product_type": "Draft Booster Box",
+    "product_name": "Fourth Edition Black Bordered",
+    "set_name": "Fourth Edition",
+    "set_code": "4ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 182,
+    "product_type": "Draft Booster Box",
+    "product_name": "Fourth Edition Booster Box",
+    "set_name": "Fourth Edition Foreign Black Border",
+    "set_code": "4bb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1495.0,
+        "avg_25_lowest": 1563.65,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 239,
+    "product_type": "Draft Booster Box",
+    "product_name": "Future Sight Booster Box",
+    "set_name": "Future Sight",
+    "set_code": "fut",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 850.0,
+        "avg_25_lowest": 1629.4,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 161,
+    "product_type": "Draft Booster Box",
+    "product_name": "Gatecrash Booster Box",
+    "set_name": "Gatecrash",
+    "set_code": "gtc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 138.0,
+        "avg_25_lowest": 180.54,
+        "available_items": 11
+      }
+    ]
+  },
+  {
+    "product_id": 235,
+    "product_type": "Draft Booster Box",
+    "product_name": "Guildpact Booster Box",
+    "set_name": "Guildpact",
+    "set_code": "gpt",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 475.0,
+        "avg_25_lowest": 849.25,
+        "available_items": 8
+      }
+    ]
+  },
+  {
+    "product_id": 84,
+    "product_type": "Draft Booster Box",
+    "product_name": "Guilds of Ravnica Booster Box",
+    "set_name": "Guilds of Ravnica",
+    "set_code": "grn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 96.0,
+        "avg_25_lowest": 108.7,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 260,
+    "product_type": "Draft Booster Box",
+    "product_name": "Guilds of Ravnica Theme Booster Box",
+    "set_name": "Guilds of Ravnica",
+    "set_code": "grn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 54.5,
+        "avg_25_lowest": 59.74,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 208,
+    "product_type": "Draft Booster Box",
+    "product_name": "Homelands Booster Box",
+    "set_name": "Homelands",
+    "set_code": "hml",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 659.9,
+        "avg_25_lowest": 2275.11,
+        "available_items": 15
+      }
+    ]
+  },
+  {
+    "product_id": 136,
+    "product_type": "Draft Booster Box",
+    "product_name": "Hour of Devastation Booster Box",
+    "set_name": "Hour of Devastation",
+    "set_code": "hou",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 145.0,
+        "avg_25_lowest": 163.9,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 206,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ice Age Booster Box",
+    "set_name": "Ice Age",
+    "set_code": "ice",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1299.9,
+        "avg_25_lowest": 2444.5,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 114,
+    "product_type": "Draft Booster Box",
+    "product_name": "Iconic Masters Booster Box",
+    "set_name": "Iconic Masters",
+    "set_code": "ima",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 215.0,
+        "avg_25_lowest": 277.01,
+        "available_items": 28
+      }
+    ]
+  },
+  {
+    "product_id": 99,
+    "product_type": "Collector Booster Box",
+    "product_name": "Ikoria: Lair of Behemoths Collector Booster Box",
+    "set_name": "Ikoria: Lair of Behemoths",
+    "set_code": "iko",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 350.0,
+        "avg_25_lowest": 3166.78,
+        "available_items": 19
+      }
+    ]
+  },
+  {
+    "product_id": 43,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ikoria: Lair of Behemoths Booster Box",
+    "set_name": "Ikoria: Lair of Behemoths",
+    "set_code": "iko",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 150.0,
+        "avg_25_lowest": 172.78,
+        "available_items": 32
+      }
+    ]
+  },
+  {
+    "product_id": 263,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ikoria: Lair of Behemoths Theme Booster Box",
+    "set_name": "Ikoria: Lair of Behemoths",
+    "set_code": "iko",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 49.99,
+        "avg_25_lowest": 60.69,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 37,
+    "product_type": "Collector Booster Box",
+    "product_name": "Innistrad Remastered Collector Booster Box",
+    "set_name": "Innistrad Remastered",
+    "set_code": "inr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 359.2,
+        "avg_25_lowest": 412.06,
+        "available_items": 43
+      }
+    ]
+  },
+  {
+    "product_id": 195,
+    "product_type": "Draft Booster Box",
+    "product_name": "Innistrad Booster Box",
+    "set_name": "Innistrad Remastered",
+    "set_code": "inr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 529.0,
+        "avg_25_lowest": 935.3,
+        "available_items": 19
+      }
+    ]
+  },
+  {
+    "product_id": 44,
+    "product_type": "Play Booster Box",
+    "product_name": "Innistrad Remastered Play Booster Box",
+    "set_name": "Innistrad Remastered",
+    "set_code": "inr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 164.9,
+        "avg_25_lowest": 200.36,
+        "available_items": 30
+      }
+    ]
+  },
+  {
+    "product_id": 73,
+    "product_type": "Collector Booster Box",
+    "product_name": "Innistrad: Crimson Vow Collector Booster Box",
+    "set_name": "Innistrad: Crimson Vow",
+    "set_code": "vow",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 192.39,
+        "avg_25_lowest": 224.76,
+        "available_items": 43
+      }
+    ]
+  },
+  {
+    "product_id": 97,
+    "product_type": "Draft Booster Box",
+    "product_name": "Innistrad: Crimson Vow Draft Booster Box",
+    "set_name": "Innistrad: Crimson Vow",
+    "set_code": "vow",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 99.5,
+        "avg_25_lowest": 113.55,
+        "available_items": 40
+      }
+    ]
+  },
+  {
+    "product_id": 268,
+    "product_type": "Draft Booster Box",
+    "product_name": "Innistrad: Crimson Vow Theme Booster Box",
+    "set_name": "Innistrad: Crimson Vow",
+    "set_code": "vow",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 96.2,
+        "avg_25_lowest": 96.2,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 144,
+    "product_type": "Set Booster Box",
+    "product_name": "Innistrad: Crimson Vow Set Booster Box",
+    "set_name": "Innistrad: Crimson Vow",
+    "set_code": "vow",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 125.0,
+        "avg_25_lowest": 154.61,
+        "available_items": 24
+      }
+    ]
+  },
+  {
+    "product_id": 125,
+    "product_type": "Draft Booster Box",
+    "product_name": "Innistrad: Double Feature Booster Box",
+    "set_name": "Innistrad: Double Feature",
+    "set_code": "dbl",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 139.0,
+        "avg_25_lowest": 151.76,
+        "available_items": 47
+      }
+    ]
+  },
+  {
+    "product_id": 72,
+    "product_type": "Collector Booster Box",
+    "product_name": "Innistrad: Midnight Hunt Collector Booster Box",
+    "set_name": "Innistrad: Midnight Hunt",
+    "set_code": "mid",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 189.9,
+        "avg_25_lowest": 214.68,
+        "available_items": 45
+      }
+    ]
+  },
+  {
+    "product_id": 96,
+    "product_type": "Draft Booster Box",
+    "product_name": "Innistrad: Midnight Hunt Draft Booster Box",
+    "set_name": "Innistrad: Midnight Hunt",
+    "set_code": "mid",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 95.0,
+        "avg_25_lowest": 105.27,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 180,
+    "product_type": "Draft Booster Box",
+    "product_name": "Innistrad: Midnight Hunt Theme Booster Box",
+    "set_name": "Innistrad: Midnight Hunt",
+    "set_code": "mid",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 99.9,
+        "avg_25_lowest": 99.9,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 138,
+    "product_type": "Set Booster Box",
+    "product_name": "Innistrad: Midnight Hunt Set Booster Box",
+    "set_name": "Innistrad: Midnight Hunt",
+    "set_code": "mid",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 105.95,
+        "avg_25_lowest": 137.38,
+        "available_items": 33
+      }
+    ]
+  },
+  {
+    "product_id": 185,
+    "product_type": "Draft Booster Box",
+    "product_name": "Invasion Booster Box",
+    "set_name": "Invasion",
+    "set_code": "inv",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1249.99,
+        "avg_25_lowest": 1302.99,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 129,
+    "product_type": "Draft Booster Box",
+    "product_name": "Journey into Nyx Booster Box",
+    "set_name": "Journey into Nyx",
+    "set_code": "jou",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 148.0,
+        "avg_25_lowest": 173.39,
+        "available_items": 30
+      }
+    ]
+  },
+  {
+    "product_id": 186,
+    "product_type": "Draft Booster Box",
+    "product_name": "Judgment Booster Box",
+    "set_name": "Judgment",
+    "set_code": "jud",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 841.71,
+        "avg_25_lowest": 1014.07,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 139,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Brothers' War Jumpstart Booster Box",
+    "set_name": "Jumpstart",
+    "set_code": "jmp",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 49.99,
+        "avg_25_lowest": 72.77,
+        "available_items": 28
+      }
+    ]
+  },
+  {
+    "product_id": 181,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Lord of the Rings: Tales of Middle-earth Jumpstart Booster Box",
+    "set_name": "Jumpstart",
+    "set_code": "jmp",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 172.0,
+        "avg_25_lowest": 216.17,
+        "available_items": 13
+      }
+    ]
+  },
+  {
+    "product_id": 203,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Lord of the Rings: Tales of Middle-earth Jumpstart Vol. 2 Booster Box",
+    "set_name": "Jumpstart",
+    "set_code": "jmp",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 240.0,
+        "avg_25_lowest": 414.08,
+        "available_items": 11
+      }
+    ]
+  },
+  {
+    "product_id": 78,
+    "product_type": "Draft Booster Box",
+    "product_name": "Jumpstart 2022 Booster Box",
+    "set_name": "Jumpstart 2022",
+    "set_code": "j22",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 171.0,
+        "avg_25_lowest": 231.62,
+        "available_items": 24
+      }
+    ]
+  },
+  {
+    "product_id": 108,
+    "product_type": "Draft Booster Box",
+    "product_name": "Kaladesh Booster Box",
+    "set_name": "Kaladesh",
+    "set_code": "kld",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 290.0,
+        "avg_25_lowest": 338.33,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 106,
+    "product_type": "Collector Booster Box",
+    "product_name": "Kaldheim Collector Booster Box",
+    "set_name": "Kaldheim",
+    "set_code": "khm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 295.0,
+        "avg_25_lowest": 2652.6,
+        "available_items": 22
+      }
+    ]
+  },
+  {
+    "product_id": 151,
+    "product_type": "Draft Booster Box",
+    "product_name": "Kaldheim Draft Booster Box",
+    "set_name": "Kaldheim",
+    "set_code": "khm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 149.0,
+        "avg_25_lowest": 182.95,
+        "available_items": 34
+      }
+    ]
+  },
+  {
+    "product_id": 265,
+    "product_type": "Draft Booster Box",
+    "product_name": "Kaldheim Theme Booster Box",
+    "set_name": "Kaldheim",
+    "set_code": "khm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 70.0,
+        "avg_25_lowest": 72.5,
+        "available_items": 2
+      }
+    ]
+  },
+  {
+    "product_id": 82,
+    "product_type": "Set Booster Box",
+    "product_name": "Kaldheim Set Booster Box",
+    "set_name": "Kaldheim",
+    "set_code": "khm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 175.0,
+        "avg_25_lowest": 253.58,
+        "available_items": 22
+      }
+    ]
+  },
+  {
+    "product_id": 50,
+    "product_type": "Collector Booster Box",
+    "product_name": "Kamigawa: Neon Dynasty Collector Booster Box",
+    "set_name": "Kamigawa: Neon Dynasty",
+    "set_code": "neo",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 439.9,
+        "avg_25_lowest": 518.58,
+        "available_items": 34
+      }
+    ]
+  },
+  {
+    "product_id": 54,
+    "product_type": "Draft Booster Box",
+    "product_name": "Kamigawa: Neon Dynasty Draft Booster Box",
+    "set_name": "Kamigawa: Neon Dynasty",
+    "set_code": "neo",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 150.0,
+        "avg_25_lowest": 188.26,
+        "available_items": 33
+      }
+    ]
+  },
+  {
+    "product_id": 267,
+    "product_type": "Draft Booster Box",
+    "product_name": "Kamigawa: Neon Dynasty Theme Booster Box",
+    "set_name": "Kamigawa: Neon Dynasty",
+    "set_code": "neo",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 79.99,
+        "avg_25_lowest": 79.99,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 53,
+    "product_type": "Set Booster Box",
+    "product_name": "Kamigawa: Neon Dynasty Set Booster Box",
+    "set_name": "Kamigawa: Neon Dynasty",
+    "set_code": "neo",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 195.0,
+        "avg_25_lowest": 220.45,
+        "available_items": 42
+      }
+    ]
+  },
+  {
+    "product_id": 89,
+    "product_type": "Draft Booster Box",
+    "product_name": "Khans of Tarkir Booster Box",
+    "set_name": "Khans of Tarkir",
+    "set_code": "ktk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 90.0,
+        "avg_25_lowest": 140.47,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 255,
+    "product_type": "Draft Booster Box",
+    "product_name": "Legends Italian",
+    "set_name": "Legends",
+    "set_code": "leg",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 226,
+    "product_type": "Draft Booster Box",
+    "product_name": "Legions Booster Box",
+    "set_name": "Legions",
+    "set_code": "lgn",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 850.0,
+        "avg_25_lowest": 1208.37,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 271,
+    "product_type": "Draft Booster Box",
+    "product_name": "Alpha",
+    "set_name": "Limited Edition Alpha",
+    "set_code": "lea",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 272,
+    "product_type": "Draft Booster Box",
+    "product_name": "Beta",
+    "set_name": "Limited Edition Beta",
+    "set_code": "leb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 23,
+    "product_type": "Collector Booster Box",
+    "product_name": "Lorwyn Eclipsed Collector Booster Box",
+    "set_name": "Lorwyn Eclipsed",
+    "set_code": "ecl",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 315.0,
+        "avg_25_lowest": 342.58,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 242,
+    "product_type": "Draft Booster Box",
+    "product_name": "Lorwyn Booster Box",
+    "set_name": "Lorwyn Eclipsed",
+    "set_code": "ecl",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1200.0,
+        "avg_25_lowest": 2152.14,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 15,
+    "product_type": "Play Booster Box",
+    "product_name": "Lorwyn Eclipsed Play Booster Box",
+    "set_name": "Lorwyn Eclipsed",
+    "set_code": "ecl",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 104.99,
+        "avg_25_lowest": 123.19,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 193,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic 2010 Booster Box",
+    "set_name": "Magic 2010",
+    "set_code": "m10",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 390.0,
+        "avg_25_lowest": 504.88,
+        "available_items": 10
+      }
+    ]
+  },
+  {
+    "product_id": 249,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic 2011 Booster Box",
+    "set_name": "Magic 2011",
+    "set_code": "m11",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 350.0,
+        "avg_25_lowest": 428.15,
+        "available_items": 6
+      }
+    ]
+  },
+  {
+    "product_id": 250,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic 2012 Booster Box",
+    "set_name": "Magic 2012",
+    "set_code": "m12",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 249.99,
+        "avg_25_lowest": 286.11,
+        "available_items": 8
+      }
+    ]
+  },
+  {
+    "product_id": 251,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic 2013 Booster Box",
+    "set_name": "Magic 2013",
+    "set_code": "m13",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 205.0,
+        "avg_25_lowest": 252.48,
+        "available_items": 14
+      }
+    ]
+  },
+  {
+    "product_id": 178,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic 2014 Booster Box",
+    "set_name": "Magic 2014",
+    "set_code": "m14",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 185.0,
+        "avg_25_lowest": 223.8,
+        "available_items": 20
+      }
+    ]
+  },
+  {
+    "product_id": 147,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic 2015 Booster Box",
+    "set_name": "Magic 2015 Clash Pack",
+    "set_code": "cp1",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 185.0,
+        "avg_25_lowest": 239.04,
+        "available_items": 16
+      }
+    ]
+  },
+  {
+    "product_id": 148,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic Origins Booster Box",
+    "set_name": "Magic Origins Clash Pack",
+    "set_code": "cp3",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 112.5,
+        "avg_25_lowest": 137.34,
+        "available_items": 30
+      }
+    ]
+  },
+  {
+    "product_id": 79,
+    "product_type": "Draft Booster Box",
+    "product_name": "March of the Machine Draft Booster Box",
+    "set_name": "March of the Machine",
+    "set_code": "mom",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 119.0,
+        "avg_25_lowest": 175.61,
+        "available_items": 15
+      }
+    ]
+  },
+  {
+    "product_id": 159,
+    "product_type": "Draft Booster Box",
+    "product_name": "March of the Machine Jumpstart Booster Box",
+    "set_name": "March of the Machine",
+    "set_code": "mom",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 64.9,
+        "avg_25_lowest": 83.73,
+        "available_items": 12
+      }
+    ]
+  },
+  {
+    "product_id": 80,
+    "product_type": "Collector Booster Box",
+    "product_name": "March of the Machine Collector Booster Box",
+    "set_name": "March of the Machine: The Aftermath",
+    "set_code": "mat",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 764.0,
+        "avg_25_lowest": 3854.76,
+        "available_items": 17
+      }
+    ]
+  },
+  {
+    "product_id": 152,
+    "product_type": "Collector Booster Box",
+    "product_name": "March of the Machine: The Aftermath Collector Booster Box",
+    "set_name": "March of the Machine: The Aftermath",
+    "set_code": "mat",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 154.9,
+        "avg_25_lowest": 198.99,
+        "available_items": 35
+      }
+    ]
+  },
+  {
+    "product_id": 88,
+    "product_type": "Draft Booster Box",
+    "product_name": "March of the Machine: The Aftermath Epilogue Booster Box",
+    "set_name": "March of the Machine: The Aftermath",
+    "set_code": "mat",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 64.9,
+        "avg_25_lowest": 80.69,
+        "available_items": 30
+      }
+    ]
+  },
+  {
+    "product_id": 36,
+    "product_type": "Set Booster Box",
+    "product_name": "March of the Machine Set Booster Box",
+    "set_name": "March of the Machine: The Aftermath",
+    "set_code": "mat",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 129.99,
+        "avg_25_lowest": 192.54,
+        "available_items": 20
+      }
+    ]
+  },
+  {
+    "product_id": 3,
+    "product_type": "Collector Booster Box",
+    "product_name": "Magic: The Gathering | Marvel Super Heroes Collector Booster Box",
+    "set_name": "Marvel Super Heroes",
+    "set_code": "msh",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 315.0,
+        "avg_25_lowest": 332.79,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 7,
+    "product_type": "Draft Booster Box",
+    "product_name": "Magic: The Gathering | Marvel Super Heroes Jumpstart Booster Box",
+    "set_name": "Marvel Super Heroes",
+    "set_code": "msh",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 104.95,
+        "avg_25_lowest": 115.0,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 2,
+    "product_type": "Play Booster Box",
+    "product_name": "Magic: The Gathering | Marvel Super Heroes Play Booster Box",
+    "set_name": "Marvel Super Heroes",
+    "set_code": "msh",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 95.28,
+        "avg_25_lowest": 106.91,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 168,
+    "product_type": "Draft Booster Box",
+    "product_name": "Masters 25 Booster Box",
+    "set_name": "Masters 25",
+    "set_code": "a25",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 190.0,
+        "avg_25_lowest": 221.1,
+        "available_items": 41
+      }
+    ]
+  },
+  {
+    "product_id": 221,
+    "product_type": "Draft Booster Box",
+    "product_name": "Mercadian Masques Booster Box",
+    "set_name": "Mercadian Masques",
+    "set_code": "mmq",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 2399.99,
+        "avg_25_lowest": 2572.49,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 210,
+    "product_type": "Draft Booster Box",
+    "product_name": "Mirage Booster Box",
+    "set_name": "Mirage",
+    "set_code": "mir",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 3399.0,
+        "avg_25_lowest": 4750.65,
+        "available_items": 7
+      }
+    ]
+  },
+  {
+    "product_id": 194,
+    "product_type": "Draft Booster Box",
+    "product_name": "Mirrodin Besieged Booster Box",
+    "set_name": "Mirrodin Besieged",
+    "set_code": "mbs",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 549.99,
+        "avg_25_lowest": 844.52,
+        "available_items": 7
+      }
+    ]
+  },
+  {
+    "product_id": 228,
+    "product_type": "Draft Booster Box",
+    "product_name": "Mirrodin Booster Box",
+    "set_name": "Mirrodin Besieged",
+    "set_code": "mbs",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 950.0,
+        "avg_25_lowest": 1471.81,
+        "available_items": 10
+      }
+    ]
+  },
+  {
+    "product_id": 56,
+    "product_type": "Draft Booster Box",
+    "product_name": "Modern Horizons 2 Draft Booster Box",
+    "set_name": "Modern Horizons 2",
+    "set_code": "mh2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 230.0,
+        "avg_25_lowest": 282.46,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 75,
+    "product_type": "Collector Booster Box",
+    "product_name": "Modern Horizons 2 Collector Booster Box",
+    "set_name": "Modern Horizons 2 Timeshifts",
+    "set_code": "h2r",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 398.56,
+        "avg_25_lowest": 499.56,
+        "available_items": 35
+      }
+    ]
+  },
+  {
+    "product_id": 92,
+    "product_type": "Draft Booster Box",
+    "product_name": "Modern Horizons Booster Box",
+    "set_name": "Modern Horizons 2 Timeshifts",
+    "set_code": "h2r",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 210.0,
+        "avg_25_lowest": 237.84,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 100,
+    "product_type": "Set Booster Box",
+    "product_name": "Modern Horizons 2 Set Booster Box",
+    "set_name": "Modern Horizons 2 Timeshifts",
+    "set_code": "h2r",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 289.02,
+        "avg_25_lowest": 325.82,
+        "available_items": 42
+      }
+    ]
+  },
+  {
+    "product_id": 142,
+    "product_type": "Collector Booster Box",
+    "product_name": "Modern Horizons 3 Collector Booster Box",
+    "set_name": "Modern Horizons 3",
+    "set_code": "mh3",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 729.0,
+        "avg_25_lowest": 3172.75,
+        "available_items": 24
+      }
+    ]
+  },
+  {
+    "product_id": 26,
+    "product_type": "Play Booster Box",
+    "product_name": "Modern Horizons 3 Play Booster Box",
+    "set_name": "Modern Horizons 3",
+    "set_code": "mh3",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 250.0,
+        "avg_25_lowest": 285.8,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 166,
+    "product_type": "Draft Booster Box",
+    "product_name": "Modern Masters 2015 Booster Box",
+    "set_name": "Modern Masters 2015",
+    "set_code": "mm2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 239.0,
+        "avg_25_lowest": 258.29,
+        "available_items": 40
+      }
+    ]
+  },
+  {
+    "product_id": 177,
+    "product_type": "Draft Booster Box",
+    "product_name": "Modern Masters Booster Box",
+    "set_name": "Modern Masters 2017",
+    "set_code": "mm3",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 323.0,
+        "avg_25_lowest": 365.5,
+        "available_items": 40
+      }
+    ]
+  },
+  {
+    "product_id": 252,
+    "product_type": "Draft Booster Box",
+    "product_name": "Modern Masters 2017 Booster Box",
+    "set_name": "Modern Masters 2017",
+    "set_code": "mm3",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 200.0,
+        "avg_25_lowest": 238.18,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 243,
+    "product_type": "Draft Booster Box",
+    "product_name": "Morningtide Booster Box",
+    "set_name": "Morningtide",
+    "set_code": "mor",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 590.0,
+        "avg_25_lowest": 740.91,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 33,
+    "product_type": "Collector Booster Box",
+    "product_name": "Murders at Karlov Manor Collector Booster Box",
+    "set_name": "Murders at Karlov Manor",
+    "set_code": "mkm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 286.12,
+        "avg_25_lowest": 2747.89,
+        "available_items": 21
+      }
+    ]
+  },
+  {
+    "product_id": 95,
+    "product_type": "Play Booster Box",
+    "product_name": "Murders at Karlov Manor Play Booster Box",
+    "set_name": "Murders at Karlov Manor",
+    "set_code": "mkm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 124.9,
+        "avg_25_lowest": 142.46,
+        "available_items": 43
+      }
+    ]
+  },
+  {
+    "product_id": 11,
+    "product_type": "Draft Booster Box",
+    "product_name": "Mystery Booster 2 Booster Box",
+    "set_name": "Mystery Booster 2",
+    "set_code": "mb2",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 250.0,
+        "avg_25_lowest": 270.63,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 149,
+    "product_type": "Draft Booster Box",
+    "product_name": "Mystery Booster Box",
+    "set_name": "Mystery Booster Commander Edition",
+    "set_code": "mbc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 185.99,
+        "avg_25_lowest": 307.38,
+        "available_items": 40
+      }
+    ]
+  },
+  {
+    "product_id": 162,
+    "product_type": "Draft Booster Box",
+    "product_name": "Mystery Booster: Convention Edition Booster Box",
+    "set_name": "Mystery Booster Commander Edition",
+    "set_code": "mbc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 219.0,
+        "avg_25_lowest": 349.5,
+        "available_items": 27
+      }
+    ]
+  },
+  {
+    "product_id": 279,
+    "product_type": "Draft Booster Box",
+    "product_name": "Nemesis Booster Box",
+    "set_name": "Nemesis",
+    "set_code": "nem",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1190.0,
+        "avg_25_lowest": 1670.47,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 231,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ninth Edition Booster Box",
+    "set_name": "Ninth Edition",
+    "set_code": "9ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 599.0,
+        "avg_25_lowest": 697.6,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 110,
+    "product_type": "Draft Booster Box",
+    "product_name": "Oath of the Gatewatch Booster Box",
+    "set_name": "Oath of the Gatewatch",
+    "set_code": "ogw",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 108.99,
+        "avg_25_lowest": 124.74,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 224,
+    "product_type": "Draft Booster Box",
+    "product_name": "Odyssey Booster Box",
+    "set_name": "Odyssey",
+    "set_code": "ody",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1900.0,
+        "avg_25_lowest": 2750.0,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 225,
+    "product_type": "Draft Booster Box",
+    "product_name": "Onslaught Booster Box",
+    "set_name": "Onslaught",
+    "set_code": "ons",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 2164.38,
+        "avg_25_lowest": 2854.57,
+        "available_items": 11
+      }
+    ]
+  },
+  {
+    "product_id": 68,
+    "product_type": "Collector Booster Box",
+    "product_name": "Outlaws of Thunder Junction Collector Booster Box",
+    "set_name": "Outlaws of Thunder Junction",
+    "set_code": "otj",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 399.0,
+        "avg_25_lowest": 3561.53,
+        "available_items": 20
+      }
+    ]
+  },
+  {
+    "product_id": 39,
+    "product_type": "Play Booster Box",
+    "product_name": "Outlaws of Thunder Junction Play Booster Box",
+    "set_name": "Outlaws of Thunder Junction",
+    "set_code": "otj",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 120.0,
+        "avg_25_lowest": 135.06,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 132,
+    "product_type": "Collector Booster Box",
+    "product_name": "Phyrexia: All Will Be One Collector Booster Box",
+    "set_name": "Phyrexia: All Will Be One",
+    "set_code": "one",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 749.0,
+        "avg_25_lowest": 1001.58,
+        "available_items": 28
+      }
+    ]
+  },
+  {
+    "product_id": 112,
+    "product_type": "Draft Booster Box",
+    "product_name": "Phyrexia: All Will Be One Draft Booster Box",
+    "set_name": "Phyrexia: All Will Be One",
+    "set_code": "one",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 176.99,
+        "avg_25_lowest": 214.36,
+        "available_items": 27
+      }
+    ]
+  },
+  {
+    "product_id": 126,
+    "product_type": "Draft Booster Box",
+    "product_name": "Phyrexia: All Will Be One Jumpstart Booster Box",
+    "set_name": "Phyrexia: All Will Be One",
+    "set_code": "one",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 70.0,
+        "avg_25_lowest": 93.64,
+        "available_items": 13
+      }
+    ]
+  },
+  {
+    "product_id": 94,
+    "product_type": "Set Booster Box",
+    "product_name": "Phyrexia: All Will Be One Set Booster Box",
+    "set_name": "Phyrexia: All Will Be One",
+    "set_code": "one",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 250.0,
+        "avg_25_lowest": 282.09,
+        "available_items": 31
+      }
+    ]
+  },
+  {
+    "product_id": 189,
+    "product_type": "Draft Booster Box",
+    "product_name": "Planar Chaos Booster Box",
+    "set_name": "Planar Chaos",
+    "set_code": "plc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 720.0,
+        "avg_25_lowest": 1522.72,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 280,
+    "product_type": "Draft Booster Box",
+    "product_name": "Planeshift Booster Box",
+    "set_name": "Planeshift",
+    "set_code": "pls",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 901.83,
+        "avg_25_lowest": 1050.91,
+        "available_items": 2
+      }
+    ]
+  },
+  {
+    "product_id": 217,
+    "product_type": "Draft Booster Box",
+    "product_name": "Portal Second Age Booster Box",
+    "set_name": "Portal Second Age",
+    "set_code": "p02",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 3990.0,
+        "avg_25_lowest": 3990.0,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 218,
+    "product_type": "Draft Booster Box",
+    "product_name": "Portal Booster Box",
+    "set_name": "Portal Three Kingdoms",
+    "set_code": "ptk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1495.0,
+        "avg_25_lowest": 1815.6,
+        "available_items": 6
+      }
+    ]
+  },
+  {
+    "product_id": 278,
+    "product_type": "Draft Booster Box",
+    "product_name": "Portal Three Kingdoms Booster Box",
+    "set_name": "Portal Three Kingdoms",
+    "set_code": "ptk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 27715.25,
+        "avg_25_lowest": 27715.25,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 184,
+    "product_type": "Draft Booster Box",
+    "product_name": "Prophecy Booster Box",
+    "set_name": "Prophecy",
+    "set_code": "pcy",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1349.99,
+        "avg_25_lowest": 1598.89,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 198,
+    "product_type": "Collector Booster Box",
+    "product_name": "Ravnica Allegiance",
+    "set_name": "Ravnica Allegiance",
+    "set_code": "rna",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 81,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ravnica Allegiance Booster Box",
+    "set_name": "Ravnica Allegiance",
+    "set_code": "rna",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 98.0,
+        "avg_25_lowest": 115.0,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 199,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ravnica Allegiance Theme Booster Box",
+    "set_name": "Ravnica Allegiance",
+    "set_code": "rna",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 44.99,
+        "avg_25_lowest": 57.49,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 141,
+    "product_type": "Collector Booster Box",
+    "product_name": "Ravnica Remastered Collector Booster Box",
+    "set_name": "Ravnica Remastered",
+    "set_code": "rvr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1475.0,
+        "avg_25_lowest": 5433.08,
+        "available_items": 15
+      }
+    ]
+  },
+  {
+    "product_id": 153,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ravnica Remastered Draft Booster Box",
+    "set_name": "Ravnica Remastered",
+    "set_code": "rvr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 204.42,
+        "avg_25_lowest": 721.73,
+        "available_items": 21
+      }
+    ]
+  },
+  {
+    "product_id": 236,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ravnica: City of Guilds Booster Box",
+    "set_name": "Ravnica: City of Guilds",
+    "set_code": "rav",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1090.0,
+        "avg_25_lowest": 2936.63,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 14,
+    "product_type": "Collector Booster Box",
+    "product_name": "Reality Fracture Collector Booster Box",
+    "set_name": "Reality Fracture",
+    "set_code": "fra",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 302.09,
+        "avg_25_lowest": 317.33,
+        "available_items": 21
+      }
+    ]
+  },
+  {
+    "product_id": 13,
+    "product_type": "Play Booster Box",
+    "product_name": "Reality Fracture Play Booster Box",
+    "set_name": "Reality Fracture",
+    "set_code": "fra",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 127.89,
+        "avg_25_lowest": 137.33,
+        "available_items": 25
+      }
+    ]
+  },
+  {
+    "product_id": 190,
+    "product_type": "Draft Booster Box",
+    "product_name": "Renaissance",
+    "set_name": "Renaissance",
+    "set_code": "ren",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 155,
+    "product_type": "Draft Booster Box",
+    "product_name": "Return to Ravnica Booster Box",
+    "set_name": "Return to Ravnica",
+    "set_code": "rtr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 150.0,
+        "avg_25_lowest": 187.89,
+        "available_items": 26
+      }
+    ]
+  },
+  {
+    "product_id": 205,
+    "product_type": "Draft Booster Box",
+    "product_name": "Revised Booster Box",
+    "set_name": "Revised Edition",
+    "set_code": "3ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 7749.0,
+        "avg_25_lowest": 13333.21,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 256,
+    "product_type": "Draft Booster Box",
+    "product_name": "Rinascimento",
+    "set_name": "Rinascimento",
+    "set_code": "rin",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 248,
+    "product_type": "Draft Booster Box",
+    "product_name": "Rise of the Eldrazi Booster Box",
+    "set_name": "Rise of the Eldrazi",
+    "set_code": "roe",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 2400.0,
+        "avg_25_lowest": 3198.35,
+        "available_items": 2
+      }
+    ]
+  },
+  {
+    "product_id": 111,
+    "product_type": "Draft Booster Box",
+    "product_name": "Rivals of Ixalan Booster Box",
+    "set_name": "Rivals of Ixalan",
+    "set_code": "rix",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 110.0,
+        "avg_25_lowest": 139.55,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 232,
+    "product_type": "Draft Booster Box",
+    "product_name": "Saviors of Kamigawa Booster Box",
+    "set_name": "Saviors of Kamigawa",
+    "set_code": "sok",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 445.0,
+        "avg_25_lowest": 599.22,
+        "available_items": 13
+      }
+    ]
+  },
+  {
+    "product_id": 174,
+    "product_type": "Draft Booster Box",
+    "product_name": "Scars of Mirrodin Booster Box",
+    "set_name": "Scars of Mirrodin",
+    "set_code": "som",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 601.21,
+        "avg_25_lowest": 900.76,
+        "available_items": 11
+      }
+    ]
+  },
+  {
+    "product_id": 227,
+    "product_type": "Draft Booster Box",
+    "product_name": "Scourge Booster Box",
+    "set_name": "Scourge",
+    "set_code": "scg",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 900.0,
+        "avg_25_lowest": 1072.19,
+        "available_items": 5
+      }
+    ]
+  },
+  {
+    "product_id": 8,
+    "product_type": "Collector Booster Box",
+    "product_name": "Secrets of Strixhaven Collector Booster Box",
+    "set_name": "Secrets of Strixhaven",
+    "set_code": "sos",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 340.0,
+        "avg_25_lowest": 370.9,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 6,
+    "product_type": "Play Booster Box",
+    "product_name": "Secrets of Strixhaven Play Booster Box",
+    "set_name": "Secrets of Strixhaven",
+    "set_code": "sos",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 98.95,
+        "avg_25_lowest": 103.91,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 223,
+    "product_type": "Draft Booster Box",
+    "product_name": "Seventh Edition Booster Box",
+    "set_name": "Seventh Edition",
+    "set_code": "7ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 3699.95,
+        "avg_25_lowest": 4116.65,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 191,
+    "product_type": "Draft Booster Box",
+    "product_name": "Shadowmoor Booster Box",
+    "set_name": "Shadowmoor",
+    "set_code": "shm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 949.9,
+        "avg_25_lowest": 1056.66,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 120,
+    "product_type": "Draft Booster Box",
+    "product_name": "Shadows over Innistrad Booster Box",
+    "set_name": "Shadows over Innistrad",
+    "set_code": "soi",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 120.0,
+        "avg_25_lowest": 158.63,
+        "available_items": 30
+      }
+    ]
+  },
+  {
+    "product_id": 244,
+    "product_type": "Draft Booster Box",
+    "product_name": "Shards of Alara Booster Box",
+    "set_name": "Shards of Alara",
+    "set_code": "ala",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 600.0,
+        "avg_25_lowest": 705.83,
+        "available_items": 8
+      }
+    ]
+  },
+  {
+    "product_id": 24,
+    "product_type": "Collector Booster Box",
+    "product_name": "Star Trek Collector Booster Box",
+    "set_name": "Star Trek",
+    "set_code": "trk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 467.1,
+        "avg_25_lowest": 506.81,
+        "available_items": 17
+      }
+    ]
+  },
+  {
+    "product_id": 48,
+    "product_type": "Play Booster Box",
+    "product_name": "Star Trek Play Booster Box",
+    "set_name": "Star Trek",
+    "set_code": "trk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 141.5,
+        "avg_25_lowest": 158.27,
+        "available_items": 15
+      }
+    ]
+  },
+  {
+    "product_id": 283,
+    "product_type": "Draft Booster Box",
+    "product_name": "Starter 1999 Booster Box",
+    "set_name": "Starter 1999",
+    "set_code": "s99",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 6500.0,
+        "avg_25_lowest": 6500.0,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 59,
+    "product_type": "Collector Booster Box",
+    "product_name": "Streets of New Capenna Collector Booster Box",
+    "set_name": "Streets of New Capenna",
+    "set_code": "snc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 185.0,
+        "avg_25_lowest": 210.0,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 93,
+    "product_type": "Draft Booster Box",
+    "product_name": "Streets of New Capenna Draft Booster Box",
+    "set_name": "Streets of New Capenna",
+    "set_code": "snc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 100.99,
+        "avg_25_lowest": 119.24,
+        "available_items": 41
+      }
+    ]
+  },
+  {
+    "product_id": 201,
+    "product_type": "Draft Booster Box",
+    "product_name": "Streets of New Capenna Theme Booster Box",
+    "set_name": "Streets of New Capenna",
+    "set_code": "snc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 59.0,
+        "avg_25_lowest": 64.98,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 40,
+    "product_type": "Set Booster Box",
+    "product_name": "Streets of New Capenna Set Booster Box",
+    "set_name": "Streets of New Capenna",
+    "set_code": "snc",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 115.0,
+        "avg_25_lowest": 151.74,
+        "available_items": 27
+      }
+    ]
+  },
+  {
+    "product_id": 107,
+    "product_type": "Collector Booster Box",
+    "product_name": "Strixhaven: School of Mages Collector Booster Box",
+    "set_name": "Strixhaven: School of Mages",
+    "set_code": "stx",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 420.0,
+        "avg_25_lowest": 500.28,
+        "available_items": 31
+      }
+    ]
+  },
+  {
+    "product_id": 171,
+    "product_type": "Draft Booster Box",
+    "product_name": "Strixhaven: School of Mages Draft Booster Box",
+    "set_name": "Strixhaven: School of Mages",
+    "set_code": "stx",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 145.0,
+        "avg_25_lowest": 160.11,
+        "available_items": 38
+      }
+    ]
+  },
+  {
+    "product_id": 179,
+    "product_type": "Draft Booster Box",
+    "product_name": "Strixhaven: School of Mages Theme Booster Box",
+    "set_name": "Strixhaven: School of Mages",
+    "set_code": "stx",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 85.0,
+        "avg_25_lowest": 85.0,
+        "available_items": 1
+      }
+    ]
+  },
+  {
+    "product_id": 200,
+    "product_type": "Set Booster Box",
+    "product_name": "Strixhaven: School of Mages Set Booster Box",
+    "set_name": "Strixhaven: School of Mages",
+    "set_code": "stx",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 159.9,
+        "avg_25_lowest": 179.63,
+        "available_items": 28
+      }
+    ]
+  },
+  {
+    "product_id": 214,
+    "product_type": "Draft Booster Box",
+    "product_name": "Stronghold Booster Box",
+    "set_name": "Stronghold",
+    "set_code": "sth",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 3500.0,
+        "avg_25_lowest": 14505.88,
+        "available_items": 8
+      }
+    ]
+  },
+  {
+    "product_id": 282,
+    "product_type": "Draft Booster Box",
+    "product_name": "Summer Magic",
+    "set_name": "Summer Magic / Edgar",
+    "set_code": "sum",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 45,
+    "product_type": "Collector Booster Box",
+    "product_name": "Tarkir: Dragonstorm Collector Booster Box",
+    "set_name": "Tarkir: Dragonstorm",
+    "set_code": "tdm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 430.0,
+        "avg_25_lowest": 486.71,
+        "available_items": 35
+      }
+    ]
+  },
+  {
+    "product_id": 29,
+    "product_type": "Play Booster Box",
+    "product_name": "Tarkir: Dragonstorm Play Booster Box",
+    "set_name": "Tarkir: Dragonstorm",
+    "set_code": "tdm",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 112.0,
+        "avg_25_lowest": 133.76,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 21,
+    "product_type": "Collector Booster Box",
+    "product_name": "Magic: The Gathering | Teenage Mutant Ninja Turtles Collector Booster Box",
+    "set_name": "Teenage Mutant Ninja Turtles",
+    "set_code": "tmt",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 259.0,
+        "avg_25_lowest": 296.06,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 9,
+    "product_type": "Play Booster Box",
+    "product_name": "Magic: The Gathering | Teenage Mutant Ninja Turtles Play Booster Box",
+    "set_name": "Teenage Mutant Ninja Turtles",
+    "set_code": "tmt",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 68.0,
+        "avg_25_lowest": 75.04,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 213,
+    "product_type": "Draft Booster Box",
+    "product_name": "Tempest Booster Box",
+    "set_name": "Tempest",
+    "set_code": "tmp",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 3907.91,
+        "avg_25_lowest": 6714.97,
+        "available_items": 7
+      }
+    ]
+  },
+  {
+    "product_id": 241,
+    "product_type": "Draft Booster Box",
+    "product_name": "Tenth Edition Booster Box",
+    "set_name": "Tenth Edition",
+    "set_code": "10e",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 649.95,
+        "avg_25_lowest": 749.06,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 116,
+    "product_type": "Collector Booster Box",
+    "product_name": "The Brothers' War Collector Booster Box",
+    "set_name": "The Brothers' War",
+    "set_code": "bro",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 668.99,
+        "avg_25_lowest": 795.19,
+        "available_items": 33
+      }
+    ]
+  },
+  {
+    "product_id": 83,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Brothers' War Draft Booster Box",
+    "set_name": "The Brothers' War",
+    "set_code": "bro",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 115.0,
+        "avg_25_lowest": 150.87,
+        "available_items": 34
+      }
+    ]
+  },
+  {
+    "product_id": 62,
+    "product_type": "Set Booster Box",
+    "product_name": "The Brothers' War Set Booster Box",
+    "set_name": "The Brothers' War",
+    "set_code": "bro",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 200.0,
+        "avg_25_lowest": 260.58,
+        "available_items": 13
+      }
+    ]
+  },
+  {
+    "product_id": 254,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Dark Italian",
+    "set_name": "The Dark",
+    "set_code": "drk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 276,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Dark Booster Box",
+    "set_name": "The Dark",
+    "set_code": "drk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 5090.0,
+        "avg_25_lowest": 7384.5,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 4,
+    "product_type": "Collector Booster Box",
+    "product_name": "The Hobbit Collector Booster Box",
+    "set_name": "The Hobbit",
+    "set_code": "hob",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 699.69,
+        "avg_25_lowest": 718.09,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 1,
+    "product_type": "Play Booster Box",
+    "product_name": "The Hobbit Play Booster Box",
+    "set_name": "The Hobbit",
+    "set_code": "hob",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 165.0,
+        "avg_25_lowest": 170.91,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 35,
+    "product_type": "Collector Booster Box",
+    "product_name": "The Lord of the Rings: Tales of Middle-earth Collector Booster Box",
+    "set_name": "The Lord of the Rings: Tales of Middle-earth",
+    "set_code": "ltr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1500.0,
+        "avg_25_lowest": 1815.43,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 128,
+    "product_type": "Collector Booster Box",
+    "product_name": "The Lord of the Rings: Tales of Middle-earth Special Edition Collector Booster Box",
+    "set_name": "The Lord of the Rings: Tales of Middle-earth",
+    "set_code": "ltr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 6500.0,
+        "avg_25_lowest": 8832.75,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 58,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Lord of the Rings: Tales of Middle-earth Draft Booster Box",
+    "set_name": "The Lord of the Rings: Tales of Middle-earth",
+    "set_code": "ltr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 250.0,
+        "avg_25_lowest": 289.95,
+        "available_items": 46
+      }
+    ]
+  },
+  {
+    "product_id": 25,
+    "product_type": "Set Booster Box",
+    "product_name": "The Lord of the Rings: Tales of Middle-earth Set Booster Box",
+    "set_name": "The Lord of the Rings: Tales of Middle-earth",
+    "set_code": "ltr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 290.0,
+        "avg_25_lowest": 312.53,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 140,
+    "product_type": "Collector Booster Box",
+    "product_name": "The Lost Caverns of Ixalan Collector Booster Box",
+    "set_name": "The Lost Caverns of Ixalan",
+    "set_code": "lci",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 870.0,
+        "avg_25_lowest": 4652.03,
+        "available_items": 15
+      }
+    ]
+  },
+  {
+    "product_id": 67,
+    "product_type": "Draft Booster Box",
+    "product_name": "The Lost Caverns of Ixalan Draft Booster Box",
+    "set_name": "The Lost Caverns of Ixalan",
+    "set_code": "lci",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 214.98,
+        "avg_25_lowest": 263.59,
+        "available_items": 24
+      }
+    ]
+  },
+  {
+    "product_id": 122,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ixalan Booster Box",
+    "set_name": "The Lost Caverns of Ixalan",
+    "set_code": "lci",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 125.0,
+        "avg_25_lowest": 141.11,
+        "available_items": 46
+      }
+    ]
+  },
+  {
+    "product_id": 27,
+    "product_type": "Set Booster Box",
+    "product_name": "The Lost Caverns of Ixalan Set Booster Box",
+    "set_name": "The Lost Caverns of Ixalan",
+    "set_code": "lci",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 235.0,
+        "avg_25_lowest": 344.35,
+        "available_items": 20
+      }
+    ]
+  },
+  {
+    "product_id": 47,
+    "product_type": "Collector Booster Box",
+    "product_name": "Theros Beyond Death Collector Booster Box",
+    "set_name": "Theros Beyond Death",
+    "set_code": "thb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 209.99,
+        "avg_25_lowest": 283.74,
+        "available_items": 33
+      }
+    ]
+  },
+  {
+    "product_id": 86,
+    "product_type": "Draft Booster Box",
+    "product_name": "Theros Beyond Death Booster Box",
+    "set_name": "Theros Beyond Death",
+    "set_code": "thb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 115.0,
+        "avg_25_lowest": 145.79,
+        "available_items": 42
+      }
+    ]
+  },
+  {
+    "product_id": 196,
+    "product_type": "Draft Booster Box",
+    "product_name": "Theros Booster Box",
+    "set_name": "Theros Beyond Death",
+    "set_code": "thb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 204.99,
+        "avg_25_lowest": 328.05,
+        "available_items": 19
+      }
+    ]
+  },
+  {
+    "product_id": 262,
+    "product_type": "Draft Booster Box",
+    "product_name": "Theros Beyond Death Theme Booster Box",
+    "set_name": "Theros Beyond Death",
+    "set_code": "thb",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 49.95,
+        "avg_25_lowest": 54.48,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 105,
+    "product_type": "Collector Booster Box",
+    "product_name": "Throne of Eldraine Collector Booster Box",
+    "set_name": "Throne of Eldraine",
+    "set_code": "eld",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 280.0,
+        "avg_25_lowest": 328.67,
+        "available_items": 39
+      }
+    ]
+  },
+  {
+    "product_id": 71,
+    "product_type": "Draft Booster Box",
+    "product_name": "Throne of Eldraine Booster Box",
+    "set_name": "Throne of Eldraine",
+    "set_code": "eld",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 124.0,
+        "avg_25_lowest": 144.32,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 65,
+    "product_type": "Draft Booster Box",
+    "product_name": "Time Spiral Remastered Draft Booster Box",
+    "set_name": "Time Spiral Remastered",
+    "set_code": "tsr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 200.0,
+        "avg_25_lowest": 233.01,
+        "available_items": 48
+      }
+    ]
+  },
+  {
+    "product_id": 164,
+    "product_type": "Draft Booster Box",
+    "product_name": "Time Spiral Booster Box",
+    "set_name": "Time Spiral Remastered",
+    "set_code": "tsr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 600.0,
+        "avg_25_lowest": 698.66,
+        "available_items": 7
+      }
+    ]
+  },
+  {
+    "product_id": 172,
+    "product_type": "Draft Booster Box",
+    "product_name": "Torment Booster Box",
+    "set_name": "Torment",
+    "set_code": "tor",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1052.13,
+        "avg_25_lowest": 1475.57,
+        "available_items": 2
+      }
+    ]
+  },
+  {
+    "product_id": 85,
+    "product_type": "Draft Booster Box",
+    "product_name": "Ultimate Masters Booster Box",
+    "set_name": "Ultimate Masters",
+    "set_code": "uma",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 300.0,
+        "avg_25_lowest": 346.42,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 273,
+    "product_type": "Draft Booster Box",
+    "product_name": "Unlimited",
+    "set_name": "Unlimited Edition",
+    "set_code": "2ed",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 220,
+    "product_type": "Draft Booster Box",
+    "product_name": "Urza's Legacy Booster Box",
+    "set_name": "Urza's Legacy",
+    "set_code": "ulg",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 4400.0,
+        "avg_25_lowest": 5019.82,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 219,
+    "product_type": "Draft Booster Box",
+    "product_name": "Urza's Saga Booster Box",
+    "set_name": "Urza's Saga",
+    "set_code": "usg",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 7900.0,
+        "avg_25_lowest": 10642.13,
+        "available_items": 7
+      }
+    ]
+  },
+  {
+    "product_id": 211,
+    "product_type": "Draft Booster Box",
+    "product_name": "Visions Booster Box",
+    "set_name": "Visions",
+    "set_code": "vis",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1499.0,
+        "avg_25_lowest": 2255.97,
+        "available_items": 12
+      }
+    ]
+  },
+  {
+    "product_id": 55,
+    "product_type": "Draft Booster Box",
+    "product_name": "War of the Spark Booster Box",
+    "set_name": "War of the Spark",
+    "set_code": "war",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 109.7,
+        "avg_25_lowest": 122.82,
+        "available_items": 50
+      }
+    ]
+  },
+  {
+    "product_id": 285,
+    "product_type": "Draft Booster Box",
+    "product_name": "War of the Spark Theme Booster Box",
+    "set_name": "War of the Spark",
+    "set_code": "war",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 68.73,
+        "avg_25_lowest": 79.24,
+        "available_items": 3
+      }
+    ]
+  },
+  {
+    "product_id": 212,
+    "product_type": "Draft Booster Box",
+    "product_name": "Weatherlight Booster Box",
+    "set_name": "Weatherlight",
+    "set_code": "wth",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 1399.0,
+        "avg_25_lowest": 2629.26,
+        "available_items": 14
+      }
+    ]
+  },
+  {
+    "product_id": 127,
+    "product_type": "Collector Booster Box",
+    "product_name": "Wilds of Eldraine Collector Booster Box",
+    "set_name": "Wilds of Eldraine",
+    "set_code": "woe",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 795.0,
+        "avg_25_lowest": 3623.07,
+        "available_items": 20
+      }
+    ]
+  },
+  {
+    "product_id": 119,
+    "product_type": "Draft Booster Box",
+    "product_name": "Wilds of Eldraine Draft",
+    "set_name": "Wilds of Eldraine",
+    "set_code": "woe",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 133,
+    "product_type": "Set Booster Box",
+    "product_name": "Wilds of Eldraine Set Booster Box",
+    "set_name": "Wilds of Eldraine",
+    "set_code": "woe",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 269.99,
+        "avg_25_lowest": 382.33,
+        "available_items": 20
+      }
+    ]
+  },
+  {
+    "product_id": 247,
+    "product_type": "Draft Booster Box",
+    "product_name": "Worldwake Booster Box",
+    "set_name": "Worldwake",
+    "set_code": "wwk",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 799.99,
+        "avg_25_lowest": 2106.46,
+        "available_items": 4
+      }
+    ]
+  },
+  {
+    "product_id": 49,
+    "product_type": "Collector Booster Box",
+    "product_name": "Zendikar Rising Collector Booster Box",
+    "set_name": "Zendikar Rising",
+    "set_code": "znr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 369.9,
+        "avg_25_lowest": 451.83,
+        "available_items": 27
+      }
+    ]
+  },
+  {
+    "product_id": 123,
+    "product_type": "Draft Booster Box",
+    "product_name": "Zendikar Rising Draft Booster Box",
+    "set_name": "Zendikar Rising",
+    "set_code": "znr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 115.0,
+        "avg_25_lowest": 128.83,
+        "available_items": 43
+      }
+    ]
+  },
+  {
+    "product_id": 173,
+    "product_type": "Draft Booster Box",
+    "product_name": "Zendikar Booster Box",
+    "set_name": "Zendikar Rising",
+    "set_code": "znr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 825.0,
+        "avg_25_lowest": 1725.75,
+        "available_items": 9
+      }
+    ]
+  },
+  {
+    "product_id": 264,
+    "product_type": "Draft Booster Box",
+    "product_name": "Zendikar Rising Theme Booster Box",
+    "set_name": "Zendikar Rising",
+    "set_code": "znr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 50.0,
+        "avg_25_lowest": 54.66,
+        "available_items": 6
+      }
+    ]
+  },
+  {
+    "product_id": 150,
+    "product_type": "Set Booster Box",
+    "product_name": "Zendikar Rising Set Booster Box",
+    "set_name": "Zendikar Rising",
+    "set_code": "znr",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 125.0,
+        "avg_25_lowest": 152.53,
+        "available_items": 39
+      }
+    ]
+  }
+]

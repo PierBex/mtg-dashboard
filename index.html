@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/keyrune/keyrune.css">
 <script src="auth.js"></script>
 <style>
 :root{
@@ -206,13 +207,24 @@ body { font-size:15px; line-height:1.45; }
   display:flex; align-items:center; gap:12px; padding:14px 14px 14px 16px; cursor:pointer;
   background:linear-gradient(90deg, rgba(255,255,255,0.02), transparent);
 }
+/* Set icons: Keyrune font symbols */
 .set-icon{
   width:42px; height:42px; border-radius:50%; flex-shrink:0; display:grid; place-items:center;
-  font-family:'Cinzel',serif; font-weight:700; font-size:12px; letter-spacing:0.04em; color:#fff;
+  font-weight:700; font-size:12px; letter-spacing:0.04em; color:#fff;
   background:var(--mana-u); border:2px solid rgba(255,255,255,0.12);
   text-shadow:0 1px 2px rgba(0,0,0,0.45);
+  overflow:hidden; position:relative;
+}
+/* Keyrune icon inside the circle */
+.set-icon .ss{
+  font-size:22px; line-height:1; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,0.55);
+}
+/* Fallback: set code text (when no Keyrune icon) */
+.set-icon .code-text{
+  font-family:'Cinzel',serif; font-size:11px; letter-spacing:0.04em; font-weight:700;
 }
 .set-icon[data-type="core"]{ background:linear-gradient(145deg, var(--mana-w), #DCC698); color:#3A2F18; }
+.set-icon[data-type="core"] .ss{ color:#3A2F18; text-shadow:none; }
 .set-icon[data-type="expansion"]{ background:linear-gradient(145deg, var(--mana-u), #084A7C); }
 .set-icon[data-type="draft_innovation"]{ background:linear-gradient(145deg, var(--mana-g), #00592C); }
 .set-icon[data-type="commander"]{ background:linear-gradient(145deg, var(--mana-b), #333333); border-color:rgba(255,255,255,0.14); }
@@ -573,6 +585,9 @@ function setupOverviewFilters(){
   });
 }
 
+/* Keyrune set codes — all MTG sets with icon font support */
+const KEYRUNE_CODES = new Set(['10e','1e','2e','2ed','2u','2x2','2xm','30a','3e','3ed','40k','4ed','5dn','5ed','6ed','7ed','8ed','9ed','a25','acr','aer','afc','afr','akh','akr','ala','all','ann','apc','arb','arc','arn','ath','atq','avr','azorius','bbd','bcore','bfz','big','blb','blc','bng','bok','boros','bot','br','brb','brc','bro','brr','btd','c13','c14','c15','c16','c17','c18','c19','c20','c21','cc1','cc2','chk','chr','clb','clu','cm1','cm2','cma','cmc','cmd','cmm','cmr','cn2','cns','con','csp','dd2','ddc','ddd','dde','ddf','ddg','ddh','ddi','ddj','ddk','ddl','ddm','ddn','ddo','ddp','ddq','ddr','dds','ddt','ddu','dft','dgm','dimir','dis','dka','dkm','dmc','dmr','dmu','dom','dpa','drb','drc','drk','dsc','dsk','dst','dtk','duels','dvk','e01','e02','ea1','ecc','ecl','eld','ema','emn','eoc','eoe','eos','eve','evg','exo','exp','fca','fdc','fdn','fem','fic','fin','fra','frf','fut','gk1','gk2','gn2','gn3','gnt','golgari','gpt','grn','gruul','gs1','gtc','h09','h17','ha1','hbg','hml','hob','hoc','hop','hou','htr','htr17','ice','ice2','iko','ima','inr','inv','isd','izzet','j20','j21','j22','j25','j25a','jmp','jou','jud','khc','khm','kld','klr','ktk','lcc','lci','lea','leb','leg','lgn','lrw','ltc','ltr','m10','m11','m12','m13','m14','m15','m19','m20','m21','m3c','mar','mat','mb1','mb2','mbs','md1','me1','me2','me3','me4','med','mh1','mh2','mh3','mic','mid','mir','mkc','mkm','mm2','mm3','mma','mmq','moc','modo','mom','mor','mp1','mp2','mps','mrd','msc','msh','mul','ncc','nec','nem','neo','nms','nph','ody','ogw','om1','omb','onc','one','ons','ori','orzhov','otc','otj','otp','p02','papac','parl','parl2','parl3','past','pbook','pc2','pca','pcy','pd2','pd3','pdep','pdrc','peuro','pfnm','pgru','pheart','pidw','pio','pip','plc','pleaf','pls','pm2','pma','pmei','pmodo','pmps','pmpu','pmtg1','pmtg2','po2','por','psalvat05','psalvat11','psega','psld','psum','ptg','ptk','ptsa','pxbox','pz1','pz2','pza','rakdos','rav','ren','rex','rin','rix','rna','roe','rtr','rvr','s00','s99','scd','scg','selesnya','shm','simic','sir','sis','sld','sld2','slu','snc','soa','soc','soi','sok','som','sos','spe','spg','spm','ss1','ss2','ss3','sta','sth','stx','tce','td2','tdc','tdm','thb','ths','tla','tle','tmc','tmp','tmt','tor','tpr','tsp','tsr','uds','ugl','ulg','uma','una','und','unf','unh','usg','ust','v09','v0x','v10','v11','v12','v13','v14','v15','v16','v17','van','vis','vma','voc','vow','w16','w17','war','who','woc','woe','wot','wth','wwk','x2ps','x4ea','xcle','xdnd','xduels','xice','xkld','xlcu','xln','xmods','xren','xrin','xssm','y22','y23','y24','y25','y26','yblb','ybro','ydft','ydmu','ydsk','yeoe','ylci','ymid','ymkm','yneo','yone','yotj','ysnc','ytdm','ywoe','zen','znc','zne','znr']);
+
 function renderOverview(){
   const loading = document.getElementById('overviewLoading');
   const content = document.getElementById('overviewContent');
@@ -599,11 +614,16 @@ function renderOverview(){
     const products = (set.products || []).slice().sort((a,b)=>
       (PRODUCT_TYPE_ORDER[a.product_type] || 99) - (PRODUCT_TYPE_ORDER[b.product_type] || 99)
     );
-    const code = escapeHtml(set.code || '??').toUpperCase();
+    const code = escapeHtml(set.code || '??').toUpperCase().toLowerCase();
+    // Keyrune has most set codes; for the 16 missing ones, fall back to text
+    const hasKeyrune = set.code && KEYRUNE_CODES.has(set.code);
+    const iconInner = hasKeyrune
+      ? `<i class="ss ss-${escapeHtml(set.code)}"></i>`
+      : `<span class="code-text">${escapeHtml((set.code || '??').toUpperCase())}</span>`;
     return `
     <article class="set-card" data-id="${escapeHtml(set.id)}">
       <div class="set-header" onclick="toggleSet(this)">
-        <div class="set-icon" data-type="${setTypeKey(set.set_type)}" title="${escapeHtml(set.set_type || '')}">${code}</div>
+        <div class="set-icon" data-type="${setTypeKey(set.set_type)}" title="${escapeHtml(set.set_type || '')}">${iconInner}</div>
         <div class="set-info">
           <div class="set-name">${escapeHtml(set.name || '')}</div>
           <div class="set-meta">

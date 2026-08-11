@@ -339,6 +339,21 @@ body { font-size:15px; line-height:1.45; }
 .cron-note-warn{ color:var(--gold); }
 .cron-note-err{ color:var(--mana-r); }
 .cron-empty{ color:var(--text-muted); font-size:14px; padding:20px; text-align:center; }
+
+/* Stale data banner */
+.stale-banner{
+  display:flex; align-items:center; gap:10px;
+  background:rgba(245,158,11,0.12);
+  border:1px solid rgba(245,158,11,0.4);
+  border-radius:10px;
+  padding:12px 16px;
+  margin-bottom:14px;
+  font-size:13px;
+  color:var(--gold);
+  line-height:1.4;
+}
+.stale-icon{ font-size:18px; flex-shrink:0; }
+.stale-text{ flex:1; }
 .stat-card{
   padding:18px 16px; border-radius:var(--radius); border:1px solid var(--border);
   background:var(--bg-card); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
@@ -459,6 +474,12 @@ body { font-size:15px; line-height:1.45; }
         <button class="tab" data-tab="stats">Stats</button>
         <button class="tab" data-tab="cron">Cron Runs</button>
       </div>
+    </div>
+
+    <!-- Stale data warning banner (hidden by default, shown if data >4 days old) -->
+    <div id="staleBanner" class="stale-banner" style="display:none">
+      <span class="stale-icon">⚠</span>
+      <span class="stale-text">Data may be stale.</span>
     </div>
 
     <!-- Overview panel -->
@@ -636,7 +657,7 @@ async function initDashboard(){
   await Promise.all([
     fetchJSON('data/overview.json').then(d => { overviewData = d || []; renderOverview(); }).catch(e => showError('overviewContent','overviewLoading', e)),
     fetchJSON('data/history.json').then(d => { historyData = d || []; renderHistory(); }).catch(e => showError('historyContent','historyLoading', e)),
-    fetchJSON('data/stats.json').then(d => { statsData = d; renderStats(); }).catch(e => showError('statsContent','statsLoading', e)),
+    fetchJSON('data/stats.json').then(d => { statsData = d; renderStats(); checkStaleData(d); }).catch(e => showError('statsContent','statsLoading', e)),
     fetchJSON('data/cron_runs.json').then(d => { cronRunsData = d || []; renderCronRuns(); }).catch(e => showError('cronContent','cronLoading', e))
   ]);
 }
@@ -651,6 +672,19 @@ function showError(containerId, loadingId, err){
   const el = document.getElementById(containerId);
   document.getElementById(loadingId).style.display='none';
   el.innerHTML = '<div class="error-msg">Could not load data.<br>' + escapeHtml(err.message) + '</div>';
+}
+
+function checkStaleData(stats){
+  const banner = document.getElementById('staleBanner');
+  if (!banner || !stats || !stats.exported_at) return;
+  const exported = new Date(stats.exported_at + 'T00:00:00');
+  const days = Math.floor((Date.now() - exported.getTime()) / 86400000);
+  if (days > 4){
+    banner.style.display = 'flex';
+    banner.querySelector('.stale-text').textContent = 'Data is ' + days + ' days old — last crawl may have failed. Check Cron Runs tab.';
+  } else {
+    banner.style.display = 'none';
+  }
 }
 
 function setupTabs(){

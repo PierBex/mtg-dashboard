@@ -167,7 +167,9 @@ body { font-size:15px; line-height:1.45; }
   flex:1; background:transparent; border:none; outline:none; color:var(--text); font-size:15px;
 }
 .search-box input::placeholder{ color:var(--text-muted); }
-.chips{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:18px; }
+.chips{ display:flex; gap:8px; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; margin-bottom:18px; padding-bottom:2px; }
+.chips::-webkit-scrollbar{ display:none; }
+.chips{ scrollbar-width:none; }
 .chip{
   padding:7px 14px; border-radius:20px; border:1px solid var(--border); background:var(--bg-glass);
   color:var(--text-sec); font-size:12px; font-weight:600; cursor:pointer; transition:all .2s;
@@ -237,31 +239,32 @@ body { font-size:15px; line-height:1.45; }
 /* Product rows */
 .product-list{ padding:0 8px; }
 .product-row{
-  display:grid; grid-template-columns:auto 1fr auto; gap:12px; align-items:center;
+  display:grid; grid-template-columns:auto 1fr auto auto; gap:10px; align-items:center;
   padding:12px 10px; margin:0 2px 8px; border-radius:var(--radius-sm);
   background:var(--bg-glass); border:1px solid rgba(255,255,255,0.03);
   transition:background .2s, border .2s;
 }
 .product-row:hover{ background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.07); }
 .badge{
-  min-width:58px; text-align:center; padding:5px 8px; border-radius:6px; font-size:10px; font-weight:800;
+  min-width:50px; text-align:center; padding:4px 7px; border-radius:6px; font-size:9px; font-weight:800;
   text-transform:uppercase; letter-spacing:0.04em; color:#fff; background:var(--text-muted);
+  line-height:1.2;
 }
 .badge-play{ background:var(--play); }
 .badge-set{ background:var(--set); }
 .badge-draft{ background:var(--draft); color:#2A1500; }
 .badge-collector{ background:var(--collector); }
-.product-name{ font-weight:500; font-size:14px; color:var(--text); }
-.product-sub{ font-size:11px; color:var(--text-muted); margin-top:2px; }
+.product-name{ font-weight:500; font-size:13px; color:var(--text); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.product-sub{ font-size:10px; color:var(--text-muted); margin-top:2px; }
 .price-col{ text-align:right; }
-.price-main{ font-size:19px; font-weight:700; color:var(--gold); letter-spacing:-0.02em; }
-.price-sub{ font-size:11px; color:var(--text-sec); }
-.price-missing{ color:var(--text-muted); font-size:13px; }
-.stock-tag{ display:inline-flex; align-items:center; gap:4px; font-size:11px; color:var(--text-sec); margin-top:3px; }
+.price-main{ font-size:17px; font-weight:700; color:var(--gold); letter-spacing:-0.02em; }
+.price-sub{ font-size:10px; color:var(--text-sec); }
+.price-missing{ color:var(--text-muted); font-size:12px; }
+.stock-tag{ display:inline-flex; align-items:center; gap:4px; font-size:10px; color:var(--text-sec); margin-top:2px; }
 .stock-tag.out{ color:#FF7A7A; }
 .cm-link{
-  display:inline-flex; align-items:center; justify-content:center; width:34px; height:34px; border-radius:50%;
-  background:var(--bg-elev); border:1px solid var(--border); color:var(--text-sec); margin-left:4px;
+  display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%;
+  background:var(--bg-elev); border:1px solid var(--border); color:var(--text-sec); margin-left:0;
   transition:all .2s; flex-shrink:0;
 }
 .cm-link:hover{ border-color:rgba(255,200,87,0.4); color:var(--gold); background:rgba(255,200,87,0.07); }
@@ -323,6 +326,15 @@ body { font-size:15px; line-height:1.45; }
   .stats-grid{ grid-template-columns:repeat(4,1fr); }
   .stat-card.wide{ grid-column:span 1; }
   .history-grid{ grid-template-columns:repeat(2,1fr); }
+  .product-row{ gap:12px; }
+  .badge{ min-width:58px; padding:5px 8px; font-size:10px; }
+  .product-name{ font-size:14px; }
+  .product-sub{ font-size:11px; }
+  .price-main{ font-size:19px; }
+  .price-sub{ font-size:11px; }
+  .price-missing{ font-size:13px; }
+  .stock-tag{ font-size:11px; margin-top:3px; }
+  .cm-link{ width:34px; height:34px; margin-left:4px; }
 }
 @media(min-width:900px){
   .history-grid{ grid-template-columns:repeat(3,1fr); }
@@ -459,10 +471,10 @@ body { font-size:15px; line-height:1.45; }
 })();
 
 /* ---- Dashboard ---- */
-let dashboardInitialized = false;
-let overviewData = [];
-let historyData = [];
-let statsData = null;
+var dashboardInitialized = false;
+var overviewData = [];
+var historyData = [];
+var statsData = null;
 
 const PRODUCT_TYPE_ORDER = {
   'Play Booster Box':1,
@@ -581,7 +593,7 @@ function renderOverview(){
     return;
   }
 
-  sets.sort((a,b)=> ((b.year||0)-(a.year||0)) || (a.name||'').localeCompare(b.name||''));
+  sets.sort((a,b)=> ((b.released_at||'').localeCompare(a.released_at||'')) || (a.name||'').localeCompare(b.name||''));
 
   content.innerHTML = sets.map(set => {
     const products = (set.products || []).slice().sort((a,b)=>

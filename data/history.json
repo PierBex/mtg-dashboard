@@ -1170,21 +1170,6 @@
     ]
   },
   {
-    "product_id": 32,
-    "product_type": "Jumpstart Booster Box",
-    "product_name": "Jumpstart Booster Box",
-    "set_name": "Foundations Jumpstart",
-    "set_code": "j25",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 95.0,
-        "avg_25_lowest": 105.51,
-        "available_items": 50
-      }
-    ]
-  },
-  {
     "product_id": 182,
     "product_type": "Draft Booster Box",
     "product_name": "Fourth Edition Booster Box",
@@ -1605,8 +1590,23 @@
     ]
   },
   {
+    "product_id": 32,
+    "product_type": "Jumpstart Booster Box",
+    "product_name": "Jumpstart Booster Box",
+    "set_name": "Jumpstart",
+    "set_code": "jmp",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 95.0,
+        "avg_25_lowest": 105.51,
+        "available_items": 50
+      }
+    ]
+  },
+  {
     "product_id": 78,
-    "product_type": "Draft Booster Box",
+    "product_type": "Jumpstart Booster Box",
     "product_name": "Jumpstart 2022 Booster Box",
     "set_name": "Jumpstart 2022",
     "set_code": "j22",

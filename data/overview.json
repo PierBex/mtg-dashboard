@@ -520,28 +520,6 @@
     ]
   },
   {
-    "id": 17,
-    "name": "Foundations Jumpstart",
-    "code": "j25",
-    "released_at": "2024-11-15",
-    "year": "2024",
-    "set_type": "draft_innovation",
-    "short_info": "Foundations Jumpstart (2024) \u00b7 draft_innovation \u00b7 779 cards",
-    "card_count": 779,
-    "products": [
-      {
-        "product_id": 32,
-        "product_type": "Jumpstart Booster Box",
-        "product_name": "Jumpstart Booster Box",
-        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Jumpstart-Booster-Box?language=1",
-        "from_price": 95.0,
-        "avg_25_lowest": 105.51,
-        "available_items": 50,
-        "scan_date": "2026-08-10"
-      }
-    ]
-  },
-  {
     "id": 18,
     "name": "Duskmourn: House of Horror",
     "code": "dsk",
@@ -1199,7 +1177,7 @@
     "products": [
       {
         "product_id": 78,
-        "product_type": "Draft Booster Box",
+        "product_type": "Jumpstart Booster Box",
         "product_name": "Jumpstart 2022 Booster Box",
         "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Jumpstart-2022-Booster-Box?language=1",
         "from_price": 171.0,
@@ -1930,7 +1908,18 @@
     "set_type": "draft_innovation",
     "short_info": "Jumpstart (2020) \u00b7 draft_innovation \u00b7 497 cards",
     "card_count": 497,
-    "products": []
+    "products": [
+      {
+        "product_id": 32,
+        "product_type": "Jumpstart Booster Box",
+        "product_name": "Jumpstart Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Jumpstart-Booster-Box?language=1",
+        "from_price": 95.0,
+        "avg_25_lowest": 105.51,
+        "available_items": 50,
+        "scan_date": "2026-08-10"
+      }
+    ]
   },
   {
     "id": 59,

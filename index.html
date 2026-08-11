@@ -722,7 +722,7 @@ function renderProductRow(p, setName){
     <div class="price-col">
       ${from !== null ? `<div class="price-main">€${from}</div>` : `<div class="price-missing">No price</div>`}
       ${avg !== null ? `<div class="price-sub">avg €${avg}</div>` : ''}
-      <div class="stock-tag ${out ? 'out' : ''}">${out ? 'Out' : listed.toLocaleString() + ' listed'}</div>
+      <div class="stock-tag ${out ? 'out' : ''}">${out ? 'Out of stock' : (listed >= 50 ? '50+ listed' : listed.toLocaleString() + ' listed')}</div>
     </div>
     ${p.cardmarket_url ? `<a class="cm-link" href="${escapeHtml(p.cardmarket_url)}" target="_blank" rel="noopener" title="Open on CardMarket" aria-label="Open on CardMarket">CM<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M9 7h8v8"></path></svg></a>` : '<span></span>'}
   </div>`;

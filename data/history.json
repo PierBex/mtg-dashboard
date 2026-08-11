@@ -2430,6 +2430,21 @@
     ]
   },
   {
+    "product_id": 175,
+    "product_type": "Draft Booster Box",
+    "product_name": "New Phyrexia Booster Box",
+    "set_name": "New Phyrexia",
+    "set_code": "nph",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-11",
+        "from_price": 899.0,
+        "avg_25_lowest": 1967.17,
+        "available_items": 4
+      }
+    ]
+  },
+  {
     "product_id": 231,
     "product_type": "Draft Booster Box",
     "product_name": "Ninth Edition Booster Box",
@@ -3611,6 +3626,21 @@
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
+      }
+    ]
+  },
+  {
+    "product_id": 286,
+    "product_type": "Draft Booster Box",
+    "product_name": "Urza's Destiny Booster Box",
+    "set_name": "Urza's Destiny",
+    "set_code": "uds",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-11",
+        "from_price": 5122.6,
+        "avg_25_lowest": 5311.3,
+        "available_items": 2
       }
     ]
   },

@@ -3068,12 +3068,12 @@
       {
         "product_id": 175,
         "product_type": "Draft Booster Box",
-        "product_name": "New Phyrexia",
+        "product_name": "New Phyrexia Booster Box",
         "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/New-Phyrexia-Booster-Box?language=1",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": null,
-        "scan_date": null
+        "from_price": 899.0,
+        "avg_25_lowest": 1967.17,
+        "available_items": 4,
+        "scan_date": "2026-08-11"
       }
     ]
   },
@@ -4038,10 +4038,10 @@
         "product_type": "Draft Booster Box",
         "product_name": "Urza's Destiny Booster Box",
         "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Urza-s-Destiny-Booster-Box?language=1",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": null,
-        "scan_date": null
+        "from_price": 5122.6,
+        "avg_25_lowest": 5311.3,
+        "available_items": 2,
+        "scan_date": "2026-08-11"
       }
     ]
   },

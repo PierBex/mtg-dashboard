@@ -796,7 +796,7 @@ function renderStats(){
       <div class="stat-card"><div class="stat-label">With Prices</div><div class="stat-value">${(s.products_with_prices||0).toLocaleString()}</div><div class="stat-sub">priced listings</div></div>
       <div class="stat-card"><div class="stat-label">Out of Stock</div><div class="stat-value">${(s.products_out_of_stock||0).toLocaleString()}</div><div class="stat-sub">unavailable</div></div>
       <div class="stat-card wide"><div class="stat-label">Total Snapshots</div><div class="stat-value" style="font-size:22px">${(s.total_snapshots||0).toLocaleString()}</div><div class="stat-sub">price observations in history</div></div>
-      <div class="stat-card wide"><div class="stat-label">Last Crawl</div><div class="stat-value" style="font-size:18px">${escapeHtml(last.status || '—')} · ${fmtDate(last.finished_at)}</div><div class="stat-sub">${(last.products_scanned||0).toLocaleString()} products scanned · ${(last.items_scraped||0).toLocaleString()} items scraped</div></div>
+      <div class="stat-card wide"><div class="stat-label">Last Crawl</div><div class="stat-value" style="font-size:18px">${escapeHtml(last.status || '—')} · ${fmtDate(last.finished_at)}</div><div class="stat-sub">${(last.products_scanned||0).toLocaleString()} products scanned</div></div>
       <div class="stat-card wide"><div class="stat-label">Exported</div><div class="stat-value" style="font-size:22px">${exported || '—'}</div><div class="stat-sub">JSON bundle generation date</div></div>
     </div>
     <div class="set-card" style="padding:18px 18px 22px;">

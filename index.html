@@ -251,14 +251,15 @@ body { font-size:15px; line-height:1.45; }
 /* Product rows */
 .product-list{ padding:0 8px; }
 .product-row{
-  display:grid; grid-template-columns:auto 1fr auto auto; gap:10px; align-items:center;
+  display:grid; grid-template-columns:auto minmax(0,1fr) auto auto; gap:8px; align-items:center;
   padding:12px 10px; margin:0 2px 8px; border-radius:var(--radius-sm);
   background:var(--bg-glass); border:1px solid rgba(255,255,255,0.03);
   transition:background .2s, border .2s;
+  min-width:0;
 }
 .product-row:hover{ background:rgba(255,255,255,0.05); border-color:rgba(255,255,255,0.07); }
 .badge{
-  min-width:50px; text-align:center; padding:4px 7px; border-radius:6px; font-size:9px; font-weight:800;
+  min-width:46px; text-align:center; padding:4px 7px; border-radius:6px; font-size:10px; font-weight:800;
   text-transform:uppercase; letter-spacing:0.04em; color:#fff; background:var(--text-muted);
   line-height:1.2;
 }
@@ -266,21 +267,45 @@ body { font-size:15px; line-height:1.45; }
 .badge-set{ background:var(--set); }
 .badge-draft{ background:var(--draft); color:#2A1500; }
 .badge-collector{ background:var(--collector); }
+.product-copy{ min-width:0; overflow:hidden; }
 .product-name{ font-weight:500; font-size:13px; color:var(--text); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
-.product-sub{ font-size:10px; color:var(--text-muted); margin-top:2px; }
-.price-col{ text-align:right; }
-.price-main{ font-size:17px; font-weight:700; color:var(--gold); letter-spacing:-0.02em; }
+.product-sub{ font-size:10px; color:var(--text-muted); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.price-col{ text-align:right; min-width:62px; }
+.price-main{ font-size:16px; font-weight:700; color:var(--gold); letter-spacing:-0.03em; white-space:nowrap; }
 .price-sub{ font-size:10px; color:var(--text-sec); }
 .price-missing{ color:var(--text-muted); font-size:12px; }
-.stock-tag{ display:inline-flex; align-items:center; gap:4px; font-size:10px; color:var(--text-sec); margin-top:2px; }
+.stock-tag{ display:inline-flex; align-items:center; gap:4px; font-size:10px; color:var(--text-sec); margin-top:2px; white-space:nowrap; }
 .stock-tag.out{ color:#FF7A7A; }
 .cm-link{
-  display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; border-radius:50%;
-  background:var(--bg-elev); border:1px solid var(--border); color:var(--text-sec); margin-left:0;
+  display:inline-flex; align-items:center; justify-content:center; width:auto; height:26px; padding:0 5px; border-radius:7px;
+  background:transparent; border:1px solid rgba(255,255,255,0.06); color:var(--text-muted); margin-left:0;
   transition:all .2s; flex-shrink:0;
+  font-size:10px; font-weight:700; letter-spacing:0.04em; text-decoration:none;
 }
-.cm-link:hover{ border-color:rgba(255,200,87,0.4); color:var(--gold); background:rgba(255,200,87,0.07); }
-.cm-link svg{ width:16px; height:16px; }
+.cm-link:hover{ border-color:rgba(255,200,87,0.35); color:var(--gold); background:rgba(255,200,87,0.06); }
+.cm-link svg{ width:11px; height:11px; margin-left:3px; }
+
+@media(max-width:430px){
+  .container{ padding-left:12px; padding-right:12px; }
+  .tabs{ margin-left:-12px; margin-right:-12px; }
+  .set-header{ gap:10px; padding:13px 12px; }
+  .set-icon{ width:40px; height:40px; }
+  .set-name{ font-size:15px; }
+  .set-meta{ gap:6px; font-size:11px; }
+  .set-meta .meta-type, .set-meta .meta-products, .set-meta .meta-sep-extra{ display:none; }
+  .set-card.is-open .set-body{ padding-top:6px; }
+  .set-desc{ display:none; }
+  .product-list{ padding:0 6px; }
+  .product-row{ grid-template-columns:48px minmax(0,1fr) minmax(60px,auto) 26px; gap:7px; padding:10px 8px; margin-left:0; margin-right:0; }
+  .badge{ min-width:48px; padding:4px 5px; font-size:9px; letter-spacing:0.03em; }
+  .product-name{ font-size:13px; }
+  .product-sub{ font-size:10px; }
+  .price-col{ min-width:60px; }
+  .price-main{ font-size:15px; }
+  .price-sub, .stock-tag{ font-size:9px; }
+  .cm-link{ width:26px; padding:0; font-size:0; }
+  .cm-link svg{ width:13px; height:13px; margin-left:0; }
+}
 
 /* Stats */
 .stats-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:12px; margin-bottom:20px; }
@@ -508,6 +533,37 @@ function fmtDate(str){
   try { return new Date(str).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); }
   catch(e){ return str; }
 }
+
+function badgeLabel(type){
+  const t = String(type || '').toLowerCase();
+  if (t.includes('collector')) return 'Collect';
+  if (t.includes('jumpstart')) return 'Jump';
+  if (t.includes('draft')) return 'Draft';
+  if (t.includes('set')) return 'Set';
+  if (t.includes('theme')) return 'Theme';
+  if (t.includes('play')) return 'Play';
+  return String(type || 'Box').replace(/\s*Booster\s*Box\s*/ig, '').trim() || 'Box';
+}
+function cleanProductName(name, setName, productType){
+  let out = String(name || '').trim();
+  const set = String(setName || '').trim();
+  const type = String(productType || '').trim();
+  out = out.replace(/^Magic:\s*The\s*Gathering\s*(?:[|:–—-]\s*)?/i, '');
+  if (set) {
+    const esc = set.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    out = out.replace(new RegExp('^' + esc + '\\s*[-–—:|]?\\s*', 'i'), '');
+    out = out.replace(new RegExp('\\s*[-–—:|]?\\s*' + esc + '\\s*', 'ig'), ' ');
+  }
+  out = out.replace(/^Magic:\s*The\s*Gathering\s*(?:[|:–—-]\s*)?/i, '');
+  out = out.replace(/\s+/g, ' ').trim();
+  return out || type || name || 'Booster Box';
+}
+function shortDate(str){
+  if (!str) return '';
+  try { return new Date(str).toLocaleDateString(undefined, { month:'short', day:'numeric' }); }
+  catch(e){ return str; }
+}
+
 function typeClass(type){
   if (!type) return 'badge-play';
   const t = String(type).toLowerCase();
@@ -629,45 +685,46 @@ function renderOverview(){
           <div class="set-meta">
             <span>${escapeHtml(String(set.year || ''))}</span>
             <span>•</span>
-            <span>${escapeHtml(set.set_type || '')}</span>
-            <span>•</span>
+            <span class="meta-type">${escapeHtml(set.set_type || '')}</span>
+            <span class="meta-sep-extra">•</span>
             <span>${set.card_count || '?'} cards</span>
-            <span>•</span>
-            <span>${products.length} products</span>
+            <span class="meta-products meta-sep-extra">•</span>
+            <span class="meta-products">${products.length} products</span>
           </div>
         </div>
         <svg class="set-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </div>
       <div class="set-body">
-        ${set.short_info ? `<div class="set-desc">${escapeHtml(set.short_info)}</div>` : ''}
         <div class="product-list">
-          ${products.map(p => renderProductRow(p)).join('')}
+          ${products.map(p => renderProductRow(p, set.name)).join('')}
         </div>
       </div>
     </article>`;
   }).join('');
 }
 
-function renderProductRow(p){
+function renderProductRow(p, setName){
   const from = fmtPrice(p.from_price);
   const avg = fmtPrice(p.avg_25_lowest);
   const badgeClass = typeClass(p.product_type);
-  const name = escapeHtml(p.product_name || '');
-  const type = escapeHtml(p.product_type || '');
+  const name = escapeHtml(cleanProductName(p.product_name, setName, p.product_type));
+  const originalName = escapeHtml(p.product_name || '');
+  const label = escapeHtml(badgeLabel(p.product_type));
   const out = !p.available_items || Number(p.available_items) === 0;
+  const listed = Number(p.available_items) || 0;
   return `
-  <div class="product-row">
-    <div class="badge ${badgeClass}">${type}</div>
-    <div>
+  <div class="product-row" title="${originalName}">
+    <div class="badge ${badgeClass}">${label}</div>
+    <div class="product-copy">
       <div class="product-name">${name}</div>
-      <div class="product-sub">Updated ${fmtDate(p.scan_date)}</div>
+      <div class="product-sub">${shortDate(p.scan_date) ? 'Updated ' + shortDate(p.scan_date) : ''}</div>
     </div>
     <div class="price-col">
       ${from !== null ? `<div class="price-main">€${from}</div>` : `<div class="price-missing">No price</div>`}
-      ${avg !== null ? `<div class="price-sub">avg25 €${avg}</div>` : ''}
-      <div class="stock-tag ${out ? 'out' : ''}">${out ? '● Out of stock' : '● ' + (Number(p.available_items)||0).toLocaleString() + ' listed'}</div>
+      ${avg !== null ? `<div class="price-sub">avg €${avg}</div>` : ''}
+      <div class="stock-tag ${out ? 'out' : ''}">${out ? 'Out' : listed.toLocaleString() + ' listed'}</div>
     </div>
-    ${p.cardmarket_url ? `<a class="cm-link" href="${escapeHtml(p.cardmarket_url)}" target="_blank" rel="noopener" title="Open on CardMarket">↗</a>` : ''}
+    ${p.cardmarket_url ? `<a class="cm-link" href="${escapeHtml(p.cardmarket_url)}" target="_blank" rel="noopener" title="Open on CardMarket" aria-label="Open on CardMarket">CM<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7"></path><path d="M9 7h8v8"></path></svg></a>` : '<span></span>'}
   </div>`;
 }
 
@@ -743,10 +800,10 @@ function renderHistoryCard(h){
   <div class="history-card">
     <div class="history-head">
       <div>
-        <div class="history-title">${escapeHtml(h.product_name || '')}</div>
-        <div class="history-sub">${escapeHtml(h.set_name || '')} · ${escapeHtml(h.product_type || '')}</div>
+        <div class="history-title">${escapeHtml(cleanProductName(h.product_name, h.set_name, h.product_type))}</div>
+        <div class="history-sub">${escapeHtml(h.set_name || '')}</div>
       </div>
-      <div class="badge ${typeClass(h.product_type)}">${escapeHtml(h.product_type || '')}</div>
+      <div class="badge ${typeClass(h.product_type)}">${escapeHtml(badgeLabel(h.product_type))}</div>
     </div>
     <div class="chart-wrap">
       <svg viewBox="0 0 ${w} ${height}" preserveAspectRatio="none">
@@ -805,7 +862,7 @@ function renderStats(){
         ${Object.entries(typeBreakdown).sort((a,b)=>b[1]-a[1]).map(([type,count])=>`
           <div class="type-row">
             <span class="type-dot" style="background:var(--${typeClass(type).replace('badge-','')})"></span>
-            <span class="type-name">${escapeHtml(type)}</span>
+            <span class="type-name">${escapeHtml(badgeLabel(type))}</span>
             <span class="type-count">${count.toLocaleString()}</span>
           </div>
         `).join('')}

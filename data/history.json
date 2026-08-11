@@ -1,20 +1,5 @@
 [
   {
-    "product_id": 202,
-    "product_type": "Draft Booster Box",
-    "product_name": "30th Anniversary Edition Booster Box",
-    "set_name": "30th Anniversary Edition",
-    "set_code": "30a",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 1100.0,
-        "avg_25_lowest": 1376.87,
-        "available_items": 37
-      }
-    ]
-  },
-  {
     "product_id": 38,
     "product_type": "Collector Booster Box",
     "product_name": "Adventures in the Forgotten Realms Collector Booster Box",
@@ -386,36 +371,6 @@
         "from_price": 850.0,
         "avg_25_lowest": 1419.06,
         "available_items": 11
-      }
-    ]
-  },
-  {
-    "product_id": 207,
-    "product_type": "Draft Booster Box",
-    "product_name": "Chronicles Booster Box",
-    "set_name": "Chronicles",
-    "set_code": "chr",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 1199.48,
-        "avg_25_lowest": 1223.61,
-        "available_items": 4
-      }
-    ]
-  },
-  {
-    "product_id": 257,
-    "product_type": "Draft Booster Box",
-    "product_name": "Chronicles Japanese",
-    "set_name": "Chronicles",
-    "set_code": "chr",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
       }
     ]
   },
@@ -1245,21 +1200,6 @@
     ]
   },
   {
-    "product_id": 253,
-    "product_type": "Draft Booster Box",
-    "product_name": "Fourth Edition Black Bordered",
-    "set_name": "Fourth Edition Foreign Black Border",
-    "set_code": "4bb",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
-      }
-    ]
-  },
-  {
     "product_id": 239,
     "product_type": "Draft Booster Box",
     "product_name": "Future Sight Booster Box",
@@ -1541,21 +1481,6 @@
         "from_price": 96.2,
         "avg_25_lowest": 96.2,
         "available_items": 1
-      }
-    ]
-  },
-  {
-    "product_id": 125,
-    "product_type": "Draft Booster Box",
-    "product_name": "Innistrad: Double Feature Booster Box",
-    "set_name": "Innistrad: Double Feature",
-    "set_code": "dbl",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 139.0,
-        "avg_25_lowest": 151.76,
-        "available_items": 47
       }
     ]
   },
@@ -2490,51 +2415,6 @@
     ]
   },
   {
-    "product_id": 11,
-    "product_type": "Draft Booster Box",
-    "product_name": "Mystery Booster 2 Booster Box",
-    "set_name": "Mystery Booster 2",
-    "set_code": "mb2",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 250.0,
-        "avg_25_lowest": 270.63,
-        "available_items": 50
-      }
-    ]
-  },
-  {
-    "product_id": 149,
-    "product_type": "Draft Booster Box",
-    "product_name": "Mystery Booster Box",
-    "set_name": "Mystery Booster Commander Edition",
-    "set_code": "mbc",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 185.99,
-        "avg_25_lowest": 307.38,
-        "available_items": 40
-      }
-    ]
-  },
-  {
-    "product_id": 162,
-    "product_type": "Draft Booster Box",
-    "product_name": "Mystery Booster: Convention Edition Booster Box",
-    "set_name": "Mystery Booster Commander Edition",
-    "set_code": "mbc",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 219.0,
-        "avg_25_lowest": 349.5,
-        "available_items": 27
-      }
-    ]
-  },
-  {
     "product_id": 279,
     "product_type": "Draft Booster Box",
     "product_name": "Nemesis Booster Box",
@@ -2730,51 +2610,6 @@
     ]
   },
   {
-    "product_id": 217,
-    "product_type": "Draft Booster Box",
-    "product_name": "Portal Second Age Booster Box",
-    "set_name": "Portal Second Age",
-    "set_code": "p02",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 3990.0,
-        "avg_25_lowest": 3990.0,
-        "available_items": 1
-      }
-    ]
-  },
-  {
-    "product_id": 218,
-    "product_type": "Draft Booster Box",
-    "product_name": "Portal Booster Box",
-    "set_name": "Portal Three Kingdoms",
-    "set_code": "ptk",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 1495.0,
-        "avg_25_lowest": 1815.6,
-        "available_items": 6
-      }
-    ]
-  },
-  {
-    "product_id": 278,
-    "product_type": "Draft Booster Box",
-    "product_name": "Portal Three Kingdoms Booster Box",
-    "set_name": "Portal Three Kingdoms",
-    "set_code": "ptk",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 27715.25,
-        "avg_25_lowest": 27715.25,
-        "available_items": 1
-      }
-    ]
-  },
-  {
     "product_id": 184,
     "product_type": "Draft Booster Box",
     "product_name": "Prophecy Booster Box",
@@ -2910,21 +2745,6 @@
     ]
   },
   {
-    "product_id": 190,
-    "product_type": "Draft Booster Box",
-    "product_name": "Renaissance",
-    "set_name": "Renaissance",
-    "set_code": "ren",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
-      }
-    ]
-  },
-  {
     "product_id": 155,
     "product_type": "Draft Booster Box",
     "product_name": "Return to Ravnica Booster Box",
@@ -2951,21 +2771,6 @@
         "from_price": 7749.0,
         "avg_25_lowest": 13333.21,
         "available_items": 9
-      }
-    ]
-  },
-  {
-    "product_id": 256,
-    "product_type": "Draft Booster Box",
-    "product_name": "Rinascimento",
-    "set_name": "Rinascimento",
-    "set_code": "rin",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
       }
     ]
   },
@@ -3165,21 +2970,6 @@
     ]
   },
   {
-    "product_id": 283,
-    "product_type": "Draft Booster Box",
-    "product_name": "Starter 1999 Booster Box",
-    "set_name": "Starter 1999",
-    "set_code": "s99",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 6500.0,
-        "avg_25_lowest": 6500.0,
-        "available_items": 1
-      }
-    ]
-  },
-  {
     "product_id": 59,
     "product_type": "Collector Booster Box",
     "product_name": "Streets of New Capenna Collector Booster Box",
@@ -3311,21 +3101,6 @@
         "from_price": 3500.0,
         "avg_25_lowest": 14505.88,
         "available_items": 8
-      }
-    ]
-  },
-  {
-    "product_id": 282,
-    "product_type": "Draft Booster Box",
-    "product_name": "Summer Magic",
-    "set_name": "Summer Magic / Edgar",
-    "set_code": "sum",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
       }
     ]
   },
@@ -3825,66 +3600,6 @@
     ]
   },
   {
-    "product_id": 145,
-    "product_type": "Collector Booster Box",
-    "product_name": "Unfinity Collector Booster Box",
-    "set_name": "Unfinity",
-    "set_code": "unf",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 211.88,
-        "avg_25_lowest": 332.47,
-        "available_items": 33
-      }
-    ]
-  },
-  {
-    "product_id": 98,
-    "product_type": "Draft Booster Box",
-    "product_name": "Unfinity Booster Box",
-    "set_name": "Unfinity",
-    "set_code": "unf",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 101.88,
-        "avg_25_lowest": 158.15,
-        "available_items": 35
-      }
-    ]
-  },
-  {
-    "product_id": 215,
-    "product_type": "Draft Booster Box",
-    "product_name": "Unglued Booster Box",
-    "set_name": "Unglued",
-    "set_code": "ugl",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 1299.9,
-        "avg_25_lowest": 3532.98,
-        "available_items": 6
-      }
-    ]
-  },
-  {
-    "product_id": 238,
-    "product_type": "Draft Booster Box",
-    "product_name": "Unhinged Booster Box",
-    "set_name": "Unhinged",
-    "set_code": "unh",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 549.0,
-        "avg_25_lowest": 872.31,
-        "available_items": 10
-      }
-    ]
-  },
-  {
     "product_id": 273,
     "product_type": "Draft Booster Box",
     "product_name": "Unlimited",
@@ -3896,21 +3611,6 @@
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
-      }
-    ]
-  },
-  {
-    "product_id": 103,
-    "product_type": "Draft Booster Box",
-    "product_name": "Unstable Booster Box",
-    "set_name": "Unstable",
-    "set_code": "ust",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 109.8,
-        "avg_25_lowest": 123.08,
-        "available_items": 48
       }
     ]
   },

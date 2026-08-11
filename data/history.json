@@ -2325,6 +2325,21 @@
     ]
   },
   {
+    "product_id": 177,
+    "product_type": "Draft Booster Box",
+    "product_name": "Modern Masters Booster Box",
+    "set_name": "Modern Masters",
+    "set_code": "mma",
+    "snapshots": [
+      {
+        "scan_date": "2026-08-10",
+        "from_price": 323.0,
+        "avg_25_lowest": 365.5,
+        "available_items": 40
+      }
+    ]
+  },
+  {
     "product_id": 166,
     "product_type": "Draft Booster Box",
     "product_name": "Modern Masters 2015 Booster Box",
@@ -2335,21 +2350,6 @@
         "scan_date": "2026-08-10",
         "from_price": 239.0,
         "avg_25_lowest": 258.29,
-        "available_items": 40
-      }
-    ]
-  },
-  {
-    "product_id": 177,
-    "product_type": "Draft Booster Box",
-    "product_name": "Modern Masters Booster Box",
-    "set_name": "Modern Masters 2017",
-    "set_code": "mm3",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": 323.0,
-        "avg_25_lowest": 365.5,
         "available_items": 40
       }
     ]

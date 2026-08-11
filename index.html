@@ -172,8 +172,10 @@ body { font-size:15px; line-height:1.45; }
 .chips::-webkit-scrollbar{ display:none; }
 .chips{ scrollbar-width:none; }
 .chip{
-  padding:7px 14px; border-radius:20px; border:1px solid var(--border); background:var(--bg-glass);
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:7px 16px; border-radius:20px; border:1px solid var(--border); background:var(--bg-glass);
   color:var(--text-sec); font-size:12px; font-weight:600; cursor:pointer; transition:all .2s;
+  white-space:nowrap; text-align:center; min-height:32px; line-height:1;
 }
 .chip.is-active{ border-color:rgba(255,200,87,0.35); background:rgba(255,200,87,0.10); color:var(--gold); }
 .chip:not(.is-active):hover{ border-color:var(--border-hover); background:rgba(255,255,255,0.05); color:var(--text); }

@@ -1,12 +1,12 @@
 {
-  "total_sets": 165,
-  "total_products": 257,
+  "total_sets": 166,
+  "total_products": 258,
   "total_snapshots": 256,
   "products_with_prices": 246,
-  "products_out_of_stock": 11,
+  "products_out_of_stock": 12,
   "type_breakdown": {
     "Collector Booster Box": 52,
-    "Draft Booster Box": 143,
+    "Draft Booster Box": 144,
     "Jumpstart Booster Box": 11,
     "Play Booster Box": 20,
     "Set Booster Box": 18,

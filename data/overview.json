@@ -4024,6 +4024,28 @@
     ]
   },
   {
+    "id": 394,
+    "name": "Urza's Destiny",
+    "code": "uds",
+    "released_at": "1999-06-04",
+    "year": "1999",
+    "set_type": "expansion",
+    "short_info": "Urza's Destiny (1999) \u00b7 expansion \u00b7 143 cards",
+    "card_count": 143,
+    "products": [
+      {
+        "product_id": 286,
+        "product_type": "Draft Booster Box",
+        "product_name": "Urza's Destiny Booster Box",
+        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Urza-s-Destiny-Booster-Box?language=1",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": null,
+        "scan_date": null
+      }
+    ]
+  },
+  {
     "id": 161,
     "name": "Classic Sixth Edition",
     "code": "6ed",

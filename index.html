@@ -315,6 +315,30 @@ body { font-size:15px; line-height:1.45; }
 
 /* Stats */
 .stats-grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:12px; margin-bottom:20px; }
+
+/* Cron Runs */
+.cron-list{ display:grid; gap:12px; }
+.cron-card{
+  background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.06);
+  border-radius:12px; padding:14px 16px;
+}
+.cron-card.cron-ok{ border-left:3px solid var(--mana-g); }
+.cron-card.cron-partial{ border-left:3px solid var(--gold); }
+.cron-card.cron-error{ border-left:3px solid var(--mana-r); }
+.cron-head{ display:flex; justify-content:space-between; align-items:center; gap:8px; margin-bottom:8px; }
+.cron-status{ font-size:12px; font-weight:600; text-transform:uppercase; letter-spacing:0.05em; }
+.cron-ok .cron-status{ color:var(--mana-g); }
+.cron-partial .cron-status{ color:var(--gold); }
+.cron-error .cron-status{ color:var(--mana-r); }
+.cron-date{ font-size:11px; color:var(--text-muted); }
+.cron-stats{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:6px; font-size:12px; color:var(--text-sec); }
+.cron-stat{ display:flex; align-items:center; gap:4px; }
+.cron-stat b{ color:var(--text); font-weight:600; }
+.cron-notes{ font-size:12px; color:var(--text-sec); line-height:1.5; }
+.cron-note{ display:block; padding:2px 0; }
+.cron-note-warn{ color:var(--gold); }
+.cron-note-err{ color:var(--mana-r); }
+.cron-empty{ color:var(--text-muted); font-size:14px; padding:20px; text-align:center; }
 .stat-card{
   padding:18px 16px; border-radius:var(--radius); border:1px solid var(--border);
   background:var(--bg-card); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
@@ -433,6 +457,7 @@ body { font-size:15px; line-height:1.45; }
         <button class="tab is-active" data-tab="overview">Overview</button>
         <button class="tab" data-tab="history">Price History</button>
         <button class="tab" data-tab="stats">Stats</button>
+        <button class="tab" data-tab="cron">Cron Runs</button>
       </div>
     </div>
 
@@ -469,6 +494,14 @@ body { font-size:15px; line-height:1.45; }
       <p class="subtitle">At-a-glance summary of your tracked CardMarket data.</p>
       <div id="statsLoading" class="loading"><div class="spinner"></div>Loading stats...</div>
       <div id="statsContent"></div>
+    </div>
+
+    <!-- Cron Runs panel -->
+    <div id="cronPanel" class="panel">
+      <h2 class="section-title"><span class="dot"></span>Cron Runs</h2>
+      <p class="subtitle">Automated crawl diagnostics — last 10 runs.</p>
+      <div id="cronLoading" class="loading"><div class="spinner"></div>Loading cron runs...</div>
+      <div id="cronContent"></div>
     </div>
 
     <div class="footer">
@@ -518,6 +551,7 @@ var dashboardInitialized = false;
 var overviewData = [];
 var historyData = [];
 var statsData = null;
+var cronRunsData = [];
 
 const PRODUCT_TYPE_ORDER = {
   'Play Booster Box':1,
@@ -602,7 +636,8 @@ async function initDashboard(){
   await Promise.all([
     fetchJSON('data/overview.json').then(d => { overviewData = d || []; renderOverview(); }).catch(e => showError('overviewContent','overviewLoading', e)),
     fetchJSON('data/history.json').then(d => { historyData = d || []; renderHistory(); }).catch(e => showError('historyContent','historyLoading', e)),
-    fetchJSON('data/stats.json').then(d => { statsData = d; renderStats(); }).catch(e => showError('statsContent','statsLoading', e))
+    fetchJSON('data/stats.json').then(d => { statsData = d; renderStats(); }).catch(e => showError('statsContent','statsLoading', e)),
+    fetchJSON('data/cron_runs.json').then(d => { cronRunsData = d || []; renderCronRuns(); }).catch(e => showError('cronContent','cronLoading', e))
   ]);
 }
 
@@ -876,6 +911,45 @@ function renderStats(){
     </div>
   `;
 }
+
+/* ---- Cron Runs ---- */
+function renderCronRuns(){
+  const loading = document.getElementById('cronLoading');
+  const content = document.getElementById('cronContent');
+  loading.style.display = 'none';
+
+  if (!cronRunsData || !cronRunsData.length){
+    content.innerHTML = '<div class="cron-empty">No cron runs yet. The first automated crawl is scheduled — diagnostics will appear here after it completes.</div>';
+    return;
+  }
+
+  content.innerHTML = '<div class="cron-list">' + cronRunsData.map(r => {
+    const status = escapeHtml(r.status || 'unknown');
+    const statusClass = r.status === 'ok' ? 'cron-ok' : (r.status === 'partial' ? 'cron-partial' : 'cron-error');
+    const date = fmtDate(r.finished_at || r.started_at);
+    const notes = (r.notes || []).map(n => {
+      const isErr = n.toLowerCase().startsWith('error');
+      const isWarn = n.includes('Suspicious') || n.includes('0 EN listings') || n.includes('HTML');
+      const cls = isErr ? 'cron-note-err' : (isWarn ? 'cron-note-warn' : '');
+      return '<span class="cron-note ' + cls + '">' + escapeHtml(n) + '</span>';
+    }).join('');
+
+    return `
+    <div class="cron-card ${statusClass}">
+      <div class="cron-head">
+        <span class="cron-status">${status}</span>
+        <span class="cron-date">${date || '—'}</span>
+      </div>
+      <div class="cron-stats">
+        <span class="cron-stat"><b>${r.products_with_prices || 0}</b> priced</span>
+        <span class="cron-stat"><b>${r.products_out_of_stock || 0}</b> out of stock</span>
+        <span class="cron-stat"><b>${r.products_failed || 0}</b> failed</span>
+      </div>
+      ${notes ? '<div class="cron-notes">' + notes + '</div>' : ''}
+    </div>`;
+  }).join('') + '</div>';
+}
+
 </script>
 </body>
 </html>

@@ -1095,21 +1095,6 @@
     ]
   },
   {
-    "product_id": 270,
-    "product_type": "Draft Booster Box",
-    "product_name": "FINAL FANTASY Basic",
-    "set_name": "Final Fantasy",
-    "set_code": "fin",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
-      }
-    ]
-  },
-  {
     "product_id": 5,
     "product_type": "Play Booster Box",
     "product_name": "Magic: The Gathering - FINAL FANTASY Play Booster Box",
@@ -1766,21 +1751,6 @@
         "from_price": 90.0,
         "avg_25_lowest": 140.47,
         "available_items": 50
-      }
-    ]
-  },
-  {
-    "product_id": 255,
-    "product_type": "Draft Booster Box",
-    "product_name": "Legends Italian",
-    "set_name": "Legends",
-    "set_code": "leg",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
       }
     ]
   },
@@ -3266,21 +3236,6 @@
         "from_price": 200.0,
         "avg_25_lowest": 260.58,
         "available_items": 13
-      }
-    ]
-  },
-  {
-    "product_id": 254,
-    "product_type": "Draft Booster Box",
-    "product_name": "The Dark Italian",
-    "set_name": "The Dark",
-    "set_code": "drk",
-    "snapshots": [
-      {
-        "scan_date": "2026-08-10",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0
       }
     ]
   },

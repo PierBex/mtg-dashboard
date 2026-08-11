@@ -360,16 +360,6 @@
         "scan_date": "2026-08-10"
       },
       {
-        "product_id": 270,
-        "product_type": "Draft Booster Box",
-        "product_name": "FINAL FANTASY Basic",
-        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/FINAL-FANTASY-Basic-Booster-Box?language=1",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0,
-        "scan_date": "2026-08-10"
-      },
-      {
         "product_id": 18,
         "product_type": "Collector Booster Box",
         "product_name": "Magic: The Gathering - FINAL FANTASY Collector Booster Box",
@@ -4386,16 +4376,6 @@
     "card_count": 122,
     "products": [
       {
-        "product_id": 254,
-        "product_type": "Draft Booster Box",
-        "product_name": "The Dark Italian",
-        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/The-Dark-Italian-Booster-Box?language=1",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0,
-        "scan_date": "2026-08-10"
-      },
-      {
         "product_id": 276,
         "product_type": "Draft Booster Box",
         "product_name": "The Dark Booster Box",
@@ -4417,16 +4397,6 @@
     "short_info": "Legends (1994) \u00b7 expansion \u00b7 310 cards",
     "card_count": 310,
     "products": [
-      {
-        "product_id": 255,
-        "product_type": "Draft Booster Box",
-        "product_name": "Legends Italian",
-        "cardmarket_url": "https://www.cardmarket.com/en/Magic/Products/Booster-Boxes/Legends-Italian-Booster-Box?language=1",
-        "from_price": null,
-        "avg_25_lowest": null,
-        "available_items": 0,
-        "scan_date": "2026-08-10"
-      },
       {
         "product_id": 275,
         "product_type": "Draft Booster Box",

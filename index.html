@@ -256,37 +256,62 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 
 /* Set Cards — Richer design with Keyrune watermark */
 .set-card{
-  border:1px solid var(--border); border-radius:var(--radius);
-  background:var(--bg-card); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
-  box-shadow:0 14px 45px rgba(0,0,0,0.4); overflow:hidden; margin-bottom:18px;
+  border:2px solid transparent; border-radius:var(--radius);
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(135deg, rgba(255,200,87,0.6), rgba(184,134,11,0.4) 50%, rgba(255,200,87,0.55)) border-box;
+  backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
+  box-shadow:0 14px 45px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,200,87,0.08) inset; overflow:hidden; margin-bottom:18px;
   transition:border .2s, transform .2s, box-shadow .2s;
   position:relative;
 }
-/* Subtle old-book leather texture overlay — warm, monochrome */
+/* Dark gradient overlay for text readability */
 .set-card::before{
   content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.25) 40%, rgba(0,0,0,0.35) 100%),
+    linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 30%, transparent 70%, rgba(0,0,0,0.25) 100%);
+}
+/* Subtle leather texture */
+.set-card .card-leather{
+  position:absolute; inset:0; z-index:0; pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='leather'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018 0.022' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.45 0 0 0 0 0.28 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leather)'/%3E%3C/svg%3E");
   background-size:200px 200px; opacity:0.15; mix-blend-mode:soft-light;
 }
 .set-card::after{
   content:''; position:absolute; top:0; right:0; width:50%; height:100%;
-  background:radial-gradient(ellipse at right, rgba(139,92,246,0.05), transparent 70%);
+  background:radial-gradient(ellipse at right, rgba(139,92,246,0.06), transparent 70%);
   pointer-events:none; opacity:0; transition:opacity .25s; z-index:0;
 }
-.set-card:hover{ border-color:var(--border-hover); transform:translateY(-2px); box-shadow:0 18px 55px rgba(0,0,0,0.5); }
+.set-card:hover{ transform:translateY(-2px); box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,200,87,0.15) inset, 0 0 20px rgba(255,200,87,0.08); }
 .set-card:hover::after{ opacity:1; }
+
+/* Colored left strip — full height, matches set type */
+.card-strip{
+  position:absolute; left:0; top:0; bottom:0; width:6px; z-index:2;
+  background:linear-gradient(180deg, var(--strip-color, var(--mana-u)), rgba(0,0,0,0.3));
+  box-shadow:2px 0 8px rgba(0,0,0,0.3);
+}
+.set-card[data-type="core"]{ --strip-color:var(--mana-w); }
+.set-card[data-type="expansion"]{ --strip-color:var(--mana-u); }
+.set-card[data-type="draft_innovation"]{ --strip-color:var(--mana-g); }
+.set-card[data-type="commander"]{ --strip-color:var(--mana-b); }
+.set-card[data-type="masters"]{ --strip-color:var(--mana-r); }
+.set-card[data-type="spellbook"]{ --strip-color:#8B5CF6; }
+.set-card[data-type="premium"]{ --strip-color:#F59E0B; }
+
 .set-header{
-  display:flex; align-items:center; gap:14px; padding:16px 16px 16px 18px; cursor:pointer;
+  display:flex; align-items:center; gap:14px; padding:16px 16px 16px 22px; cursor:pointer;
   position:relative; z-index:1;
 }
-/* Set icon */
+/* Set icon — integrated with left strip, gold ring */
 .set-icon{
-  width:52px; height:52px; border-radius:50%; flex-shrink:0; display:grid; place-items:center;
+  width:48px; height:48px; border-radius:50%; flex-shrink:0; display:grid; place-items:center;
   font-weight:700; font-size:12px; letter-spacing:0.04em; color:#fff;
-  background:var(--mana-u); border:2px solid rgba(255,255,255,0.15);
-  text-shadow:0 1px 3px rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.5); border:2px solid rgba(255,200,87,0.5);
+  text-shadow:0 1px 3px rgba(0,0,0,0.6);
   overflow:hidden; position:relative;
-  box-shadow:0 6px 18px rgba(0,0,0,0.4);
+  box-shadow:0 4px 14px rgba(0,0,0,0.5), 0 0 0 1px rgba(0,0,0,0.3) inset;
 }
 .set-icon .ss{
   font-size:28px; line-height:1; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.6);
@@ -305,12 +330,12 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .set-icon[data-type="spellbook"]{ background:linear-gradient(145deg, #8B5CF6, #6D28D9); }
 .set-icon[data-type="premium"]{ background:linear-gradient(145deg, #F59E0B, #B45309); }
 .set-info{ flex:1; min-width:0; }
-.set-name{ font-family:'Cinzel',serif; font-size:17px; font-weight:700; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; letter-spacing:0.01em; }
-.set-meta{ display:flex; gap:8px; align-items:center; color:var(--text-sec); font-size:12px; flex-wrap:wrap; }
+.set-name{ font-family:'Cinzel',serif; font-size:17px; font-weight:700; margin-bottom:3px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; letter-spacing:0.01em; color:#fff; text-shadow:0 1px 4px rgba(0,0,0,0.8); }
+.set-meta{ display:flex; gap:8px; align-items:center; color:rgba(255,255,255,0.7); font-size:12px; flex-wrap:wrap; text-shadow:0 1px 3px rgba(0,0,0,0.7); }
 .set-meta span{ display:inline-flex; align-items:center; gap:4px; }
 .set-chevron{
-  width:28px; height:28px; flex-shrink:0; stroke:var(--text-sec); transition:transform .25s;
-  background:rgba(255,255,255,0.04); border-radius:50%; padding:5px;
+  width:28px; height:28px; flex-shrink:0; stroke:rgba(255,200,87,0.6); transition:transform .25s;
+  background:rgba(0,0,0,0.3); border:1px solid rgba(255,200,87,0.2); border-radius:50%; padding:5px;
 }
 .set-card.is-open .set-chevron{ transform:rotate(180deg); }
 /* Keyrune watermark on right side of card header (stays put when expanded) */
@@ -1022,7 +1047,9 @@ function renderOverview(){
       watermarkInner = `<span class="code-text wm-text">${escapeHtml((set.code || '??').toUpperCase())}</span>`;
     }
     return `
-    <article class="set-card" data-id="${escapeHtml(set.id)}">
+    <article class="set-card" data-type="${setTypeKey(set.set_type)}" data-id="${escapeHtml(set.id)}">
+      <div class="card-strip"></div>
+      <div class="card-leather"></div>
       <div class="set-watermark">${watermarkInner}</div>
       <div class="set-header" onclick="toggleSet(this)">
         <div class="set-icon" data-type="${setTypeKey(set.set_type)}" title="${escapeHtml(set.set_type || '')}">${iconInner}</div>

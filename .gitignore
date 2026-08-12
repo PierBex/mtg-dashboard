@@ -1,0 +1,8 @@
+# Backups
+index.html.backup-*
+
+# Large source images (use optimized versions only)
+assets/mtg-bg.png
+
+# OS files
+.DS_Store

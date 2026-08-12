@@ -48,8 +48,8 @@
 }
 * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html,body { margin:0; padding:0; color:var(--text); font-family:'Inter',sans-serif; min-height:100dvh; }
-html { background:transparent; }
-body { font-size:15px; line-height:1.45; background:transparent; }
+html { background:var(--bg); }
+body { font-size:15px; line-height:1.45; background:var(--bg); }
 
 /* Fantasy background artwork */
 .bg-art{
@@ -474,13 +474,14 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .footer{ text-align:center; font-size:11px; color:var(--text-muted); padding:20px 0 20px; }
 .footer a{ color:var(--gold-dim); text-decoration:none; }
 
-/* Bottom Navigation */
+/* Bottom Navigation — mobile only, hidden on desktop */
+.bottom-nav{ display:flex; }
 .bottom-nav{
   position:fixed; bottom:0; left:0; right:0; z-index:50;
   height:var(--bottom-nav-h); padding:8px 12px env(safe-area-inset-bottom, 0px) 12px;
   background:rgba(10,10,12,0.92); backdrop-filter:blur(24px); -webkit-backdrop-filter:blur(24px);
   border-top:1px solid var(--border-gold);
-  display:flex; align-items:center; justify-content:space-around; max-width:var(--max); margin:0 auto;
+  align-items:center; justify-content:space-around; max-width:var(--max); margin:0 auto;
   box-shadow:0 -8px 32px rgba(0,0,0,0.4);
 }
 .bottom-nav::before{
@@ -508,10 +509,16 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   margin-top:-24px;
 }
 .nav-fab svg{ width:26px; height:26px; stroke:#1A1200; fill:none; stroke-width:2; }
+.nav-fab.is-active{ transform:scale(1.08); box-shadow:0 8px 30px rgba(255,200,87,0.55), 0 0 0 2px rgba(255,200,87,0.35); }
 .nav-fab:hover{ transform:scale(1.08); box-shadow:0 8px 26px rgba(255,200,87,0.5), 0 0 0 1px rgba(255,200,87,0.3); }
 .nav-fab:active{ transform:scale(1); }
 
-/* Desktop tweaks */
+/* Mobile: hide top tabs, show bottom nav */
+@media(max-width:639px){
+  .tabs{ display:none; }
+}
+
+/* Desktop: show top tabs, hide bottom nav */
 @media(min-width:640px){
   :root{ --header-h:68px; }
   .brand-title{ font-size:20px; }
@@ -533,6 +540,8 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .set-watermark .ss{ font-size:100px; }
   .hero-stat-value{ font-size:22px; }
   .hero-stat-label{ font-size:9px; }
+  .bottom-nav{ display:none; }
+  .app{ padding-bottom:0; }
 }
 @media(min-width:900px){
   .history-grid{ grid-template-columns:repeat(3,1fr); }
@@ -676,18 +685,18 @@ body { font-size:15px; line-height:1.45; background:transparent; }
     </div>
   </div>
 
-  <!-- Bottom Navigation -->
+  <!-- Bottom Navigation — mobile only: History, Stats, Overview (FAB), Cron, Logout -->
   <nav class="bottom-nav" id="bottomNav">
-    <button class="nav-item is-active" data-tab="overview">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
-      <span>Overview</span>
-    </button>
     <button class="nav-item" data-tab="history">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
       <span>History</span>
     </button>
-    <button class="nav-fab" data-tab="stats" title="Stats">
+    <button class="nav-item" data-tab="stats">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+      <span>Stats</span>
+    </button>
+    <button class="nav-fab is-active" data-tab="overview" title="Overview">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
     </button>
     <button class="nav-item" data-tab="cron">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
@@ -880,21 +889,22 @@ function checkStaleData(stats){
   }
 }
 
-/* Tab switching — top tabs AND bottom nav both switch panels */
+/* Tab switching — top tabs (desktop) AND bottom nav (mobile) both switch panels */
 function switchTab(tabName){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('is-active'));
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('is-active'));
   document.querySelectorAll('.panel').forEach(p=>p.classList.remove('is-active'));
-  // Activate top tab
+  // Deactivate FAB
+  const fab = document.querySelector('.nav-fab');
+  if (fab) fab.classList.remove('is-active');
+  // Activate top tab (desktop)
   const topTab = document.querySelector('.tab[data-tab="' + tabName + '"]');
   if (topTab) topTab.classList.add('is-active');
-  // Activate bottom nav item
+  // Activate bottom nav item (mobile)
   const navItem = document.querySelector('.nav-item[data-tab="' + tabName + '"]');
   if (navItem) navItem.classList.add('is-active');
-  // Activate FAB for stats
-  const fab = document.querySelector('.nav-fab[data-tab="' + tabName + '"]');
-  if (fab) fab.style.transform = 'scale(1.08)';
-  else document.querySelector('.nav-fab').style.transform = '';
+  // Activate FAB if this is the overview tab
+  if (tabName === 'overview' && fab) fab.classList.add('is-active');
   // Activate panel
   const panel = document.getElementById(tabName + 'Panel');
   if (panel) panel.classList.add('is-active');

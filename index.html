@@ -97,12 +97,11 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   pointer-events:none;
 }
 .login-crest{
-  width:88px; height:88px; margin:0 auto 20px; border-radius:50%;
-  background:linear-gradient(145deg, rgba(255,200,87,0.25), rgba(139,92,246,0.25));
-  border:2px solid rgba(255,200,87,0.4);
-  display:grid; place-items:center; font-family:'Cinzel',serif; font-size:38px; color:var(--gold); font-weight:900;
-  box-shadow:0 0 50px rgba(255,200,87,0.25), inset 0 0 30px rgba(139,92,246,0.2);
+  width:88px; height:88px; margin:0 auto 20px;
+  display:grid; place-items:center;
+  filter:drop-shadow(0 0 30px rgba(255,200,87,0.35));
 }
+.login-crest svg{ width:100%; height:100%; }
 .login-title{ font-family:'Cinzel',serif; font-size:26px; font-weight:700; text-align:center; margin-bottom:6px; letter-spacing:0.02em; }
 .login-sub{ color:var(--text-sec); text-align:center; font-size:13px; margin-bottom:32px; }
 .login-card form{ display:flex; flex-direction:column; gap:16px; }
@@ -145,11 +144,10 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 }
 .brand{ display:flex; align-items:center; gap:12px; }
 .brand-crest{
-  width:42px; height:42px; border-radius:50%; flex-shrink:0; display:grid; place-items:center;
-  background:linear-gradient(135deg, rgba(255,200,87,0.25), rgba(139,92,246,0.25));
-  border:2px solid rgba(255,200,87,0.35); font-family:'Cinzel',serif; font-size:20px; color:var(--gold); font-weight:900;
-  box-shadow:0 0 24px rgba(255,200,87,0.15);
+  width:42px; height:42px; flex-shrink:0; display:grid; place-items:center;
+  filter:drop-shadow(0 0 10px rgba(255,200,87,0.35));
 }
+.brand-crest svg{ width:100%; height:100%; }
 .brand-title{ font-family:'Cinzel',serif; font-size:18px; font-weight:700; line-height:1.2; letter-spacing:0.03em; }
 .brand-title span{ display:block; font-family:'Inter',sans-serif; font-size:9px; font-weight:600; letter-spacing:0.16em; text-transform:uppercase; color:var(--gold-dim); }
 .user-pill{
@@ -563,7 +561,19 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 <!-- Login -->
 <div id="login" class="login-wrap">
   <div class="login-card">
-    <div class="login-crest">M</div>
+    <div class="login-crest">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="loginSparkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFE082"/>
+              <stop offset="40%" stop-color="#FFC857"/>
+              <stop offset="100%" stop-color="#B8860B"/>
+            </linearGradient>
+          </defs>
+          <path d="M50 8 C 44 22, 36 28, 28 32 C 18 37, 10 44, 10 55 C 10 70, 22 80, 35 82 C 30 77, 27 70, 27 62 C 27 52, 33 46, 40 42 C 38 50, 42 56, 48 58 C 44 50, 47 42, 52 36 C 57 42, 60 50, 56 58 C 62 56, 66 50, 64 42 C 71 46, 73 52, 73 62 C 73 70, 70 77, 65 82 C 78 80, 90 70, 90 55 C 90 44, 82 37, 72 32 C 64 28, 56 22, 50 8 Z" fill="url(#loginSparkGrad)" stroke="rgba(255,200,87,0.5)" stroke-width="0.8"/>
+          <path d="M50 30 C 47 36, 44 40, 42 44 C 45 42, 48 40, 50 38 C 52 40, 55 42, 58 44 C 56 40, 53 36, 50 30 Z" fill="rgba(255,255,255,0.25)"/>
+        </svg>
+    </div>
     <h1 class="login-title">MTG Tracker</h1>
     <p class="login-sub">Booster Box Prices · CardMarket English</p>
     <form id="loginForm" autocomplete="off">
@@ -585,7 +595,21 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 <div id="app" class="app">
   <header class="header">
     <div class="brand">
-      <div class="brand-crest">M</div>
+      <div class="brand-crest">
+        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="sparkGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#FFE082"/>
+              <stop offset="40%" stop-color="#FFC857"/>
+              <stop offset="100%" stop-color="#B8860B"/>
+            </linearGradient>
+          </defs>
+          <!-- MTG Planeswalker spark: flame/spark shape -->
+          <path d="M50 8 C 44 22, 36 28, 28 32 C 18 37, 10 44, 10 55 C 10 70, 22 80, 35 82 C 30 77, 27 70, 27 62 C 27 52, 33 46, 40 42 C 38 50, 42 56, 48 58 C 44 50, 47 42, 52 36 C 57 42, 60 50, 56 58 C 62 56, 66 50, 64 42 C 71 46, 73 52, 73 62 C 73 70, 70 77, 65 82 C 78 80, 90 70, 90 55 C 90 44, 82 37, 72 32 C 64 28, 56 22, 50 8 Z" fill="url(#sparkGrad)" stroke="rgba(255,200,87,0.5)" stroke-width="0.8"/>
+          <!-- Inner flame detail -->
+          <path d="M50 30 C 47 36, 44 40, 42 44 C 45 42, 48 40, 50 38 C 52 40, 55 42, 58 44 C 56 40, 53 36, 50 30 Z" fill="rgba(255,255,255,0.25)"/>
+        </svg>
+      </div>
       <div class="brand-title">MTG Tracker <span>Booster Box Prices</span></div>
     </div>
     <button id="logoutBtn" class="user-pill" title="Log out">

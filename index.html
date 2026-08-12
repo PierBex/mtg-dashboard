@@ -262,11 +262,11 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   transition:border .2s, transform .2s, box-shadow .2s;
   position:relative;
 }
-/* Subtle old-book leather texture overlay — warm, monochrome, barely visible */
+/* Subtle old-book leather texture overlay — warm, monochrome */
 .set-card::before{
   content:''; position:absolute; inset:0; z-index:0; pointer-events:none;
-  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='leather'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018 0.022' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.36 0 0 0 0 0.22 0 0 0 0.5 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leather)'/%3E%3C/svg%3E");
-  background-size:200px 200px; opacity:0.08; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='leather'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018 0.022' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.55 0 0 0 0 0.45 0 0 0 0 0.28 0 0 0 0.6 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leather)'/%3E%3C/svg%3E");
+  background-size:200px 200px; opacity:0.15; mix-blend-mode:soft-light;
 }
 .set-card::after{
   content:''; position:absolute; top:0; right:0; width:50%; height:100%;

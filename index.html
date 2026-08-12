@@ -313,9 +313,10 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   background:rgba(255,255,255,0.04); border-radius:50%; padding:5px;
 }
 .set-card.is-open .set-chevron{ transform:rotate(180deg); }
-/* Keyrune watermark on right side of card */
+/* Keyrune watermark on right side of card header (stays put when expanded) */
 .set-watermark{
-  position:absolute; right:-10px; top:50%; transform:translateY(-50%);
+  position:absolute; right:-10px; top:0; height:84px;
+  display:flex; align-items:center;
   font-size:90px; opacity:0.06; pointer-events:none; color:var(--text);
   z-index:0; line-height:1; overflow:hidden;
 }
@@ -394,7 +395,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .price-sub, .stock-tag{ font-size:9px; }
   .cm-link{ width:28px; padding:0; font-size:0; }
   .cm-link svg{ width:13px; height:13px; margin-left:0; }
-  .set-watermark{ font-size:70px; right:-8px; }
+  .set-watermark{ font-size:70px; right:-8px; height:76px; }
   .set-watermark .ss{ font-size:70px; }
   .hero-stat-value{ font-size:18px; }
   .hero-stat-label{ font-size:7px; }

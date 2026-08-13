@@ -1,9 +1,9 @@
 {
   "total_sets": 166,
   "total_products": 255,
-  "total_snapshots": 255,
-  "products_with_prices": 248,
-  "products_out_of_stock": 7,
+  "total_snapshots": 477,
+  "products_with_prices": 249,
+  "products_out_of_stock": 6,
   "type_breakdown": {
     "Collector Booster Box": 52,
     "Draft Booster Box": 141,
@@ -13,10 +13,10 @@
     "Theme Booster Box": 13
   },
   "last_crawl": {
-    "job_name": "mtg_crawl_all",
-    "finished_at": "2026-08-10T22:44:40.766569",
+    "job_name": "mtg_cron_run",
+    "finished_at": "2026-08-13T06:38:00.639448",
     "status": "partial",
-    "products_scanned": 161
+    "products_scanned": 255
   },
-  "exported_at": "2026-08-11"
+  "exported_at": "2026-08-13"
 }

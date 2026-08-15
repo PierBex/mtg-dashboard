@@ -2,8 +2,10 @@
 // SHA-256 hashing + sessionStorage session with 24h expiry.
 
 const AUTH_CONFIG = {
-  username: 'aquarius',
-  passwordHash: '57016ab31516ab194980337d54cf8e97959f30d827aa0f574f535b84eae37cf4'
+  users: [
+    { username: 'aquarius', passwordHash: '57016ab31516ab194980337d54cf8e97959f30d827aa0f574f535b84eae37cf4' },
+    { username: 'karolis',  passwordHash: 'ce8287426a2c8cf69270d3b471208b524009e7f2215bc183a32f3b7892181842' }
+  ]
 };
 
 const SESSION_KEY = 'mtg_dashboard_session';
@@ -22,8 +24,11 @@ async function authenticate(username, password) {
     return { success: false, error: 'Please enter username and password.' };
   }
   const hash = await sha256(password.trim());
-  if (username.trim().toLowerCase() === AUTH_CONFIG.username.toLowerCase() &&
-      hash.toLowerCase() === AUTH_CONFIG.passwordHash.toLowerCase()) {
+  const user = AUTH_CONFIG.users.find(
+    u => u.username.toLowerCase() === username.trim().toLowerCase() &&
+         u.passwordHash.toLowerCase() === hash.toLowerCase()
+  );
+  if (user) {
     setSession(username.trim());
     return { success: true, error: null };
   }

@@ -1,4 +1,4 @@
-// MTG Dashboard — client-side auth utilities
+// MTG Dashboard - client-side auth utilities
 // SHA-256 hashing + sessionStorage session with 24h expiry.
 
 const AUTH_CONFIG = {

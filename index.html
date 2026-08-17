@@ -131,7 +131,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .app.is-visible{ display:block; animation:fadeIn .35s ease; }
 @keyframes fadeIn{ from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;} }
 
-/* Header — semi-transparent with gradient overlay for text readability */
+/* Header - semi-transparent with gradient overlay for text readability */
 .header{
   position:sticky; top:0; z-index:50; height:var(--header-h); padding:0 16px;
   background:linear-gradient(180deg, rgba(10,10,12,0.72) 0%, rgba(10,10,12,0.55) 100%);
@@ -254,7 +254,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .section-title .dot{ width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 16px var(--gold); }
 .subtitle{ color:var(--text-sec); font-size:13px; margin-bottom:18px; }
 
-/* Set Cards — Richer design with Keyrune watermark */
+/* Set Cards - Richer design with Keyrune watermark */
 .set-card{
   border:2px solid transparent; border-radius:var(--radius);
   background:
@@ -286,7 +286,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .set-card:hover{ transform:translateY(-2px); box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,200,87,0.15) inset, 0 0 20px rgba(255,200,87,0.08); }
 .set-card:hover::after{ opacity:1; }
 
-/* Colored left strip — full height, matches set type */
+/* Colored left strip - full height, matches set type */
 .card-strip{
   position:absolute; left:0; top:0; bottom:0; width:6px; z-index:2;
   background:linear-gradient(180deg, var(--strip-color, var(--mana-u)), rgba(0,0,0,0.3));
@@ -304,7 +304,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   display:flex; align-items:center; gap:14px; padding:16px 16px 16px 22px; cursor:pointer;
   position:relative; z-index:1;
 }
-/* Set icon — integrated with left strip, gold ring */
+/* Set icon - integrated with left strip, gold ring */
 .set-icon{
   width:48px; height:48px; border-radius:50%; flex-shrink:0; display:grid; place-items:center;
   font-weight:700; font-size:12px; letter-spacing:0.04em; color:#fff;
@@ -513,7 +513,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .footer{ text-align:center; font-size:11px; color:var(--text-muted); padding:20px 0 20px; }
 .footer a{ color:var(--gold-dim); text-decoration:none; }
 
-/* Bottom Navigation — mobile only, hidden on desktop */
+/* Bottom Navigation - mobile only, hidden on desktop */
 .bottom-nav{ display:flex; }
 .bottom-nav{
   position:fixed; bottom:0; left:0; right:0; z-index:50;
@@ -679,22 +679,22 @@ body { font-size:15px; line-height:1.45; background:transparent; }
         <div class="hero-stats">
           <div class="hero-stat">
             <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="20" rx="2"/><rect x="7" y="7" width="14" height="14" rx="2" opacity="0.5"/></svg></div>
-            <div class="hero-stat-value" id="heroSets">—</div>
+            <div class="hero-stat-value" id="heroSets">-</div>
             <div class="hero-stat-label">Sets Tracked</div>
           </div>
           <div class="hero-stat">
             <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><path d="M20 7L9 18l-5-5"/></svg></div>
-            <div class="hero-stat-value" id="heroPriced">—</div>
+            <div class="hero-stat-value" id="heroPriced">-</div>
             <div class="hero-stat-label">Products Priced</div>
           </div>
           <div class="hero-stat">
             <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
-            <div class="hero-stat-value" id="heroAvg">—</div>
+            <div class="hero-stat-value" id="heroAvg">-</div>
             <div class="hero-stat-label">Avg Price €</div>
           </div>
           <div class="hero-stat">
             <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
-            <div class="hero-stat-value" id="heroUpdated">—</div>
+            <div class="hero-stat-value" id="heroUpdated">-</div>
             <div class="hero-stat-label">Last Updated</div>
           </div>
         </div>
@@ -736,7 +736,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
     <!-- Cron Runs panel -->
     <div id="cronPanel" class="panel">
       <h2 class="section-title"><span class="dot"></span>Cron Runs</h2>
-      <p class="subtitle">Automated crawl diagnostics — last 10 runs.</p>
+      <p class="subtitle">Automated crawl diagnostics - last 10 runs.</p>
       <div id="cronLoading" class="loading"><div class="spinner"></div>Loading cron runs...</div>
       <div id="cronContent"></div>
     </div>
@@ -746,7 +746,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
     </div>
   </div>
 
-  <!-- Bottom Navigation — mobile only: History, Stats, Overview (FAB), Cron, Logout -->
+  <!-- Bottom Navigation - mobile only: History, Stats, Overview (FAB), Cron, Logout -->
   <nav class="bottom-nav" id="bottomNav">
     <button class="nav-item" data-tab="history">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
@@ -901,12 +901,12 @@ function updateHeroStats(){
       if (p.from_price && parseFloat(p.from_price) > 0) { sum += parseFloat(p.from_price); count++; }
     });
   });
-  document.getElementById('heroAvg').textContent = count > 0 ? '€' + Math.round(sum/count).toLocaleString() : '—';
+  document.getElementById('heroAvg').textContent = count > 0 ? '€' + Math.round(sum/count).toLocaleString() : '-';
   // Last updated date
   if (statsData.last_crawl && statsData.last_crawl.finished_at){
     document.getElementById('heroUpdated').textContent = shortDate(statsData.last_crawl.finished_at);
   } else {
-    document.getElementById('heroUpdated').textContent = '—';
+    document.getElementById('heroUpdated').textContent = '-';
   }
 }
 
@@ -944,13 +944,13 @@ function checkStaleData(stats){
   const days = Math.floor((Date.now() - exported.getTime()) / 86400000);
   if (days > 4){
     banner.style.display = 'flex';
-    banner.querySelector('.stale-text').textContent = 'Data is ' + days + ' days old — last crawl may have failed. Check Cron Runs tab.';
+    banner.querySelector('.stale-text').textContent = 'Data is ' + days + ' days old - last crawl may have failed. Check Cron Runs tab.';
   } else {
     banner.style.display = 'none';
   }
 }
 
-/* Tab switching — top tabs (desktop) AND bottom nav (mobile) both switch panels */
+/* Tab switching - top tabs (desktop) AND bottom nav (mobile) both switch panels */
 function switchTab(tabName){
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('is-active'));
   document.querySelectorAll('.nav-item').forEach(n=>n.classList.remove('is-active'));
@@ -999,7 +999,7 @@ function setupOverviewFilters(){
   });
 }
 
-/* Keyrune set codes — all MTG sets with icon font support */
+/* Keyrune set codes - all MTG sets with icon font support */
 const KEYRUNE_CODES = new Set(['10e','1e','2e','2ed','2u','2x2','2xm','30a','3e','3ed','40k','4ed','5dn','5ed','6ed','7ed','8ed','9ed','a25','acr','aer','afc','afr','akh','akr','ala','all','ann','apc','arb','arc','arn','ath','atq','avr','azorius','bbd','bcore','bfz','big','blb','blc','bng','bok','boros','bot','br','brb','brc','bro','brr','btd','c13','c14','c15','c16','c17','c18','c19','c20','c21','cc1','cc2','chk','chr','clb','clu','cm1','cm2','cma','cmc','cmd','cmm','cmr','cn2','cns','con','csp','dd2','ddc','ddd','dde','ddf','ddg','ddh','ddi','ddj','ddk','ddl','ddm','ddn','ddo','ddp','ddq','ddr','dds','ddt','ddu','dft','dgm','dimir','dis','dka','dkm','dmc','dmr','dmu','dom','dpa','drb','drc','drk','dsc','dsk','dst','dtk','duels','dvk','e01','e02','ea1','ecc','ecl','eld','ema','emn','eoc','eoe','eos','eve','evg','exo','exp','fca','fdc','fdn','fem','fic','fin','fra','frf','fut','gk1','gk2','gn2','gn3','gnt','golgari','gpt','grn','gruul','gs1','gtc','h09','h17','ha1','hbg','hml','hob','hoc','hop','hou','htr','htr17','ice','ice2','iko','ima','inr','inv','isd','izzet','j20','j21','j22','j25','j25a','jmp','jou','jud','khc','khm','kld','klr','ktk','lcc','lci','lea','leb','leg','lgn','lrw','ltc','ltr','m10','m11','m12','m13','m14','m15','m19','m20','m21','m3c','mar','mat','mb1','mb2','mbs','md1','me1','me2','me3','me4','med','mh1','mh2','mh3','mic','mid','mir','mkc','mkm','mm2','mm3','mma','mmq','moc','modo','mom','mor','mp1','mp2','mps','mrd','msc','msh','mul','ncc','nec','nem','neo','nms','nph','ody','ogw','om1','omb','onc','one','ons','ori','orzhov','otc','otj','otp','p02','papac','parl','parl2','parl3','past','pbook','pc2','pca','pcy','pd2','pd3','pdep','pdrc','peuro','pfnm','pgru','pheart','pidw','pio','pip','plc','pleaf','pls','pm2','pma','pmei','pmodo','pmps','pmpu','pmtg1','pmtg2','po2','por','psalvat05','psalvat11','psega','psld','psum','ptg','ptk','ptsa','pxbox','pz1','pz2','pza','rakdas','rav','ren','rex','rin','rix','rna','roe','rtr','rvr','s00','s99','scd','scg','shm','snc','soi','som','sos','sok','spd','spm','spx','ss1','ss2','ss3','sth','stx','sum','sus','tdm','thb','ths','tla','tmp','tmt','tor','tsp','tsr','twb','uds','ulg','uma','usg','v17','v21','vis','vow','vrgr','w16','w17','war','who','woe','wth','wwk','xln','ymid','yrn','zen','znc','znr','zvr']);
 
 /* Custom SVG icons for sets not in Keyrune font */
@@ -1186,8 +1186,8 @@ function renderHistoryCard(h){
       </svg>
     </div>
     <div class="chart-legend">
-      <span class="legend-item"><span class="legend-line" style="background:var(--gold)"></span> from ${currentFrom !== null ? '€'+currentFrom : '—'}</span>
-      <span class="legend-item"><span class="legend-line" style="background:var(--mana-u)"></span> avg25 ${currentAvg !== null ? '€'+currentAvg : '—'}</span>
+      <span class="legend-item"><span class="legend-line" style="background:var(--gold)"></span> from ${currentFrom !== null ? '€'+currentFrom : '-'}</span>
+      <span class="legend-item"><span class="legend-line" style="background:var(--mana-u)"></span> avg25 ${currentAvg !== null ? '€'+currentAvg : '-'}</span>
     </div>
     <div class="chart-labels"><span>${firstDate}</span><span>${lastDate}</span></div>
   </div>`;
@@ -1226,8 +1226,8 @@ function renderStats(){
       <div class="stat-card"><div class="stat-label">With Prices</div><div class="stat-value">${(s.products_with_prices||0).toLocaleString()}</div><div class="stat-sub">priced listings</div></div>
       <div class="stat-card"><div class="stat-label">Out of Stock</div><div class="stat-value">${(s.products_out_of_stock||0).toLocaleString()}</div><div class="stat-sub">unavailable</div></div>
       <div class="stat-card wide"><div class="stat-label">Total Snapshots</div><div class="stat-value" style="font-size:22px">${(s.total_snapshots||0).toLocaleString()}</div><div class="stat-sub">price observations in history</div></div>
-      <div class="stat-card wide"><div class="stat-label">Last Crawl</div><div class="stat-value" style="font-size:18px">${escapeHtml(last.status || '—')} · ${fmtDate(last.finished_at)}</div><div class="stat-sub">${(last.products_scanned||0).toLocaleString()} products scanned</div></div>
-      <div class="stat-card wide"><div class="stat-label">Exported</div><div class="stat-value" style="font-size:22px">${exported || '—'}</div><div class="stat-sub">JSON bundle generation date</div></div>
+      <div class="stat-card wide"><div class="stat-label">Last Crawl</div><div class="stat-value" style="font-size:18px">${escapeHtml(last.status || '-')} · ${fmtDate(last.finished_at)}</div><div class="stat-sub">${(last.products_scanned||0).toLocaleString()} products scanned</div></div>
+      <div class="stat-card wide"><div class="stat-label">Exported</div><div class="stat-value" style="font-size:22px">${exported || '-'}</div><div class="stat-sub">JSON bundle generation date</div></div>
     </div>
     <div class="set-card" style="padding:18px 18px 22px;">
       <h3 class="section-title" style="font-size:16px; margin-bottom:14px"><span class="dot"></span>Product Type Breakdown</h3>
@@ -1251,7 +1251,7 @@ function renderCronRuns(){
   loading.style.display = 'none';
 
   if (!cronRunsData || !cronRunsData.length){
-    content.innerHTML = '<div class="cron-empty">No cron runs yet. The first automated crawl is scheduled — diagnostics will appear here after it completes.</div>';
+    content.innerHTML = '<div class="cron-empty">No cron runs yet. The first automated crawl is scheduled - diagnostics will appear here after it completes.</div>';
     return;
   }
 
@@ -1270,7 +1270,7 @@ function renderCronRuns(){
     <div class="cron-card ${statusClass}">
       <div class="cron-head">
         <span class="cron-status">${status}</span>
-        <span class="cron-date">${date || '—'}</span>
+        <span class="cron-date">${date || '-'}</span>
       </div>
       <div class="cron-stats">
         <span class="cron-stat"><b>${r.products_with_prices || 0}</b> priced</span>

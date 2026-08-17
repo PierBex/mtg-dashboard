@@ -1,5 +1,20 @@
 [
   {
+    "id": 2,
+    "started_at": "2026-08-17T05:00:11.345998",
+    "finished_at": "2026-08-17T06:43:45.091504",
+    "status": "partial",
+    "products_scanned": 255,
+    "products_with_prices": 238,
+    "products_out_of_stock": 7,
+    "products_failed": 10,
+    "notes": [
+      "Error: Star Trek Collector Booster Box: fetch failed (status=0)",
+      "Error: Lorwyn Eclipsed Play Booster Box: fetch failed (status=0)",
+      "Phyrexia: All Will Be One Jumpstart Booster Box: Suspiciously high price: \u20ac99995.0 (likely vintage/g"
+    ]
+  },
+  {
     "id": 1,
     "started_at": "2026-08-13T05:00:29.298848",
     "finished_at": "2026-08-13T06:38:02.996875",

@@ -453,6 +453,21 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .cron-note-warn{ color:var(--gold); }
 .cron-note-err{ color:var(--mana-r); }
 .cron-empty{ color:var(--text-muted); font-size:14px; padding:20px; text-align:center; }
+.cron-fix-summary{ font-size:11px; margin-top:4px; }
+.fix-ok{ color:var(--mana-g); }
+.fix-pending{ color:var(--gold); }
+.fix-run-btn{
+  margin-top:10px; padding:6px 16px; border-radius:8px;
+  background:linear-gradient(135deg, rgba(255,200,87,0.15), rgba(139,92,246,0.15));
+  border:1px solid rgba(255,200,87,0.3); color:var(--gold);
+  font-size:12px; font-weight:600; cursor:pointer;
+  transition:all 0.2s; font-family:inherit;
+}
+.fix-run-btn:hover{
+  background:linear-gradient(135deg, rgba(255,200,87,0.25), rgba(139,92,246,0.25));
+  border-color:rgba(255,200,87,0.5); box-shadow:0 0 12px rgba(255,200,87,0.15);
+}
+.fix-run-btn:active{ transform:scale(0.97); }
 
 /* Stale data banner */
 .stale-banner{
@@ -1255,6 +1270,8 @@ function renderCronRuns(){
     return;
   }
 
+  const DISCORD_CHANNEL_URL = 'https://discord.com/channels/1495481265829187876/1527416437168406558';
+
   content.innerHTML = '<div class="cron-list">' + cronRunsData.map(r => {
     const status = escapeHtml(r.status || 'unknown');
     const statusClass = r.status === 'ok' ? 'cron-ok' : (r.status === 'partial' ? 'cron-partial' : 'cron-error');
@@ -1265,6 +1282,24 @@ function renderCronRuns(){
       const cls = isErr ? 'cron-note-err' : (isWarn ? 'cron-note-warn' : '');
       return '<span class="cron-note ' + cls + '">' + escapeHtml(n) + '</span>';
     }).join('');
+
+    // Auto-fix summary (brief, user-friendly)
+    let fixSummary = '';
+    if (r.auto_fix) {
+      const af = r.auto_fix;
+      const parts = [];
+      if (af.recovered > 0) parts.push('<span class="fix-ok">' + af.recovered + ' auto-fixed</span>');
+      if (af.still_failed > 0) parts.push('<span class="fix-pending">' + af.still_failed + ' need attention</span>');
+      if (parts.length) fixSummary = '<div class="cron-fix-summary">' + parts.join(' · ') + '</div>';
+    }
+
+    // Fix run button — only on non-ok runs
+    let fixBtn = '';
+    if (r.status !== 'ok') {
+      const runDate = (r.started_at || '').split('T')[0];
+      const fixMsg = 'Cron fix ' + runDate + ' - MTG tracker cron run #' + r.id + ' has status "' + r.status + '" with ' + (r.products_failed || 0) + ' failed products. Check diagnostics in cron_runs DB and attempt to fix all failures. Auto-fix already attempted: ' + (r.auto_fix ? (r.auto_fix.recovered + ' recovered, ' + r.auto_fix.still_failed + ' still failing') : 'not run') + '.';
+      fixBtn = '<button class="fix-run-btn" onclick="fixRun(' + r.id + ',\'' + escapeHtml(runDate) + '\',\'' + escapeHtml(r.status) + '\',' + (r.products_failed || 0) + ',' + (r.auto_fix ? r.auto_fix.recovered : 0) + ',' + (r.auto_fix ? r.auto_fix.still_failed : 0) + ')" title="Copy fix instructions and open Discord">Fix run</button>';
+    }
 
     return `
     <div class="cron-card ${statusClass}">
@@ -1277,9 +1312,25 @@ function renderCronRuns(){
         <span class="cron-stat"><b>${r.products_out_of_stock || 0}</b> out of stock</span>
         <span class="cron-stat"><b>${r.products_failed || 0}</b> failed</span>
       </div>
+      ${fixSummary}
       ${notes ? '<div class="cron-notes">' + notes + '</div>' : ''}
+      ${fixBtn}
     </div>`;
   }).join('') + '</div>';
+}
+
+function fixRun(runId, runDate, status, failed, recovered, stillFailing) {
+  var msg = 'Cron fix ' + runDate + ' - MTG tracker cron run #' + runId + ' has status "' + status + '" with ' + failed + ' failed products. Auto-fix already attempted: ' + recovered + ' recovered, ' + stillFailing + ' still failing. Please check the cron_runs diagnostics in the DB, inspect any saved HTML in the diagnostics/ folder, and attempt to fix all remaining failures. Create a thread titled "Cron fix ' + runDate + '" in the collectible-investing channel to work the fix.';
+
+  // Copy to clipboard
+  navigator.clipboard.writeText(msg).then(function() {
+    // Open Discord channel in new tab
+    window.open('https://discord.com/channels/1495481265829187876/1527416437168406558', '_blank');
+  }).catch(function() {
+    // Fallback: prompt the user
+    prompt('Copy this message, then click OK to open Discord:', msg);
+    window.open('https://discord.com/channels/1495481265829187876/1527416437168406558', '_blank');
+  });
 }
 
 </script>

@@ -12,7 +12,8 @@
       "Innistrad: Crimson Vow Theme Booster Box: Out of stock \u2014 no available offers on CardMarket",
       "Adventures in the Forgotten Realms Theme Booster Box: Out of stock \u2014 no available offers on CardMark",
       "Matches fixed"
-    ]
+    ],
+    "auto_fix": null
   },
   {
     "id": 1,
@@ -27,6 +28,7 @@
       "Error: Lorwyn Eclipsed Collector Booster Box: fetch failed (status=0)",
       "Error: Lorwyn Eclipsed Play Booster Box: fetch failed (status=0)",
       "The Lord of the Rings: Tales of Middle-earth Collector Booster Box: No articleRow divs found - CardM"
-    ]
+    ],
+    "auto_fix": null
   }
 ]

@@ -184,30 +184,34 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   min-width:0;
 }
 .hero-title{ font-family:'Cinzel',serif; font-size:12px; font-weight:700; letter-spacing:0.20em; text-transform:uppercase; color:#E0D8C0; margin-bottom:5px; }
-.hero-tagline{ font-size:9px; color:rgba(208,208,208,0.6); letter-spacing:0.10em; text-transform:uppercase; font-weight:600; margin-bottom:14px; }
-.hero-stats{ display:grid; grid-template-columns:repeat(4, 1fr); gap:4px; }
-.hero-stat{ text-align:center; }
-.hero-stat-icon{ width:20px; height:20px; margin:0 auto 3px; display:grid; place-items:center; }
-.hero-stat-icon svg{ width:14px; height:14px; stroke:rgba(255,255,255,0.7); fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
-.hero-stat-label{ font-size:7px; color:rgba(208,208,208,0.5); text-transform:uppercase; letter-spacing:0.06em; margin-bottom:2px; font-weight:600; }
-.hero-stat-value{ font-family:'Inter',sans-serif; font-size:13px; font-weight:700; color:#FFFFFF; line-height:1; }
+.hero-tagline{ font-size:9px; color:rgba(208,208,208,0.6); letter-spacing:0.10em; text-transform:uppercase; font-weight:600; margin-bottom:20px; }
+.hero-stats{ display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; }
+.hero-stat{ text-align:center; display:flex; flex-direction:column; align-items:center; }
+.hero-stat-icon{ width:28px; height:28px; margin-bottom:8px; display:grid; place-items:center; }
+.hero-stat-icon svg{ width:22px; height:22px; stroke:#C8A87A; fill:none; stroke-width:1.5; stroke-linecap:round; stroke-linejoin:round; }
+.hero-stat-label{ font-size:7px; color:rgba(220,220,220,0.7); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px; font-weight:600; }
+.hero-stat-value{ font-family:'Inter',sans-serif; font-size:14px; font-weight:700; color:#FFFFFF; line-height:1; }
 .hero-stat-value.gold{ color:var(--gold); }
 @media(min-width:640px){
   .hero-image{ flex-basis:32%; max-width:220px; }
   .hero-content{ padding:28px 24px 26px; }
   .hero-title{ font-size:16px; letter-spacing:0.24em; }
-  .hero-tagline{ font-size:11px; margin-bottom:22px; }
+  .hero-tagline{ font-size:11px; margin-bottom:28px; }
+  .hero-stat-icon{ width:36px; height:36px; margin-bottom:10px; }
+  .hero-stat-icon svg{ width:28px; height:28px; }
   .hero-stat-value{ font-size:18px; }
   .hero-stat-label{ font-size:8px; }
-  .hero-stat-icon{ width:28px; height:28px; }
-  .hero-stat-icon svg{ width:18px; height:18px; }
-  .hero-stats{ gap:8px; }
+  .hero-stats{ gap:12px; }
 }
 @media(min-width:900px){
   .hero-image{ flex-basis:30%; max-width:260px; }
   .hero-content{ padding:32px 28px 30px; }
   .hero-title{ font-size:18px; }
+  .hero-tagline{ margin-bottom:32px; }
   .hero-stat-value{ font-size:20px; }
+  .hero-stat-icon{ width:40px; height:40px; margin-bottom:12px; }
+  .hero-stat-icon svg{ width:32px; height:32px; }
+  .hero-stats{ gap:16px; }
 }
 
 /* Tabs */
@@ -788,7 +792,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
           <div class="hero-tagline">Track Prices. Find Trends. Make Smarter Moves.</div>
           <div class="hero-stats">
             <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="20" rx="2"/><rect x="7" y="7" width="14" height="14" rx="2" opacity="0.5"/></svg></div>
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="14" height="20" rx="2"/><rect x="7" y="7" width="14" height="14" rx="2" opacity="0.5"/><path d="M14 14l3 3-3 3" stroke-width="1.5"/></svg></div>
               <div class="hero-stat-label">Sets Tracked</div>
               <div class="hero-stat-value" id="heroSets">-</div>
             </div>
@@ -798,12 +802,12 @@ body { font-size:15px; line-height:1.45; background:transparent; }
               <div class="hero-stat-value" id="heroPriced">-</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg></div>
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="6 15 10 11 14 14 20 8"/><polyline points="17 8 20 8 20 11"/></svg></div>
               <div class="hero-stat-label">Avg Price</div>
               <div class="hero-stat-value gold" id="heroAvg">-</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 16 14"/></svg></div>
               <div class="hero-stat-label">Last Updated</div>
               <div class="hero-stat-value" id="heroUpdated">-</div>
             </div>

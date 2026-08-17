@@ -580,7 +580,8 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   100%{ offset-distance:100%; }
 }
 .hist-avg-line{
-  fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round;
+  fill:none; stroke-width:2.8; stroke-linecap:round; stroke-linejoin:round;
+  filter:drop-shadow(0 0 3px rgba(255,230,128,0.3));
 }
 .hist-avg-area{
   fill:url(#histGradArea); opacity:0.06; stroke:none;
@@ -1308,7 +1309,7 @@ function renderHistSetCard(setData){
 function renderHistProductCard(p){
   const snaps = p.snapshots || [];
   const avgSeries = snaps.map(s => parseFloat(s.avg_25_lowest)).filter(v => !isNaN(v) && v > 0);
-  if (avgSeries.length < 2) return '';
+  if (!avgSeries.length) return '';
 
   const min = Math.min(...avgSeries);
   const max = Math.max(...avgSeries);
@@ -1319,21 +1320,29 @@ function renderHistProductCard(p){
   const w = 280, h = 90, padX = 4, padY = 8;
   const chartW = w - padX * 2, chartH = h - padY * 2;
 
-  // Build SVG path for avg25 line
+  // Build SVG path for avg25 line (or single dot for 1 data point)
   const points = avgSeries.map((v, i) => {
     const x = padX + (avgSeries.length > 1 ? (i / (avgSeries.length - 1)) * chartW : chartW / 2);
     const y = padY + chartH - ((v - yMin) / (yMax - yMin || 1)) * chartH;
     return `${x.toFixed(1)},${y.toFixed(1)}`;
   });
 
-  const linePath = `M ${points.join(' L ')}`;
-  const areaPath = `M ${padX},${padY + chartH} L ${points.join(' L ')} L ${padX + chartW},${padY + chartH} Z`;
+  const linePath = avgSeries.length >= 2 ? `M ${points.join(' L ')}` : '';
+  const areaPath = avgSeries.length >= 2
+    ? `M ${padX},${padY + chartH} L ${points.join(' L ')} L ${padX + chartW},${padY + chartH} Z`
+    : '';
 
-  // Dots — only show first and last
-  const firstPt = points[0].split(',');
-  const lastPt = points[points.length - 1].split(',');
-  const dotsHTML = `<circle cx="${firstPt[0]}" cy="${firstPt[1]}" r="2.5" fill="#ffe680" stroke="none" />` +
-                   `<circle cx="${lastPt[0]}" cy="${lastPt[1]}" r="2.5" fill="#b794f4" stroke="none" />`;
+  // Dots — show all for single point, first+last for multi-point
+  let dotsHTML;
+  if (avgSeries.length === 1){
+    const pt = points[0].split(',');
+    dotsHTML = `<circle cx="${pt[0]}" cy="${pt[1]}" r="3.5" fill="#ffe680" stroke="none" />`;
+  } else {
+    const firstPt = points[0].split(',');
+    const lastPt = points[points.length - 1].split(',');
+    dotsHTML = `<circle cx="${firstPt[0]}" cy="${firstPt[1]}" r="2.5" fill="#ffe680" stroke="none" />` +
+               `<circle cx="${lastPt[0]}" cy="${lastPt[1]}" r="2.5" fill="#b794f4" stroke="none" />`;
+  };
 
   // Grid lines
   let gridHTML = '';
@@ -1353,17 +1362,17 @@ function renderHistProductCard(p){
   // Trend calculation
   const currentAvg = avgSeries[avgSeries.length - 1];
   const firstAvg = avgSeries[0];
-  const trendPct = firstAvg > 0 ? ((currentAvg - firstAvg) / firstAvg * 100) : 0;
+  const trendPct = (avgSeries.length >= 2 && firstAvg > 0) ? ((currentAvg - firstAvg) / firstAvg * 100) : 0;
   const trendClass = trendPct > 1 ? 'up' : (trendPct < -1 ? 'down' : 'flat');
   const trendArrow = trendPct > 1 ? '↑' : (trendPct < -1 ? '↓' : '→');
-  const trendText = Math.abs(trendPct) >= 0.1 ? trendArrow + ' ' + Math.abs(trendPct).toFixed(1) + '%' : trendArrow;
+  const trendText = avgSeries.length >= 2 && Math.abs(trendPct) >= 0.1 ? trendArrow + ' ' + Math.abs(trendPct).toFixed(1) + '%' : (avgSeries.length === 1 ? 'new' : trendArrow);
 
   // Badge
   const badgeClass = typeClass(p.product_type);
   const badgeText = badgeLabel(p.product_type);
 
   const firstDate = shortDate(snaps[0].scan_date);
-  const lastDate = shortDate(snaps[snaps.length - 1].scan_date);
+  const lastDate = avgSeries.length >= 2 ? shortDate(snaps[snaps.length - 1].scan_date) : firstDate;
 
   return `
   <div class="hist-prod-card">
@@ -1376,8 +1385,9 @@ function renderHistProductCard(p){
         <defs>
           <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%" spreadMethod="repeat">
             <stop offset="0%" stop-color="#ffe680" />
-            <stop offset="50%" stop-color="#d4a8f0" />
-            <stop offset="100%" stop-color="#b794f4" />
+            <stop offset="33%" stop-color="#d4a8f0" />
+            <stop offset="66%" stop-color="#b794f4" />
+            <stop offset="100%" stop-color="#ffe680" />
             <animate attributeName="x1" from="0%" to="100%" dur="3s" repeatCount="indefinite" />
             <animate attributeName="x2" from="100%" to="200%" dur="3s" repeatCount="indefinite" />
           </linearGradient>
@@ -1387,8 +1397,8 @@ function renderHistProductCard(p){
           </linearGradient>
         </defs>
         ${gridHTML}
-        <path d="${areaPath}" fill="url(#${areaGradId})" opacity="0.3" stroke="none" />
-        <path d="${linePath}" class="hist-avg-line" stroke="url(#${gradId})" />
+        ${areaPath ? `<path d="${areaPath}" fill="url(#${areaGradId})" opacity="0.3" stroke="none" />` : ''}
+        ${linePath ? `<path d="${linePath}" class="hist-avg-line" stroke="url(#${gradId})" />` : ''}
         ${dotsHTML}
       </svg>
     </div>

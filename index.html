@@ -188,7 +188,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .hero-stats{ display:grid; grid-template-columns:repeat(4, 1fr); gap:6px; }
 .hero-stat{ text-align:center; display:flex; flex-direction:column; align-items:center; }
 .hero-stat-icon{ width:28px; height:28px; margin-bottom:8px; display:grid; place-items:center; }
-.hero-stat-icon img{ width:24px; height:24px; object-fit:contain; }
+.hero-stat-icon svg{ width:24px; height:24px; }
 .hero-stat-label{ font-size:7px; color:rgba(220,220,220,0.7); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px; font-weight:600; }
 .hero-stat-value{ font-family:'Inter',sans-serif; font-size:14px; font-weight:700; color:#FFFFFF; line-height:1; }
 .hero-stat-value.gold{ color:var(--gold); }
@@ -198,7 +198,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .hero-title{ font-size:16px; letter-spacing:0.24em; }
   .hero-tagline{ font-size:11px; margin-bottom:28px; }
   .hero-stat-icon{ width:36px; height:36px; margin-bottom:10px; }
-  .hero-stat-icon img{ width:32px; height:32px; }
+  .hero-stat-icon svg{ width:30px; height:30px; }
   .hero-stat-value{ font-size:18px; }
   .hero-stat-label{ font-size:8px; }
   .hero-stats{ gap:12px; }
@@ -210,7 +210,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .hero-tagline{ margin-bottom:32px; }
   .hero-stat-value{ font-size:20px; }
   .hero-stat-icon{ width:40px; height:40px; margin-bottom:12px; }
-  .hero-stat-icon img{ width:36px; height:36px; }
+  .hero-stat-icon svg{ width:34px; height:34px; }
   .hero-stats{ gap:16px; }
 }
 
@@ -792,22 +792,22 @@ body { font-size:15px; line-height:1.45; background:transparent; }
           <div class="hero-tagline">Track Prices. Find Trends. Make Smarter Moves.</div>
           <div class="hero-stats">
             <div class="hero-stat">
-              <div class="hero-stat-icon"><img src="assets/icon-sets.webp" alt="Sets"></div>
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="18" rx="2"/><rect x="7" y="2" width="13" height="18" rx="2"/><path d="M13.5 11l2 2-2 2"/></svg></div>
               <div class="hero-stat-label">Sets Tracked</div>
               <div class="hero-stat-value" id="heroSets">-</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-icon"><img src="assets/icon-alerts.webp" alt="Alerts"></div>
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.5c.5-1 2-1 2.4 0c.3.6.8 1.1 1.5 1.3c3 .9 5.3 3.6 5.3 6.9c0 4.5 1.5 6 1.5 6H3s1.5-1.5 1.5-6c0-3.3 2.3-6 5.3-6.9c.7-.2 1.2-.7 1.5-1.3z"/><path d="M9 19.5c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/></svg></div>
               <div class="hero-stat-label">Price Alerts</div>
               <div class="hero-stat-value" id="heroPriced">-</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-icon"><img src="assets/icon-avg.webp" alt="Avg"></div>
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M6 17l4-5 3 3 5-7"/><circle cx="18" cy="8" r="1.2" fill="#C8A87A" stroke="none"/></svg></div>
               <div class="hero-stat-label">Avg Price</div>
               <div class="hero-stat-value gold" id="heroAvg">-</div>
             </div>
             <div class="hero-stat">
-              <div class="hero-stat-icon"><img src="assets/icon-updated.webp" alt="Updated"></div>
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
               <div class="hero-stat-label">Last Updated</div>
               <div class="hero-stat-value" id="heroUpdated">-</div>
             </div>

@@ -560,13 +560,14 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .hist-chart-wrap{ width:100%; height:90px; position:relative; }
 @media(min-width:640px){ .hist-chart-wrap{ height:100px; } }
 .hist-chart-wrap svg{ width:100%; height:100%; display:block; overflow:visible; }
-.hist-prod-stats{ display:flex; justify-content:space-between; align-items:center; margin-top:4px; }
-.hist-prod-current{ font-size:13px; font-weight:700; color:var(--gold); }
-.hist-prod-trend{ font-size:10px; font-weight:600; display:flex; align-items:center; gap:2px; }
+.hist-prod-stats{ display:flex; justify-content:space-between; align-items:center; margin-top:6px; gap:8px; }
+.hist-prod-current{ font-size:11px; color:var(--text-sec); }
+.hist-prod-current b{ font-size:13px; font-weight:700; color:var(--gold); }
+.hist-prod-trend{ font-size:10px; font-weight:600; display:flex; align-items:center; gap:2px; white-space:nowrap; }
 .hist-prod-trend.up{ color:var(--mana-g); }
 .hist-prod-trend.down{ color:var(--mana-r); }
 .hist-prod-trend.flat{ color:var(--text-muted); }
-.hist-chart-labels{ display:flex; justify-content:space-between; font-size:8px; color:var(--text-muted); margin-top:2px; }
+.hist-chart-labels{ display:flex; justify-content:space-between; font-size:8px; color:var(--text-muted); margin-top:3px; }
 @media(min-width:640px){ .hist-chart-labels{ font-size:9px; } }
 
 /* Animated gradient stroke for history charts */
@@ -1365,7 +1366,14 @@ function renderHistProductCard(p){
   const trendPct = (avgSeries.length >= 2 && firstAvg > 0) ? ((currentAvg - firstAvg) / firstAvg * 100) : 0;
   const trendClass = trendPct > 1 ? 'up' : (trendPct < -1 ? 'down' : 'flat');
   const trendArrow = trendPct > 1 ? '↑' : (trendPct < -1 ? '↓' : '→');
-  const trendText = avgSeries.length >= 2 && Math.abs(trendPct) >= 0.1 ? trendArrow + ' ' + Math.abs(trendPct).toFixed(1) + '%' : (avgSeries.length === 1 ? 'new' : trendArrow);
+  let trendText;
+  if (avgSeries.length === 1) {
+    trendText = 'new';
+  } else if (Math.abs(trendPct) >= 0.1) {
+    trendText = trendArrow + ' ' + Math.abs(trendPct).toFixed(1) + '% vs first';
+  } else {
+    trendText = trendArrow + ' stable';
+  }
 
   // Badge
   const badgeClass = typeClass(p.product_type);
@@ -1402,11 +1410,11 @@ function renderHistProductCard(p){
         ${dotsHTML}
       </svg>
     </div>
+    <div class="hist-chart-labels"><span>${firstDate}</span><span>${lastDate}</span></div>
     <div class="hist-prod-stats">
-      <span class="hist-prod-current">€${currentAvg.toLocaleString(undefined,{maximumFractionDigits:0})}</span>
+      <span class="hist-prod-current">avg25 <b>€${currentAvg.toLocaleString(undefined,{maximumFractionDigits:0})}</b></span>
       <span class="hist-prod-trend ${trendClass}">${trendText}</span>
     </div>
-    <div class="hist-chart-labels"><span>${firstDate}</span><span>${lastDate}</span></div>
   </div>`;
 }
 

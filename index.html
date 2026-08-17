@@ -585,7 +585,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 }
 .hist-avg-line{
   fill:none; stroke-width:2.8; stroke-linecap:round; stroke-linejoin:round;
-  filter:drop-shadow(0 0 3px rgba(255,230,128,0.3));
+  filter:drop-shadow(0 0 3px rgba(200,168,122,0.25));
 }
 .hist-avg-area{
   fill:url(#histGradArea); opacity:0.06; stroke:none;
@@ -1340,13 +1340,13 @@ function renderHistProductCard(p){
   let dotsHTML;
   if (avgSeries.length === 1){
     const pt = points[0].split(',');
-    dotsHTML = `<circle cx="${pt[0]}" cy="${pt[1]}" r="3.5" fill="#ffe680" stroke="none" />`;
+    dotsHTML = `<circle cx="${pt[0]}" cy="${pt[1]}" r="3.5" fill="#C8A87A" stroke="none" />`;
   } else {
     const firstPt = points[0].split(',');
     const lastPt = points[points.length - 1].split(',');
-    dotsHTML = `<circle cx="${firstPt[0]}" cy="${firstPt[1]}" r="2.5" fill="#ffe680" stroke="none" />` +
-               `<circle cx="${lastPt[0]}" cy="${lastPt[1]}" r="2.5" fill="#b794f4" stroke="none" />`;
-  };
+    dotsHTML = `<circle cx="${firstPt[0]}" cy="${firstPt[1]}" r="2.5" fill="#C8A87A" stroke="none" />` +
+               `<circle cx="${lastPt[0]}" cy="${lastPt[1]}" r="2.5" fill="#6B4E8F" stroke="none" />`;
+  }
 
   // Grid lines
   let gridHTML = '';
@@ -1395,16 +1395,15 @@ function renderHistProductCard(p){
       <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
         <defs>
           <linearGradient id="${gradId}" x1="0%" y1="0%" x2="33%" y2="0%" spreadMethod="repeat">
-            <stop offset="0%" stop-color="#ffe680" />
-            <stop offset="35%" stop-color="#ff9ecf" />
-            <stop offset="70%" stop-color="#d4a8f0" />
-            <stop offset="100%" stop-color="#ffe680" />
+            <stop offset="0%" stop-color="#C8A87A" />
+            <stop offset="50%" stop-color="#6B4E8F" />
+            <stop offset="100%" stop-color="#C8A87A" />
             <animate attributeName="x1" from="0%" to="33%" dur="1.8s" repeatCount="indefinite" />
             <animate attributeName="x2" from="33%" to="66%" dur="1.8s" repeatCount="indefinite" />
           </linearGradient>
           <linearGradient id="${areaGradId}" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stop-color="#ffe680" stop-opacity="0.4" />
-            <stop offset="100%" stop-color="#b794f4" stop-opacity="0" />
+            <stop offset="0%" stop-color="#C8A87A" stop-opacity="0.25" />
+            <stop offset="100%" stop-color="#6B4E8F" stop-opacity="0" />
           </linearGradient>
         </defs>
         ${gridHTML}

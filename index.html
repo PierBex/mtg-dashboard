@@ -1001,10 +1001,12 @@ async function initDashboard(){
 
   await Promise.all([
     fetchJSON('data/overview.json').then(d => { overviewData = d || []; renderOverview(); updateHeroStats(); }).catch(e => showError('overviewContent','overviewLoading', e)),
-    fetchJSON('data/history.json').then(d => { historyData = d || []; renderHistory(); }).catch(e => showError('historyContent','historyLoading', e)),
+    fetchJSON('data/history.json').then(d => { historyData = d || []; }).catch(e => showError('historyContent','historyLoading', e)),
     fetchJSON('data/stats.json').then(d => { statsData = d; renderStats(); checkStaleData(d); updateHeroStats(); }).catch(e => showError('statsContent','statsLoading', e)),
     fetchJSON('data/cron_runs.json').then(d => { cronRunsData = d || []; renderCronRuns(); }).catch(e => showError('cronContent','cronLoading', e))
   ]);
+  // Render history AFTER overview data is loaded (needs released_at for sorting)
+  renderHistory();
 }
 
 async function fetchJSON(path){
@@ -1223,7 +1225,10 @@ function renderHistory(){
     // Find release date from overviewData if available
     const oa = overviewData.find(s => s.code === a.set_code);
     const ob = overviewData.find(s => s.code === b.set_code);
-    return (ob?.released_at || '').localeCompare(oa?.released_at || '');
+    const dateA = oa?.released_at || '';
+    const dateB = ob?.released_at || '';
+    // Newest first (desc), fallback to set name asc
+    return dateB.localeCompare(dateA) || (a.set_name || '').localeCompare(b.set_name || '');
   });
 
   content.innerHTML = sets.map(s => renderHistSetCard(s)).join('');
@@ -1369,12 +1374,12 @@ function renderHistProductCard(p){
     <div class="hist-chart-wrap">
       <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
         <defs>
-          <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+          <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%" spreadMethod="repeat">
             <stop offset="0%" stop-color="#ffe680" />
             <stop offset="50%" stop-color="#d4a8f0" />
             <stop offset="100%" stop-color="#b794f4" />
-            <animate attributeName="x1" values="0%;100%;0%" dur="4s" repeatCount="indefinite" />
-            <animate attributeName="x2" values="100%;200%;100%" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="x1" from="0%" to="100%" dur="3s" repeatCount="indefinite" />
+            <animate attributeName="x2" from="100%" to="200%" dur="3s" repeatCount="indefinite" />
           </linearGradient>
           <linearGradient id="${areaGradId}" x1="0%" y1="0%" x2="0%" y2="100%">
             <stop offset="0%" stop-color="#ffe680" stop-opacity="0.4" />

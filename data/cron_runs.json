@@ -2,16 +2,16 @@
   {
     "id": 2,
     "started_at": "2026-08-17T05:00:11.345998",
-    "finished_at": "2026-08-17T06:43:45.091504",
-    "status": "partial",
+    "finished_at": "2026-08-17T06:43:47.466966",
+    "status": "ok",
     "products_scanned": 255,
-    "products_with_prices": 238,
+    "products_with_prices": 248,
     "products_out_of_stock": 7,
-    "products_failed": 10,
+    "products_failed": 0,
     "notes": [
-      "Error: Star Trek Collector Booster Box: fetch failed (status=0)",
-      "Error: Lorwyn Eclipsed Play Booster Box: fetch failed (status=0)",
-      "Phyrexia: All Will Be One Jumpstart Booster Box: Suspiciously high price: \u20ac99995.0 (likely vintage/g"
+      "Error: Core Set 2021 Collector Booster Box: No articleRow divs found - CardMarket HTML structure may have c",
+      "Phyrexia: All Will Be One Jumpstart Booster Box: Suspiciously high price: \u20ac99995.0 (likely vintage/g",
+      "Jumpstart 2022 Jumpstart Booster Box: Suspiciously high price: \u20ac999160.0 (likely vintage/graded \u2014 ve"
     ]
   },
   {

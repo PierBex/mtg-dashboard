@@ -501,21 +501,93 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .type-count{ font-weight:700; color:var(--gold); }
 
 /* History */
-.history-grid{ display:grid; gap:16px; }
-.history-card{
+.history-grid{ display:grid; gap:12px; }
+.hist-set-card{
   border:1px solid var(--border); border-radius:var(--radius);
   background:var(--bg-card); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px);
-  box-shadow:0 12px 35px rgba(0,0,0,0.3); padding:16px 16px 18px;
+  box-shadow:0 12px 35px rgba(0,0,0,0.3); overflow:hidden;
 }
-.history-head{ display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:10px; }
-.history-title{ font-weight:600; font-size:14px; }
-.history-sub{ font-size:12px; color:var(--text-sec); }
-.chart-wrap{ width:100%; height:160px; position:relative; }
-.chart-wrap svg{ width:100%; height:100%; display:block; }
-.chart-labels{ display:flex; justify-content:space-between; font-size:10px; color:var(--text-muted); margin-top:6px; }
-.chart-legend{ display:flex; gap:14px; justify-content:center; margin-top:8px; font-size:11px; }
-.legend-item{ display:flex; align-items:center; gap:5px; color:var(--text-sec); }
-.legend-line{ width:16px; height:2px; border-radius:2px; box-shadow:0 0 4px currentColor; }
+.hist-set-head{
+  display:flex; align-items:center; gap:10px; padding:12px 14px; cursor:pointer;
+  user-select:none; -webkit-tap-highlight-color:transparent;
+}
+.hist-set-head:active{ background:rgba(255,255,255,0.02); }
+.hist-set-icon{
+  width:36px; height:36px; border-radius:50%; flex-shrink:0;
+  display:flex; align-items:center; justify-content:center;
+  background:rgba(0,0,0,0.4); border:1.5px solid rgba(255,200,87,0.3);
+  position:relative; z-index:2;
+}
+.hist-set-icon i{ font-size:18px; color:#fff; opacity:0.9; }
+.hist-set-icon svg{ width:18px; height:18px; fill:currentColor; color:#fff; opacity:0.9; }
+.hist-set-info{ flex:1; min-width:0; }
+.hist-set-name{ font-family:'Cinzel',serif; font-weight:600; font-size:14px; color:#fff; text-shadow:0 1px 3px rgba(0,0,0,0.6); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.hist-set-meta{ font-size:11px; color:var(--text-sec); margin-top:2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.hist-set-price{ font-size:15px; font-weight:700; color:var(--gold); white-space:nowrap; flex-shrink:0; }
+.hist-set-price small{ font-size:10px; font-weight:400; color:var(--text-muted); display:block; text-align:right; }
+.hist-set-toggle{
+  width:28px; height:28px; flex-shrink:0; display:flex; align-items:center; justify-content:center;
+  color:var(--text-muted); transition:transform 0.3s ease, color 0.2s;
+  font-size:14px;
+}
+.hist-set-card.expanded .hist-set-toggle{ transform:rotate(180deg); color:var(--gold); }
+.hist-set-body{
+  max-height:0; overflow:hidden;
+  transition:max-height 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+.hist-set-card.expanded .hist-set-body{ max-height:1200px; }
+.hist-products{ padding:0 10px 10px; display:grid; gap:8px; }
+@media(min-width:640px){ .hist-products{ grid-template-columns:1fr 1fr; gap:12px; padding:0 14px 14px; } }
+@media(min-width:1024px){ .hist-products{ grid-template-columns:1fr 1fr 1fr; } }
+
+.hist-prod-card{
+  background:rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.06);
+  border-radius:10px; padding:10px 12px;
+}
+.hist-prod-head{ display:flex; align-items:center; justify-content:space-between; gap:6px; margin-bottom:6px; }
+.hist-prod-name{ font-size:11px; font-weight:600; color:var(--text-sec); text-transform:uppercase; letter-spacing:0.03em; }
+.hist-prod-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  white-space:nowrap; font-size:9px; font-weight:700; text-transform:uppercase;
+  min-width:42px; padding:3px 8px; border-radius:5px; letter-spacing:0.03em;
+}
+.hist-prod-badge.badge-play{ background:rgba(72,187,120,0.12); color:#68d391; }
+.hist-prod-badge.badge-set{ background:rgba(99,179,237,0.12); color:#63b3ed; }
+.hist-prod-badge.badge-draft{ background:rgba(237,137,54,0.12); color:#f6ad55; }
+.hist-prod-badge.badge-collect{ background:rgba(139,92,246,0.12); color:#b794f4; }
+.hist-prod-badge.badge-theme{ background:rgba(237,54,54,0.12); color:#fc8181; }
+.hist-prod-badge.badge-jump{ background:rgba(245,200,87,0.12); color:var(--gold); }
+.hist-chart-wrap{ width:100%; height:90px; position:relative; }
+@media(min-width:640px){ .hist-chart-wrap{ height:100px; } }
+.hist-chart-wrap svg{ width:100%; height:100%; display:block; overflow:visible; }
+.hist-prod-stats{ display:flex; justify-content:space-between; align-items:center; margin-top:4px; }
+.hist-prod-current{ font-size:13px; font-weight:700; color:var(--gold); }
+.hist-prod-trend{ font-size:10px; font-weight:600; display:flex; align-items:center; gap:2px; }
+.hist-prod-trend.up{ color:var(--mana-g); }
+.hist-prod-trend.down{ color:var(--mana-r); }
+.hist-prod-trend.flat{ color:var(--text-muted); }
+.hist-chart-labels{ display:flex; justify-content:space-between; font-size:8px; color:var(--text-muted); margin-top:2px; }
+@media(min-width:640px){ .hist-chart-labels{ font-size:9px; } }
+
+/* Animated gradient stroke for history charts */
+@keyframes gradientShift{
+  0%{ stop-color:#ffe680; }
+  50%{ stop-color:#b794f4; }
+  100%{ stop-color:#ffe680; }
+}
+@keyframes gradientFlow{
+  0%{ offset-distance:0%; }
+  100%{ offset-distance:100%; }
+}
+.hist-avg-line{
+  fill:none; stroke-width:2.5; stroke-linecap:round; stroke-linejoin:round;
+}
+.hist-avg-area{
+  fill:url(#histGradArea); opacity:0.06; stroke:none;
+}
+@media(prefers-reduced-motion:reduce){
+  .hist-avg-line{ animation:none !important; }
+}
 
 /* Empty / error */
 .empty{ text-align:center; color:var(--text-sec); padding:46px 12px; }
@@ -580,7 +652,6 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .tabs{ margin:-22px -22px 26px; }
   .stats-grid{ grid-template-columns:repeat(4,1fr); }
   .stat-card.wide{ grid-column:span 1; }
-  .history-grid{ grid-template-columns:repeat(2,1fr); }
   .product-row{ gap:12px; }
   .badge{ min-width:58px; padding:5px 9px; font-size:10px; }
   .product-name{ font-size:14px; }
@@ -597,10 +668,6 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .bottom-nav{ display:none; }
   .app{ padding-bottom:0; }
 }
-@media(min-width:900px){
-  .history-grid{ grid-template-columns:repeat(3,1fr); }
-}
-
 /* Reduced motion */
 @media(prefers-reduced-motion:reduce){
   *{ animation:none !important; transition:none !important; }
@@ -1139,85 +1206,193 @@ function renderHistory(){
   const content = document.getElementById('historyContent');
   loading.style.display='none';
 
-  let items = (historyData || []).filter(h => (h.snapshots || []).length >= 2).slice().sort((a,b)=> b.snapshots.length - a.snapshots.length);
+  let items = (historyData || []).filter(h => (h.snapshots || []).length >= 2);
   if (!items.length){
     content.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">📉</div><h3>No history yet</h3><p>History charts will appear once multiple price snapshots are available.</p></div>';
     return;
   }
 
-  items = items.slice(0, 60);
-  content.innerHTML = items.map(h => renderHistoryCard(h)).join('');
+  // Group by set, sort by release date desc (same as overview)
+  const setMap = {};
+  for (const h of items){
+    const key = h.set_code || h.set_name || 'unknown';
+    if (!setMap[key]) setMap[key] = { set_name: h.set_name, set_code: h.set_code, products: [] };
+    setMap[key].products.push(h);
+  }
+  const sets = Object.values(setMap).sort((a,b) => {
+    // Find release date from overviewData if available
+    const oa = overviewData.find(s => s.code === a.set_code);
+    const ob = overviewData.find(s => s.code === b.set_code);
+    return (ob?.released_at || '').localeCompare(oa?.released_at || '');
+  });
+
+  content.innerHTML = sets.map(s => renderHistSetCard(s)).join('');
+
+  // Add click handlers for expand/collapse
+  document.querySelectorAll('.hist-set-head').forEach(head => {
+    head.addEventListener('click', () => {
+      const card = head.closest('.hist-set-card');
+      card.classList.toggle('expanded');
+    });
+  });
 }
 
-function renderHistoryCard(h){
-  const snaps = h.snapshots || [];
-  const fromSeries = snaps.map(s => parseFloat(s.from_price)).filter(v=>!isNaN(v));
-  const avgSeries = snaps.map(s => parseFloat(s.avg_25_lowest)).filter(v=>!isNaN(v));
-  if (!fromSeries.length) fromSeries.push(0);
-  if (!avgSeries.length) avgSeries.push(0);
-  const all = [...fromSeries, ...avgSeries];
-  const min = Math.min(...all), max = Math.max(...all);
-  const pad = (max - min) * 0.1 || 1;
-  const yMin = Math.max(0, min - pad), yMax = max + pad;
-  const w = 300, height = 150, padX=28, padY=20;
-  const chartW = w - padX*2, chartH = height - padY*2;
+function renderHistSetCard(setData){
+  const products = setData.products;
+  // Find overview data for this set (icon, release year, set type)
+  const ov = overviewData.find(s => s.code === setData.set_code);
+  const setName = escapeHtml(setData.set_name || 'Unknown');
+  const year = ov?.year || '';
+  const setType = ov?.set_type || '';
+  const cardCount = ov?.card_count || '';
 
-  function svgPath(series, color){
-    if (!series.length) return '';
-    const points = series.map((v,i)=>{
-      const x = padX + (series.length > 1 ? (i / (series.length - 1)) * chartW : chartW/2);
-      const y = padY + chartH - ((v - yMin) / (yMax - yMin || 1)) * chartH;
-      return `${x.toFixed(1)},${y.toFixed(1)}`;
-    });
-    const area = `M ${padX},${padY+chartH} L ${points.join(' L ')} L ${padX+chartW},${padY+chartH} Z`;
-    const line = `M ${points.join(' L ')}`;
-    const dots = points.map((pt,i)=> `<circle cx="${pt.split(',')[0]}" cy="${pt.split(',')[1]}" r="2.4" fill="${color}" stroke="none" />`).join('');
-    return `<path d="${area}" fill="${color}" opacity="0.10" stroke="none" />
-            <path d="${line}" fill="none" stroke="${color}" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
-            ${dots}`;
+  // Find the cheapest current avg25 across all products in this set
+  let cheapestAvg = null;
+  let cheapestProduct = null;
+  for (const p of products){
+    const snaps = p.snapshots || [];
+    if (!snaps.length) continue;
+    const lastAvg = parseFloat(snaps[snaps.length-1].avg_25_lowest);
+    if (lastAvg && (cheapestAvg === null || lastAvg < cheapestAvg)){
+      cheapestAvg = lastAvg;
+      cheapestProduct = p;
+    }
   }
 
-  const fromSvg = svgPath(fromSeries, 'var(--gold)');
-  const avgSvg = svgPath(avgSeries, 'var(--mana-u)');
-  const firstDate = fmtDate(snaps[0].scan_date);
-  const lastDate = fmtDate(snaps[snaps.length - 1].scan_date);
-  const currentFrom = fmtPrice(snaps[snaps.length-1].from_price);
-  const currentAvg = fmtPrice(snaps[snaps.length-1].avg_25_lowest);
+  // Set icon
+  const code = setData.set_code || '';
+  let iconHTML = '';
+  if (typeof KEYRUNE_CODES !== 'undefined' && KEYRUNE_CODES.has(code)){
+    iconHTML = `<i class="ss ss-${code}"></i>`;
+  } else if (typeof CUSTOM_SVGS !== 'undefined' && CUSTOM_SVGS[code]){
+    iconHTML = `<span class="custom-svg" style="display:flex;align-items:center;justify-content:center;width:18px;height:18px">${CUSTOM_SVGS[code]}</span>`;
+  } else {
+    iconHTML = `<span style="font-family:'Cinzel',serif;font-size:10px;font-weight:900;color:#fff;opacity:0.7">${code.toUpperCase()}</span>`;
+  }
+
+  const productsHTML = products.map(p => renderHistProductCard(p)).join('');
+
+  // Meta line
+  let metaParts = [];
+  if (year) metaParts.push(year);
+  if (setType) metaParts.push(setType);
+  if (cardCount) metaParts.push(cardCount + ' cards');
+  metaParts.push(products.length + (products.length === 1 ? ' product' : ' products'));
+  const meta = metaParts.join(' · ');
 
   return `
-  <div class="history-card">
-    <div class="history-head">
-      <div>
-        <div class="history-title">${escapeHtml(cleanProductName(h.product_name, h.set_name, h.product_type))}</div>
-        <div class="history-sub">${escapeHtml(h.set_name || '')}</div>
+  <div class="hist-set-card">
+    <div class="hist-set-head">
+      <div class="hist-set-icon">${iconHTML}</div>
+      <div class="hist-set-info">
+        <div class="hist-set-name">${setName}</div>
+        <div class="hist-set-meta">${escapeHtml(meta)}</div>
       </div>
-      <div class="badge ${typeClass(h.product_type)}">${escapeHtml(badgeLabel(h.product_type))}</div>
+      <div class="hist-set-price">
+        ${cheapestAvg !== null ? '€' + cheapestAvg.toLocaleString(undefined,{maximumFractionDigits:0}) : '-'}
+        <small>from avg25</small>
+      </div>
+      <div class="hist-set-toggle">▼</div>
     </div>
-    <div class="chart-wrap">
-      <svg viewBox="0 0 ${w} ${height}" preserveAspectRatio="none">
-        ${gridLines(w, height, padX, padY, chartW, chartH, yMin, yMax)}
-        ${avgSvg}
-        ${fromSvg}
-      </svg>
+    <div class="hist-set-body">
+      <div class="hist-products">${productsHTML}</div>
     </div>
-    <div class="chart-legend">
-      <span class="legend-item"><span class="legend-line" style="background:var(--gold)"></span> from ${currentFrom !== null ? '€'+currentFrom : '-'}</span>
-      <span class="legend-item"><span class="legend-line" style="background:var(--mana-u)"></span> avg25 ${currentAvg !== null ? '€'+currentAvg : '-'}</span>
-    </div>
-    <div class="chart-labels"><span>${firstDate}</span><span>${lastDate}</span></div>
   </div>`;
 }
 
-function gridLines(w, h, padX, padY, cw, ch, yMin, yMax){
-  const range = yMax - yMin || 1;
-  let lines = '';
-  for (let i=0; i<=4; i++){
-    const y = padY + (i/4)*ch;
-    const val = (yMax - (i/4)*range).toFixed(0);
-    lines += `<line x1="${padX}" y1="${y.toFixed(1)}" x2="${w-padX}" y2="${y.toFixed(1)}" stroke="rgba(255,255,255,0.06)" stroke-width="1" stroke-dasharray="4 4" />`;
-    lines += `<text x="4" y="${(y+3).toFixed(1)}" fill="var(--text-muted)" font-size="8" font-family="Inter,sans-serif">€${val}</text>`;
+function renderHistProductCard(p){
+  const snaps = p.snapshots || [];
+  const avgSeries = snaps.map(s => parseFloat(s.avg_25_lowest)).filter(v => !isNaN(v) && v > 0);
+  if (avgSeries.length < 2) return '';
+
+  const min = Math.min(...avgSeries);
+  const max = Math.max(...avgSeries);
+  const pad = (max - min) * 0.15 || 1;
+  const yMin = Math.max(0, min - pad);
+  const yMax = max + pad;
+
+  const w = 280, h = 90, padX = 4, padY = 8;
+  const chartW = w - padX * 2, chartH = h - padY * 2;
+
+  // Build SVG path for avg25 line
+  const points = avgSeries.map((v, i) => {
+    const x = padX + (avgSeries.length > 1 ? (i / (avgSeries.length - 1)) * chartW : chartW / 2);
+    const y = padY + chartH - ((v - yMin) / (yMax - yMin || 1)) * chartH;
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  });
+
+  const linePath = `M ${points.join(' L ')}`;
+  const areaPath = `M ${padX},${padY + chartH} L ${points.join(' L ')} L ${padX + chartW},${padY + chartH} Z`;
+
+  // Dots — only show first and last
+  const firstPt = points[0].split(',');
+  const lastPt = points[points.length - 1].split(',');
+  const dotsHTML = `<circle cx="${firstPt[0]}" cy="${firstPt[1]}" r="2.5" fill="#ffe680" stroke="none" />` +
+                   `<circle cx="${lastPt[0]}" cy="${lastPt[1]}" r="2.5" fill="#b794f4" stroke="none" />`;
+
+  // Grid lines
+  let gridHTML = '';
+  for (let i = 0; i <= 3; i++){
+    const y = padY + (i / 3) * chartH;
+    const val = (yMax - (i / 3) * (yMax - yMin)).toFixed(0);
+    gridHTML += `<line x1="${padX}" y1="${y.toFixed(1)}" x2="${w - padX}" y2="${y.toFixed(1)}" stroke="rgba(255,255,255,0.05)" stroke-width="1" stroke-dasharray="3 3" />`;
+    if (i === 0 || i === 3) {
+      gridHTML += `<text x="${padX + 2}" y="${(y + 3).toFixed(1)}" fill="rgba(255,255,255,0.3)" font-size="7" font-family="Inter,sans-serif">€${val}</text>`;
+    }
   }
-  return lines;
+
+  // Unique gradient ID per product to avoid SVG conflicts
+  const gradId = 'histGrad_' + p.product_id;
+  const areaGradId = 'histArea_' + p.product_id;
+
+  // Trend calculation
+  const currentAvg = avgSeries[avgSeries.length - 1];
+  const firstAvg = avgSeries[0];
+  const trendPct = firstAvg > 0 ? ((currentAvg - firstAvg) / firstAvg * 100) : 0;
+  const trendClass = trendPct > 1 ? 'up' : (trendPct < -1 ? 'down' : 'flat');
+  const trendArrow = trendPct > 1 ? '↑' : (trendPct < -1 ? '↓' : '→');
+  const trendText = Math.abs(trendPct) >= 0.1 ? trendArrow + ' ' + Math.abs(trendPct).toFixed(1) + '%' : trendArrow;
+
+  // Badge
+  const badgeClass = typeClass(p.product_type);
+  const badgeText = badgeLabel(p.product_type);
+
+  const firstDate = shortDate(snaps[0].scan_date);
+  const lastDate = shortDate(snaps[snaps.length - 1].scan_date);
+
+  return `
+  <div class="hist-prod-card">
+    <div class="hist-prod-head">
+      <span class="hist-prod-name">${escapeHtml(badgeText)}</span>
+      <span class="hist-prod-badge ${badgeClass}">${escapeHtml(badgeText)}</span>
+    </div>
+    <div class="hist-chart-wrap">
+      <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="${gradId}" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="#ffe680" />
+            <stop offset="50%" stop-color="#d4a8f0" />
+            <stop offset="100%" stop-color="#b794f4" />
+            <animate attributeName="x1" values="0%;100%;0%" dur="4s" repeatCount="indefinite" />
+            <animate attributeName="x2" values="100%;200%;100%" dur="4s" repeatCount="indefinite" />
+          </linearGradient>
+          <linearGradient id="${areaGradId}" x1="0%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#ffe680" stop-opacity="0.4" />
+            <stop offset="100%" stop-color="#b794f4" stop-opacity="0" />
+          </linearGradient>
+        </defs>
+        ${gridHTML}
+        <path d="${areaPath}" fill="url(#${areaGradId})" opacity="0.3" stroke="none" />
+        <path d="${linePath}" class="hist-avg-line" stroke="url(#${gradId})" />
+        ${dotsHTML}
+      </svg>
+    </div>
+    <div class="hist-prod-stats">
+      <span class="hist-prod-current">€${currentAvg.toLocaleString(undefined,{maximumFractionDigits:0})}</span>
+      <span class="hist-prod-trend ${trendClass}">${trendText}</span>
+    </div>
+    <div class="hist-chart-labels"><span>${firstDate}</span><span>${lastDate}</span></div>
+  </div>`;
 }
 
 /* ---- Stats ---- */

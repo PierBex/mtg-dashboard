@@ -45,7 +45,6 @@
   --max:980px;
   --header-h:64px;
   --bottom-nav-h:68px;
-  --co:18px;
 }
 * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html,body { margin:0; padding:0; color:var(--text); font-family:'Inter',sans-serif; min-height:100dvh; }
@@ -162,54 +161,18 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .container{ max-width:var(--max); margin:0 auto; padding:18px 14px 36px; }
 
 /* Market Overview Hero */
-.hero-wrapper{
-  position:relative; margin-bottom:24px;
-}
 .market-hero{
-  --co:26px;
-  padding:0; border-radius:0; border:none;
+  margin-bottom:24px; padding:0; border-radius:var(--radius);
   background:linear-gradient(135deg, rgba(30,20,50,0.5), rgba(15,10,25,0.6));
-  position:relative; overflow:hidden;
+  border:1px solid rgba(200,168,122,0.2);
+  position:relative; overflow:visible;
   box-shadow:0 12px 40px rgba(0,0,0,0.4);
   display:flex; align-items:stretch;
-  clip-path:polygon(
-    calc(var(--co) * 2) 0,
-    calc(var(--co) * 1.5) calc(var(--co) * 0.3),
-    var(--co) var(--co),
-    calc(var(--co) * 0.3) calc(var(--co) * 1.5),
-    0 calc(var(--co) * 2),
-    0 calc(100% - var(--co) * 2),
-    calc(var(--co) * 0.3) calc(100% - var(--co) * 1.5),
-    var(--co) calc(100% - var(--co)),
-    calc(var(--co) * 1.5) calc(100% - var(--co) * 0.3),
-    calc(var(--co) * 2) 100%,
-    calc(100% - var(--co) * 2) 100%,
-    calc(100% - var(--co) * 1.5) calc(100% - var(--co) * 0.3),
-    calc(100% - var(--co)) calc(100% - var(--co)),
-    calc(100% - var(--co) * 0.3) calc(100% - var(--co) * 1.5),
-    100% calc(100% - var(--co) * 2),
-    100% calc(var(--co) * 2),
-    calc(100% - var(--co) * 0.3) calc(var(--co) * 1.5),
-    calc(100% - var(--co)) var(--co),
-    calc(100% - var(--co) * 1.5) calc(var(--co) * 0.3),
-    calc(100% - var(--co) * 2) 0
-  );
 }
-/* Gold border for hero */
-.market-hero::after{
-  content:''; position:absolute; inset:0; z-index:3; pointer-events:none;
-  padding:1.5px;
-  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor; mask-composite:exclude;
-  clip-path:inherit;
-  opacity:0.7;
-}
-/* Particle effects - outside clipped hero */
+/* Particle effects bleeding out of the card */
 .hero-particles{
   position:absolute; top:0; left:0; width:36%; max-width:160px;
-  height:100%; pointer-events:none; z-index:4;
+  height:100%; pointer-events:none; z-index:3;
   overflow:visible;
 }
 .hero-particles span{
@@ -338,47 +301,16 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .section-title .dot{ width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 16px var(--gold); }
 .subtitle{ color:var(--text-sec); font-size:13px; margin-bottom:18px; }
 
-/* Set Cards - Ornate gold border with decorative corner shape */
+/* Set Cards - Richer design with Keyrune watermark */
 .set-card{
-  border:none; border-radius:0;
-  background:var(--bg-card);
+  border:2px solid transparent; border-radius:var(--radius);
+  background:
+    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+    linear-gradient(135deg, rgba(139,92,246,0.35), rgba(107,78,143,0.25) 50%, rgba(200,168,122,0.3)) border-box;
   backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
   box-shadow:0 14px 45px rgba(0,0,0,0.4), 0 0 0 1px rgba(139,92,246,0.08) inset; overflow:hidden; margin-bottom:18px;
-  transition:transform .2s, box-shadow .2s;
+  transition:border .2s, transform .2s, box-shadow .2s;
   position:relative;
-  clip-path:polygon(
-    calc(var(--co) * 2) 0,
-    calc(var(--co) * 1.5) calc(var(--co) * 0.3),
-    var(--co) var(--co),
-    calc(var(--co) * 0.3) calc(var(--co) * 1.5),
-    0 calc(var(--co) * 2),
-    0 calc(100% - var(--co) * 2),
-    calc(var(--co) * 0.3) calc(100% - var(--co) * 1.5),
-    var(--co) calc(100% - var(--co)),
-    calc(var(--co) * 1.5) calc(100% - var(--co) * 0.3),
-    calc(var(--co) * 2) 100%,
-    calc(100% - var(--co) * 2) 100%,
-    calc(100% - var(--co) * 1.5) calc(100% - var(--co) * 0.3),
-    calc(100% - var(--co)) calc(100% - var(--co)),
-    calc(100% - var(--co) * 0.3) calc(100% - var(--co) * 1.5),
-    100% calc(100% - var(--co) * 2),
-    100% calc(var(--co) * 2),
-    calc(100% - var(--co) * 0.3) calc(var(--co) * 1.5),
-    calc(100% - var(--co)) var(--co),
-    calc(100% - var(--co) * 1.5) calc(var(--co) * 0.3),
-    calc(100% - var(--co) * 2) 0
-  );
-}
-/* Ornate gold border following clip-path shape */
-.set-card::after{
-  content:''; position:absolute; inset:0; z-index:3; pointer-events:none;
-  padding:1.5px;
-  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
-  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
-  -webkit-mask-composite:xor; mask-composite:exclude;
-  clip-path:inherit;
-  opacity:0.85;
 }
 /* Dark gradient overlay for text readability */
 .set-card::before{
@@ -393,7 +325,13 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='leather'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018 0.022' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.38 0 0 0 0 0.55 0 0 0 0.6 0'/%3E/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leather)'/%3E%3C/svg%3E");
   background-size:200px 200px; opacity:0.15; mix-blend-mode:soft-light;
 }
+.set-card::after{
+  content:''; position:absolute; top:0; right:0; width:50%; height:100%;
+  background:radial-gradient(ellipse at right, rgba(139,92,246,0.06), transparent 70%);
+  pointer-events:none; opacity:0; transition:opacity .25s; z-index:0;
+}
 .set-card:hover{ transform:translateY(-2px); box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.15) inset, 0 0 20px rgba(139,92,246,0.1); }
+.set-card:hover::after{ opacity:1; }
 
 /* Colored left strip - full height, matches set type */
 .card-strip{
@@ -865,13 +803,12 @@ body { font-size:15px; line-height:1.45; background:transparent; }
     <!-- Overview panel -->
     <div id="overviewPanel" class="panel is-active">
       <!-- Market Overview Hero -->
-      <div class="hero-wrapper">
+      <div class="market-hero">
         <div class="hero-particles" id="heroParticles"></div>
-        <div class="market-hero">
-          <div class="hero-image">
-            <img src="assets/crystal-lotus.webp" alt="Crystal Lotus" width="400" height="400">
-          </div>
-          <div class="hero-content">
+        <div class="hero-image">
+          <img src="assets/crystal-lotus.webp" alt="Crystal Lotus" width="400" height="400">
+        </div>
+        <div class="hero-content">
           <div class="hero-title">Market Overview</div>
           <div class="hero-tagline">Track Prices. Find Trends. Make Smarter Moves.</div>
           <div class="hero-stats">
@@ -896,7 +833,6 @@ body { font-size:15px; line-height:1.45; background:transparent; }
               <div class="hero-stat-value" id="heroUpdated">-</div>
             </div>
           </div>
-        </div>
         </div>
       </div>
 

@@ -45,6 +45,7 @@
   --max:980px;
   --header-h:64px;
   --bottom-nav-h:68px;
+  --co:14px;
 }
 * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html,body { margin:0; padding:0; color:var(--text); font-family:'Inter',sans-serif; min-height:100dvh; }
@@ -161,13 +162,42 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .container{ max-width:var(--max); margin:0 auto; padding:18px 14px 36px; }
 
 /* Market Overview Hero */
+.hero-wrapper{
+  position:relative; margin-bottom:24px;
+}
 .market-hero{
-  margin-bottom:24px; padding:0; border-radius:var(--radius);
+  --co:22px;
+  padding:0; 
   background:linear-gradient(135deg, rgba(30,20,50,0.5), rgba(15,10,25,0.6));
-  border:1px solid rgba(200,168,122,0.35);
-  position:relative; overflow:visible;
+  position:relative; overflow:hidden;
   box-shadow:0 12px 40px rgba(0,0,0,0.4);
   display:flex; align-items:stretch;
+  clip-path:polygon(
+    0 var(--co), var(--co) 0,
+    calc(50% - var(--co)*1.5) 0,
+    calc(50% - var(--co)*0.7) calc(var(--co)*0.5),
+    50% calc(var(--co)*0.7),
+    calc(50% + var(--co)*0.7) calc(var(--co)*0.5),
+    calc(50% + var(--co)*1.5) 0,
+    calc(100% - var(--co)) 0, 100% var(--co),
+    100% calc(100% - var(--co)),
+    calc(100% - var(--co)) 100%,
+    calc(50% + var(--co)*1.5) 100%,
+    calc(50% + var(--co)*0.7) calc(100% - var(--co)*0.5),
+    50% calc(100% - var(--co)*0.7),
+    calc(50% - var(--co)*0.7) calc(100% - var(--co)*0.5),
+    calc(50% - var(--co)*1.5) 100%,
+    var(--co) 100%, 0 calc(100% - var(--co))
+  );
+}
+.market-hero::before{
+  content:''; position:absolute; inset:-2px; z-index:10; pointer-events:none;
+  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
+  clip-path:inherit;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  padding:1.5px;
 }
 /* Particle effects bleeding out of the card */
 .hero-particles{
@@ -233,6 +263,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .hero-stats{ gap:14px; }
   .hero-particles{ width:28%; max-width:220px; }
 }
+
 
 /* Tabs */
 .tabs{ position:sticky; top:var(--header-h); z-index:40; padding:14px 0 0; margin:-18px -14px 24px; }
@@ -303,14 +334,40 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 
 /* Set Cards - Richer design with Keyrune watermark */
 .set-card{
-  border:2px solid transparent; border-radius:var(--radius);
-  background:
-    linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
-    linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%) border-box;
+  --co:14px;
+  border:none;
+  background:var(--bg-card);
   backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
   box-shadow:0 14px 45px rgba(0,0,0,0.4), 0 0 0 1px rgba(139,92,246,0.08) inset; overflow:hidden; margin-bottom:18px;
-  transition:border .2s, transform .2s, box-shadow .2s;
+  transition:transform .2s, box-shadow .2s;
   position:relative;
+  clip-path:polygon(
+    0 var(--co), var(--co) 0,
+    calc(50% - var(--co)*1.5) 0,
+    calc(50% - var(--co)*0.7) calc(var(--co)*0.5),
+    50% calc(var(--co)*0.7),
+    calc(50% + var(--co)*0.7) calc(var(--co)*0.5),
+    calc(50% + var(--co)*1.5) 0,
+    calc(100% - var(--co)) 0, 100% var(--co),
+    100% calc(100% - var(--co)),
+    calc(100% - var(--co)) 100%,
+    calc(50% + var(--co)*1.5) 100%,
+    calc(50% + var(--co)*0.7) calc(100% - var(--co)*0.5),
+    50% calc(100% - var(--co)*0.7),
+    calc(50% - var(--co)*0.7) calc(100% - var(--co)*0.5),
+    calc(50% - var(--co)*1.5) 100%,
+    var(--co) 100%, 0 calc(100% - var(--co))
+  );
+}
+/* Gold border via pseudo-element */
+.set-card::after{
+  content:''; position:absolute; inset:-2px; z-index:20; pointer-events:none;
+  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
+  clip-path:inherit;
+  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  padding:1.5px;
 }
 /* Dark gradient overlay for text readability */
 .set-card::before{
@@ -325,13 +382,10 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='leather'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018 0.022' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.38 0 0 0 0 0.55 0 0 0 0.6 0'/%3E/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leather)'/%3E%3C/svg%3E");
   background-size:200px 200px; opacity:0.15; mix-blend-mode:soft-light;
 }
-.set-card::after{
-  content:''; position:absolute; top:0; right:0; width:50%; height:100%;
-  background:radial-gradient(ellipse at right, rgba(139,92,246,0.06), transparent 70%);
-  pointer-events:none; opacity:0; transition:opacity .25s; z-index:0;
+.set-card:hover{ 
+  transform:translateY(-2px); 
+  box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.15) inset, 0 0 20px rgba(139,92,246,0.1); 
 }
-.set-card:hover{ transform:translateY(-2px); box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.15) inset, 0 0 20px rgba(139,92,246,0.1); }
-.set-card:hover::after{ opacity:1; }
 
 /* Colored left strip - full height, matches set type */
 .card-strip{
@@ -803,34 +857,36 @@ body { font-size:15px; line-height:1.45; background:transparent; }
     <!-- Overview panel -->
     <div id="overviewPanel" class="panel is-active">
       <!-- Market Overview Hero -->
-      <div class="market-hero">
+      <div class="hero-wrapper">
         <div class="hero-particles" id="heroParticles"></div>
-        <div class="hero-image">
-          <img src="assets/crystal-lotus.webp" alt="Crystal Lotus" width="400" height="400">
-        </div>
-        <div class="hero-content">
-          <div class="hero-title">Market Overview</div>
-          <div class="hero-tagline">Track Prices. Find Trends. Make Smarter Moves.</div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="18" rx="2"/><rect x="7" y="2" width="13" height="18" rx="2"/><path d="M13.5 11l2 2-2 2"/></svg></div>
-              <div class="hero-stat-label">Sets Tracked</div>
-              <div class="hero-stat-value" id="heroSets">-</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.5c.5-1 2-1 2.4 0c.3.6.8 1.1 1.5 1.3c3 .9 5.3 3.6 5.3 6.9c0 4.5 1.5 6 1.5 6H3s1.5-1.5 1.5-6c0-3.3 2.3-6 5.3-6.9c.7-.2 1.2-.7 1.5-1.3z"/><path d="M9 19.5c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/></svg></div>
-              <div class="hero-stat-label">Price Alerts</div>
-              <div class="hero-stat-value" id="heroPriced">-</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M6 17l4-5 3 3 5-7"/><circle cx="18" cy="8" r="1.2" fill="#C8A87A" stroke="none"/></svg></div>
-              <div class="hero-stat-label">Avg Price</div>
-              <div class="hero-stat-value gold" id="heroAvg">-</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
-              <div class="hero-stat-label">Last Updated</div>
-              <div class="hero-stat-value" id="heroUpdated">-</div>
+        <div class="market-hero">
+          <div class="hero-image">
+            <img src="assets/crystal-lotus.webp" alt="Crystal Lotus" width="400" height="400">
+          </div>
+          <div class="hero-content">
+            <div class="hero-title">Market Overview</div>
+            <div class="hero-tagline">Track Prices. Find Trends. Make Smarter Moves.</div>
+            <div class="hero-stats">
+              <div class="hero-stat">
+                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="18" rx="2"/><rect x="7" y="2" width="13" height="18" rx="2"/><path d="M13.5 11l2 2-2 2"/></svg></div>
+                <div class="hero-stat-label">Sets Tracked</div>
+                <div class="hero-stat-value" id="heroSets">-</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.5c.5-1 2-1 2.4 0c.3.6.8 1.1 1.5 1.3c3 .9 5.3 3.6 5.3 6.9c0 4.5 1.5 6 1.5 6H3s1.5-1.5 1.5-6c0-3.3 2.3-6 5.3-6.9c.7-.2 1.2-.7 1.5-1.3z"/><path d="M9 19.5c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/></svg></div>
+                <div class="hero-stat-label">Price Alerts</div>
+                <div class="hero-stat-value" id="heroPriced">-</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M6 17l4-5 3 3 5-7"/><circle cx="18" cy="8" r="1.2" fill="#C8A87A" stroke="none"/></svg></div>
+                <div class="hero-stat-label">Avg Price</div>
+                <div class="hero-stat-value gold" id="heroAvg">-</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+                <div class="hero-stat-label">Last Updated</div>
+                <div class="hero-stat-value" id="heroUpdated">-</div>
+              </div>
             </div>
           </div>
         </div>

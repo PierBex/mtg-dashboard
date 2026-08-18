@@ -45,7 +45,7 @@
   --max:980px;
   --header-h:64px;
   --bottom-nav-h:68px;
-  --co:14px;
+  --co:18px;
 }
 * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html,body { margin:0; padding:0; color:var(--text); font-family:'Inter',sans-serif; min-height:100dvh; }
@@ -166,43 +166,50 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   position:relative; margin-bottom:24px;
 }
 .market-hero{
-  --co:22px;
-  padding:0; 
+  --co:26px;
+  padding:0; border-radius:0; border:none;
   background:linear-gradient(135deg, rgba(30,20,50,0.5), rgba(15,10,25,0.6));
   position:relative; overflow:hidden;
   box-shadow:0 12px 40px rgba(0,0,0,0.4);
   display:flex; align-items:stretch;
   clip-path:polygon(
-    0 var(--co), var(--co) 0,
-    calc(50% - var(--co)*1.5) 0,
-    calc(50% - var(--co)*0.7) calc(var(--co)*0.5),
-    50% calc(var(--co)*0.7),
-    calc(50% + var(--co)*0.7) calc(var(--co)*0.5),
-    calc(50% + var(--co)*1.5) 0,
-    calc(100% - var(--co)) 0, 100% var(--co),
-    100% calc(100% - var(--co)),
-    calc(100% - var(--co)) 100%,
-    calc(50% + var(--co)*1.5) 100%,
-    calc(50% + var(--co)*0.7) calc(100% - var(--co)*0.5),
-    50% calc(100% - var(--co)*0.7),
-    calc(50% - var(--co)*0.7) calc(100% - var(--co)*0.5),
-    calc(50% - var(--co)*1.5) 100%,
-    var(--co) 100%, 0 calc(100% - var(--co))
+    calc(var(--co) * 2) 0,
+    calc(var(--co) * 1.5) calc(var(--co) * 0.3),
+    var(--co) var(--co),
+    calc(var(--co) * 0.3) calc(var(--co) * 1.5),
+    0 calc(var(--co) * 2),
+    0 calc(100% - var(--co) * 2),
+    calc(var(--co) * 0.3) calc(100% - var(--co) * 1.5),
+    var(--co) calc(100% - var(--co)),
+    calc(var(--co) * 1.5) calc(100% - var(--co) * 0.3),
+    calc(var(--co) * 2) 100%,
+    calc(100% - var(--co) * 2) 100%,
+    calc(100% - var(--co) * 1.5) calc(100% - var(--co) * 0.3),
+    calc(100% - var(--co)) calc(100% - var(--co)),
+    calc(100% - var(--co) * 0.3) calc(100% - var(--co) * 1.5),
+    100% calc(100% - var(--co) * 2),
+    100% calc(var(--co) * 2),
+    calc(100% - var(--co) * 0.3) calc(var(--co) * 1.5),
+    calc(100% - var(--co)) var(--co),
+    calc(100% - var(--co) * 1.5) calc(var(--co) * 0.3),
+    calc(100% - var(--co) * 2) 0
   );
 }
-.market-hero::before{
-  content:''; position:absolute; inset:-2px; z-index:10; pointer-events:none;
-  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
-  clip-path:inherit;
-  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor; mask-composite:exclude;
+/* Gold border for hero */
+.market-hero::after{
+  content:''; position:absolute; inset:0; z-index:3; pointer-events:none;
   padding:1.5px;
+  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  clip-path:inherit;
+  opacity:0.7;
 }
-/* Particle effects bleeding out of the card */
+/* Particle effects - outside clipped hero */
 .hero-particles{
   position:absolute; top:0; left:0; width:36%; max-width:160px;
-  height:100%; pointer-events:none; z-index:3;
+  height:100%; pointer-events:none; z-index:4;
   overflow:visible;
 }
 .hero-particles span{
@@ -263,7 +270,6 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   .hero-stats{ gap:14px; }
   .hero-particles{ width:28%; max-width:220px; }
 }
-
 
 /* Tabs */
 .tabs{ position:sticky; top:var(--header-h); z-index:40; padding:14px 0 0; margin:-18px -14px 24px; }
@@ -332,42 +338,47 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .section-title .dot{ width:8px; height:8px; border-radius:50%; background:var(--gold); box-shadow:0 0 16px var(--gold); }
 .subtitle{ color:var(--text-sec); font-size:13px; margin-bottom:18px; }
 
-/* Set Cards - Richer design with Keyrune watermark */
+/* Set Cards - Ornate gold border with decorative corner shape */
 .set-card{
-  --co:14px;
-  border:none;
+  border:none; border-radius:0;
   background:var(--bg-card);
   backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px);
   box-shadow:0 14px 45px rgba(0,0,0,0.4), 0 0 0 1px rgba(139,92,246,0.08) inset; overflow:hidden; margin-bottom:18px;
   transition:transform .2s, box-shadow .2s;
   position:relative;
   clip-path:polygon(
-    0 var(--co), var(--co) 0,
-    calc(50% - var(--co)*1.5) 0,
-    calc(50% - var(--co)*0.7) calc(var(--co)*0.5),
-    50% calc(var(--co)*0.7),
-    calc(50% + var(--co)*0.7) calc(var(--co)*0.5),
-    calc(50% + var(--co)*1.5) 0,
-    calc(100% - var(--co)) 0, 100% var(--co),
-    100% calc(100% - var(--co)),
-    calc(100% - var(--co)) 100%,
-    calc(50% + var(--co)*1.5) 100%,
-    calc(50% + var(--co)*0.7) calc(100% - var(--co)*0.5),
-    50% calc(100% - var(--co)*0.7),
-    calc(50% - var(--co)*0.7) calc(100% - var(--co)*0.5),
-    calc(50% - var(--co)*1.5) 100%,
-    var(--co) 100%, 0 calc(100% - var(--co))
+    calc(var(--co) * 2) 0,
+    calc(var(--co) * 1.5) calc(var(--co) * 0.3),
+    var(--co) var(--co),
+    calc(var(--co) * 0.3) calc(var(--co) * 1.5),
+    0 calc(var(--co) * 2),
+    0 calc(100% - var(--co) * 2),
+    calc(var(--co) * 0.3) calc(100% - var(--co) * 1.5),
+    var(--co) calc(100% - var(--co)),
+    calc(var(--co) * 1.5) calc(100% - var(--co) * 0.3),
+    calc(var(--co) * 2) 100%,
+    calc(100% - var(--co) * 2) 100%,
+    calc(100% - var(--co) * 1.5) calc(100% - var(--co) * 0.3),
+    calc(100% - var(--co)) calc(100% - var(--co)),
+    calc(100% - var(--co) * 0.3) calc(100% - var(--co) * 1.5),
+    100% calc(100% - var(--co) * 2),
+    100% calc(var(--co) * 2),
+    calc(100% - var(--co) * 0.3) calc(var(--co) * 1.5),
+    calc(100% - var(--co)) var(--co),
+    calc(100% - var(--co) * 1.5) calc(var(--co) * 0.3),
+    calc(100% - var(--co) * 2) 0
   );
 }
-/* Gold border via pseudo-element */
+/* Ornate gold border following clip-path shape */
 .set-card::after{
-  content:''; position:absolute; inset:-2px; z-index:20; pointer-events:none;
-  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
-  clip-path:inherit;
-  -webkit-mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  mask:linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
-  -webkit-mask-composite:xor; mask-composite:exclude;
+  content:''; position:absolute; inset:0; z-index:3; pointer-events:none;
   padding:1.5px;
+  background:linear-gradient(135deg, #D4B06E 0%, #9E804D 30%, #5C4A2B 50%, #9E804D 70%, #C8A86C 100%);
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  clip-path:inherit;
+  opacity:0.85;
 }
 /* Dark gradient overlay for text readability */
 .set-card::before{
@@ -382,10 +393,7 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='leather'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.018 0.022' numOctaves='5' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.42 0 0 0 0 0.38 0 0 0 0 0.55 0 0 0 0.6 0'/%3E/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23leather)'/%3E%3C/svg%3E");
   background-size:200px 200px; opacity:0.15; mix-blend-mode:soft-light;
 }
-.set-card:hover{ 
-  transform:translateY(-2px); 
-  box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.15) inset, 0 0 20px rgba(139,92,246,0.1); 
-}
+.set-card:hover{ transform:translateY(-2px); box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(139,92,246,0.15) inset, 0 0 20px rgba(139,92,246,0.1); }
 
 /* Colored left strip - full height, matches set type */
 .card-strip{
@@ -864,31 +872,31 @@ body { font-size:15px; line-height:1.45; background:transparent; }
             <img src="assets/crystal-lotus.webp" alt="Crystal Lotus" width="400" height="400">
           </div>
           <div class="hero-content">
-            <div class="hero-title">Market Overview</div>
-            <div class="hero-tagline">Track Prices. Find Trends. Make Smarter Moves.</div>
-            <div class="hero-stats">
-              <div class="hero-stat">
-                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="18" rx="2"/><rect x="7" y="2" width="13" height="18" rx="2"/><path d="M13.5 11l2 2-2 2"/></svg></div>
-                <div class="hero-stat-label">Sets Tracked</div>
-                <div class="hero-stat-value" id="heroSets">-</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.5c.5-1 2-1 2.4 0c.3.6.8 1.1 1.5 1.3c3 .9 5.3 3.6 5.3 6.9c0 4.5 1.5 6 1.5 6H3s1.5-1.5 1.5-6c0-3.3 2.3-6 5.3-6.9c.7-.2 1.2-.7 1.5-1.3z"/><path d="M9 19.5c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/></svg></div>
-                <div class="hero-stat-label">Price Alerts</div>
-                <div class="hero-stat-value" id="heroPriced">-</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M6 17l4-5 3 3 5-7"/><circle cx="18" cy="8" r="1.2" fill="#C8A87A" stroke="none"/></svg></div>
-                <div class="hero-stat-label">Avg Price</div>
-                <div class="hero-stat-value gold" id="heroAvg">-</div>
-              </div>
-              <div class="hero-stat">
-                <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
-                <div class="hero-stat-label">Last Updated</div>
-                <div class="hero-stat-value" id="heroUpdated">-</div>
-              </div>
+          <div class="hero-title">Market Overview</div>
+          <div class="hero-tagline">Track Prices. Find Trends. Make Smarter Moves.</div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="13" height="18" rx="2"/><rect x="7" y="2" width="13" height="18" rx="2"/><path d="M13.5 11l2 2-2 2"/></svg></div>
+              <div class="hero-stat-label">Sets Tracked</div>
+              <div class="hero-stat-value" id="heroSets">-</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.5c.5-1 2-1 2.4 0c.3.6.8 1.1 1.5 1.3c3 .9 5.3 3.6 5.3 6.9c0 4.5 1.5 6 1.5 6H3s1.5-1.5 1.5-6c0-3.3 2.3-6 5.3-6.9c.7-.2 1.2-.7 1.5-1.3z"/><path d="M9 19.5c.5 1 1.5 1.5 3 1.5s2.5-.5 3-1.5"/></svg></div>
+              <div class="hero-stat-label">Price Alerts</div>
+              <div class="hero-stat-value" id="heroPriced">-</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="18" rx="2"/><path d="M6 17l4-5 3 3 5-7"/><circle cx="18" cy="8" r="1.2" fill="#C8A87A" stroke="none"/></svg></div>
+              <div class="hero-stat-label">Avg Price</div>
+              <div class="hero-stat-value gold" id="heroAvg">-</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A87A" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></div>
+              <div class="hero-stat-label">Last Updated</div>
+              <div class="hero-stat-value" id="heroUpdated">-</div>
             </div>
           </div>
+        </div>
         </div>
       </div>
 

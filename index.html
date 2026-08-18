@@ -45,7 +45,6 @@
   --max:980px;
   --header-h:64px;
   --bottom-nav-h:68px;
-  --corner-notch:14px;
 }
 * { box-sizing:border-box; -webkit-tap-highlight-color:transparent; }
 html,body { margin:0; padding:0; color:var(--text); font-family:'Inter',sans-serif; min-height:100dvh; }
@@ -172,17 +171,41 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   position:relative; overflow:hidden;
   box-shadow:0 12px 40px rgba(0,0,0,0.4);
   display:flex; align-items:stretch;
-  /* Same ornate corner shape as set cards, but larger notch */
-  --corner-notch:20px;
+  /* Same ornate corner shape as set cards, but larger */
+  --co:22px;
   clip-path:polygon(
-    var(--corner-notch) 0%,
-    calc(100% - var(--corner-notch)) 0%,
-    100% var(--corner-notch),
-    100% calc(100% - var(--corner-notch)),
-    calc(100% - var(--corner-notch)) 100%,
-    var(--corner-notch) 100%,
-    0% calc(100% - var(--corner-notch)),
-    0% var(--corner-notch)
+    /* === TOP-LEFT CORNER === */
+    calc(var(--co) * 1.4) 0%,
+    calc(var(--co) * 1.0) calc(var(--co) * 0.35),
+    calc(var(--co) * 0.55) calc(var(--co) * 0.45),
+    calc(var(--co) * 0.15) calc(var(--co) * 0.15),
+    calc(var(--co) * 0.45) calc(var(--co) * 0.55),
+    calc(var(--co) * 0.35) calc(var(--co) * 1.0),
+    0% calc(var(--co) * 1.4),
+    /* === BOTTOM-LEFT CORNER === */
+    0% calc(100% - var(--co) * 1.4),
+    calc(var(--co) * 0.35) calc(100% - var(--co) * 1.0),
+    calc(var(--co) * 0.45) calc(100% - var(--co) * 0.55),
+    calc(var(--co) * 0.15) calc(100% - var(--co) * 0.15),
+    calc(var(--co) * 0.55) calc(100% - var(--co) * 0.45),
+    calc(var(--co) * 1.0) calc(100% - var(--co) * 0.35),
+    calc(var(--co) * 1.4) 100%,
+    /* === BOTTOM-RIGHT CORNER === */
+    calc(100% - var(--co) * 1.4) 100%,
+    calc(100% - var(--co) * 1.0) calc(100% - var(--co) * 0.35),
+    calc(100% - var(--co) * 0.55) calc(100% - var(--co) * 0.45),
+    calc(100% - var(--co) * 0.15) calc(100% - var(--co) * 0.15),
+    calc(100% - var(--co) * 0.45) calc(100% - var(--co) * 0.55),
+    calc(100% - var(--co) * 0.35) calc(100% - var(--co) * 1.0),
+    100% calc(100% - var(--co) * 1.4),
+    /* === TOP-RIGHT CORNER === */
+    100% calc(var(--co) * 1.4),
+    calc(100% - var(--co) * 0.35) calc(var(--co) * 1.0),
+    calc(100% - var(--co) * 0.45) calc(var(--co) * 0.55),
+    calc(100% - var(--co) * 0.15) calc(var(--co) * 0.15),
+    calc(100% - var(--co) * 0.55) calc(var(--co) * 0.45),
+    calc(100% - var(--co) * 1.0) calc(var(--co) * 0.35),
+    calc(100% - var(--co) * 1.4) 0%
   );
 }
 /* Gold border for hero - same mask-composite technique */
@@ -331,6 +354,9 @@ body { font-size:15px; line-height:1.45; background:transparent; }
 .subtitle{ color:var(--text-sec); font-size:13px; margin-bottom:18px; }
 
 /* Set Cards - Ornate gold border with decorative notch corners */
+/* CSS variable for corner ornament size - responsive */
+:root{ --co:14px; }
+
 .set-card{
   border:none; border-radius:0;
   background:
@@ -340,17 +366,47 @@ body { font-size:15px; line-height:1.45; background:transparent; }
   box-shadow:0 14px 45px rgba(0,0,0,0.4), 0 0 0 1px rgba(139,92,246,0.08) inset; overflow:hidden; margin-bottom:18px;
   transition:transform .2s, box-shadow .2s;
   position:relative;
-  /* Ornate corner: diagonal chamfer cut at each corner, with a small concave notch
-     flanking it on each side - like a decorative plaque */
+  /* Ornate plaque corners: straight edge -> concave notch (dips inward) -> convex corner -> concave notch -> straight edge
+     --co = corner ornament total span from the corner along each axis
+     Notch depth (how far it dips inward) is ~35% of co */
   clip-path:polygon(
-    var(--corner-notch) 0%,
-    calc(100% - var(--corner-notch)) 0%,
-    100% var(--corner-notch),
-    100% calc(100% - var(--corner-notch)),
-    calc(100% - var(--corner-notch)) 100%,
-    var(--corner-notch) 100%,
-    0% calc(100% - var(--corner-notch)),
-    0% var(--corner-notch)
+    /* === TOP-LEFT CORNER === */
+    /* straight top edge ends, notch begins */
+    calc(var(--co) * 1.4) 0%,
+    /* concave notch on top: dips DOWN (inward) */
+    calc(var(--co) * 1.0) calc(var(--co) * 0.35),
+    calc(var(--co) * 0.55) calc(var(--co) * 0.45),
+    /* convex corner curve apex */
+    calc(var(--co) * 0.15) calc(var(--co) * 0.15),
+    /* concave notch on left: dips RIGHT (inward) */
+    calc(var(--co) * 0.45) calc(var(--co) * 0.55),
+    calc(var(--co) * 0.35) calc(var(--co) * 1.0),
+    /* straight left edge begins */
+    0% calc(var(--co) * 1.4),
+    /* === BOTTOM-LEFT CORNER (mirror top-left on Y) === */
+    0% calc(100% - var(--co) * 1.4),
+    calc(var(--co) * 0.35) calc(100% - var(--co) * 1.0),
+    calc(var(--co) * 0.45) calc(100% - var(--co) * 0.55),
+    calc(var(--co) * 0.15) calc(100% - var(--co) * 0.15),
+    calc(var(--co) * 0.55) calc(100% - var(--co) * 0.45),
+    calc(var(--co) * 1.0) calc(100% - var(--co) * 0.35),
+    calc(var(--co) * 1.4) 100%,
+    /* === BOTTOM-RIGHT CORNER (mirror on X) === */
+    calc(100% - var(--co) * 1.4) 100%,
+    calc(100% - var(--co) * 1.0) calc(100% - var(--co) * 0.35),
+    calc(100% - var(--co) * 0.55) calc(100% - var(--co) * 0.45),
+    calc(100% - var(--co) * 0.15) calc(100% - var(--co) * 0.15),
+    calc(100% - var(--co) * 0.45) calc(100% - var(--co) * 0.55),
+    calc(100% - var(--co) * 0.35) calc(100% - var(--co) * 1.0),
+    100% calc(100% - var(--co) * 1.4),
+    /* === TOP-RIGHT CORNER (mirror on X) === */
+    100% calc(var(--co) * 1.4),
+    calc(100% - var(--co) * 0.35) calc(var(--co) * 1.0),
+    calc(100% - var(--co) * 0.45) calc(var(--co) * 0.55),
+    calc(100% - var(--co) * 0.15) calc(var(--co) * 0.15),
+    calc(100% - var(--co) * 0.55) calc(var(--co) * 0.45),
+    calc(100% - var(--co) * 1.0) calc(var(--co) * 0.35),
+    calc(100% - var(--co) * 1.4) 0%
   );
 }
 /* Ornate gold border via mask-composite: thin metallic gold line following the clip-path shape */

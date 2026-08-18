@@ -51,16 +51,22 @@ html,body { margin:0; padding:0; color:var(--text); font-family:'Inter',sans-ser
 html { background:var(--bg); }
 body { font-size:15px; line-height:1.45; background:transparent; }
 
-/* Fantasy background artwork */
+/* Fantasy background artwork - sticky at top, fades to solid below */
 .bg-art{
-  position:fixed; inset:0; z-index:-3; pointer-events:none;
+  position:fixed; top:0; left:0; right:0; height:100vh; z-index:-3; pointer-events:none;
   background-image:url('assets/mtg-bg-optimized.jpg');
-  background-size:cover; background-position:center;
-  opacity:0.75;
+  background-size:cover; background-position:center top;
+  opacity:0.85;
 }
 .bg-overlay{
   position:fixed; inset:0; z-index:-2; pointer-events:none;
-  background:linear-gradient(180deg, rgba(10,10,12,0.55) 0%, rgba(10,10,12,0.72) 50%, rgba(10,10,12,0.85) 100%);
+  background:linear-gradient(180deg,
+    rgba(10,10,12,0.35) 0%,
+    rgba(10,10,12,0.55) 25%,
+    rgba(10,10,12,0.82) 45%,
+    rgba(10,10,12,0.95) 60%,
+    rgba(10,10,12,1) 75%,
+    rgba(10,10,12,1) 100%);
 }
 .bg-mana{
   position:fixed; inset:0; z-index:-1; pointer-events:none;

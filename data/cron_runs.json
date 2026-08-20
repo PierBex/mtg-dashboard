@@ -2,18 +2,24 @@
   {
     "id": 3,
     "started_at": "2026-08-20T05:00:51.353479",
-    "finished_at": "2026-08-20T06:51:51.784142",
-    "status": "error",
+    "finished_at": "2026-08-20T06:56:43.464832",
+    "status": "ok",
     "products_scanned": 255,
     "products_with_prices": 243,
     "products_out_of_stock": 6,
-    "products_failed": 6,
+    "products_failed": 1,
     "notes": [
-      "Error: Assassin's Creed Collector Booster Box: fetch failed (status=0)",
-      "Error: The Lord of the Rings: Tales of Middle-earth Collector Booster Box: fetch failed (status=0)",
-      "Edge of Eternities Collector Booster Box: Excluded 3 outlier listing(s) from avg_25: [2000.0, 2501.0"
+      "Edge of Eternities Collector Booster Box: Excluded 3 outlier listing(s) from avg_25: [2000.0, 2501.0",
+      "Edge of Eternities Play Booster Box: Excluded 2 outlier listing(s) from avg_25: [399.0, 400.0] (rang"
     ],
-    "auto_fix": null
+    "auto_fix": {
+      "retried": 0,
+      "recovered": 6,
+      "still_failed": 0,
+      "fetch_failures": 3,
+      "parse_failures": 3,
+      "redirect_failures": 0
+    }
   },
   {
     "id": 2,

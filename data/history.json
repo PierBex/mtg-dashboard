@@ -4511,6 +4511,12 @@
         "from_price": 58.0,
         "avg_25_lowest": 185.83,
         "available_items": 26
+      },
+      {
+        "scan_date": "2026-08-20",
+        "from_price": 129.99,
+        "avg_25_lowest": 180.32,
+        "available_items": 28
       }
     ]
   },

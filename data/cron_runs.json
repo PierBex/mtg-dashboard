@@ -5,9 +5,9 @@
     "finished_at": "2026-08-20T06:56:43.464832",
     "status": "ok",
     "products_scanned": 255,
-    "products_with_prices": 243,
+    "products_with_prices": 244,
     "products_out_of_stock": 6,
-    "products_failed": 1,
+    "products_failed": 0,
     "notes": [
       "Edge of Eternities Collector Booster Box: Excluded 3 outlier listing(s) from avg_25: [2000.0, 2501.0",
       "Edge of Eternities Play Booster Box: Excluded 2 outlier listing(s) from avg_25: [399.0, 400.0] (rang"

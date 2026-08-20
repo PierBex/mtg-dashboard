@@ -41,15 +41,15 @@
     "id": 1,
     "started_at": "2026-08-13T05:00:29.298848",
     "finished_at": "2026-08-13T06:38:02.996875",
-    "status": "partial",
+    "status": "ok",
     "products_scanned": 255,
-    "products_with_prices": 222,
-    "products_out_of_stock": 0,
-    "products_failed": 33,
+    "products_with_prices": 249,
+    "products_out_of_stock": 6,
+    "products_failed": 0,
     "notes": [
-      "Error: Lorwyn Eclipsed Collector Booster Box: fetch failed (status=0)",
-      "Error: Lorwyn Eclipsed Play Booster Box: fetch failed (status=0)",
-      "The Lord of the Rings: Tales of Middle-earth Collector Booster Box: No articleRow divs found - CardM"
+      "The Lord of the Rings: Tales of Middle-earth Collector Booster Box: No articleRow divs found - CardM",
+      "Adventures in the Forgotten Realms Theme Booster Box: No articleRow divs found - CardMarket HTML str",
+      "Matches fixed"
     ],
     "auto_fix": null
   }

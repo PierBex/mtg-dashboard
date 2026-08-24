@@ -1,5 +1,28 @@
 [
   {
+    "id": 4,
+    "started_at": "2026-08-24T05:00:52.842770",
+    "finished_at": "2026-08-24T07:11:58.148334",
+    "status": "partial",
+    "products_scanned": 255,
+    "products_with_prices": 235,
+    "products_out_of_stock": 7,
+    "products_failed": 1,
+    "notes": [
+      "Error: Star Trek Play Booster Box: retry fetch failed (status=0)",
+      "The Hobbit Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [58.0] (range: \u20ac139.87-\u20ac175.",
+      "Marvel Super Heroes Collector Booster Box: Excluded 1 outlier listing(s) from avg_25: [122.0] (range"
+    ],
+    "auto_fix": {
+      "retried": 9,
+      "recovered": 12,
+      "still_failed": 1,
+      "fetch_failures": 9,
+      "parse_failures": 4,
+      "redirect_failures": 0
+    }
+  },
+  {
     "id": 3,
     "started_at": "2026-08-20T05:00:51.353479",
     "finished_at": "2026-08-20T06:56:43.464832",

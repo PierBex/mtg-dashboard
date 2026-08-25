@@ -1,7 +1,7 @@
 {
   "total_sets": 166,
   "total_products": 255,
-  "total_snapshots": 1273,
+  "total_snapshots": 1274,
   "products_with_prices": 248,
   "products_out_of_stock": 7,
   "type_breakdown": {
@@ -18,5 +18,5 @@
     "status": "partial",
     "products_scanned": 255
   },
-  "exported_at": "2026-08-24"
+  "exported_at": "2026-08-25"
 }

@@ -1,5 +1,28 @@
 [
   {
+    "id": 5,
+    "started_at": "2026-08-27T05:00:42.046372",
+    "finished_at": "2026-08-27T06:43:41.419454",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 241,
+    "products_out_of_stock": 7,
+    "products_failed": 0,
+    "notes": [
+      "The Hobbit Play Booster Box: Excluded 3 outlier listing(s) from avg_25: [150.0, 150.0, 150.0] (range",
+      "Edge of Eternities Collector Booster Box: Excluded 3 outlier listing(s) from avg_25: [2000.0, 2501.0",
+      "Matches fixed"
+    ],
+    "auto_fix": {
+      "retried": 0,
+      "recovered": 7,
+      "still_failed": 0,
+      "fetch_failures": 0,
+      "parse_failures": 7,
+      "redirect_failures": 0
+    }
+  },
+  {
     "id": 4,
     "started_at": "2026-08-24T05:00:52.842770",
     "finished_at": "2026-08-24T07:12:00.733863",

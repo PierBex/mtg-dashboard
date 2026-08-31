@@ -41,6 +41,12 @@
         "from_price": 329.0,
         "avg_25_lowest": 372.46,
         "available_items": 39
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 319.0,
+        "avg_25_lowest": 366.06,
+        "available_items": 44
       }
     ]
   },
@@ -86,6 +92,12 @@
         "from_price": 172.9,
         "avg_25_lowest": 190.45,
         "available_items": 40
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 172.9,
+        "avg_25_lowest": 191.05,
+        "available_items": 37
       }
     ]
   },
@@ -131,6 +143,12 @@
         "from_price": 199.0,
         "avg_25_lowest": 235.67,
         "available_items": 22
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 199.0,
+        "avg_25_lowest": 236.64,
+        "available_items": 22
       }
     ]
   },
@@ -173,6 +191,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
@@ -221,6 +245,12 @@
         "from_price": 130.0,
         "avg_25_lowest": 153.39,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 130.0,
+        "avg_25_lowest": 155.23,
+        "available_items": 50
       }
     ]
   },
@@ -265,6 +295,12 @@
         "scan_date": "2026-08-27",
         "from_price": 224.9,
         "avg_25_lowest": 246.18,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 224.9,
+        "avg_25_lowest": 246.52,
         "available_items": 50
       }
     ]
@@ -311,6 +347,12 @@
         "from_price": 84.9,
         "avg_25_lowest": 94.65,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 75.0,
+        "avg_25_lowest": 92.5,
+        "available_items": 50
       }
     ]
   },
@@ -356,6 +398,12 @@
         "from_price": 375.0,
         "avg_25_lowest": 647.87,
         "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 375.0,
+        "avg_25_lowest": 627.99,
+        "available_items": 9
       }
     ]
   },
@@ -401,6 +449,12 @@
         "from_price": 1889.0,
         "avg_25_lowest": 3079.66,
         "available_items": 6
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1900.0,
+        "avg_25_lowest": 3317.8,
+        "available_items": 5
       }
     ]
   },
@@ -446,6 +500,12 @@
         "from_price": 175.0,
         "avg_25_lowest": 198.43,
         "available_items": 46
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 175.0,
+        "avg_25_lowest": 200.91,
+        "available_items": 46
       }
     ]
   },
@@ -488,6 +548,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 39900.0,
+        "avg_25_lowest": 60208.39,
+        "available_items": 5
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 39900.0,
         "avg_25_lowest": 60208.39,
         "available_items": 5
@@ -536,6 +602,12 @@
         "from_price": 1549.98,
         "avg_25_lowest": 1666.66,
         "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1549.98,
+        "avg_25_lowest": 1666.66,
+        "available_items": 3
       }
     ]
   },
@@ -578,6 +650,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
@@ -626,6 +704,12 @@
         "from_price": 389.9,
         "avg_25_lowest": 506.31,
         "available_items": 38
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 389.9,
+        "avg_25_lowest": 489.79,
+        "available_items": 41
       }
     ]
   },
@@ -671,6 +755,12 @@
         "from_price": 445.0,
         "avg_25_lowest": 549.93,
         "available_items": 18
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 440.0,
+        "avg_25_lowest": 539.89,
+        "available_items": 21
       }
     ]
   },
@@ -715,6 +805,12 @@
         "scan_date": "2026-08-27",
         "from_price": 350.0,
         "avg_25_lowest": 382.15,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 350.0,
+        "avg_25_lowest": 380.35,
         "available_items": 50
       }
     ]
@@ -761,6 +857,12 @@
         "from_price": 109.9,
         "avg_25_lowest": 119.49,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 69.0,
+        "avg_25_lowest": 117.28,
+        "available_items": 50
       }
     ]
   },
@@ -805,6 +907,12 @@
         "scan_date": "2026-08-27",
         "from_price": 103.99,
         "avg_25_lowest": 121.55,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 103.99,
+        "avg_25_lowest": 120.03,
         "available_items": 50
       }
     ]
@@ -851,6 +959,12 @@
         "from_price": 120.0,
         "avg_25_lowest": 137.87,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 120.0,
+        "avg_25_lowest": 137.43,
+        "available_items": 50
       }
     ]
   },
@@ -895,6 +1009,12 @@
         "scan_date": "2026-08-27",
         "from_price": 200.0,
         "avg_25_lowest": 278.18,
+        "available_items": 35
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 235.0,
+        "avg_25_lowest": 282.17,
         "available_items": 35
       }
     ]
@@ -941,6 +1061,12 @@
         "from_price": 448.9,
         "avg_25_lowest": 702.87,
         "available_items": 13
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 448.9,
+        "avg_25_lowest": 702.99,
+        "available_items": 13
       }
     ]
   },
@@ -986,6 +1112,12 @@
         "from_price": 940.0,
         "avg_25_lowest": 1926.22,
         "available_items": 24
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 725.0,
+        "avg_25_lowest": 1883.86,
+        "available_items": 25
       }
     ]
   },
@@ -1030,6 +1162,12 @@
         "scan_date": "2026-08-27",
         "from_price": 145.0,
         "avg_25_lowest": 163.89,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 145.0,
+        "avg_25_lowest": 164.63,
         "available_items": 50
       }
     ]
@@ -1076,6 +1214,12 @@
         "from_price": 130.0,
         "avg_25_lowest": 180.85,
         "available_items": 20
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 130.0,
+        "avg_25_lowest": 182.5,
+        "available_items": 19
       }
     ]
   },
@@ -1120,6 +1264,12 @@
         "scan_date": "2026-08-27",
         "from_price": 850.0,
         "avg_25_lowest": 1424.05,
+        "available_items": 12
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 850.0,
+        "avg_25_lowest": 1424.21,
         "available_items": 12
       }
     ]
@@ -1166,6 +1316,12 @@
         "from_price": 1201.1,
         "avg_25_lowest": 1225.05,
         "available_items": 2
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1203.42,
+        "avg_25_lowest": 1247.47,
+        "available_items": 3
       }
     ]
   },
@@ -1211,6 +1367,12 @@
         "from_price": 551.31,
         "avg_25_lowest": 752.12,
         "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 595.69,
+        "avg_25_lowest": 785.77,
+        "available_items": 7
       }
     ]
   },
@@ -1255,6 +1417,12 @@
         "scan_date": "2026-08-27",
         "from_price": 210.0,
         "avg_25_lowest": 236.94,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 219.9,
+        "avg_25_lowest": 238.07,
         "available_items": 50
       }
     ]
@@ -1301,6 +1469,12 @@
         "from_price": 569.9,
         "avg_25_lowest": 743.88,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 599.9,
+        "avg_25_lowest": 796.3,
+        "available_items": 25
       }
     ]
   },
@@ -1345,6 +1519,12 @@
         "scan_date": "2026-08-27",
         "from_price": 620.0,
         "avg_25_lowest": 713.19,
+        "available_items": 22
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 620.0,
+        "avg_25_lowest": 746.11,
         "available_items": 22
       }
     ]
@@ -1391,6 +1571,12 @@
         "from_price": 285.0,
         "avg_25_lowest": 301.88,
         "available_items": 35
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 285.0,
+        "avg_25_lowest": 303.21,
+        "available_items": 36
       }
     ]
   },
@@ -1435,6 +1621,12 @@
         "scan_date": "2026-08-27",
         "from_price": 250.0,
         "avg_25_lowest": 319.21,
+        "available_items": 24
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 250.0,
+        "avg_25_lowest": 324.06,
         "available_items": 24
       }
     ]
@@ -1481,6 +1673,12 @@
         "from_price": 549.9,
         "avg_25_lowest": 644.37,
         "available_items": 19
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 549.9,
+        "avg_25_lowest": 642.96,
+        "available_items": 20
       }
     ]
   },
@@ -1526,6 +1724,12 @@
         "from_price": 399.9,
         "avg_25_lowest": 453.8,
         "available_items": 13
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 399.99,
+        "avg_25_lowest": 458.9,
+        "available_items": 14
       }
     ]
   },
@@ -1570,6 +1774,12 @@
         "scan_date": "2026-08-27",
         "from_price": 483.0,
         "avg_25_lowest": 531.88,
+        "available_items": 21
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 483.0,
+        "avg_25_lowest": 534.14,
         "available_items": 21
       }
     ]
@@ -1616,6 +1826,12 @@
         "from_price": 585.0,
         "avg_25_lowest": 661.65,
         "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 585.0,
+        "avg_25_lowest": 643.74,
+        "available_items": 4
       }
     ]
   },
@@ -1661,6 +1877,12 @@
         "from_price": 140.0,
         "avg_25_lowest": 188.72,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 140.0,
+        "avg_25_lowest": 180.92,
+        "available_items": 29
       }
     ]
   },
@@ -1705,6 +1927,12 @@
         "scan_date": "2026-08-27",
         "from_price": 159.98,
         "avg_25_lowest": 186.26,
+        "available_items": 34
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 159.98,
+        "avg_25_lowest": 189.42,
         "available_items": 34
       }
     ]
@@ -1751,6 +1979,12 @@
         "from_price": 112.99,
         "avg_25_lowest": 152.37,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 112.99,
+        "avg_25_lowest": 149.77,
+        "available_items": 31
       }
     ]
   },
@@ -1796,6 +2030,12 @@
         "from_price": 99.0,
         "avg_25_lowest": 118.69,
         "available_items": 46
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 99.0,
+        "avg_25_lowest": 117.88,
+        "available_items": 48
       }
     ]
   },
@@ -1840,6 +2080,12 @@
         "scan_date": "2026-08-27",
         "from_price": 410.0,
         "avg_25_lowest": 523.5,
+        "available_items": 27
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 420.0,
+        "avg_25_lowest": 523.92,
         "available_items": 27
       }
     ]
@@ -1886,6 +2132,12 @@
         "from_price": 110.0,
         "avg_25_lowest": 125.77,
         "available_items": 43
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 112.0,
+        "avg_25_lowest": 128.37,
+        "available_items": 43
       }
     ]
   },
@@ -1931,6 +2183,12 @@
         "from_price": 265.0,
         "avg_25_lowest": 307.4,
         "available_items": 20
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 265.0,
+        "avg_25_lowest": 309.03,
+        "available_items": 21
       }
     ]
   },
@@ -1976,6 +2234,12 @@
         "from_price": 1895.95,
         "avg_25_lowest": 2197.54,
         "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 950.0,
+        "avg_25_lowest": 1700.53,
+        "available_items": 5
       }
     ]
   },
@@ -2021,6 +2285,12 @@
         "from_price": 614.95,
         "avg_25_lowest": 1046.97,
         "available_items": 6
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 614.95,
+        "avg_25_lowest": 705.82,
+        "available_items": 7
       }
     ]
   },
@@ -2066,6 +2336,12 @@
         "from_price": 499.9,
         "avg_25_lowest": 884.96,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 499.9,
+        "avg_25_lowest": 827.12,
+        "available_items": 30
       }
     ]
   },
@@ -2110,6 +2386,12 @@
         "scan_date": "2026-08-27",
         "from_price": 120.0,
         "avg_25_lowest": 130.88,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 120.0,
+        "avg_25_lowest": 132.44,
         "available_items": 50
       }
     ]
@@ -2156,6 +2438,12 @@
         "from_price": 390.0,
         "avg_25_lowest": 706.26,
         "available_items": 26
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 548.0,
+        "avg_25_lowest": 685.39,
+        "available_items": 29
       }
     ]
   },
@@ -2200,6 +2488,12 @@
         "scan_date": "2026-08-27",
         "from_price": 230.0,
         "avg_25_lowest": 249.31,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 230.0,
+        "avg_25_lowest": 248.15,
         "available_items": 50
       }
     ]
@@ -2246,6 +2540,12 @@
         "from_price": 255.0,
         "avg_25_lowest": 287.72,
         "available_items": 43
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 155.0,
+        "avg_25_lowest": 284.18,
+        "available_items": 46
       }
     ]
   },
@@ -2291,6 +2591,12 @@
         "from_price": 129.9,
         "avg_25_lowest": 181.26,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 129.9,
+        "avg_25_lowest": 165.76,
+        "available_items": 35
       }
     ]
   },
@@ -2336,6 +2642,12 @@
         "from_price": 64.99,
         "avg_25_lowest": 93.83,
         "available_items": 24
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 64.99,
+        "avg_25_lowest": 94.3,
+        "available_items": 25
       }
     ]
   },
@@ -2381,6 +2693,12 @@
         "from_price": 159.99,
         "avg_25_lowest": 184.46,
         "available_items": 17
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 159.99,
+        "avg_25_lowest": 185.37,
+        "available_items": 20
       }
     ]
   },
@@ -2426,6 +2744,12 @@
         "from_price": 600.0,
         "avg_25_lowest": 830.1,
         "available_items": 22
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 595.0,
+        "avg_25_lowest": 787.08,
+        "available_items": 21
       }
     ]
   },
@@ -2471,6 +2795,12 @@
         "from_price": 389.0,
         "avg_25_lowest": 434.85,
         "available_items": 45
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 390.0,
+        "avg_25_lowest": 439.43,
+        "available_items": 46
       }
     ]
   },
@@ -2515,6 +2845,12 @@
         "scan_date": "2026-08-27",
         "from_price": 305.0,
         "avg_25_lowest": 340.37,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 325.0,
+        "avg_25_lowest": 341.2,
         "available_items": 50
       }
     ]
@@ -2561,6 +2897,12 @@
         "from_price": 120.0,
         "avg_25_lowest": 161.18,
         "available_items": 22
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 124.89,
+        "avg_25_lowest": 161.59,
+        "available_items": 23
       }
     ]
   },
@@ -2606,6 +2948,12 @@
         "from_price": 175.0,
         "avg_25_lowest": 202.89,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 175.0,
+        "avg_25_lowest": 202.08,
+        "available_items": 31
       }
     ]
   },
@@ -2651,6 +2999,12 @@
         "from_price": 550.0,
         "avg_25_lowest": 786.65,
         "available_items": 22
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 649.0,
+        "avg_25_lowest": 797.92,
+        "available_items": 21
       }
     ]
   },
@@ -2695,6 +3049,12 @@
         "scan_date": "2026-08-27",
         "from_price": 135.0,
         "avg_25_lowest": 150.08,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 125.0,
+        "avg_25_lowest": 148.76,
         "available_items": 50
       }
     ]
@@ -2741,6 +3101,12 @@
         "from_price": 639.99,
         "avg_25_lowest": 794.89,
         "available_items": 36
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 629.99,
+        "avg_25_lowest": 762.86,
+        "available_items": 38
       }
     ]
   },
@@ -2786,6 +3152,12 @@
         "from_price": 179.0,
         "avg_25_lowest": 195.21,
         "available_items": 49
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 180.0,
+        "avg_25_lowest": 209.13,
+        "available_items": 40
       }
     ]
   },
@@ -2830,6 +3202,12 @@
         "scan_date": "2026-08-27",
         "from_price": 750.69,
         "avg_25_lowest": 953.04,
+        "available_items": 11
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 752.14,
+        "avg_25_lowest": 953.17,
         "available_items": 11
       }
     ]
@@ -2876,6 +3254,12 @@
         "from_price": 180.0,
         "avg_25_lowest": 196.19,
         "available_items": 47
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 187.9,
+        "avg_25_lowest": 196.99,
+        "available_items": 46
       }
     ]
   },
@@ -2921,6 +3305,12 @@
         "from_price": 280.0,
         "avg_25_lowest": 331.95,
         "available_items": 46
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 280.0,
+        "avg_25_lowest": 333.55,
+        "available_items": 47
       }
     ]
   },
@@ -2966,6 +3356,12 @@
         "from_price": 599.99,
         "avg_25_lowest": 752.83,
         "available_items": 12
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 640.0,
+        "avg_25_lowest": 771.84,
+        "available_items": 13
       }
     ]
   },
@@ -3010,6 +3406,12 @@
         "scan_date": "2026-08-27",
         "from_price": 2999.9,
         "avg_25_lowest": 3280.74,
+        "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 2950.0,
+        "avg_25_lowest": 3219.91,
         "available_items": 4
       }
     ]
@@ -3056,6 +3458,12 @@
         "from_price": 490.0,
         "avg_25_lowest": 809.72,
         "available_items": 21
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 475.0,
+        "avg_25_lowest": 728.37,
+        "available_items": 22
       }
     ]
   },
@@ -3101,6 +3509,12 @@
         "from_price": 1450.0,
         "avg_25_lowest": 1917.51,
         "available_items": 31
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1349.0,
+        "avg_25_lowest": 1843.11,
+        "available_items": 33
       }
     ]
   },
@@ -3146,6 +3560,12 @@
         "from_price": 140.0,
         "avg_25_lowest": 181.12,
         "available_items": 25
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 140.0,
+        "avg_25_lowest": 179.35,
+        "available_items": 28
       }
     ]
   },
@@ -3191,6 +3611,12 @@
         "from_price": 690.63,
         "avg_25_lowest": 844.28,
         "available_items": 10
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 691.97,
+        "avg_25_lowest": 839.88,
+        "available_items": 11
       }
     ]
   },
@@ -3236,6 +3662,12 @@
         "from_price": 1499.99,
         "avg_25_lowest": 1610.0,
         "available_items": 5
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1499.99,
+        "avg_25_lowest": 1595.48,
+        "available_items": 6
       }
     ]
   },
@@ -3280,6 +3712,12 @@
         "scan_date": "2026-08-27",
         "from_price": 1339.0,
         "avg_25_lowest": 1439.0,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1300.0,
+        "avg_25_lowest": 1432.4,
         "available_items": 50
       }
     ]
@@ -3326,6 +3764,12 @@
         "from_price": 154.0,
         "avg_25_lowest": 164.58,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 157.9,
+        "avg_25_lowest": 166.53,
+        "available_items": 50
       }
     ]
   },
@@ -3371,6 +3815,12 @@
         "from_price": 695.0,
         "avg_25_lowest": 858.05,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 690.0,
+        "avg_25_lowest": 880.76,
+        "available_items": 29
       }
     ]
   },
@@ -3415,6 +3865,12 @@
         "scan_date": "2026-08-27",
         "from_price": 89.95,
         "avg_25_lowest": 94.71,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 89.95,
+        "avg_25_lowest": 95.1,
         "available_items": 50
       }
     ]
@@ -3461,6 +3917,12 @@
         "from_price": 117.99,
         "avg_25_lowest": 124.52,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 117.99,
+        "avg_25_lowest": 125.09,
+        "available_items": 50
       }
     ]
   },
@@ -3503,6 +3965,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 1495.0,
+        "avg_25_lowest": 1563.65,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 1495.0,
         "avg_25_lowest": 1563.65,
         "available_items": 3
@@ -3551,6 +4019,12 @@
         "from_price": 799.99,
         "avg_25_lowest": 1316.16,
         "available_items": 6
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 850.0,
+        "avg_25_lowest": 1324.5,
+        "available_items": 6
       }
     ]
   },
@@ -3596,6 +4070,12 @@
         "from_price": 138.0,
         "avg_25_lowest": 183.27,
         "available_items": 14
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 138.0,
+        "avg_25_lowest": 181.72,
+        "available_items": 15
       }
     ]
   },
@@ -3640,6 +4120,12 @@
         "scan_date": "2026-08-27",
         "from_price": 475.0,
         "avg_25_lowest": 597.07,
+        "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 490.0,
+        "avg_25_lowest": 599.36,
         "available_items": 8
       }
     ]
@@ -3686,6 +4172,12 @@
         "from_price": 98.0,
         "avg_25_lowest": 108.66,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 96.0,
+        "avg_25_lowest": 107.3,
+        "available_items": 50
       }
     ]
   },
@@ -3728,6 +4220,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 54.5,
+        "avg_25_lowest": 59.83,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 54.5,
         "avg_25_lowest": 59.83,
         "available_items": 3
@@ -3776,6 +4274,12 @@
         "from_price": 659.9,
         "avg_25_lowest": 1075.83,
         "available_items": 15
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 659.9,
+        "avg_25_lowest": 1065.18,
+        "available_items": 15
       }
     ]
   },
@@ -3820,6 +4324,12 @@
         "scan_date": "2026-08-27",
         "from_price": 139.0,
         "avg_25_lowest": 166.93,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 139.0,
+        "avg_25_lowest": 165.69,
         "available_items": 50
       }
     ]
@@ -3866,6 +4376,12 @@
         "from_price": 1390.0,
         "avg_25_lowest": 1942.13,
         "available_items": 10
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1390.0,
+        "avg_25_lowest": 1942.44,
+        "available_items": 10
       }
     ]
   },
@@ -3911,6 +4427,12 @@
         "from_price": 224.98,
         "avg_25_lowest": 267.09,
         "available_items": 29
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 224.98,
+        "avg_25_lowest": 265.53,
+        "available_items": 31
       }
     ]
   },
@@ -3956,6 +4478,12 @@
         "from_price": 379.9,
         "avg_25_lowest": 593.66,
         "available_items": 23
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 379.9,
+        "avg_25_lowest": 597.89,
+        "available_items": 24
       }
     ]
   },
@@ -4001,6 +4529,12 @@
         "from_price": 160.0,
         "avg_25_lowest": 177.02,
         "available_items": 34
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 163.0,
+        "avg_25_lowest": 180.6,
+        "available_items": 33
       }
     ]
   },
@@ -4043,6 +4577,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 49.99,
+        "avg_25_lowest": 61.41,
+        "available_items": 6
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 49.99,
         "avg_25_lowest": 61.41,
         "available_items": 6
@@ -4091,6 +4631,12 @@
         "from_price": 529.0,
         "avg_25_lowest": 848.98,
         "available_items": 17
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 529.0,
+        "avg_25_lowest": 829.59,
+        "available_items": 19
       }
     ]
   },
@@ -4136,6 +4682,12 @@
         "from_price": 339.9,
         "avg_25_lowest": 423.04,
         "available_items": 43
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 339.9,
+        "avg_25_lowest": 421.28,
+        "available_items": 44
       }
     ]
   },
@@ -4181,6 +4733,12 @@
         "from_price": 178.9,
         "avg_25_lowest": 220.05,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 178.9,
+        "avg_25_lowest": 216.26,
+        "available_items": 30
       }
     ]
   },
@@ -4226,6 +4784,12 @@
         "from_price": 199.0,
         "avg_25_lowest": 231.29,
         "available_items": 44
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 180.0,
+        "avg_25_lowest": 243.6,
+        "available_items": 38
       }
     ]
   },
@@ -4270,6 +4834,12 @@
         "scan_date": "2026-08-27",
         "from_price": 99.5,
         "avg_25_lowest": 115.43,
+        "available_items": 38
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 99.5,
+        "avg_25_lowest": 114.71,
         "available_items": 38
       }
     ]
@@ -4316,6 +4886,12 @@
         "from_price": 125.0,
         "avg_25_lowest": 151.32,
         "available_items": 27
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 129.0,
+        "avg_25_lowest": 155.42,
+        "available_items": 27
       }
     ]
   },
@@ -4361,6 +4937,12 @@
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 99.9,
+        "avg_25_lowest": 99.9,
+        "available_items": 1
       }
     ]
   },
@@ -4406,6 +4988,12 @@
         "from_price": 199.9,
         "avg_25_lowest": 219.59,
         "available_items": 44
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 199.9,
+        "avg_25_lowest": 219.02,
+        "available_items": 48
       }
     ]
   },
@@ -4450,6 +5038,12 @@
         "scan_date": "2026-08-27",
         "from_price": 90.0,
         "avg_25_lowest": 105.7,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 90.0,
+        "avg_25_lowest": 107.12,
         "available_items": 50
       }
     ]
@@ -4496,6 +5090,12 @@
         "from_price": 105.0,
         "avg_25_lowest": 140.12,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 105.0,
+        "avg_25_lowest": 140.5,
+        "available_items": 32
       }
     ]
   },
@@ -4538,6 +5138,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 99.9,
+        "avg_25_lowest": 99.9,
+        "available_items": 1
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 99.9,
         "avg_25_lowest": 99.9,
         "available_items": 1
@@ -4586,6 +5192,12 @@
         "from_price": 1299.99,
         "avg_25_lowest": 1329.49,
         "available_items": 2
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1299.99,
+        "avg_25_lowest": 1329.49,
+        "available_items": 2
       }
     ]
   },
@@ -4631,6 +5243,12 @@
         "from_price": 126.0,
         "avg_25_lowest": 147.83,
         "available_items": 42
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 126.0,
+        "avg_25_lowest": 146.15,
+        "available_items": 43
       }
     ]
   },
@@ -4676,6 +5294,12 @@
         "from_price": 148.0,
         "avg_25_lowest": 179.23,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 148.0,
+        "avg_25_lowest": 176.46,
+        "available_items": 31
       }
     ]
   },
@@ -4721,6 +5345,12 @@
         "from_price": 840.77,
         "avg_25_lowest": 975.1,
         "available_items": 7
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 842.39,
+        "avg_25_lowest": 979.55,
+        "available_items": 6
       }
     ]
   },
@@ -4765,6 +5395,12 @@
         "scan_date": "2026-08-27",
         "from_price": 99.99,
         "avg_25_lowest": 109.26,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 99.99,
+        "avg_25_lowest": 109.73,
         "available_items": 50
       }
     ]
@@ -4811,6 +5447,12 @@
         "from_price": 180.0,
         "avg_25_lowest": 208.98,
         "available_items": 25
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 180.0,
+        "avg_25_lowest": 209.29,
+        "available_items": 27
       }
     ]
   },
@@ -4855,6 +5497,12 @@
         "scan_date": "2026-08-27",
         "from_price": 280.0,
         "avg_25_lowest": 345.76,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 300.0,
+        "avg_25_lowest": 354.9,
         "available_items": 50
       }
     ]
@@ -4901,6 +5549,12 @@
         "from_price": 289.9,
         "avg_25_lowest": 415.75,
         "available_items": 24
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 289.9,
+        "avg_25_lowest": 392.14,
+        "available_items": 26
       }
     ]
   },
@@ -4946,6 +5600,12 @@
         "from_price": 165.0,
         "avg_25_lowest": 180.6,
         "available_items": 43
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 165.0,
+        "avg_25_lowest": 180.8,
+        "available_items": 39
       }
     ]
   },
@@ -4991,6 +5651,12 @@
         "from_price": 180.0,
         "avg_25_lowest": 228.24,
         "available_items": 24
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 194.9,
+        "avg_25_lowest": 230.76,
+        "available_items": 22
       }
     ]
   },
@@ -5033,6 +5699,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 70.0,
+        "avg_25_lowest": 72.5,
+        "available_items": 2
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 70.0,
         "avg_25_lowest": 72.5,
         "available_items": 2
@@ -5081,6 +5753,12 @@
         "from_price": 424.9,
         "avg_25_lowest": 496.89,
         "available_items": 36
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 424.9,
+        "avg_25_lowest": 499.13,
+        "available_items": 35
       }
     ]
   },
@@ -5126,6 +5804,12 @@
         "from_price": 170.0,
         "avg_25_lowest": 183.26,
         "available_items": 47
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 170.0,
+        "avg_25_lowest": 182.7,
+        "available_items": 50
       }
     ]
   },
@@ -5171,6 +5855,12 @@
         "from_price": 199.0,
         "avg_25_lowest": 233.81,
         "available_items": 35
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 199.0,
+        "avg_25_lowest": 235.27,
+        "available_items": 39
       }
     ]
   },
@@ -5213,6 +5903,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 79.99,
+        "avg_25_lowest": 79.99,
+        "available_items": 1
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 79.99,
         "avg_25_lowest": 79.99,
         "available_items": 1
@@ -5261,6 +5957,12 @@
         "from_price": 134.0,
         "avg_25_lowest": 142.63,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 134.0,
+        "avg_25_lowest": 143.83,
+        "available_items": 50
       }
     ]
   },
@@ -5306,6 +6008,12 @@
         "from_price": 31757.06,
         "avg_25_lowest": 31757.06,
         "available_items": 1
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 31757.06,
+        "avg_25_lowest": 33378.53,
+        "available_items": 2
       }
     ]
   },
@@ -5348,6 +6056,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 950.0,
+        "avg_25_lowest": 1228.37,
+        "available_items": 5
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 950.0,
         "avg_25_lowest": 1228.37,
         "available_items": 5
@@ -5396,6 +6110,12 @@
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
       }
     ]
   },
@@ -5438,6 +6158,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
@@ -5486,6 +6212,12 @@
         "from_price": 1200.0,
         "avg_25_lowest": 2184.14,
         "available_items": 5
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1200.0,
+        "avg_25_lowest": 2184.14,
+        "available_items": 5
       }
     ]
   },
@@ -5530,6 +6262,12 @@
         "scan_date": "2026-08-27",
         "from_price": 330.0,
         "avg_25_lowest": 350.86,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 330.0,
+        "avg_25_lowest": 351.26,
         "available_items": 50
       }
     ]
@@ -5576,6 +6314,12 @@
         "from_price": 105.0,
         "avg_25_lowest": 124.71,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 104.99,
+        "avg_25_lowest": 125.36,
+        "available_items": 50
       }
     ]
   },
@@ -5621,6 +6365,12 @@
         "from_price": 390.0,
         "avg_25_lowest": 517.12,
         "available_items": 9
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 390.0,
+        "avg_25_lowest": 515.42,
+        "available_items": 10
       }
     ]
   },
@@ -5666,6 +6416,12 @@
         "from_price": 350.0,
         "avg_25_lowest": 440.65,
         "available_items": 6
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 350.0,
+        "avg_25_lowest": 438.41,
+        "available_items": 7
       }
     ]
   },
@@ -5711,6 +6467,12 @@
         "from_price": 249.99,
         "avg_25_lowest": 286.12,
         "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 219.99,
+        "avg_25_lowest": 280.89,
+        "available_items": 10
       }
     ]
   },
@@ -5755,6 +6517,12 @@
         "scan_date": "2026-08-27",
         "from_price": 205.0,
         "avg_25_lowest": 252.36,
+        "available_items": 13
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 205.0,
+        "avg_25_lowest": 248.52,
         "available_items": 13
       }
     ]
@@ -5801,6 +6569,12 @@
         "from_price": 195.0,
         "avg_25_lowest": 225.54,
         "available_items": 18
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 195.0,
+        "avg_25_lowest": 224.46,
+        "available_items": 18
       }
     ]
   },
@@ -5846,6 +6620,12 @@
         "from_price": 185.0,
         "avg_25_lowest": 230.69,
         "available_items": 15
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 185.0,
+        "avg_25_lowest": 228.31,
+        "available_items": 16
       }
     ]
   },
@@ -5891,6 +6671,12 @@
         "from_price": 120.0,
         "avg_25_lowest": 146.21,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 120.0,
+        "avg_25_lowest": 142.76,
+        "available_items": 31
       }
     ]
   },
@@ -5936,6 +6722,12 @@
         "from_price": 129.9,
         "avg_25_lowest": 191.75,
         "available_items": 16
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 129.9,
+        "avg_25_lowest": 192.4,
+        "available_items": 19
       }
     ]
   },
@@ -5978,6 +6770,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 64.9,
+        "avg_25_lowest": 84.26,
+        "available_items": 14
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 64.9,
         "avg_25_lowest": 84.26,
         "available_items": 14
@@ -6026,6 +6824,12 @@
         "from_price": 759.99,
         "avg_25_lowest": 880.88,
         "available_items": 21
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 759.99,
+        "avg_25_lowest": 881.67,
+        "available_items": 21
       }
     ]
   },
@@ -6071,6 +6875,12 @@
         "from_price": 154.9,
         "avg_25_lowest": 203.49,
         "available_items": 35
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 154.9,
+        "avg_25_lowest": 205.11,
+        "available_items": 34
       }
     ]
   },
@@ -6116,6 +6926,12 @@
         "from_price": 64.9,
         "avg_25_lowest": 79.39,
         "available_items": 32
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 64.9,
+        "avg_25_lowest": 80.5,
+        "available_items": 31
       }
     ]
   },
@@ -6161,6 +6977,12 @@
         "from_price": 130.0,
         "avg_25_lowest": 191.72,
         "available_items": 24
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 130.0,
+        "avg_25_lowest": 192.11,
+        "available_items": 26
       }
     ]
   },
@@ -6205,6 +7027,12 @@
         "scan_date": "2026-08-27",
         "from_price": 315.0,
         "avg_25_lowest": 341.41,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 330.0,
+        "avg_25_lowest": 345.81,
         "available_items": 50
       }
     ]
@@ -6251,6 +7079,12 @@
         "from_price": 104.0,
         "avg_25_lowest": 113.6,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 104.0,
+        "avg_25_lowest": 113.82,
+        "available_items": 50
       }
     ]
   },
@@ -6295,6 +7129,12 @@
         "scan_date": "2026-08-27",
         "from_price": 96.24,
         "avg_25_lowest": 105.69,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 100.0,
+        "avg_25_lowest": 106.32,
         "available_items": 50
       }
     ]
@@ -6341,6 +7181,12 @@
         "from_price": 330.0,
         "avg_25_lowest": 355.91,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 330.0,
+        "avg_25_lowest": 363.5,
+        "available_items": 50
       }
     ]
   },
@@ -6385,6 +7231,12 @@
         "scan_date": "2026-08-27",
         "from_price": 79.9,
         "avg_25_lowest": 87.86,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 69.0,
+        "avg_25_lowest": 87.42,
         "available_items": 50
       }
     ]
@@ -6431,6 +7283,12 @@
         "from_price": 190.0,
         "avg_25_lowest": 224.15,
         "available_items": 42
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 190.0,
+        "avg_25_lowest": 224.89,
+        "available_items": 44
       }
     ]
   },
@@ -6473,6 +7331,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 2399.99,
+        "avg_25_lowest": 2630.0,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 2399.99,
         "avg_25_lowest": 2630.0,
         "available_items": 3
@@ -6521,6 +7385,12 @@
         "from_price": 3399.0,
         "avg_25_lowest": 4749.98,
         "available_items": 7
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 3399.0,
+        "avg_25_lowest": 4809.66,
+        "available_items": 6
       }
     ]
   },
@@ -6563,6 +7433,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 950.0,
+        "avg_25_lowest": 1483.46,
+        "available_items": 11
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 950.0,
         "avg_25_lowest": 1483.46,
         "available_items": 11
@@ -6611,6 +7487,12 @@
         "from_price": 500.0,
         "avg_25_lowest": 630.1,
         "available_items": 10
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 500.0,
+        "avg_25_lowest": 632.33,
+        "available_items": 10
       }
     ]
   },
@@ -6655,6 +7537,12 @@
         "scan_date": "2026-08-27",
         "from_price": 217.0,
         "avg_25_lowest": 241.1,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 217.0,
+        "avg_25_lowest": 242.44,
         "available_items": 50
       }
     ]
@@ -6701,6 +7589,12 @@
         "from_price": 398.56,
         "avg_25_lowest": 498.16,
         "available_items": 32
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 438.56,
+        "avg_25_lowest": 498.79,
+        "available_items": 34
       }
     ]
   },
@@ -6745,6 +7639,12 @@
         "scan_date": "2026-08-27",
         "from_price": 250.0,
         "avg_25_lowest": 289.13,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 250.0,
+        "avg_25_lowest": 284.22,
         "available_items": 50
       }
     ]
@@ -6791,6 +7691,12 @@
         "from_price": 295.0,
         "avg_25_lowest": 332.12,
         "available_items": 41
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 299.0,
+        "avg_25_lowest": 332.51,
+        "available_items": 43
       }
     ]
   },
@@ -6836,6 +7742,12 @@
         "from_price": 730.0,
         "avg_25_lowest": 857.38,
         "available_items": 27
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 730.0,
+        "avg_25_lowest": 857.49,
+        "available_items": 29
       }
     ]
   },
@@ -6880,6 +7792,12 @@
         "scan_date": "2026-08-27",
         "from_price": 274.95,
         "avg_25_lowest": 284.9,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 274.95,
+        "avg_25_lowest": 283.18,
         "available_items": 50
       }
     ]
@@ -6926,6 +7844,12 @@
         "from_price": 322.0,
         "avg_25_lowest": 362.05,
         "available_items": 41
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 322.0,
+        "avg_25_lowest": 362.02,
+        "available_items": 42
       }
     ]
   },
@@ -6971,6 +7895,12 @@
         "from_price": 220.0,
         "avg_25_lowest": 255.23,
         "available_items": 44
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 240.0,
+        "avg_25_lowest": 256.83,
+        "available_items": 45
       }
     ]
   },
@@ -7015,6 +7945,12 @@
         "scan_date": "2026-08-27",
         "from_price": 200.0,
         "avg_25_lowest": 234.45,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 200.0,
+        "avg_25_lowest": 236.37,
         "available_items": 50
       }
     ]
@@ -7061,6 +7997,12 @@
         "from_price": 590.0,
         "avg_25_lowest": 727.49,
         "available_items": 9
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 599.99,
+        "avg_25_lowest": 774.75,
+        "available_items": 8
       }
     ]
   },
@@ -7106,6 +8048,12 @@
         "from_price": 299.9,
         "avg_25_lowest": 478.95,
         "available_items": 21
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 299.0,
+        "avg_25_lowest": 476.1,
+        "available_items": 23
       }
     ]
   },
@@ -7151,6 +8099,12 @@
         "from_price": 124.9,
         "avg_25_lowest": 146.61,
         "available_items": 44
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 95.0,
+        "avg_25_lowest": 143.39,
+        "available_items": 47
       }
     ]
   },
@@ -7193,6 +8147,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 1149.0,
+        "avg_25_lowest": 1632.72,
+        "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 1149.0,
         "avg_25_lowest": 1632.72,
         "available_items": 4
@@ -7241,6 +8201,12 @@
         "from_price": 850.0,
         "avg_25_lowest": 1863.13,
         "available_items": 5
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 850.0,
+        "avg_25_lowest": 1702.44,
+        "available_items": 6
       }
     ]
   },
@@ -7283,6 +8249,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 599.0,
+        "avg_25_lowest": 701.85,
+        "available_items": 7
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 599.0,
         "avg_25_lowest": 701.85,
         "available_items": 7
@@ -7331,6 +8303,12 @@
         "from_price": 108.99,
         "avg_25_lowest": 124.66,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 108.99,
+        "avg_25_lowest": 124.26,
+        "available_items": 50
       }
     ]
   },
@@ -7376,6 +8354,12 @@
         "from_price": 1900.0,
         "avg_25_lowest": 2650.0,
         "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1900.0,
+        "avg_25_lowest": 2733.33,
+        "available_items": 3
       }
     ]
   },
@@ -7421,6 +8405,12 @@
         "from_price": 2275.0,
         "avg_25_lowest": 3094.48,
         "available_items": 9
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 2100.0,
+        "avg_25_lowest": 2983.98,
+        "available_items": 10
       }
     ]
   },
@@ -7465,6 +8455,12 @@
         "scan_date": "2026-08-27",
         "from_price": 435.0,
         "avg_25_lowest": 526.48,
+        "available_items": 23
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 439.99,
+        "avg_25_lowest": 524.26,
         "available_items": 23
       }
     ]
@@ -7511,6 +8507,12 @@
         "from_price": 120.0,
         "avg_25_lowest": 135.52,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 120.0,
+        "avg_25_lowest": 137.48,
+        "available_items": 50
       }
     ]
   },
@@ -7556,6 +8558,12 @@
         "from_price": 727.5,
         "avg_25_lowest": 963.91,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 725.0,
+        "avg_25_lowest": 989.01,
+        "available_items": 29
       }
     ]
   },
@@ -7601,6 +8609,12 @@
         "from_price": 176.99,
         "avg_25_lowest": 207.07,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 179.99,
+        "avg_25_lowest": 213.49,
+        "available_items": 29
       }
     ]
   },
@@ -7646,6 +8660,12 @@
         "from_price": 70.0,
         "avg_25_lowest": 103.54,
         "available_items": 10
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 70.0,
+        "avg_25_lowest": 102.18,
+        "available_items": 11
       }
     ]
   },
@@ -7691,6 +8711,12 @@
         "from_price": 250.0,
         "avg_25_lowest": 290.28,
         "available_items": 29
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 250.0,
+        "avg_25_lowest": 297.32,
+        "available_items": 30
       }
     ]
   },
@@ -7736,6 +8762,12 @@
         "from_price": 699.99,
         "avg_25_lowest": 1781.96,
         "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 3696.9,
+        "avg_25_lowest": 3696.9,
+        "available_items": 2
       }
     ]
   },
@@ -7780,6 +8812,12 @@
         "scan_date": "2026-08-27",
         "from_price": 900.82,
         "avg_25_lowest": 1050.4,
+        "available_items": 2
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 902.56,
+        "avg_25_lowest": 1051.28,
         "available_items": 2
       }
     ]
@@ -7826,6 +8864,12 @@
         "from_price": 1499.95,
         "avg_25_lowest": 1997.21,
         "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1499.95,
+        "avg_25_lowest": 1960.41,
+        "available_items": 4
       }
     ]
   },
@@ -7868,6 +8912,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
@@ -7916,6 +8966,12 @@
         "from_price": 99.0,
         "avg_25_lowest": 115.35,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 98.0,
+        "avg_25_lowest": 114.36,
+        "available_items": 50
       }
     ]
   },
@@ -7958,6 +9014,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 44.99,
+        "avg_25_lowest": 57.49,
+        "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 44.99,
         "avg_25_lowest": 57.49,
         "available_items": 4
@@ -8006,6 +9068,12 @@
         "from_price": 1399.9,
         "avg_25_lowest": 2344.33,
         "available_items": 14
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1600.0,
+        "avg_25_lowest": 2597.64,
+        "available_items": 11
       }
     ]
   },
@@ -8051,6 +9119,12 @@
         "from_price": 219.9,
         "avg_25_lowest": 272.74,
         "available_items": 21
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 205.0,
+        "avg_25_lowest": 271.1,
+        "available_items": 23
       }
     ]
   },
@@ -8096,6 +9170,12 @@
         "from_price": 1090.0,
         "avg_25_lowest": 2936.36,
         "available_items": 5
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1050.0,
+        "avg_25_lowest": 2622.35,
+        "available_items": 6
       }
     ]
   },
@@ -8141,6 +9221,12 @@
         "from_price": 304.95,
         "avg_25_lowest": 334.99,
         "available_items": 15
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 308.95,
+        "avg_25_lowest": 344.96,
+        "available_items": 21
       }
     ]
   },
@@ -8186,6 +9272,12 @@
         "from_price": 114.99,
         "avg_25_lowest": 130.01,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 114.99,
+        "avg_25_lowest": 126.23,
+        "available_items": 35
       }
     ]
   },
@@ -8231,6 +9323,12 @@
         "from_price": 150.0,
         "avg_25_lowest": 183.76,
         "available_items": 29
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 150.0,
+        "avg_25_lowest": 181.09,
+        "available_items": 31
       }
     ]
   },
@@ -8276,6 +9374,12 @@
         "from_price": 7749.0,
         "avg_25_lowest": 8714.14,
         "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 7749.0,
+        "avg_25_lowest": 9124.87,
+        "available_items": 9
       }
     ]
   },
@@ -8318,6 +9422,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 4996.69,
+        "avg_25_lowest": 4996.69,
+        "available_items": 2
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 4996.69,
         "avg_25_lowest": 4996.69,
         "available_items": 2
@@ -8366,6 +9476,12 @@
         "from_price": 110.0,
         "avg_25_lowest": 142.35,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 110.0,
+        "avg_25_lowest": 141.95,
+        "available_items": 50
       }
     ]
   },
@@ -8410,6 +9526,12 @@
         "scan_date": "2026-08-27",
         "from_price": 445.0,
         "avg_25_lowest": 534.81,
+        "available_items": 15
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 445.0,
+        "avg_25_lowest": 534.89,
         "available_items": 15
       }
     ]
@@ -8456,6 +9578,12 @@
         "from_price": 600.54,
         "avg_25_lowest": 687.21,
         "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 637.0,
+        "avg_25_lowest": 694.27,
+        "available_items": 8
       }
     ]
   },
@@ -8498,6 +9626,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 900.0,
+        "avg_25_lowest": 1131.65,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 900.0,
         "avg_25_lowest": 1131.65,
         "available_items": 3
@@ -8546,6 +9680,12 @@
         "from_price": 380.0,
         "avg_25_lowest": 406.11,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 355.0,
+        "avg_25_lowest": 406.82,
+        "available_items": 50
       }
     ]
   },
@@ -8591,6 +9731,12 @@
         "from_price": 99.0,
         "avg_25_lowest": 105.05,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 99.0,
+        "avg_25_lowest": 105.49,
+        "available_items": 50
       }
     ]
   },
@@ -8633,6 +9779,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 3699.95,
+        "avg_25_lowest": 4562.24,
+        "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 3699.95,
         "avg_25_lowest": 4562.24,
         "available_items": 4
@@ -8681,6 +9833,12 @@
         "from_price": 949.9,
         "avg_25_lowest": 1074.56,
         "available_items": 7
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 949.9,
+        "avg_25_lowest": 1064.61,
+        "available_items": 8
       }
     ]
   },
@@ -8726,6 +9884,12 @@
         "from_price": 120.0,
         "avg_25_lowest": 163.31,
         "available_items": 31
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 130.0,
+        "avg_25_lowest": 162.91,
+        "available_items": 33
       }
     ]
   },
@@ -8768,6 +9932,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 666.66,
+        "avg_25_lowest": 745.77,
+        "available_items": 6
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 666.66,
         "avg_25_lowest": 745.77,
         "available_items": 6
@@ -8816,6 +9986,12 @@
         "from_price": 478.99,
         "avg_25_lowest": 506.1,
         "available_items": 16
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 478.99,
+        "avg_25_lowest": 503.75,
+        "available_items": 18
       }
     ]
   },
@@ -8861,6 +10037,12 @@
         "from_price": 141.99,
         "avg_25_lowest": 158.39,
         "available_items": 14
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 141.99,
+        "avg_25_lowest": 158.5,
+        "available_items": 15
       }
     ]
   },
@@ -8906,6 +10088,12 @@
         "from_price": 195.0,
         "avg_25_lowest": 225.47,
         "available_items": 45
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 195.0,
+        "avg_25_lowest": 226.67,
+        "available_items": 48
       }
     ]
   },
@@ -8951,6 +10139,12 @@
         "from_price": 100.99,
         "avg_25_lowest": 118.34,
         "available_items": 49
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 69.0,
+        "avg_25_lowest": 115.14,
+        "available_items": 50
       }
     ]
   },
@@ -8996,6 +10190,12 @@
         "from_price": 115.0,
         "avg_25_lowest": 153.76,
         "available_items": 29
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 115.0,
+        "avg_25_lowest": 151.98,
+        "available_items": 32
       }
     ]
   },
@@ -9038,6 +10238,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 59.0,
+        "avg_25_lowest": 64.98,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 59.0,
         "avg_25_lowest": 64.98,
         "available_items": 3
@@ -9086,6 +10292,12 @@
         "from_price": 449.9,
         "avg_25_lowest": 504.11,
         "available_items": 31
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 449.9,
+        "avg_25_lowest": 518.83,
+        "available_items": 31
       }
     ]
   },
@@ -9131,6 +10343,12 @@
         "from_price": 145.0,
         "avg_25_lowest": 157.8,
         "available_items": 44
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 145.0,
+        "avg_25_lowest": 158.2,
+        "available_items": 43
       }
     ]
   },
@@ -9176,6 +10394,12 @@
         "from_price": 159.9,
         "avg_25_lowest": 180.28,
         "available_items": 29
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 159.9,
+        "avg_25_lowest": 181.78,
+        "available_items": 31
       }
     ]
   },
@@ -9218,6 +10442,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 149.99,
+        "avg_25_lowest": 149.99,
+        "available_items": 2
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 149.99,
         "avg_25_lowest": 149.99,
         "available_items": 2
@@ -9266,6 +10496,12 @@
         "from_price": 3500.0,
         "avg_25_lowest": 6721.0,
         "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 3500.0,
+        "avg_25_lowest": 6630.87,
+        "available_items": 9
       }
     ]
   },
@@ -9311,6 +10547,12 @@
         "from_price": 445.0,
         "avg_25_lowest": 479.61,
         "available_items": 39
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 445.0,
+        "avg_25_lowest": 478.09,
+        "available_items": 41
       }
     ]
   },
@@ -9355,6 +10597,12 @@
         "scan_date": "2026-08-27",
         "from_price": 120.0,
         "avg_25_lowest": 136.2,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 120.0,
+        "avg_25_lowest": 135.29,
         "available_items": 50
       }
     ]
@@ -9401,6 +10649,12 @@
         "from_price": 279.0,
         "avg_25_lowest": 313.02,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 299.95,
+        "avg_25_lowest": 315.73,
+        "available_items": 50
       }
     ]
   },
@@ -9445,6 +10699,12 @@
         "scan_date": "2026-08-27",
         "from_price": 69.9,
         "avg_25_lowest": 75.04,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 58.0,
+        "avg_25_lowest": 74.89,
         "available_items": 50
       }
     ]
@@ -9491,6 +10751,12 @@
         "from_price": 3903.56,
         "avg_25_lowest": 6833.41,
         "available_items": 6
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 3911.09,
+        "avg_25_lowest": 6834.66,
+        "available_items": 6
       }
     ]
   },
@@ -9536,6 +10802,12 @@
         "from_price": 649.95,
         "avg_25_lowest": 712.54,
         "available_items": 10
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 649.95,
+        "avg_25_lowest": 749.18,
+        "available_items": 9
       }
     ]
   },
@@ -9580,6 +10852,12 @@
         "scan_date": "2026-08-27",
         "from_price": 649.9,
         "avg_25_lowest": 832.73,
+        "available_items": 32
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 649.9,
+        "avg_25_lowest": 814.1,
         "available_items": 32
       }
     ]
@@ -9626,6 +10904,12 @@
         "from_price": 115.0,
         "avg_25_lowest": 153.48,
         "available_items": 40
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 115.0,
+        "avg_25_lowest": 147.99,
+        "available_items": 44
       }
     ]
   },
@@ -9670,6 +10954,12 @@
         "scan_date": "2026-08-27",
         "from_price": 49.99,
         "avg_25_lowest": 68.92,
+        "available_items": 33
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 49.99,
+        "avg_25_lowest": 69.52,
         "available_items": 33
       }
     ]
@@ -9716,6 +11006,12 @@
         "from_price": 179.9,
         "avg_25_lowest": 244.42,
         "available_items": 16
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 249.5,
+        "avg_25_lowest": 250.48,
+        "available_items": 13
       }
     ]
   },
@@ -9760,6 +11056,12 @@
         "scan_date": "2026-08-27",
         "from_price": 5090.0,
         "avg_25_lowest": 8113.0,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 5100.0,
+        "avg_25_lowest": 8116.33,
         "available_items": 3
       }
     ]
@@ -9806,6 +11108,12 @@
         "from_price": 699.0,
         "avg_25_lowest": 732.04,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 710.0,
+        "avg_25_lowest": 739.92,
+        "available_items": 50
       }
     ]
   },
@@ -9850,6 +11158,12 @@
         "scan_date": "2026-08-27",
         "from_price": 151.0,
         "avg_25_lowest": 157.76,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 150.0,
+        "avg_25_lowest": 156.15,
         "available_items": 50
       }
     ]
@@ -9896,6 +11210,12 @@
         "from_price": 1590.0,
         "avg_25_lowest": 1856.35,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1590.0,
+        "avg_25_lowest": 1842.76,
+        "available_items": 50
       }
     ]
   },
@@ -9934,6 +11254,12 @@
         "scan_date": "2026-08-27",
         "from_price": 6150.0,
         "avg_25_lowest": 7455.8,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 6123.0,
+        "avg_25_lowest": 7382.76,
         "available_items": 50
       }
     ]
@@ -9980,6 +11306,12 @@
         "from_price": 250.0,
         "avg_25_lowest": 291.73,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 152.0,
+        "avg_25_lowest": 288.85,
+        "available_items": 50
       }
     ]
   },
@@ -10025,6 +11357,12 @@
         "from_price": 160.0,
         "avg_25_lowest": 215.88,
         "available_items": 16
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 172.0,
+        "avg_25_lowest": 218.13,
+        "available_items": 14
       }
     ]
   },
@@ -10070,6 +11408,12 @@
         "from_price": 225.0,
         "avg_25_lowest": 299.45,
         "available_items": 12
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 200.0,
+        "avg_25_lowest": 299.0,
+        "available_items": 13
       }
     ]
   },
@@ -10114,6 +11458,12 @@
         "scan_date": "2026-08-27",
         "from_price": 299.95,
         "avg_25_lowest": 315.98,
+        "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 300.0,
+        "avg_25_lowest": 317.24,
         "available_items": 50
       }
     ]
@@ -10160,6 +11510,12 @@
         "from_price": 899.9,
         "avg_25_lowest": 1249.27,
         "available_items": 14
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 899.9,
+        "avg_25_lowest": 1176.71,
+        "available_items": 15
       }
     ]
   },
@@ -10205,6 +11561,12 @@
         "from_price": 214.98,
         "avg_25_lowest": 259.5,
         "available_items": 27
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 214.0,
+        "avg_25_lowest": 254.02,
+        "available_items": 29
       }
     ]
   },
@@ -10250,6 +11612,12 @@
         "from_price": 235.0,
         "avg_25_lowest": 295.46,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 235.0,
+        "avg_25_lowest": 299.82,
+        "available_items": 29
       }
     ]
   },
@@ -10294,6 +11662,12 @@
         "scan_date": "2026-08-27",
         "from_price": 204.99,
         "avg_25_lowest": 265.07,
+        "available_items": 18
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 204.99,
+        "avg_25_lowest": 268.54,
         "available_items": 18
       }
     ]
@@ -10340,6 +11714,12 @@
         "from_price": 209.99,
         "avg_25_lowest": 312.94,
         "available_items": 29
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 209.99,
+        "avg_25_lowest": 283.55,
+        "available_items": 35
       }
     ]
   },
@@ -10385,6 +11765,12 @@
         "from_price": 115.0,
         "avg_25_lowest": 145.16,
         "available_items": 46
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 130.0,
+        "avg_25_lowest": 145.76,
+        "available_items": 47
       }
     ]
   },
@@ -10427,6 +11813,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 54.0,
+        "avg_25_lowest": 56.0,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 54.0,
         "avg_25_lowest": 56.0,
         "available_items": 3
@@ -10475,6 +11867,12 @@
         "from_price": 279.0,
         "avg_25_lowest": 327.79,
         "available_items": 42
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 279.0,
+        "avg_25_lowest": 332.33,
+        "available_items": 45
       }
     ]
   },
@@ -10520,6 +11918,12 @@
         "from_price": 124.99,
         "avg_25_lowest": 146.51,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 124.99,
+        "avg_25_lowest": 147.99,
+        "available_items": 50
       }
     ]
   },
@@ -10562,6 +11966,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 600.0,
+        "avg_25_lowest": 690.08,
+        "available_items": 8
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 600.0,
         "avg_25_lowest": 690.08,
         "available_items": 8
@@ -10610,6 +12020,12 @@
         "from_price": 220.0,
         "avg_25_lowest": 237.17,
         "available_items": 49
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 220.0,
+        "avg_25_lowest": 237.49,
+        "available_items": 50
       }
     ]
   },
@@ -10654,6 +12070,12 @@
         "scan_date": "2026-08-27",
         "from_price": 1050.96,
         "avg_25_lowest": 1483.32,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1899.0,
+        "avg_25_lowest": 1914.49,
         "available_items": 3
       }
     ]
@@ -10700,6 +12122,12 @@
         "from_price": 300.0,
         "avg_25_lowest": 350.06,
         "available_items": 49
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 300.0,
+        "avg_25_lowest": 351.18,
+        "available_items": 50
       }
     ]
   },
@@ -10742,6 +12170,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": null,
+        "avg_25_lowest": null,
+        "available_items": 0
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": null,
         "avg_25_lowest": null,
         "available_items": 0
@@ -10790,6 +12224,12 @@
         "from_price": 5104.65,
         "avg_25_lowest": 5104.65,
         "available_items": 1
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 5114.5,
+        "avg_25_lowest": 5114.5,
+        "available_items": 1
       }
     ]
   },
@@ -10835,6 +12275,12 @@
         "from_price": 4299.0,
         "avg_25_lowest": 4700.66,
         "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 4299.0,
+        "avg_25_lowest": 4703.12,
+        "available_items": 4
       }
     ]
   },
@@ -10877,6 +12323,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 7900.0,
+        "avg_25_lowest": 10642.13,
+        "available_items": 7
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 7900.0,
         "avg_25_lowest": 10642.13,
         "available_items": 7
@@ -10925,6 +12377,12 @@
         "from_price": 1595.0,
         "avg_25_lowest": 2408.08,
         "available_items": 9
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1499.0,
+        "avg_25_lowest": 2359.41,
+        "available_items": 11
       }
     ]
   },
@@ -10970,6 +12428,12 @@
         "from_price": 109.75,
         "avg_25_lowest": 124.43,
         "available_items": 50
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 109.75,
+        "avg_25_lowest": 124.34,
+        "available_items": 50
       }
     ]
   },
@@ -11012,6 +12476,12 @@
       },
       {
         "scan_date": "2026-08-27",
+        "from_price": 68.73,
+        "avg_25_lowest": 79.24,
+        "available_items": 3
+      },
+      {
+        "scan_date": "2026-08-31",
         "from_price": 68.73,
         "avg_25_lowest": 79.24,
         "available_items": 3
@@ -11060,6 +12530,12 @@
         "from_price": 1595.0,
         "avg_25_lowest": 2358.05,
         "available_items": 13
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 1678.76,
+        "avg_25_lowest": 2382.84,
+        "available_items": 14
       }
     ]
   },
@@ -11104,6 +12580,12 @@
         "scan_date": "2026-08-27",
         "from_price": 799.9,
         "avg_25_lowest": 1109.13,
+        "available_items": 22
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 800.0,
+        "avg_25_lowest": 1108.47,
         "available_items": 22
       }
     ]
@@ -11150,6 +12632,12 @@
         "from_price": 199.99,
         "avg_25_lowest": 281.14,
         "available_items": 16
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 219.9,
+        "avg_25_lowest": 296.1,
+        "available_items": 21
       }
     ]
   },
@@ -11195,6 +12683,12 @@
         "from_price": 279.0,
         "avg_25_lowest": 343.98,
         "available_items": 28
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 279.0,
+        "avg_25_lowest": 338.48,
+        "available_items": 31
       }
     ]
   },
@@ -11239,6 +12733,12 @@
         "scan_date": "2026-08-27",
         "from_price": 929.95,
         "avg_25_lowest": 2143.96,
+        "available_items": 4
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 920.0,
+        "avg_25_lowest": 2136.46,
         "available_items": 4
       }
     ]
@@ -11285,6 +12785,12 @@
         "from_price": 825.0,
         "avg_25_lowest": 1697.65,
         "available_items": 12
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 825.0,
+        "avg_25_lowest": 1632.44,
+        "available_items": 13
       }
     ]
   },
@@ -11330,6 +12836,12 @@
         "from_price": 385.0,
         "avg_25_lowest": 432.04,
         "available_items": 30
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 385.0,
+        "avg_25_lowest": 426.64,
+        "available_items": 34
       }
     ]
   },
@@ -11375,6 +12887,12 @@
         "from_price": 103.0,
         "avg_25_lowest": 125.87,
         "available_items": 48
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 110.0,
+        "avg_25_lowest": 128.36,
+        "available_items": 46
       }
     ]
   },
@@ -11420,6 +12938,12 @@
         "from_price": 135.0,
         "avg_25_lowest": 153.01,
         "available_items": 40
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 135.0,
+        "avg_25_lowest": 151.93,
+        "available_items": 44
       }
     ]
   },
@@ -11465,6 +12989,12 @@
         "from_price": 50.0,
         "avg_25_lowest": 54.07,
         "available_items": 7
+      },
+      {
+        "scan_date": "2026-08-31",
+        "from_price": 50.0,
+        "avg_25_lowest": 53.9,
+        "available_items": 5
       }
     ]
   }

@@ -219,7 +219,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
 .hero-stat{ text-align:center; display:flex; flex-direction:column; align-items:center; }
 .hero-stat-icon{ width:24px; height:24px; margin-bottom:4px; display:grid; place-items:center; }
 .hero-stat-icon svg{ width:20px; height:20px; }
-.hero-stat-label{ font-size:7px; color:rgba(220,220,220,0.7); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px; font-weight:600; }
+.hero-stat-label{ font-size:7px; color:rgba(220,220,220,0.7); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:2px; font-weight:600; line-height:1.15; min-height:16px; display:flex; align-items:center; justify-content:center; text-align:center; word-break:break-word; overflow:hidden; }
 .hero-stat-value{ font-family:'Inter',sans-serif; font-size:14px; font-weight:700; color:#FFFFFF; line-height:1; white-space:nowrap; }
 .hero-stat-value.gold{ color:var(--gold); }
 @media(min-width:640px){
@@ -230,7 +230,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
   .hero-stat-icon{ width:30px; height:30px; margin-bottom:6px; }
   .hero-stat-icon svg{ width:26px; height:26px; }
   .hero-stat-value{ font-size:17px; }
-  .hero-stat-label{ font-size:8px; }
+  .hero-stat-label{ font-size:8px; min-height:18px; }
   .hero-stats{ gap:10px; }
   .hero-particles{ width:32%; max-width:200px; }
 }

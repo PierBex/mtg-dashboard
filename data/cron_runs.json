@@ -2,7 +2,7 @@
   {
     "id": 8,
     "started_at": "2026-09-07T05:00:25.219340",
-    "finished_at": "2026-09-07T06:44:37.502995",
+    "finished_at": "2026-09-07T06:44:40.070359",
     "status": "ok",
     "products_scanned": 255,
     "products_with_prices": 248,
@@ -25,16 +25,16 @@
   {
     "id": 7,
     "started_at": "2026-09-03T05:00:23.837322",
-    "finished_at": "2026-09-03T09:48:04.342170",
-    "status": "partial",
-    "products_scanned": 255,
+    "finished_at": "2026-09-07T11:14:39.944183",
+    "status": "ok",
+    "products_scanned": 212,
     "products_with_prices": 209,
     "products_out_of_stock": 5,
-    "products_failed": 3,
+    "products_failed": 0,
     "notes": [
-      "Error: Secrets of Strixhaven Collector Booster Box: re-fetch failed (status=0)",
-      "Error: Avatar: The Last Airbender Jumpstart Booster Box: parse still failing - No articleRow divs found - C",
-      "Star Trek Collector Booster Box: No articleRow divs found - CardMarket HTML structure may have chang"
+      "Star Trek Collector Booster Box: No articleRow divs found - CardMarket HTML structure may have chang",
+      "Reality Fracture Play Booster Box: No articleRow divs found - CardMarket HTML structure may have cha",
+      "Matches fixed"
     ],
     "auto_fix": {
       "retried": 4,

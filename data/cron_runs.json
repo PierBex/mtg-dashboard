@@ -1,8 +1,31 @@
 [
   {
+    "id": 8,
+    "started_at": "2026-09-07T05:00:25.219340",
+    "finished_at": "2026-09-07T06:44:37.502995",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 248,
+    "products_out_of_stock": 6,
+    "products_failed": 0,
+    "notes": [
+      "The Hobbit Collector Booster Box: Excluded 1 outlier listing(s) from avg_25: [311.0] (range: \u20ac672.95",
+      "The Hobbit Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [78.0] (range: \u20ac129.08-\u20ac179.",
+      "Matches fixed"
+    ],
+    "auto_fix": {
+      "retried": 1,
+      "recovered": 1,
+      "still_failed": 0,
+      "fetch_failures": 1,
+      "parse_failures": 0,
+      "redirect_failures": 0
+    }
+  },
+  {
     "id": 7,
     "started_at": "2026-09-03T05:00:23.837322",
-    "finished_at": "2026-09-03T09:48:01.693647",
+    "finished_at": "2026-09-03T09:48:04.342170",
     "status": "partial",
     "products_scanned": 255,
     "products_with_prices": 209,

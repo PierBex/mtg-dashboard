@@ -1,5 +1,21 @@
 [
   {
+    "id": 9,
+    "started_at": "2026-09-10T05:01:02.029622",
+    "finished_at": "2026-09-10T06:46:03.129833",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 249,
+    "products_out_of_stock": 6,
+    "products_failed": 0,
+    "notes": [
+      "Star Trek Collector Booster Box: Excluded 4 outlier listing(s) from avg_25: [549.9, 550.0, 550.0] (r",
+      "The Hobbit Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [135.0] (range: \u20ac137.52-\u20ac170",
+      "Discovery: 281 found"
+    ],
+    "auto_fix": null
+  },
+  {
     "id": 8,
     "started_at": "2026-09-07T05:00:25.219340",
     "finished_at": "2026-09-07T06:44:40.070359",

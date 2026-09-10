@@ -1,12 +1,12 @@
 {
   "total_sets": 166,
-  "total_products": 255,
-  "total_snapshots": 2291,
+  "total_products": 274,
+  "total_snapshots": 2546,
   "products_with_prices": 249,
   "products_out_of_stock": 6,
   "type_breakdown": {
-    "Collector Booster Box": 52,
-    "Draft Booster Box": 141,
+    "Collector Booster Box": 53,
+    "Draft Booster Box": 159,
     "Jumpstart Booster Box": 11,
     "Play Booster Box": 20,
     "Set Booster Box": 18,
@@ -14,9 +14,9 @@
   },
   "last_crawl": {
     "job_name": "mtg_cron_run",
-    "finished_at": "2026-09-07T06:44:37.502756",
+    "finished_at": "2026-09-10T06:46:03.129665",
     "status": "ok",
     "products_scanned": 255
   },
-  "exported_at": "2026-09-07"
+  "exported_at": "2026-09-10"
 }

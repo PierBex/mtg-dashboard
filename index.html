@@ -338,17 +338,21 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
   background-size:200px 200px; opacity:0.15; mix-blend-mode:soft-light;
 }
 .set-card::after{
-  content:''; position:absolute; top:0; right:0; width:50%; height:100%;
-  background:radial-gradient(ellipse at right, rgba(139,92,246,0.06), transparent 70%);
-  pointer-events:none; opacity:0; transition:opacity .25s; z-index:0;
+  content:''; position:absolute; top:0; left:0; right:0; width:100%; height:84px;
+  background-image:
+    linear-gradient(90deg, rgba(4,6,10,0.82) 0%, rgba(4,6,10,0.48) 52%, rgba(4,6,10,0.58) 100%),
+    linear-gradient(180deg, rgba(4,6,10,0.08), rgba(4,6,10,0.34)),
+    url('assets/set-card-atlas.webp');
+  background-size:cover, cover, 500% auto;
+  background-position:center, center, var(--set-art-position, 50% center);
+  pointer-events:none; opacity:0.96; transition:opacity .25s; z-index:0;
 }
-.set-card:hover{ transform:translateY(-3px); box-shadow:0 22px 60px rgba(0,0,0,0.55), 0 0 0 1px rgba(139,92,246,0.2) inset, 0 0 30px rgba(139,92,246,0.12), 0 0 50px rgba(200,168,122,0.06); }
 .set-card:hover::after{ opacity:1; }
 .set-card.is-open{ box-shadow:0 18px 55px rgba(0,0,0,0.5), 0 0 0 1px rgba(200,168,122,0.18) inset, 0 0 25px rgba(200,168,122,0.05); }
 
-/* Colored left strip - full height, matches set type */
+/* Colored header strip - matches set type */
 .card-strip{
-  position:absolute; left:0; top:0; bottom:0; width:6px; z-index:2;
+  position:absolute; left:0; top:0; bottom:auto; height:84px; width:6px; z-index:3;
   background:linear-gradient(180deg, var(--strip-color, var(--mana-u)), rgba(0,0,0,0.3));
   box-shadow:2px 0 8px rgba(0,0,0,0.3);
 }
@@ -362,7 +366,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
 
 .set-header{
   display:flex; align-items:center; gap:14px; padding:16px 16px 16px 22px; cursor:pointer;
-  position:relative; z-index:1;
+  position:relative; z-index:2;
 }
 /* Set icon - integrated with left strip, gold ring */
 .set-icon{
@@ -403,7 +407,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
   position:absolute; right:-10px; top:0; height:84px;
   display:flex; align-items:center;
   font-size:90px; opacity:0.06; pointer-events:none; color:var(--text);
-  z-index:0; line-height:1; overflow:hidden;
+  z-index:1; line-height:1; overflow:hidden;
 }
 .set-watermark .ss{ font-size:90px; }
 .set-watermark .wm-text{
@@ -1120,6 +1124,20 @@ function setTypeKey(set_type){
   if (s.includes('premium')) return 'premium';
   return 'expansion';
 }
+function setArtPosition(code, name){
+  // Match the flagship new-release cards to their artwork zones, then distribute all other sets.
+  const featured = {
+    'star trek':'0% center',
+    'reality fracture':'25% center',
+    'the hobbit':'50% center',
+    'marvel super heroes':'75% center',
+    'secrets of strixhaven':'100% center'
+  };
+  const title = String(name || '').trim().toLowerCase();
+  if (featured[title]) return featured[title];
+  const value = Array.from(String(code || 'mtg')).reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
+  return (value % 5) * 25 + '% center';
+}
 function escapeHtml(str){ return String(str).replace(/[&<>"']/g, m=>({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m])); }
 
 /* Update Market Overview hero stats from statsData */
@@ -1312,7 +1330,7 @@ function renderOverview(){
       watermarkInner = `<span class="code-text wm-text">${escapeHtml((set.code || '??').toUpperCase())}</span>`;
     }
     return `
-    <article class="set-card" data-type="${setTypeKey(set.set_type)}" data-id="${escapeHtml(set.id)}">
+    <article class="set-card" data-type="${setTypeKey(set.set_type)}" data-id="${escapeHtml(set.id)}" style="--set-art-position:${setArtPosition(set.code, set.name)}">
       <div class="card-strip"></div>
       <div class="card-leather"></div>
       <div class="set-watermark">${watermarkInner}</div>

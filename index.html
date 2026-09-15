@@ -830,6 +830,46 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
 .chip.is-active{ background:linear-gradient(135deg, rgba(255,200,87,.16), rgba(139,92,246,.11)); }
 .set-meta{ color:rgba(248,230,193,.78); }
 .bottom-nav{ background:linear-gradient(180deg, rgba(13,14,19,.46), rgba(6,7,10,.56)); backdrop-filter:blur(10px) saturate(1.22); -webkit-backdrop-filter:blur(10px) saturate(1.22); }
+
+/* GPT Sol: Overview cards - compact etched dark-glass treatment. */
+#overviewContent .set-card{
+  --set-corner:10px;
+  border:1px solid transparent; border-radius:0;
+  clip-path:polygon(var(--set-corner) 0,calc(100% - var(--set-corner)) 0,100% var(--set-corner),100% calc(100% - var(--set-corner)),calc(100% - var(--set-corner)) 100%,var(--set-corner) 100%,0 calc(100% - var(--set-corner)),0 var(--set-corner));
+  background:linear-gradient(180deg,rgba(13,16,25,.70),rgba(7,9,15,.66)) padding-box,linear-gradient(135deg,rgba(236,213,165,.72),rgba(119,92,54,.54) 24%,rgba(59,46,32,.72) 50%,rgba(159,125,73,.58) 76%,rgba(225,198,143,.66)) border-box;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.04),inset 0 -1px 0 rgba(0,0,0,.55);
+  filter:drop-shadow(0 10px 18px rgba(0,0,0,.34)); isolation:isolate; margin-bottom:12px;
+}
+/* Etched brackets and shared textile texture stay in the fixed header only. */
+#overviewContent .set-card::before{
+  content:''; position:absolute; inset:0 0 auto; width:auto; height:84px; z-index:2; pointer-events:none;
+  background:linear-gradient(90deg,transparent 0,rgba(220,188,128,.42) 18px,rgba(220,188,128,.12) 72px,transparent 116px) top left / 50% 1px no-repeat,linear-gradient(270deg,transparent 0,rgba(220,188,128,.42) 18px,rgba(220,188,128,.12) 72px,transparent 116px) top right / 50% 1px no-repeat,linear-gradient(90deg,transparent 0,rgba(133,102,59,.34) 30%,transparent 68%) bottom left / 100% 1px no-repeat,linear-gradient(180deg,rgba(231,202,146,.42),rgba(97,73,43,.08) 48%,rgba(173,135,79,.28)) left 6px top 10px / 1px 64px no-repeat,linear-gradient(180deg,rgba(231,202,146,.30),rgba(97,73,43,.06) 48%,rgba(173,135,79,.22)) right 7px top 10px / 1px 64px no-repeat;
+}
+#overviewContent .set-card::after{
+  content:''; position:absolute; inset:0 0 auto; width:auto; height:84px; z-index:0; pointer-events:none; opacity:.88; transition:opacity .2s ease;
+  background-image:linear-gradient(90deg,rgba(3,5,9,.60),rgba(10,13,20,.18) 44%,rgba(3,5,9,.44)),radial-gradient(ellipse at 14% 48%,rgba(112,91,161,.18),transparent 34%),repeating-linear-gradient(118deg,rgba(255,255,255,.018) 0 1px,transparent 1px 7px),radial-gradient(circle,rgba(214,194,157,.10) 0 .55px,transparent .8px);
+  background-size:auto,auto,auto,7px 7px; background-position:center;
+}
+#overviewContent .set-card:hover::after{ opacity:.98; }
+#overviewContent .set-card.is-open{ box-shadow:inset 0 1px 0 rgba(255,255,255,.05),inset 0 0 0 1px rgba(200,168,122,.06); filter:drop-shadow(0 14px 24px rgba(0,0,0,.42)); }
+#overviewContent .card-leather{ inset:0 0 auto; width:auto; height:84px; z-index:1; opacity:.13; mix-blend-mode:soft-light; }
+#overviewContent .card-strip{ top:10px; left:3px; width:4px; height:64px; z-index:4; clip-path:polygon(50% 0,100% 7px,100% calc(100% - 7px),50% 100%,0 calc(100% - 7px),0 7px); background:linear-gradient(180deg,rgba(255,255,255,.42),var(--strip-color) 28%,var(--strip-color) 72%,rgba(0,0,0,.45)); box-shadow:0 0 10px rgba(139,92,246,.24); }
+#overviewContent .set-header{ box-sizing:border-box; height:84px; gap:12px; padding:14px 16px 14px 20px; z-index:3; }
+/* Faceted medallion preserves Keyrune, custom SVG, and code fallback contents. */
+#overviewContent .set-icon{ --icon-face:linear-gradient(145deg,#202633,#0b0e15); width:52px; height:52px; border:2px solid transparent; border-radius:0; clip-path:polygon(30% 0,70% 0,100% 30%,100% 70%,70% 100%,30% 100%,0 70%,0 30%); background:var(--icon-face) padding-box,linear-gradient(145deg,#f0d49a 0%,#8f6b3c 34%,#3f3020 55%,#bf9253 78%,#ead09a 100%) border-box; box-shadow:inset 0 0 0 1px rgba(0,0,0,.62),inset 0 0 16px rgba(0,0,0,.26); }
+#overviewContent .set-icon[data-type="core"]{ --icon-face:linear-gradient(145deg,var(--mana-w),#dcc698); }
+#overviewContent .set-icon[data-type="expansion"]{ --icon-face:linear-gradient(145deg,var(--mana-u),#084a7c); }
+#overviewContent .set-icon[data-type="draft_innovation"]{ --icon-face:linear-gradient(145deg,var(--mana-g),#00592c); }
+#overviewContent .set-icon[data-type="commander"]{ --icon-face:linear-gradient(145deg,var(--mana-b),#292929); }
+#overviewContent .set-icon[data-type="masters"]{ --icon-face:linear-gradient(145deg,var(--mana-r),#9e151e); }
+#overviewContent .set-icon[data-type="spellbook"]{ --icon-face:linear-gradient(145deg,#8b5cf6,#6d28d9); }
+#overviewContent .set-icon[data-type="premium"]{ --icon-face:linear-gradient(145deg,#f59e0b,#b45309); }
+#overviewContent .set-watermark{ top:0; right:34px; height:84px; z-index:1; opacity:.075; overflow:hidden; color:#f3ead9; filter:blur(.3px) drop-shadow(0 0 12px rgba(214,187,137,.16)); transform:rotate(-5deg) scale(1.08); transform-origin:center; }
+#overviewContent .set-watermark .ss{ font-size:94px; }
+#overviewContent .set-watermark .custom-svg-wm{ width:84px; height:84px; }
+#overviewContent .set-chevron{ width:30px; height:30px; border:1px solid rgba(205,169,105,.34); border-radius:0; clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%); padding:7px; color:rgba(236,207,151,.78); stroke:currentColor; background:rgba(5,7,11,.56); }
+#overviewContent .set-body{ z-index:3; background:rgba(7,9,14,.82); }
+#overviewContent .set-card.is-open .set-body{ background:linear-gradient(180deg,rgba(10,12,18,.88),rgba(7,9,14,.78)); border-top-color:rgba(200,168,122,.18); }
 </style>
 </head>
 <body>
@@ -1146,20 +1186,6 @@ function setTypeKey(set_type){
   if (s.includes('premium')) return 'premium';
   return 'expansion';
 }
-function setArtPosition(code, name){
-  // Match the flagship new-release cards to their artwork zones, then distribute all other sets.
-  const featured = {
-    'star trek':'0% center',
-    'reality fracture':'25% center',
-    'the hobbit':'50% center',
-    'marvel super heroes':'75% center',
-    'secrets of strixhaven':'100% center'
-  };
-  const title = String(name || '').trim().toLowerCase();
-  if (featured[title]) return featured[title];
-  const value = Array.from(String(code || 'mtg')).reduce((sum, ch) => sum + ch.charCodeAt(0), 0);
-  return (value % 5) * 25 + '% center';
-}
 function escapeHtml(str){ return String(str).replace(/[&<>"']/g, m=>({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[m])); }
 
 /* Update Market Overview hero stats from statsData */
@@ -1352,7 +1378,7 @@ function renderOverview(){
       watermarkInner = `<span class="code-text wm-text">${escapeHtml((set.code || '??').toUpperCase())}</span>`;
     }
     return `
-    <article class="set-card" data-type="${setTypeKey(set.set_type)}" data-id="${escapeHtml(set.id)}" style="--set-art-position:${setArtPosition(set.code, set.name)}">
+    <article class="set-card" data-type="${setTypeKey(set.set_type)}" data-id="${escapeHtml(set.id)}">
       <div class="card-strip"></div>
       <div class="card-leather"></div>
       <div class="set-watermark">${watermarkInner}</div>

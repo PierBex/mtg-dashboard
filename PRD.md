@@ -22,13 +22,14 @@ A mobile-first web dashboard tracking Magic: The Gathering sealed booster box pr
 2. **Price History** — SVG charts for products with 2+ snapshots (from_price + avg_25_lowest over time)
 3. **Stats** — Total sets, products, with-prices, out-of-stock, snapshot count, last crawl info, product type breakdown
 4. **Cron Runs** — Last 10 automated crawl diagnostics with color-coded status (ok/partial/error), per-run stats, concise notes
+5. **Portfolio** — Per-user booster-box purchase lots, cost basis, current avg-25 market value, and gain/loss
 
 ### Key Features
 - Mobile-first design (390px iPhone viewport priority)
 - Keyrune icon font for official MTG set symbols (426 codes, ~95% coverage)
 - Glass-morphism UI with MTG mana-color theming
 - Stale data banner (shows if data >4 days old)
-- Client-side auth (sessionStorage, SHA256 password hash)
+- Supabase email/password authentication with per-user portfolio isolation via Row Level Security
 - Cache-busting fetch (no-store + timestamp query param)
 - No backend — fully static, served from GitHub Pages
 
@@ -54,6 +55,11 @@ A mobile-first web dashboard tracking Magic: The Gathering sealed booster box pr
 │  table      │     │ (orchestrator)│     │ products.py │     │ .py          │
 └─────────────┘     └──────────────┘     └─────────────┘     └──────────────┘
 ```
+
+The personal portfolio is intentionally separate: GitHub Pages uses Supabase
+Auth plus the `portfolio_lots` table for user-owned purchases, while market
+prices continue to come from the exported JSON above. The scraper, SQLite DB,
+and cron jobs do not read or write Supabase.
 
 ### Data Flow
 
@@ -116,8 +122,10 @@ Step 4.5: Update cron_runs record with deploy status
 
 | File | Purpose |
 |------|---------|
-| `index.html` | Single-file dashboard (HTML/CSS/JS) — 4 tabs, auth, rendering |
-| `auth.js` | Client-side auth (sessionStorage, SHA256 password hash) |
+| `index.html` | Single-file dashboard (HTML/CSS/JS) — 5 tabs, auth, rendering |
+| `auth.js` | Supabase email/password account helpers |
+| `supabase.js` | Public Supabase URL and publishable key browser configuration |
+| `supabase/portfolio_setup.sql` | One-time schema, Row Level Security, and policies for portfolio lots |
 | `data/overview.json` | All sets × products × latest prices (855KB) |
 | `data/history.json` | Full price history timeseries for charts |
 | `data/stats.json` | Summary stats (sets, products, with-prices, out-of-stock) |
@@ -223,9 +231,10 @@ Sets excluded from tracking — deleted after every Scryfall refresh:
 - Retries: 2x with 5s backoff (network errors), 10s backoff (429)
 
 ### 5.5 Dashboard Auth
-- Username: `aquarius`
-- Password: stored as SHA256 hash in `auth.js`
-- Mechanism: client-side sessionStorage check (no server-side validation — GitHub Pages is static)
+- Provider: Supabase Auth email/password.
+- New accounts may require email confirmation, depending on the Supabase Auth setting.
+- Portfolio rows are protected by a `user_id = auth.uid()` Row Level Security policy.
+- The browser contains only the Supabase publishable key; never add the Supabase secret/service-role key to this repository.
 
 ---
 

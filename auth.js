@@ -1,88 +1,49 @@
-// MTG Dashboard - client-side auth utilities
-// SHA-256 hashing + sessionStorage session with 24h expiry.
+// Account utilities backed by Supabase Auth. The browser only receives the
+// publishable key; Row Level Security protects every user's portfolio rows.
 
-const AUTH_CONFIG = {
-  users: [
-    { username: 'aquarius', passwordHash: '57016ab31516ab194980337d54cf8e97959f30d827aa0f574f535b84eae37cf4' },
-    { username: 'karolis',  passwordHash: 'ce8287426a2c8cf69270d3b471208b524009e7f2215bc183a32f3b7892181842' }
-  ]
-};
-
-const SESSION_KEY = 'mtg_dashboard_session';
-const SESSION_DURATION_MS = 24 * 60 * 60 * 1000; // 24 hours
-
-async function sha256(message) {
-  const encoder = new TextEncoder();
-  const data = encoder.encode(message);
-  const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-  const hashArray = Array.from(new Uint8Array(hashBuffer));
-  return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+function friendlyAuthError(message) {
+  const text = String(message || 'Unable to sign in. Please try again.');
+  if (/invalid login credentials/i.test(text)) return 'That email or password is not correct.';
+  if (/email not confirmed/i.test(text)) return 'Please confirm your email first, then sign in.';
+  if (/rate limit/i.test(text)) return 'Too many attempts. Please wait a moment and try again.';
+  return text;
 }
 
-async function authenticate(username, password) {
-  if (!username || !password) {
-    return { success: false, error: 'Please enter username and password.' };
-  }
-  const hash = await sha256(password.trim());
-  const user = AUTH_CONFIG.users.find(
-    u => u.username.toLowerCase() === username.trim().toLowerCase() &&
-         u.passwordHash.toLowerCase() === hash.toLowerCase()
-  );
-  if (user) {
-    setSession(username.trim());
-    return { success: true, error: null };
-  }
-  return { success: false, error: 'Invalid username or password.' };
+async function authenticate(email, password) {
+  if (!window.MTG_SUPABASE) return { success: false, error: 'The account service could not load. Please refresh and try again.' };
+  if (!email || !password) return { success: false, error: 'Please enter your email and password.' };
+  const { data, error } = await window.MTG_SUPABASE.auth.signInWithPassword({
+    email: email.trim(), password
+  });
+  return error ? { success: false, error: friendlyAuthError(error.message) } : { success: true, user: data.user };
 }
 
-function setSession(username) {
-  const session = {
-    username,
-    createdAt: Date.now()
-  };
-  try {
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify(session));
-  } catch (e) {
-    console.warn('sessionStorage unavailable', e);
-  }
+async function createAccount(email, password) {
+  if (!window.MTG_SUPABASE) return { success: false, error: 'The account service could not load. Please refresh and try again.' };
+  if (!email || !password) return { success: false, error: 'Please enter your email and password.' };
+  if (password.length < 8) return { success: false, error: 'Please use a password with at least 8 characters.' };
+  const { data, error } = await window.MTG_SUPABASE.auth.signUp({
+    email: email.trim(), password,
+    options: { emailRedirectTo: window.location.href.split('#')[0] }
+  });
+  if (error) return { success: false, error: friendlyAuthError(error.message) };
+  return { success: true, needsEmailConfirmation: !data.session, user: data.user };
 }
 
-function isLoggedIn() {
-  try {
-    const raw = sessionStorage.getItem(SESSION_KEY);
-    if (!raw) return false;
-    const session = JSON.parse(raw);
-    if (!session || typeof session.createdAt !== 'number') return false;
-    if (Date.now() - session.createdAt > SESSION_DURATION_MS) {
-      logout();
-      return false;
-    }
-    return true;
-  } catch (e) {
-    return false;
-  }
+async function isLoggedIn() {
+  if (!window.MTG_SUPABASE) return false;
+  const { data: { session } } = await window.MTG_SUPABASE.auth.getSession();
+  return Boolean(session);
 }
 
-function logout() {
-  try {
-    sessionStorage.removeItem(SESSION_KEY);
-  } catch (e) {
-    console.warn('sessionStorage unavailable', e);
-  }
+async function getUser() {
+  if (!window.MTG_SUPABASE) return null;
+  const { data: { user } } = await window.MTG_SUPABASE.auth.getUser();
+  return user || null;
 }
 
-// Expose for dashboard use
-window.AUTH = {
-  authenticate,
-  isLoggedIn,
-  logout,
-  sha256,
-  getUsername() {
-    try {
-      const raw = sessionStorage.getItem(SESSION_KEY);
-      return raw ? JSON.parse(raw).username : null;
-    } catch (e) {
-      return null;
-    }
-  }
-};
+async function logout() {
+  if (window.MTG_SUPABASE) await window.MTG_SUPABASE.auth.signOut();
+}
+
+window.AUTH = { authenticate, createAccount, isLoggedIn, getUser, logout };

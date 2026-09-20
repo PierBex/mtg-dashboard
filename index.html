@@ -12,6 +12,8 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/keyrune/keyrune.css">
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase.js"></script>
 <script src="auth.js"></script>
 <style>
 :root{
@@ -742,15 +744,16 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
     <p class="login-sub">Booster Box Prices · CardMarket English</p>
     <form id="loginForm" autocomplete="off">
       <div class="field">
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter username" required>
+        <label for="username">Email address</label>
+        <input id="username" name="username" type="email" autocomplete="email" placeholder="you@example.com" required>
       </div>
       <div class="field">
         <label for="password">Password</label>
         <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required>
       </div>
-      <button type="submit" class="btn btn-primary">Enter Dashboard</button>
+      <button id="authSubmit" type="submit" class="btn btn-primary">Sign in</button>
       <div id="loginError" class="login-error"></div>
+      <button id="authModeToggle" type="button" class="auth-mode-toggle">New here? Create an account</button>
     </form>
   </div>
 </div>
@@ -773,10 +776,14 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
       </div>
       <div class="brand-title">MTG Tracker <span>Booster Box Prices</span></div>
     </div>
-    <button id="logoutBtn" class="user-pill" title="Log out">
-      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><polyline points="16 17 21 12 16 7"></polyline><line x1="21" y1="12" x2="9" y2="12"></line></svg>
+    <button id="profileBtn" class="user-pill" title="Account menu" aria-haspopup="true" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M8.5 10.5a3.5 3.5 0 1 0 7 0a3.5 3.5 0 0 0-7 0"></path><path d="M5.5 19c1.2-2.3 3.6-3.5 6.5-3.5s5.3 1.2 6.5 3.5"></path></svg>
       <span id="userName">aquarius</span>
     </button>
+    <div id="profileMenu" class="profile-menu" hidden>
+      <div id="profileEmail" class="profile-email"></div>
+      <button id="logoutBtn" type="button">Log out</button>
+    </div>
   </header>
 
   <div class="container">
@@ -786,6 +793,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
         <button class="tab" data-tab="history">Price History</button>
         <button class="tab" data-tab="stats">Stats</button>
         <button class="tab" data-tab="cron">Cron Runs</button>
+        <button class="tab" data-tab="portfolio">Portfolio</button>
       </div>
     </div>
 
@@ -872,12 +880,54 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
       <div id="cronContent"></div>
     </div>
 
+    <!-- Portfolio panel: purchase lots live in Supabase, live prices stay in the existing JSON feed. -->
+    <div id="portfolioPanel" class="panel">
+      <div class="portfolio-heading">
+        <div>
+          <h2 class="section-title"><span class="dot"></span>My Portfolio</h2>
+          <p class="subtitle">Track what you paid for booster boxes and compare it with today’s average market price.</p>
+        </div>
+      </div>
+      <div id="portfolioMessage" class="portfolio-message" aria-live="polite"></div>
+      <section class="portfolio-summary" aria-label="Portfolio summary">
+        <div class="portfolio-summary-card"><span>Boxes owned</span><strong id="portfolioBoxes">—</strong></div>
+        <div class="portfolio-summary-card"><span>Purchase cost</span><strong id="portfolioCost">—</strong></div>
+        <div class="portfolio-summary-card"><span>Market value</span><strong id="portfolioValue">—</strong></div>
+        <div class="portfolio-summary-card"><span>Gain / loss</span><strong id="portfolioGain">—</strong></div>
+      </section>
+      <section class="portfolio-add-card">
+        <h3>Add a booster box purchase</h3>
+        <p>Each entry is one purchase lot. Use quantity if you bought more than one box at the same price.</p>
+        <form id="portfolioForm" class="portfolio-form">
+          <label class="portfolio-field portfolio-field-product">Booster box
+            <input id="portfolioProduct" list="portfolioProducts" autocomplete="off" placeholder="Search a set or booster type" required>
+            <datalist id="portfolioProducts"></datalist>
+          </label>
+          <label class="portfolio-field">Price per box (€)
+            <input id="portfolioPrice" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00" required>
+          </label>
+          <label class="portfolio-field">Quantity
+            <input id="portfolioQuantity" type="number" min="1" step="1" inputmode="numeric" value="1" required>
+          </label>
+          <label class="portfolio-field">Purchase date
+            <input id="portfolioDate" type="date" required>
+          </label>
+          <label class="portfolio-field portfolio-field-notes">Notes <span>(optional)</span>
+            <input id="portfolioNotes" type="text" maxlength="500" placeholder="Store, condition, or anything useful">
+          </label>
+          <button id="portfolioSubmit" type="submit" class="btn btn-primary portfolio-submit">Add to portfolio</button>
+        </form>
+      </section>
+      <div id="portfolioLoading" class="loading"><div class="spinner"></div>Loading your portfolio...</div>
+      <div id="portfolioContent" class="portfolio-list"></div>
+    </div>
+
     <div class="footer">
       Data from CardMarket (English) · <a href="https://pierbex.github.io/mtg-dashboard/" target="_blank" rel="noopener">pierbex.github.io/mtg-dashboard</a>
     </div>
   </div>
 
-  <!-- Bottom Navigation - mobile only: History, Stats, Overview (FAB), Cron, Logout -->
+  <!-- Bottom Navigation - mobile only: History, Stats, Overview (FAB), Cron, Portfolio -->
   <nav class="bottom-nav" id="bottomNav">
     <button class="nav-item" data-tab="history">
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="14 7 21 7 21 14"/></svg>
@@ -894,50 +944,82 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
       <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
       <span>Cron</span>
     </button>
-    <button class="nav-item" id="logoutNav" title="Log out">
-      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
-      <span>Logout</span>
+    <button class="nav-item" data-tab="portfolio">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7.5h16v11H4z"/><path d="M7 7.5V5.8A1.8 1.8 0 0 1 8.8 4h6.4A1.8 1.8 0 0 1 17 5.8v1.7"/><path d="M4 12h16"/><path d="M10 15.5h4"/></svg>
+      <span>Portfolio</span>
     </button>
   </nav>
 </div>
 
 <script>
 /* ---- Auth ---- */
-(function initAuth(){
+(async function initAuth(){
   const login = document.getElementById('login');
   const app = document.getElementById('app');
   const form = document.getElementById('loginForm');
   const error = document.getElementById('loginError');
   const logoutBtn = document.getElementById('logoutBtn');
-  const logoutNav = document.getElementById('logoutNav');
+  const modeToggle = document.getElementById('authModeToggle');
+  const submit = document.getElementById('authSubmit');
+  const profileBtn = document.getElementById('profileBtn');
+  const profileMenu = document.getElementById('profileMenu');
+  let creatingAccount = false;
 
-  function showDashboard(){
+  async function showDashboard(){
     login.style.display='none';
     app.classList.add('is-visible');
-    document.getElementById('userName').textContent = (window.AUTH && window.AUTH.getUsername()) || 'User';
+    const user = await window.AUTH.getUser();
+    const email = user && user.email ? user.email : 'Account';
+    document.getElementById('userName').textContent = email.split('@')[0] || email;
+    document.getElementById('profileEmail').textContent = email;
     initDashboard();
   }
 
-  if (window.AUTH && window.AUTH.isLoggedIn()) showDashboard();
+  if (window.AUTH && await window.AUTH.isLoggedIn()) showDashboard();
+
+  modeToggle.addEventListener('click', ()=>{
+    creatingAccount = !creatingAccount;
+    error.textContent = '';
+    error.classList.remove('is-success');
+    submit.textContent = creatingAccount ? 'Create account' : 'Sign in';
+    modeToggle.textContent = creatingAccount ? 'Already have an account? Sign in' : 'New here? Create an account';
+    document.getElementById('password').autocomplete = creatingAccount ? 'new-password' : 'current-password';
+  });
 
   form.addEventListener('submit', async (e)=>{
     e.preventDefault();
     error.textContent='';
-    const btn = form.querySelector('button');
-    const original = btn.textContent;
-    btn.textContent='Verifying...'; btn.disabled=true;
-    const res = await window.AUTH.authenticate(form.username.value, form.password.value);
-    btn.textContent=original; btn.disabled=false;
-    if (res.success) showDashboard();
+    error.classList.remove('is-success');
+    const original = submit.textContent;
+    submit.textContent = creatingAccount ? 'Creating account...' : 'Signing in...'; submit.disabled=true;
+    const res = creatingAccount
+      ? await window.AUTH.createAccount(form.username.value, form.password.value)
+      : await window.AUTH.authenticate(form.username.value, form.password.value);
+    submit.textContent=original; submit.disabled=false;
+    if (res.success && res.needsEmailConfirmation) {
+      error.classList.add('is-success');
+      error.textContent = 'Check your email to confirm your account, then come back and sign in.';
+    } else if (res.success) showDashboard();
     else error.textContent=res.error;
   });
 
-  function doLogout(){
-    window.AUTH.logout();
+  async function doLogout(){
+    await window.AUTH.logout();
     location.reload();
   }
   logoutBtn.addEventListener('click', doLogout);
-  if (logoutNav) logoutNav.addEventListener('click', doLogout);
+  profileBtn.addEventListener('click', (event)=>{
+    event.stopPropagation();
+    const open = profileMenu.hidden;
+    profileMenu.hidden = !open;
+    profileBtn.setAttribute('aria-expanded', String(open));
+  });
+  document.addEventListener('click', (event)=>{
+    if (!profileMenu.hidden && !profileMenu.contains(event.target) && !profileBtn.contains(event.target)) {
+      profileMenu.hidden = true;
+      profileBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
 })();
 
 /* ---- Dashboard ---- */
@@ -946,6 +1028,8 @@ var overviewData = [];
 var historyData = [];
 var statsData = null;
 var cronRunsData = [];
+var portfolioLots = [];
+var portfolioReady = false;
 
 const PRODUCT_TYPE_ORDER = {
   'Play Booster Box':1,
@@ -1097,6 +1181,7 @@ async function initDashboard(){
   ]);
   // Render history AFTER overview data is loaded (needs released_at for sorting)
   renderHistory();
+  initPortfolio();
 }
 
 async function fetchJSON(path){
@@ -1290,6 +1375,177 @@ function toggleSet(header){
     card.classList.remove('is-open');
     body.style.maxHeight = null;
   }
+}
+
+/* ---- Portfolio ---- */
+function portfolioProducts(){
+  return (overviewData || []).flatMap(set => (set.products || []).map(product => ({
+    product_id: product.product_id,
+    set_name: set.name || 'Unknown set',
+    product_name: product.product_name || product.product_type || 'Booster Box',
+    product_type: product.product_type || 'Booster Box',
+    avg_25_lowest: product.avg_25_lowest,
+    label: (set.name || 'Unknown set') + ' — ' + (product.product_type || product.product_name || 'Booster Box')
+  }))).sort((a, b) => a.label.localeCompare(b.label));
+}
+
+function portfolioProductForLabel(label){
+  return portfolioProducts().find(product => product.label === label) || null;
+}
+
+function portfolioCurrentPrice(lot){
+  const id = String(lot.product_id);
+  const product = portfolioProducts().find(item => String(item.product_id) === id);
+  const price = product && Number(product.avg_25_lowest);
+  return Number.isFinite(price) && price >= 0 ? price : null;
+}
+
+function money(value){ return value === null || value === undefined ? '—' : '€' + fmtPrice(value); }
+
+function portfolioMessage(message, type){
+  const target = document.getElementById('portfolioMessage');
+  target.textContent = message || '';
+  target.className = 'portfolio-message' + (type ? ' is-' + type : '');
+}
+
+function renderPortfolioPicker(){
+  const list = document.getElementById('portfolioProducts');
+  if (!list) return;
+  list.innerHTML = portfolioProducts().map(product =>
+    '<option value="' + escapeHtml(product.label) + '"></option>'
+  ).join('');
+}
+
+function renderPortfolio(){
+  const loading = document.getElementById('portfolioLoading');
+  const content = document.getElementById('portfolioContent');
+  if (!loading || !content) return;
+  loading.style.display = 'none';
+  const lots = portfolioLots || [];
+  const totalBoxes = lots.reduce((sum, lot) => sum + Number(lot.quantity || 0), 0);
+  const totalCost = lots.reduce((sum, lot) => sum + Number(lot.quantity || 0) * Number(lot.purchase_price || 0), 0);
+  let totalValue = 0;
+  let pricedBoxes = 0;
+  lots.forEach(lot => {
+    const current = portfolioCurrentPrice(lot);
+    if (current !== null) {
+      totalValue += current * Number(lot.quantity || 0);
+      pricedBoxes += Number(lot.quantity || 0);
+    }
+  });
+  const gain = pricedBoxes ? totalValue - lots.filter(lot => portfolioCurrentPrice(lot) !== null)
+    .reduce((sum, lot) => sum + Number(lot.quantity || 0) * Number(lot.purchase_price || 0), 0) : null;
+  document.getElementById('portfolioBoxes').textContent = totalBoxes.toLocaleString();
+  document.getElementById('portfolioCost').textContent = money(totalCost);
+  document.getElementById('portfolioValue').textContent = lots.length && pricedBoxes ? money(totalValue) : '—';
+  const gainEl = document.getElementById('portfolioGain');
+  gainEl.textContent = gain === null ? '—' : (gain >= 0 ? '+' : '−') + money(Math.abs(gain));
+  gainEl.className = gain === null ? '' : (gain >= 0 ? 'is-positive' : 'is-negative');
+
+  if (!lots.length) {
+    content.innerHTML = '<div class="portfolio-empty"><div class="empty-icon">◈</div><h3>Your collection starts here</h3><p>Add a booster box purchase above. Its market value will follow the average price already shown in the dashboard.</p></div>';
+    return;
+  }
+  const missing = totalBoxes - pricedBoxes;
+  content.innerHTML = (missing ? '<p class="portfolio-valuation-note">' + missing + ' box' + (missing === 1 ? '' : 'es') + ' do not have a current market price yet and are excluded from the market value.</p>' : '') +
+    lots.map(lot => {
+      const qty = Number(lot.quantity || 0);
+      const paid = Number(lot.purchase_price || 0);
+      const current = portfolioCurrentPrice(lot);
+      const value = current === null ? null : current * qty;
+      const lotGain = value === null ? null : value - paid * qty;
+      const percent = lotGain === null || paid === 0 ? null : (lotGain / (paid * qty)) * 100;
+      return '<article class="portfolio-lot">' +
+        '<div class="portfolio-lot-head"><div><span class="portfolio-set-name">' + escapeHtml(lot.set_name) + '</span><h3>' + escapeHtml(cleanProductName(lot.product_name, lot.set_name, lot.product_type)) + '</h3><p>' + escapeHtml(lot.product_type) + ' · Bought ' + escapeHtml(fmtDate(lot.purchased_on)) + '</p></div>' +
+        '<button type="button" class="portfolio-delete" data-lot-id="' + escapeHtml(lot.id) + '" aria-label="Delete this purchase">Delete</button></div>' +
+        '<div class="portfolio-lot-stats"><div><span>Boxes</span><strong>' + qty.toLocaleString() + '</strong></div><div><span>Paid</span><strong>' + money(paid) + ' <small>each</small></strong></div><div><span>Market avg.</span><strong>' + money(current) + ' <small>each</small></strong></div><div><span>Value</span><strong>' + money(value) + '</strong></div><div><span>Gain / loss</span><strong class="' + (lotGain === null ? '' : lotGain >= 0 ? 'is-positive' : 'is-negative') + '">' + (lotGain === null ? '—' : (lotGain >= 0 ? '+' : '−') + money(Math.abs(lotGain)) + (percent === null ? '' : ' (' + (percent >= 0 ? '+' : '') + percent.toFixed(1) + '%)')) + '</strong></div></div>' +
+        (lot.notes ? '<p class="portfolio-notes">' + escapeHtml(lot.notes) + '</p>' : '') +
+      '</article>';
+    }).join('');
+  content.querySelectorAll('.portfolio-delete').forEach(button => {
+    button.addEventListener('click', () => deletePortfolioLot(button.dataset.lotId));
+  });
+}
+
+async function loadPortfolio(){
+  const loading = document.getElementById('portfolioLoading');
+  if (!window.MTG_SUPABASE) {
+    portfolioMessage('The portfolio service could not load. Please refresh and try again.', 'error');
+    if (loading) loading.style.display = 'none';
+    return;
+  }
+  if (loading) loading.style.display = 'flex';
+  const { data, error } = await window.MTG_SUPABASE.from('portfolio_lots').select('*').order('purchased_on', { ascending: false }).order('created_at', { ascending: false });
+  if (error) {
+    portfolioLots = [];
+    portfolioMessage(error.code === '42P01'
+      ? 'Portfolio setup is still needed. Run the supplied Supabase setup script, then refresh this page.'
+      : 'Your portfolio could not load: ' + error.message, 'error');
+    renderPortfolio();
+    return;
+  }
+  portfolioLots = data || [];
+  renderPortfolio();
+}
+
+async function addPortfolioLot(event){
+  event.preventDefault();
+  const product = portfolioProductForLabel(document.getElementById('portfolioProduct').value);
+  if (!product) {
+    portfolioMessage('Choose a booster box from the suggestions so it can be matched to its live price.', 'error');
+    return;
+  }
+  const price = Number(document.getElementById('portfolioPrice').value);
+  const quantity = Number(document.getElementById('portfolioQuantity').value);
+  if (!Number.isFinite(price) || price < 0 || !Number.isInteger(quantity) || quantity < 1) {
+    portfolioMessage('Enter a valid price and a whole-number quantity of at least 1.', 'error');
+    return;
+  }
+  const button = document.getElementById('portfolioSubmit');
+  button.disabled = true; button.textContent = 'Adding…';
+  portfolioMessage('');
+  const { error } = await window.MTG_SUPABASE.from('portfolio_lots').insert({
+    product_id: product.product_id,
+    set_name: product.set_name,
+    product_name: product.product_name,
+    product_type: product.product_type,
+    quantity,
+    purchase_price: price,
+    purchased_on: document.getElementById('portfolioDate').value,
+    notes: document.getElementById('portfolioNotes').value.trim()
+  });
+  button.disabled = false; button.textContent = 'Add to portfolio';
+  if (error) {
+    portfolioMessage('This purchase could not be saved: ' + error.message, 'error');
+    return;
+  }
+  document.getElementById('portfolioForm').reset();
+  document.getElementById('portfolioQuantity').value = '1';
+  document.getElementById('portfolioDate').value = new Date().toISOString().slice(0, 10);
+  portfolioMessage('Booster box added to your portfolio.', 'success');
+  loadPortfolio();
+}
+
+async function deletePortfolioLot(id){
+  if (!id || !window.confirm('Remove this purchase from your portfolio?')) return;
+  portfolioMessage('');
+  const { error } = await window.MTG_SUPABASE.from('portfolio_lots').delete().eq('id', id);
+  if (error) {
+    portfolioMessage('This purchase could not be removed: ' + error.message, 'error');
+    return;
+  }
+  portfolioMessage('Purchase removed.', 'success');
+  loadPortfolio();
+}
+
+function initPortfolio(){
+  renderPortfolioPicker();
+  if (!portfolioReady) {
+    portfolioReady = true;
+    document.getElementById('portfolioDate').value = new Date().toISOString().slice(0, 10);
+    document.getElementById('portfolioForm').addEventListener('submit', addPortfolioLot);
+  }
+  loadPortfolio();
 }
 
 /* ---- History ---- */

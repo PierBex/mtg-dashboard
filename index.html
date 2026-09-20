@@ -900,8 +900,10 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
         <p>Each entry is one purchase lot. Use quantity if you bought more than one box at the same price.</p>
         <form id="portfolioForm" class="portfolio-form">
           <label class="portfolio-field portfolio-field-product">Booster box
-            <input id="portfolioProduct" list="portfolioProducts" autocomplete="off" placeholder="Search a set or booster type" required>
-            <datalist id="portfolioProducts"></datalist>
+            <span class="portfolio-picker">
+              <input id="portfolioProduct" autocomplete="off" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="portfolioProductResults" placeholder="Start typing a set or booster box" required>
+              <span id="portfolioProductResults" class="portfolio-product-results" role="listbox" hidden></span>
+            </span>
           </label>
           <label class="portfolio-field">Price per box (€)
             <input id="portfolioPrice" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00" required>
@@ -1030,6 +1032,8 @@ var statsData = null;
 var cronRunsData = [];
 var portfolioLots = [];
 var portfolioReady = false;
+var selectedPortfolioProduct = null;
+var portfolioSuggestionIndex = -1;
 
 const PRODUCT_TYPE_ORDER = {
   'Play Booster Box':1,
@@ -1385,12 +1389,12 @@ function portfolioProducts(){
     product_name: product.product_name || product.product_type || 'Booster Box',
     product_type: product.product_type || 'Booster Box',
     avg_25_lowest: product.avg_25_lowest,
-    label: (set.name || 'Unknown set') + ' — ' + (product.product_type || product.product_name || 'Booster Box')
+    label: (set.name || 'Unknown set') + ' — ' + cleanProductName(product.product_name, set.name, product.product_type)
   }))).sort((a, b) => a.label.localeCompare(b.label));
 }
 
-function portfolioProductForLabel(label){
-  return portfolioProducts().find(product => product.label === label) || null;
+function portfolioProductForId(productId){
+  return portfolioProducts().find(product => String(product.product_id) === String(productId)) || null;
 }
 
 function portfolioCurrentPrice(lot){
@@ -1408,12 +1412,75 @@ function portfolioMessage(message, type){
   target.className = 'portfolio-message' + (type ? ' is-' + type : '');
 }
 
-function renderPortfolioPicker(){
-  const list = document.getElementById('portfolioProducts');
-  if (!list) return;
-  list.innerHTML = portfolioProducts().map(product =>
-    '<option value="' + escapeHtml(product.label) + '"></option>'
-  ).join('');
+function matchingPortfolioProducts(query){
+  const terms = String(query || '').toLowerCase().trim().split(/\s+/).filter(Boolean);
+  return portfolioProducts().filter(product => {
+    const searchable = (product.label + ' ' + product.product_type).toLowerCase();
+    return terms.every(term => searchable.includes(term));
+  });
+}
+
+function closePortfolioPicker(){
+  const input = document.getElementById('portfolioProduct');
+  const results = document.getElementById('portfolioProductResults');
+  if (!input || !results) return;
+  results.hidden = true;
+  input.setAttribute('aria-expanded', 'false');
+  portfolioSuggestionIndex = -1;
+}
+
+function choosePortfolioProduct(product){
+  if (!product) return;
+  selectedPortfolioProduct = product;
+  document.getElementById('portfolioProduct').value = product.label;
+  closePortfolioPicker();
+}
+
+function renderPortfolioPicker(query, keepOpen){
+  const input = document.getElementById('portfolioProduct');
+  const results = document.getElementById('portfolioProductResults');
+  if (!input || !results) return;
+  const matches = matchingPortfolioProducts(query).slice(0, 12);
+  if (!matches.length && !keepOpen) { closePortfolioPicker(); return; }
+  results.innerHTML = matches.length
+    ? matches.map((product, index) => '<button type="button" class="portfolio-product-option' + (index === portfolioSuggestionIndex ? ' is-active' : '') + '" role="option" aria-selected="' + (index === portfolioSuggestionIndex) + '" data-product-id="' + escapeHtml(product.product_id) + '"><span>' + escapeHtml(product.set_name) + '</span><strong>' + escapeHtml(cleanProductName(product.product_name, product.set_name, product.product_type)) + '</strong></button>').join('')
+    : '<span class="portfolio-no-results">No matching booster box. Try another set or type.</span>';
+  results.hidden = false;
+  input.setAttribute('aria-expanded', 'true');
+  results.querySelectorAll('.portfolio-product-option').forEach(button => {
+    button.addEventListener('mousedown', event => event.preventDefault());
+    button.addEventListener('click', () => choosePortfolioProduct(portfolioProductForId(button.dataset.productId)));
+  });
+}
+
+function setupPortfolioPicker(){
+  const input = document.getElementById('portfolioProduct');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    selectedPortfolioProduct = null;
+    portfolioSuggestionIndex = -1;
+    renderPortfolioPicker(input.value, true);
+  });
+  input.addEventListener('focus', () => renderPortfolioPicker(input.value, true));
+  input.addEventListener('keydown', event => {
+    const options = Array.from(document.querySelectorAll('.portfolio-product-option'));
+    if (event.key === 'Escape') { closePortfolioPicker(); return; }
+    if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+      event.preventDefault();
+      if (!options.length) return;
+      const direction = event.key === 'ArrowDown' ? 1 : -1;
+      portfolioSuggestionIndex = (portfolioSuggestionIndex + direction + options.length) % options.length;
+      renderPortfolioPicker(input.value, true);
+      return;
+    }
+    if (event.key === 'Enter' && portfolioSuggestionIndex >= 0 && options.length) {
+      event.preventDefault();
+      choosePortfolioProduct(portfolioProductForId(options[portfolioSuggestionIndex].dataset.productId));
+    }
+  });
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.portfolio-picker')) closePortfolioPicker();
+  });
 }
 
 function renderPortfolio(){
@@ -1490,9 +1557,9 @@ async function loadPortfolio(){
 
 async function addPortfolioLot(event){
   event.preventDefault();
-  const product = portfolioProductForLabel(document.getElementById('portfolioProduct').value);
+  const product = selectedPortfolioProduct && portfolioProductForId(selectedPortfolioProduct.product_id);
   if (!product) {
-    portfolioMessage('Choose a booster box from the suggestions so it can be matched to its live price.', 'error');
+    portfolioMessage('Select one exact booster box from the matching dropdown before adding it.', 'error');
     return;
   }
   const price = Number(document.getElementById('portfolioPrice').value);
@@ -1520,6 +1587,7 @@ async function addPortfolioLot(event){
     return;
   }
   document.getElementById('portfolioForm').reset();
+  selectedPortfolioProduct = null;
   document.getElementById('portfolioQuantity').value = '1';
   document.getElementById('portfolioDate').value = new Date().toISOString().slice(0, 10);
   portfolioMessage('Booster box added to your portfolio.', 'success');
@@ -1539,11 +1607,11 @@ async function deletePortfolioLot(id){
 }
 
 function initPortfolio(){
-  renderPortfolioPicker();
   if (!portfolioReady) {
     portfolioReady = true;
     document.getElementById('portfolioDate').value = new Date().toISOString().slice(0, 10);
     document.getElementById('portfolioForm').addEventListener('submit', addPortfolioLot);
+    setupPortfolioPicker();
   }
   loadPortfolio();
 }

@@ -36,17 +36,17 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,.84) 67%, rgba(0,0,0,.34) 84%, transparent 100%);
 }
 .bg-top .bg-art {
-  background-position: 68% 34%; opacity: .86;
-  filter: saturate(.72) brightness(1.04) contrast(1.04);
+  background-position: 70% 28%; opacity: .97;
+  filter: saturate(.82) brightness(1.16) contrast(1.08);
 }
 .bg-top .bg-overlay {
   background:
-    radial-gradient(ellipse at 84% 15%, rgba(249,226,178,.16), transparent 33%),
-    linear-gradient(90deg, rgba(3,10,15,.75) 0%, rgba(3,10,15,.39) 38%, rgba(3,10,15,.11) 77%, rgba(3,10,15,.28) 100%),
-    linear-gradient(180deg, rgba(5,12,17,.04) 0%, rgba(5,12,17,.16) 26%, rgba(5,12,17,.55) 57%, var(--bg) 94%);
+    radial-gradient(ellipse at 84% 15%, rgba(255,226,163,.28), transparent 36%),
+    linear-gradient(90deg, rgba(3,10,15,.77) 0%, rgba(3,10,15,.42) 36%, rgba(3,10,15,.08) 72%, rgba(3,10,15,.16) 100%),
+    linear-gradient(180deg, rgba(5,12,17,.02) 0%, rgba(5,12,17,.11) 27%, rgba(5,12,17,.5) 58%, var(--bg) 94%);
 }
 .bg-top .bg-mana {
-  opacity: .58;
+  opacity: .72;
   background:
     radial-gradient(ellipse at 86% 12%, rgba(226,190,112,.14), transparent 31%),
     radial-gradient(ellipse at 18% 26%, rgba(110,80,191,.12), transparent 34%),
@@ -83,8 +83,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 .market-hero {
   min-height: 205px; margin-bottom: 22px; padding: 0;
-  background: radial-gradient(ellipse at 18% 65%, rgba(49,35,105,.24), transparent 46%),
-    linear-gradient(110deg, rgba(5,12,23,.52), rgba(5,12,18,.22));
+  background: radial-gradient(ellipse at 18% 65%, rgba(49,35,105,.2), transparent 46%),
+    linear-gradient(110deg, rgba(5,12,23,.43), rgba(5,12,18,.13));
   isolation: isolate;
 }
 .market-hero::before, .market-hero::after { display: none; }
@@ -429,7 +429,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .tabs { display: none; }
   .app { padding-bottom: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px) + 14px); }
   .bg-top { height: 680px; margin-bottom: -680px; }
-  .bg-top .bg-art { background-position: 66% 29%; opacity: .82; }
+  .bg-top .bg-art { background-position: 70% 24%; opacity: .92; }
   .market-hero { min-height: 168px; margin-bottom: 18px; }
   .hero-image { flex-basis: 32%; max-width: 150px; padding: 0; margin-top: -12px; }
   .hero-content { padding: 18px 12px 18px 2px; }

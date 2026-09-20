@@ -30,16 +30,28 @@ button { touch-action: manipulation; }
 button:focus-visible, a:focus-visible, input:focus-visible {
   outline: 2px solid var(--gold); outline-offset: 4px;
 }
-.bg-top { height: 740px; margin-bottom: -740px; mask-image: linear-gradient(#000 75%, transparent); -webkit-mask-image: linear-gradient(#000 75%, transparent); }
+.bg-top {
+  height: 760px; margin-bottom: -760px;
+  mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,.84) 67%, rgba(0,0,0,.34) 84%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 50%, rgba(0,0,0,.84) 67%, rgba(0,0,0,.34) 84%, transparent 100%);
+}
 .bg-top .bg-art {
-  background-position: center 46%; opacity: .7;
-  filter: saturate(.65) brightness(.85);
+  background-position: 68% 34%; opacity: .86;
+  filter: saturate(.72) brightness(1.04) contrast(1.04);
 }
 .bg-top .bg-overlay {
-  background: linear-gradient(90deg, rgba(3,10,15,.72), rgba(3,10,15,.12) 75%),
-    linear-gradient(180deg, rgba(5,12,17,.05), rgba(5,12,17,.28) 25%, var(--bg) 96%);
+  background:
+    radial-gradient(ellipse at 84% 15%, rgba(249,226,178,.16), transparent 33%),
+    linear-gradient(90deg, rgba(3,10,15,.75) 0%, rgba(3,10,15,.39) 38%, rgba(3,10,15,.11) 77%, rgba(3,10,15,.28) 100%),
+    linear-gradient(180deg, rgba(5,12,17,.04) 0%, rgba(5,12,17,.16) 26%, rgba(5,12,17,.55) 57%, var(--bg) 94%);
 }
-.bg-top .bg-mana { opacity: .4; }
+.bg-top .bg-mana {
+  opacity: .58;
+  background:
+    radial-gradient(ellipse at 86% 12%, rgba(226,190,112,.14), transparent 31%),
+    radial-gradient(ellipse at 18% 26%, rgba(110,80,191,.12), transparent 34%),
+    radial-gradient(ellipse at 57% 68%, rgba(32,79,93,.1), transparent 42%);
+}
 .header {
   padding: 0 max(22px, calc((100vw - var(--max)) / 2 + 22px));
   background: linear-gradient(180deg, rgba(4,10,15,.56), rgba(4,10,15,.25));
@@ -71,8 +83,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 }
 .market-hero {
   min-height: 205px; margin-bottom: 22px; padding: 0;
-  background: radial-gradient(ellipse at 18% 65%, rgba(49,35,105,.3), transparent 46%),
-    linear-gradient(110deg, rgba(5,12,23,.63), rgba(5,12,18,.34));
+  background: radial-gradient(ellipse at 18% 65%, rgba(49,35,105,.24), transparent 46%),
+    linear-gradient(110deg, rgba(5,12,23,.52), rgba(5,12,18,.22));
   isolation: isolate;
 }
 .market-hero::before, .market-hero::after { display: none; }
@@ -416,8 +428,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .container { padding: 18px 14px 30px; }
   .tabs { display: none; }
   .app { padding-bottom: calc(var(--bottom-nav-h) + env(safe-area-inset-bottom, 0px) + 14px); }
-  .bg-top { height: 650px; margin-bottom: -650px; }
-  .bg-top .bg-art { background-position: 60% 35%; }
+  .bg-top { height: 680px; margin-bottom: -680px; }
+  .bg-top .bg-art { background-position: 66% 29%; opacity: .82; }
   .market-hero { min-height: 168px; margin-bottom: 18px; }
   .hero-image { flex-basis: 32%; max-width: 150px; padding: 0; margin-top: -12px; }
   .hero-content { padding: 18px 12px 18px 2px; }

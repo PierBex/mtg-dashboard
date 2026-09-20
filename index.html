@@ -715,7 +715,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
 .nav-fab:active{ transform:scale(1); }
 
 </style>
-<link rel="stylesheet" href="assets/dashboard-theme.css?v=20260920-artwork-2">
+<link rel="stylesheet" href="assets/dashboard-theme.css?v=20260920-portfolio-edit">
 </head>
 <body>
 <div class="bg-top">
@@ -906,7 +906,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
             </span>
           </label>
           <label class="portfolio-field">Price per box (€)
-            <input id="portfolioPrice" type="number" min="0" step="0.01" inputmode="decimal" placeholder="0.00" required>
+            <input id="portfolioPrice" type="text" inputmode="decimal" placeholder="0,00" required>
           </label>
           <label class="portfolio-field">Quantity
             <input id="portfolioQuantity" type="number" min="1" step="1" inputmode="numeric" value="1" required>
@@ -1034,6 +1034,7 @@ var portfolioLots = [];
 var portfolioReady = false;
 var selectedPortfolioProduct = null;
 var portfolioSuggestionIndex = -1;
+var editingPortfolioLotId = null;
 
 const PRODUCT_TYPE_ORDER = {
   'Play Booster Box':1,
@@ -1397,6 +1398,10 @@ function portfolioProductForId(productId){
   return portfolioProducts().find(product => String(product.product_id) === String(productId)) || null;
 }
 
+function portfolioProductOptions(selectedId){
+  return portfolioProducts().map(product => '<option value="' + escapeHtml(product.product_id) + '"' + (String(product.product_id) === String(selectedId) ? ' selected' : '') + '>' + escapeHtml(product.label) + '</option>').join('');
+}
+
 function portfolioCurrentPrice(lot){
   const id = String(lot.product_id);
   const product = portfolioProducts().find(item => String(item.product_id) === id);
@@ -1405,6 +1410,25 @@ function portfolioCurrentPrice(lot){
 }
 
 function money(value){ return value === null || value === undefined ? '—' : '€' + fmtPrice(value); }
+
+function parseEuroAmount(value){
+  let amount = String(value === null || value === undefined ? '' : value).trim().replace(/\s/g, '');
+  if (!amount) return null;
+  const comma = amount.lastIndexOf(',');
+  const dot = amount.lastIndexOf('.');
+  if (comma > -1 && dot > -1) {
+    amount = comma > dot ? amount.replace(/\./g, '').replace(',', '.') : amount.replace(/,/g, '');
+  } else if (comma > -1) {
+    amount = amount.replace(',', '.');
+  }
+  const parsed = Number(amount);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function priceInputValue(value){
+  const amount = Number(value);
+  return Number.isFinite(amount) ? amount.toFixed(2).replace('.', ',') : '';
+}
 
 function portfolioMessage(message, type){
   const target = document.getElementById('portfolioMessage');
@@ -1522,15 +1546,24 @@ function renderPortfolio(){
       const value = current === null ? null : current * qty;
       const lotGain = value === null ? null : value - paid * qty;
       const percent = lotGain === null || paid === 0 ? null : (lotGain / (paid * qty)) * 100;
+      const editing = editingPortfolioLotId === lot.id;
       return '<article class="portfolio-lot">' +
         '<div class="portfolio-lot-head"><div><span class="portfolio-set-name">' + escapeHtml(lot.set_name) + '</span><h3>' + escapeHtml(cleanProductName(lot.product_name, lot.set_name, lot.product_type)) + '</h3><p>' + escapeHtml(lot.product_type) + ' · Bought ' + escapeHtml(fmtDate(lot.purchased_on)) + '</p></div>' +
-        '<button type="button" class="portfolio-delete" data-lot-id="' + escapeHtml(lot.id) + '" aria-label="Delete this purchase">Delete</button></div>' +
+        '<div class="portfolio-lot-actions"><button type="button" class="portfolio-edit" data-lot-id="' + escapeHtml(lot.id) + '">Edit</button><button type="button" class="portfolio-delete" data-lot-id="' + escapeHtml(lot.id) + '" aria-label="Delete this purchase">Delete</button></div></div>' +
         '<div class="portfolio-lot-stats"><div><span>Boxes</span><strong>' + qty.toLocaleString() + '</strong></div><div><span>Paid</span><strong>' + money(paid) + ' <small>each</small></strong></div><div><span>Market avg.</span><strong>' + money(current) + ' <small>each</small></strong></div><div><span>Value</span><strong>' + money(value) + '</strong></div><div><span>Gain / loss</span><strong class="' + (lotGain === null ? '' : lotGain >= 0 ? 'is-positive' : 'is-negative') + '">' + (lotGain === null ? '—' : (lotGain >= 0 ? '+' : '−') + money(Math.abs(lotGain)) + (percent === null ? '' : ' (' + (percent >= 0 ? '+' : '') + percent.toFixed(1) + '%)')) + '</strong></div></div>' +
+        (editing ? '<form class="portfolio-edit-form" data-lot-id="' + escapeHtml(lot.id) + '"><label class="portfolio-edit-product">Booster box<select name="product_id">' + portfolioProductOptions(lot.product_id) + '</select></label><label>Price per box (€)<input name="purchase_price" type="text" inputmode="decimal" value="' + escapeHtml(priceInputValue(lot.purchase_price)) + '" required></label><label>Quantity<input name="quantity" type="number" min="1" step="1" inputmode="numeric" value="' + qty + '" required></label><label>Purchase date<input name="purchased_on" type="date" value="' + escapeHtml(lot.purchased_on) + '" required></label><label class="portfolio-edit-notes">Notes <span>(optional)</span><input name="notes" type="text" maxlength="500" value="' + escapeHtml(lot.notes || '') + '"></label><div class="portfolio-edit-actions"><button type="submit" class="portfolio-save">Save changes</button><button type="button" class="portfolio-cancel-edit">Cancel</button></div></form>' : '') +
         (lot.notes ? '<p class="portfolio-notes">' + escapeHtml(lot.notes) + '</p>' : '') +
       '</article>';
     }).join('');
+  content.querySelectorAll('.portfolio-edit').forEach(button => {
+    button.addEventListener('click', () => { editingPortfolioLotId = button.dataset.lotId; renderPortfolio(); });
+  });
   content.querySelectorAll('.portfolio-delete').forEach(button => {
     button.addEventListener('click', () => deletePortfolioLot(button.dataset.lotId));
+  });
+  content.querySelectorAll('.portfolio-edit-form').forEach(form => form.addEventListener('submit', updatePortfolioLot));
+  content.querySelectorAll('.portfolio-cancel-edit').forEach(button => {
+    button.addEventListener('click', () => { editingPortfolioLotId = null; renderPortfolio(); });
   });
 }
 
@@ -1562,10 +1595,10 @@ async function addPortfolioLot(event){
     portfolioMessage('Select one exact booster box from the matching dropdown before adding it.', 'error');
     return;
   }
-  const price = Number(document.getElementById('portfolioPrice').value);
+  const price = parseEuroAmount(document.getElementById('portfolioPrice').value);
   const quantity = Number(document.getElementById('portfolioQuantity').value);
-  if (!Number.isFinite(price) || price < 0 || !Number.isInteger(quantity) || quantity < 1) {
-    portfolioMessage('Enter a valid price and a whole-number quantity of at least 1.', 'error');
+  if (price === null || price < 0 || !Number.isInteger(quantity) || quantity < 1) {
+    portfolioMessage('Enter a valid price (for example 125,50) and a whole-number quantity of at least 1.', 'error');
     return;
   }
   const button = document.getElementById('portfolioSubmit');
@@ -1591,6 +1624,40 @@ async function addPortfolioLot(event){
   document.getElementById('portfolioQuantity').value = '1';
   document.getElementById('portfolioDate').value = new Date().toISOString().slice(0, 10);
   portfolioMessage('Booster box added to your portfolio.', 'success');
+  loadPortfolio();
+}
+
+async function updatePortfolioLot(event){
+  event.preventDefault();
+  const form = event.currentTarget;
+  const id = form.dataset.lotId;
+  const price = parseEuroAmount(form.elements.purchase_price.value);
+  const quantity = Number(form.elements.quantity.value);
+  const product = portfolioProductForId(form.elements.product_id.value);
+  if (!product || price === null || price < 0 || !Number.isInteger(quantity) || quantity < 1) {
+    portfolioMessage('Enter a valid price (for example 125,50) and a whole-number quantity of at least 1.', 'error');
+    return;
+  }
+  const save = form.querySelector('.portfolio-save');
+  save.disabled = true; save.textContent = 'Saving…';
+  portfolioMessage('');
+  const { error } = await window.MTG_SUPABASE.from('portfolio_lots').update({
+    product_id: product.product_id,
+    set_name: product.set_name,
+    product_name: product.product_name,
+    product_type: product.product_type,
+    purchase_price: price,
+    quantity,
+    purchased_on: form.elements.purchased_on.value,
+    notes: form.elements.notes.value.trim()
+  }).eq('id', id);
+  if (error) {
+    save.disabled = false; save.textContent = 'Save changes';
+    portfolioMessage('This purchase could not be updated: ' + error.message, 'error');
+    return;
+  }
+  editingPortfolioLotId = null;
+  portfolioMessage('Purchase updated.', 'success');
   loadPortfolio();
 }
 

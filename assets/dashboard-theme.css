@@ -79,7 +79,7 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   background: linear-gradient(115deg, rgba(14,25,34,.7), rgba(5,12,18,.56));
   box-shadow: 0 10px 28px rgba(0,0,0,.18);
   backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px);
-  position: relative;
+  position: relative; background-clip: padding-box;
 }
 .market-hero {
   min-height: 205px; margin-bottom: 22px; padding: 0;
@@ -349,8 +349,9 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .portfolio-summary-card, .portfolio-add-card, .portfolio-lot, .portfolio-empty {
   border: 1px solid transparent; border-image: url('ornate-frame.svg') 24 / 24px / 0 stretch;
   background: linear-gradient(115deg, rgba(14,25,34,.7), rgba(5,12,18,.56));
-  box-shadow: 0 10px 28px rgba(0,0,0,.18); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px);
+  border-radius: 15px; box-shadow: 0 10px 28px rgba(0,0,0,.18); backdrop-filter: blur(7px); -webkit-backdrop-filter: blur(7px); background-clip: padding-box;
 }
+.portfolio-summary-card, .portfolio-lot, .portfolio-empty { overflow: hidden; }
 .portfolio-summary-card { min-height: 104px; padding: 19px 18px; display: flex; flex-direction: column; gap: 9px; }
 .portfolio-summary-card span, .portfolio-lot-stats span { color: #a8aca6; font-size: 9px; letter-spacing: .11em; text-transform: uppercase; }
 .portfolio-summary-card strong { color: #e3cf9e; font-family: 'Cinzel', serif; font-size: 23px; font-weight: 500; overflow-wrap: anywhere; }
@@ -393,13 +394,29 @@ button:focus-visible, a:focus-visible, input:focus-visible {
 .portfolio-lot-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; }
 .portfolio-set-name { display: block; margin-bottom: 4px; color: #a7aa9f; font-size: 9px; letter-spacing: .1em; text-transform: uppercase; }
 .portfolio-lot-head p { margin: 5px 0 0; color: #9da6a7; font-size: 10px; }
-.portfolio-delete { flex: 0 0 auto; padding: 6px 8px; border: 1px solid rgba(206,137,123,.35); border-radius: 4px; color: #dda59c; font-size: 10px; background: rgba(147,71,57,.1); cursor: pointer; }
+.portfolio-lot-actions { display: flex; align-items: center; gap: 7px; flex: 0 0 auto; }
+.portfolio-edit, .portfolio-delete { flex: 0 0 auto; padding: 6px 8px; border-radius: 4px; font-size: 10px; cursor: pointer; }
+.portfolio-edit { border: 1px solid rgba(205,173,108,.42); color: #e2c993; background: rgba(152,121,57,.12); }
+.portfolio-edit:hover { background: rgba(152,121,57,.23); }
+.portfolio-delete { border: 1px solid rgba(206,137,123,.35); color: #dda59c; background: rgba(147,71,57,.1); }
 .portfolio-delete:hover { background: rgba(147,71,57,.23); }
 .portfolio-lot-stats { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(189,157,98,.17); }
 .portfolio-lot-stats > div { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
 .portfolio-lot-stats strong { color: #e2cf9f; font-size: 14px; font-weight: 500; overflow-wrap: anywhere; }
 .portfolio-lot-stats small { color: #929c9e; font-size: 9px; font-weight: 400; }
 .portfolio-notes { margin: 14px 0 0; padding: 9px 11px; color: #aab0aa; font-size: 11px; background: rgba(3,10,15,.25); border-left: 1px solid rgba(205,171,107,.45); }
+.portfolio-edit-form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 11px; margin-top: 16px; padding: 14px; background: rgba(4,12,19,.46); border: 1px solid rgba(190,157,96,.23); border-radius: 6px; }
+.portfolio-edit-form label { display: flex; flex-direction: column; gap: 6px; min-width: 0; color: #b4b4ab; font-size: 9px; letter-spacing: .09em; text-transform: uppercase; }
+.portfolio-edit-form label span { color: #7f8888; letter-spacing: .04em; }
+.portfolio-edit-form input, .portfolio-edit-form select { width: 100%; min-width: 0; height: 38px; padding: 8px 9px; color: #e4e0d7; background: rgba(2,9,15,.62); border: 1px solid rgba(182,154,96,.28); border-radius: 4px; outline: none; font-size: 12px; }
+.portfolio-edit-form input:focus, .portfolio-edit-form select:focus { border-color: rgba(215,183,118,.7); box-shadow: 0 0 0 2px rgba(198,160,91,.1); }
+.portfolio-edit-product { grid-column: 1 / -1; }
+.portfolio-edit-notes { grid-column: 1 / -1; }
+.portfolio-edit-actions { display: flex; justify-content: flex-end; gap: 8px; grid-column: 1 / -1; }
+.portfolio-save, .portfolio-cancel-edit { padding: 8px 11px; border-radius: 4px; cursor: pointer; font-size: 11px; }
+.portfolio-save { border: 1px solid rgba(205,173,108,.56); color: #f0dfba; background: rgba(149,117,53,.35); }
+.portfolio-save:disabled { opacity: .65; cursor: wait; }
+.portfolio-cancel-edit { border: 1px solid rgba(164,171,168,.26); color: #b8bfbd; background: rgba(130,142,143,.08); }
 .portfolio-empty { padding: 34px 22px; text-align: center; }
 .portfolio-empty .empty-icon { color: #ddc791; font-size: 32px; }
 .portfolio-empty h3 { margin: 8px 0 5px; color: #e4d0a0; font-family: 'Cinzel', serif; font-weight: 500; }
@@ -483,6 +500,8 @@ button:focus-visible, a:focus-visible, input:focus-visible {
   .portfolio-lot h3 { font-size: 14px; }
   .portfolio-lot-stats { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 9px; }
   .portfolio-lot-stats strong { font-size: 13px; }
+  .portfolio-edit-form { grid-template-columns: repeat(2, minmax(0, 1fr)); padding: 12px; }
+  .portfolio-edit-form input, .portfolio-edit-form select { font-size: 16px; }
 }
 @media (max-width: 359px) {
   .header { padding: 0 12px; }

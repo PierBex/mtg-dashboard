@@ -2,16 +2,16 @@
   {
     "id": 12,
     "started_at": "2026-09-21T05:00:38.580991",
-    "finished_at": "2026-09-21T06:04:28.974962",
-    "status": "ok",
-    "products_scanned": 255,
+    "finished_at": "2026-09-21T08:01:09.124260",
+    "status": "partial",
+    "products_scanned": 248,
     "products_with_prices": 248,
     "products_out_of_stock": 7,
-    "products_failed": 0,
+    "products_failed": 1,
     "notes": [
-      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac87.37-\u20ac216.5",
-      "The Hobbit Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [135.0] (range: \u20ac136.05-\u20ac163",
-      "Matches fixed"
+      "Error: deploy: product not found in DB",
+      "Deploy failed: git push failed: To github.com:PierBex/mtg-dashboard.git\n ! [rejected]        ma",
+      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac87.37-\u20ac216.5"
     ],
     "auto_fix": null
   },

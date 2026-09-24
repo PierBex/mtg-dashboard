@@ -1051,10 +1051,18 @@ function fmtPrice(n){
   if (isNaN(val)) return null;
   return val.toLocaleString('en-IE', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 }
+function displayDate(str){
+  if (!str) return null;
+  // Tracker timestamps represent EEST calendar dates. Parse their literal
+  // YYYY-MM-DD portion, not the viewer's timezone, so Sep 21 stays Sep 21.
+  const match = String(str).match(/^(\d{4})-(\d{2})-(\d{2})/);
+  if (match) return new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+  const parsed = new Date(str);
+  return Number.isNaN(parsed.getTime()) ? null : parsed;
+}
 function fmtDate(str){
-  if (!str) return '';
-  try { return new Date(str).toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }); }
-  catch(e){ return str; }
+  const d = displayDate(str);
+  return d ? d.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' }) : (str || '');
 }
 
 function badgeLabel(type){
@@ -1082,20 +1090,16 @@ function cleanProductName(name, setName, productType){
   return out || type || name || 'Booster Box';
 }
 function shortDate(str){
-  if (!str) return '';
-  try { return new Date(str).toLocaleDateString(undefined, { month:'short', day:'numeric' }); }
-  catch(e){ return str; }
+  const d = displayDate(str);
+  return d ? d.toLocaleDateString(undefined, { month:'short', day:'numeric' }) : (str || '');
 }
 
 function shortDateCompact(str){
-  if (!str) return '';
-  try {
-    const d = new Date(str);
-    const day = d.getDate();
-    const month = d.toLocaleString(undefined, { month:'short' });
-    return day + ' ' + month;
-  }
-  catch(e){ return str; }
+  const d = displayDate(str);
+  if (!d) return str || '';
+  const day = d.getDate();
+  const month = d.toLocaleString(undefined, { month:'short' });
+  return day + ' ' + month;
 }
 
 function typeClass(type){

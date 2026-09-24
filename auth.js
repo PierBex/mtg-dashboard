@@ -5,6 +5,7 @@ function friendlyAuthError(message) {
   const text = String(message || 'Unable to sign in. Please try again.');
   if (/invalid login credentials/i.test(text)) return 'That email or password is not correct.';
   if (/email not confirmed/i.test(text)) return 'Please confirm your email first, then sign in.';
+  if (/signups not allowed for otp|user not found/i.test(text)) return 'We could not find an account for that email. Check the address or create an account.';
   if (/rate limit/i.test(text)) return 'Too many attempts. Please wait a moment and try again.';
   return text;
 }
@@ -30,6 +31,21 @@ async function createAccount(email, password) {
   return { success: true, needsEmailConfirmation: !data.session, user: data.user };
 }
 
+async function sendSignInLink(email) {
+  if (!window.MTG_SUPABASE) return { success: false, error: 'The account service could not load. Please refresh and try again.' };
+  if (!email) return { success: false, error: 'Enter your email address first.' };
+  const { error } = await window.MTG_SUPABASE.auth.signInWithOtp({
+    email: email.trim(),
+    options: {
+      // Do not create a new user from this recovery path. The link must lead
+      // back to the existing account, and therefore its existing portfolio.
+      shouldCreateUser: false,
+      emailRedirectTo: window.location.href.split(/[?#]/)[0]
+    }
+  });
+  return error ? { success: false, error: friendlyAuthError(error.message) } : { success: true };
+}
+
 async function isLoggedIn() {
   if (!window.MTG_SUPABASE) return false;
   const { data: { session } } = await window.MTG_SUPABASE.auth.getSession();
@@ -46,4 +62,4 @@ async function logout() {
   if (window.MTG_SUPABASE) await window.MTG_SUPABASE.auth.signOut();
 }
 
-window.AUTH = { authenticate, createAccount, isLoggedIn, getUser, logout };
+window.AUTH = { authenticate, createAccount, sendSignInLink, isLoggedIn, getUser, logout };

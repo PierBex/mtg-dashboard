@@ -715,7 +715,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
 .nav-fab:active{ transform:scale(1); }
 
 </style>
-<link rel="stylesheet" href="assets/dashboard-theme.css?v=20260920-nav-glow-subtle">
+<link rel="stylesheet" href="assets/dashboard-theme.css?v=20260924-passwordless-signin">
 </head>
 <body>
 <div class="bg-top">
@@ -752,6 +752,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
         <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter password" required>
       </div>
       <button id="authSubmit" type="submit" class="btn btn-primary">Sign in</button>
+      <button id="signInLinkBtn" type="button" class="auth-link-button">Email me a sign-in link instead</button>
       <div id="loginError" class="login-error"></div>
       <button id="authModeToggle" type="button" class="auth-mode-toggle">New here? Create an account</button>
     </form>
@@ -963,6 +964,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
   const logoutBtn = document.getElementById('logoutBtn');
   const modeToggle = document.getElementById('authModeToggle');
   const submit = document.getElementById('authSubmit');
+  const signInLinkBtn = document.getElementById('signInLinkBtn');
   const profileBtn = document.getElementById('profileBtn');
   const profileMenu = document.getElementById('profileMenu');
   let creatingAccount = false;
@@ -986,6 +988,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
     submit.textContent = creatingAccount ? 'Create account' : 'Sign in';
     modeToggle.textContent = creatingAccount ? 'Already have an account? Sign in' : 'New here? Create an account';
     document.getElementById('password').autocomplete = creatingAccount ? 'new-password' : 'current-password';
+    signInLinkBtn.hidden = creatingAccount;
   });
 
   form.addEventListener('submit', async (e)=>{
@@ -1003,6 +1006,23 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
       error.textContent = 'Check your email to confirm your account, then come back and sign in.';
     } else if (res.success) showDashboard();
     else error.textContent=res.error;
+  });
+
+  signInLinkBtn.addEventListener('click', async ()=>{
+    error.textContent='';
+    error.classList.remove('is-success');
+    const original = signInLinkBtn.textContent;
+    signInLinkBtn.textContent = 'Sending sign-in link...';
+    signInLinkBtn.disabled = true;
+    const res = await window.AUTH.sendSignInLink(form.username.value);
+    signInLinkBtn.textContent = original;
+    signInLinkBtn.disabled = false;
+    if (res.success) {
+      error.classList.add('is-success');
+      error.textContent = 'Check your email, then open the sign-in link on this device.';
+    } else {
+      error.textContent = res.error;
+    }
   });
 
   async function doLogout(){

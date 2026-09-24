@@ -861,6 +861,12 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
     <div id="historyPanel" class="panel">
       <h2 class="section-title"><span class="dot"></span>Price History</h2>
       <p class="subtitle">Historical "from" price and avg-25 lowest for tracked products.</p>
+      <div class="search-row">
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+          <input id="historySearch" type="search" placeholder="Search sets by name..." aria-label="Search price history by set name" autocomplete="off">
+        </div>
+      </div>
       <div id="historyLoading" class="loading"><div class="spinner"></div>Loading history...</div>
       <div id="historyContent" class="history-grid"></div>
     </div>
@@ -1048,6 +1054,7 @@ body { font-size:15px; line-height:1.45; background:var(--bg); }
 var dashboardInitialized = false;
 var overviewData = [];
 var historyData = [];
+var historySearch = '';
 var statsData = null;
 var cronRunsData = [];
 var portfolioLots = [];
@@ -1200,6 +1207,7 @@ async function initDashboard(){
 
   setupTabs();
   setupOverviewFilters();
+  setupHistorySearch();
   spawnHeroParticles();
 
   await Promise.all([
@@ -1284,6 +1292,14 @@ function setupOverviewFilters(){
     e.target.classList.add('is-active');
     overviewFilterType = e.target.dataset.filter;
     renderOverview();
+  });
+}
+
+function setupHistorySearch(){
+  const search = document.getElementById('historySearch');
+  search.addEventListener('input', (e)=>{
+    historySearch = e.target.value.trim().toLowerCase();
+    renderHistory();
   });
 }
 
@@ -1726,7 +1742,7 @@ function renderHistory(){
     if (!setMap[key]) setMap[key] = { set_name: h.set_name, set_code: h.set_code, products: [] };
     setMap[key].products.push(h);
   }
-  const sets = Object.values(setMap).sort((a,b) => {
+  let sets = Object.values(setMap).sort((a,b) => {
     // Find release date from overviewData if available
     const oa = overviewData.find(s => s.code === a.set_code);
     const ob = overviewData.find(s => s.code === b.set_code);
@@ -1735,6 +1751,15 @@ function renderHistory(){
     // Newest first (desc), fallback to set name asc
     return dateB.localeCompare(dateA) || (a.set_name || '').localeCompare(b.set_name || '');
   });
+
+  if (historySearch) {
+    sets = sets.filter(set => `${set.set_name || ''} ${set.set_code || ''}`.toLowerCase().includes(historySearch));
+  }
+
+  if (!sets.length){
+    content.innerHTML = '<div class="empty" style="grid-column:1/-1"><div class="empty-icon">🔎</div><h3>No matching sets</h3><p>Try another set name.</p></div>';
+    return;
+  }
 
   content.innerHTML = sets.map(s => renderHistSetCard(s)).join('');
 

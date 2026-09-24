@@ -1,5 +1,21 @@
 [
   {
+    "id": 13,
+    "started_at": "2026-09-24T05:00:40.807458",
+    "finished_at": "2026-09-24T07:06:34.333840",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 248,
+    "products_out_of_stock": 7,
+    "products_failed": 0,
+    "notes": [
+      "Star Trek Collector Booster Box: Excluded 2 outlier listing(s) from avg_25: [599.99, 10000.0] (range",
+      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [10000.0] (range: \u20ac77.03-\u20ac230",
+      "Matches fixed"
+    ],
+    "auto_fix": null
+  },
+  {
     "id": 12,
     "started_at": "2026-09-21T05:00:38.580991",
     "finished_at": "2026-09-21T08:01:09.124260",
@@ -175,28 +191,6 @@
       "still_failed": 0,
       "fetch_failures": 9,
       "parse_failures": 4,
-      "redirect_failures": 0
-    }
-  },
-  {
-    "id": 3,
-    "started_at": "2026-08-20T05:00:51.353479",
-    "finished_at": "2026-08-20T06:56:43.464832",
-    "status": "ok",
-    "products_scanned": 255,
-    "products_with_prices": 244,
-    "products_out_of_stock": 6,
-    "products_failed": 0,
-    "notes": [
-      "Edge of Eternities Collector Booster Box: Excluded 3 outlier listing(s) from avg_25: [2000.0, 2501.0",
-      "Edge of Eternities Play Booster Box: Excluded 2 outlier listing(s) from avg_25: [399.0, 400.0] (rang"
-    ],
-    "auto_fix": {
-      "retried": 0,
-      "recovered": 6,
-      "still_failed": 0,
-      "fetch_failures": 3,
-      "parse_failures": 3,
       "redirect_failures": 0
     }
   }

@@ -2,16 +2,16 @@
   {
     "id": 13,
     "started_at": "2026-09-24T05:00:40.807458",
-    "finished_at": "2026-09-24T07:06:34.333840",
-    "status": "ok",
-    "products_scanned": 255,
+    "finished_at": "2026-09-24T08:00:13.528221",
+    "status": "partial",
+    "products_scanned": 248,
     "products_with_prices": 248,
     "products_out_of_stock": 7,
-    "products_failed": 0,
+    "products_failed": 1,
     "notes": [
-      "Star Trek Collector Booster Box: Excluded 2 outlier listing(s) from avg_25: [599.99, 10000.0] (range",
-      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [10000.0] (range: \u20ac77.03-\u20ac230",
-      "Matches fixed"
+      "Error: deploy: product not found in DB",
+      "Deploy failed: git push failed: To github.com:PierBex/mtg-dashboard.git\n ! [rejected]        ma",
+      "Star Trek Collector Booster Box: Excluded 2 outlier listing(s) from avg_25: [599.99, 10000.0] (range"
     ],
     "auto_fix": null
   },
@@ -20,12 +20,12 @@
     "started_at": "2026-09-21T05:00:38.580991",
     "finished_at": "2026-09-21T08:01:09.124260",
     "status": "partial",
-    "products_scanned": 248,
+    "products_scanned": 255,
     "products_with_prices": 248,
     "products_out_of_stock": 7,
-    "products_failed": 1,
+    "products_failed": 0,
     "notes": [
-      "Error: deploy: product not found in DB",
+      "Error: Deployment was blocked by a non-fast-forward push. Data was verified intact and queued for backfill.",
       "Deploy failed: git push failed: To github.com:PierBex/mtg-dashboard.git\n ! [rejected]        ma",
       "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac87.37-\u20ac216.5"
     ],

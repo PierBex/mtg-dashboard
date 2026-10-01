@@ -1,8 +1,24 @@
 [
   {
+    "id": 15,
+    "started_at": "2026-10-01T05:00:30.752656",
+    "finished_at": "2026-10-01T07:38:44.899512",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 248,
+    "products_out_of_stock": 7,
+    "products_failed": 0,
+    "notes": [
+      "Star Trek Collector Booster Box: Excluded 1 outlier listing(s) from avg_25: [599.99] (range: \u20ac422.37",
+      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac89.80-\u20ac218.5",
+      "Matches fixed"
+    ],
+    "auto_fix": null
+  },
+  {
     "id": 14,
     "started_at": "2026-09-28T05:00:28.908984",
-    "finished_at": "2026-09-28T07:46:40.925290",
+    "finished_at": "2026-09-28T07:46:45.444841",
     "status": "ok",
     "products_scanned": 255,
     "products_with_prices": 248,
@@ -161,29 +177,6 @@
       "still_failed": 0,
       "fetch_failures": 0,
       "parse_failures": 6,
-      "redirect_failures": 0
-    }
-  },
-  {
-    "id": 5,
-    "started_at": "2026-08-27T05:00:42.046372",
-    "finished_at": "2026-08-27T06:43:43.817062",
-    "status": "ok",
-    "products_scanned": 255,
-    "products_with_prices": 241,
-    "products_out_of_stock": 7,
-    "products_failed": 0,
-    "notes": [
-      "The Hobbit Play Booster Box: Excluded 3 outlier listing(s) from avg_25: [150.0, 150.0, 150.0] (range",
-      "Edge of Eternities Collector Booster Box: Excluded 3 outlier listing(s) from avg_25: [2000.0, 2501.0",
-      "Matches fixed"
-    ],
-    "auto_fix": {
-      "retried": 0,
-      "recovered": 7,
-      "still_failed": 0,
-      "fetch_failures": 0,
-      "parse_failures": 7,
       "redirect_failures": 0
     }
   }

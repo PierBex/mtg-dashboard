@@ -1,8 +1,24 @@
 [
   {
+    "id": 16,
+    "started_at": "2026-10-05T05:00:48.627157",
+    "finished_at": "2026-10-05T07:19:21.843295",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 248,
+    "products_out_of_stock": 7,
+    "products_failed": 0,
+    "notes": [
+      "Star Trek Collector Booster Box: Excluded 1 outlier listing(s) from avg_25: [599.99] (range: \u20ac420.82",
+      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac101.12-\u20ac204.",
+      "Matches fixed"
+    ],
+    "auto_fix": null
+  },
+  {
     "id": 15,
     "started_at": "2026-10-01T05:00:30.752656",
-    "finished_at": "2026-10-01T07:38:44.899512",
+    "finished_at": "2026-10-01T07:38:49.141108",
     "status": "ok",
     "products_scanned": 255,
     "products_with_prices": 248,
@@ -154,29 +170,6 @@
       "still_failed": 3,
       "fetch_failures": 4,
       "parse_failures": 37,
-      "redirect_failures": 0
-    }
-  },
-  {
-    "id": 6,
-    "started_at": "2026-08-31T05:00:38.755555",
-    "finished_at": "2026-08-31T06:35:48.859360",
-    "status": "ok",
-    "products_scanned": 255,
-    "products_with_prices": 243,
-    "products_out_of_stock": 6,
-    "products_failed": 0,
-    "notes": [
-      "The Hobbit Collector Booster Box: Excluded 6 outlier listing(s) from avg_25: [122.0, 690.0, 695.0] (",
-      "The Hobbit Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [78.0] (range: \u20ac145.18-\u20ac173.",
-      "Matches fixed"
-    ],
-    "auto_fix": {
-      "retried": 0,
-      "recovered": 6,
-      "still_failed": 0,
-      "fetch_failures": 0,
-      "parse_failures": 6,
       "redirect_failures": 0
     }
   }

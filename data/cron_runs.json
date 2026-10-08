@@ -1,8 +1,24 @@
 [
   {
+    "id": 17,
+    "started_at": "2026-10-08T05:00:55.352513",
+    "finished_at": "2026-10-08T07:29:12.551214",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 248,
+    "products_out_of_stock": 7,
+    "products_failed": 0,
+    "notes": [
+      "Star Trek Collector Booster Box: Excluded 1 outlier listing(s) from avg_25: [599.99] (range: \u20ac410.05",
+      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac99.07-\u20ac205.6",
+      "Matches fixed"
+    ],
+    "auto_fix": null
+  },
+  {
     "id": 16,
     "started_at": "2026-10-05T05:00:48.627157",
-    "finished_at": "2026-10-05T07:19:21.843295",
+    "finished_at": "2026-10-05T07:19:25.900655",
     "status": "ok",
     "products_scanned": 255,
     "products_with_prices": 248,
@@ -147,29 +163,6 @@
       "still_failed": 0,
       "fetch_failures": 1,
       "parse_failures": 0,
-      "redirect_failures": 0
-    }
-  },
-  {
-    "id": 7,
-    "started_at": "2026-09-03T05:00:23.837322",
-    "finished_at": "2026-09-07T11:14:39.944183",
-    "status": "ok",
-    "products_scanned": 212,
-    "products_with_prices": 209,
-    "products_out_of_stock": 5,
-    "products_failed": 0,
-    "notes": [
-      "Star Trek Collector Booster Box: No articleRow divs found - CardMarket HTML structure may have chang",
-      "Reality Fracture Play Booster Box: No articleRow divs found - CardMarket HTML structure may have cha",
-      "Matches fixed"
-    ],
-    "auto_fix": {
-      "retried": 4,
-      "recovered": 38,
-      "still_failed": 3,
-      "fetch_failures": 4,
-      "parse_failures": 37,
       "redirect_failures": 0
     }
   }

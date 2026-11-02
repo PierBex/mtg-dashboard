@@ -1,8 +1,24 @@
 [
   {
+    "id": 22,
+    "started_at": "2026-11-02T05:00:04.727401",
+    "finished_at": "2026-11-02T08:25:55.905612",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 248,
+    "products_out_of_stock": 7,
+    "products_failed": 0,
+    "notes": [
+      "Edge of Eternities Collector Booster Box: Excluded 4 outlier listing(s) from avg_25: [1299.0, 2000.0",
+      "Edge of Eternities Play Booster Box: Excluded 2 outlier listing(s) from avg_25: [342.81, 355.0] (ran",
+      "Matches fixed"
+    ],
+    "auto_fix": null
+  },
+  {
     "id": 21,
     "started_at": "2026-10-30T13:31:33.329260",
-    "finished_at": "2026-10-30T17:22:35.348352",
+    "finished_at": "2026-10-30T17:22:39.525983",
     "status": "ok",
     "products_scanned": 255,
     "products_with_prices": 248,
@@ -146,22 +162,6 @@
     "notes": [
       "Star Trek Collector Booster Box: Excluded 2 outlier listing(s) from avg_25: [599.99, 10000.0] (range",
       "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [10000.0] (range: \u20ac77.03-\u20ac230",
-      "Matches fixed"
-    ],
-    "auto_fix": null
-  },
-  {
-    "id": 12,
-    "started_at": "2026-09-21T05:00:38.580991",
-    "finished_at": "2026-09-21T08:01:09.124260",
-    "status": "ok",
-    "products_scanned": 255,
-    "products_with_prices": 248,
-    "products_out_of_stock": 7,
-    "products_failed": 0,
-    "notes": [
-      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac87.37-\u20ac216.5",
-      "The Hobbit Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [135.0] (range: \u20ac136.05-\u20ac163",
       "Matches fixed"
     ],
     "auto_fix": null

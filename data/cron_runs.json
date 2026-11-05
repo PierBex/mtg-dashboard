@@ -1,8 +1,31 @@
 [
   {
+    "id": 23,
+    "started_at": "2026-11-05T05:00:10.046920",
+    "finished_at": "2026-11-05T08:03:38.096436",
+    "status": "ok",
+    "products_scanned": 255,
+    "products_with_prices": 247,
+    "products_out_of_stock": 7,
+    "products_failed": 0,
+    "notes": [
+      "Star Trek Collector Booster Box: Excluded 2 outlier listing(s) from avg_25: [550.0, 555.53] (range: ",
+      "Avatar: The Last Airbender Collector Booster Box: Excluded 12 outlier listing(s) from avg_25: [360.0",
+      "Matches fixed"
+    ],
+    "auto_fix": {
+      "retried": 1,
+      "recovered": 1,
+      "still_failed": 0,
+      "fetch_failures": 1,
+      "parse_failures": 0,
+      "redirect_failures": 0
+    }
+  },
+  {
     "id": 22,
     "started_at": "2026-11-02T05:00:04.727401",
-    "finished_at": "2026-11-02T08:25:55.905612",
+    "finished_at": "2026-11-02T08:26:00.139814",
     "status": "ok",
     "products_scanned": 255,
     "products_with_prices": 248,
@@ -146,22 +169,6 @@
     "notes": [
       "Star Trek Collector Booster Box: Excluded 1 outlier listing(s) from avg_25: [599.99] (range: \u20ac418.03",
       "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [219.9] (range: \u20ac98.00-\u20ac206.4",
-      "Matches fixed"
-    ],
-    "auto_fix": null
-  },
-  {
-    "id": 13,
-    "started_at": "2026-09-24T05:00:40.807458",
-    "finished_at": "2026-09-24T08:00:13.528221",
-    "status": "ok",
-    "products_scanned": 255,
-    "products_with_prices": 248,
-    "products_out_of_stock": 7,
-    "products_failed": 0,
-    "notes": [
-      "Star Trek Collector Booster Box: Excluded 2 outlier listing(s) from avg_25: [599.99, 10000.0] (range",
-      "Star Trek Play Booster Box: Excluded 1 outlier listing(s) from avg_25: [10000.0] (range: \u20ac77.03-\u20ac230",
       "Matches fixed"
     ],
     "auto_fix": null

@@ -1,7 +1,7 @@
 {
   "total_sets": 169,
   "total_products": 255,
-  "total_snapshots": 6151,
+  "total_snapshots": 6406,
   "products_with_prices": 248,
   "products_out_of_stock": 7,
   "type_breakdown": {
@@ -14,9 +14,9 @@
   },
   "last_crawl": {
     "job_name": "mtg_cron_run",
-    "finished_at": "2026-11-02T08:25:55.905447",
+    "finished_at": "2026-11-05T08:03:38.096256",
     "status": "ok",
     "products_scanned": 255
   },
-  "exported_at": "2026-11-02"
+  "exported_at": "2026-11-05"
 }
